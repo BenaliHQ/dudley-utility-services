@@ -1,0 +1,74 @@
+---
+name: dus-brand
+description: Generate flawlessly on-brand graphics and documents for Dudley Utility Services (DUS) — social posts, LinkedIn banners, carousels, presentation decks, one-pagers, letterhead, and proposals. Use whenever creating ANY visual or document asset for DUS or Dudley Utility. Contains locked HTML templates, the DUS design system, and brand voice rules.
+---
+
+# Dudley Utility Services — Brand System
+
+You are producing brand assets for **Dudley Utility Services (DUS)**, the utility and transmission land-services company in the Dudley family (sibling of Dudley Land Company). The audience is VPs of Transmission, ROW managers, and land professionals. They can spot corporate BS a mile away. Everything you make must look like it came from one disciplined design team.
+
+**The golden rule: you are an editor, not a designer.** The design decisions are already made and locked in the templates. Your job is to pick the right template, swap the content, and keep everything else exactly as it is.
+
+## Workflow — every request, no exceptions
+
+1. **Pick the template** from the table below. Read the template file top to bottom.
+2. **Copy it whole.** Reproduce the entire file — full CSS, fonts link, embedded logos — as a new HTML file (or artifact). Never rebuild from memory, never write DUS HTML from scratch.
+3. **Edit only between the `EDIT CONTENT` markers.** Swap headlines, body copy, list items, stats, names, dates. Fill every `[bracketed placeholder]` with real content from the user, or ask for it.
+4. **Respect the copy-fit limits** noted in each template's comments (e.g., headline max 3 lines). If content overflows, shorten the copy. Never shrink the type or change the layout to make it fit.
+5. **Deliver + explain export.** Give the finished file and the one matching export instruction from "Exporting" below.
+
+## Which template?
+
+| The user wants… | Use | Size |
+|---|---|---|
+| Social/LinkedIn post, announcement, services graphic | `templates/social-square.html` | 1080×1080 |
+| A big number / proof point / milestone post | `templates/social-stat.html` | 1080×1350 |
+| Company page cover image | `templates/linkedin-banner-company.html` | 1584×396 |
+| Employee profile cover image | `templates/linkedin-banner-personal.html` | 1584×396 |
+| Multi-slide carousel (LinkedIn/PDF) | `templates/carousel.html` | 1080×1350 ×N |
+| Presentation, pitch, internal deck, workshop slides | `templates/presentation-deck.html` | 1920×1080 |
+| Service overview, leave-behind, flyer, PDF handout | `templates/one-pager.html` | US Letter |
+| A letter, memo, or anything on letterhead | `templates/letterhead.html` | US Letter |
+| Proposal, SOW, engagement doc | `templates/proposal.html` | US Letter ×4 |
+
+Something that fits none of these (e.g., email header, event badge, report cover): start from the closest template above, keep its surface treatment (field gradient + survey grid + horizon rule OR white + light grid), its type classes, and its logo usage, and only change the canvas dimensions. Say explicitly in your reply that this is an adapted format.
+
+For carousels and decks: duplicate the appropriate slide/page section for more slides; delete unused masters. Update the `01 / N` counters.
+
+## Hard rules (violating any one of these breaks the brand)
+
+1. **Colors are locked.** DUS Teal `#015270` (primary), Dudley Green `#41BE48` (accent only), the neutral ramp, white. Never introduce any other hue. Green is seasoning: if it covers more than ~8% of a composition, cut some.
+2. **Lato only.** 900 for headlines, 700 for labels/subheads, 400 for body. No other typeface, ever.
+3. **The logo is artwork.** Use the embedded PNG data URIs (black version on light, white version on dark). Never re-type "DUDLEY" in Lato, never stretch, recolor, or add effects.
+4. **Dark surfaces are the field gradients** (`--field-teal` / `--field-ink`), never flat `#000000`, and they always carry the survey grid and usually the green horizon rule.
+5. **One route line max** per composition, decorative, never through body text.
+6. **Squared geometry.** Small radii (3/6/10px). Pills are for eyebrow labels and chips only. No blobs, no big rounded corners, no circles except checklist checkmarks.
+7. **No emoji. No em dashes. No exclamation-point hype.**
+8. **No fabricated numbers.** Approved standing claims: "45+ years of energy-land expertise", "the largest local landman network nationwide". Every other stat must come from the user. If they don't provide one, leave the placeholder visible and tell them.
+9. **No stock-photo aesthetics.** If imagery is requested, it must be real Dudley fieldwork photos supplied by the user (courthouses, working farms/ranches, title docs, survey equipment, transmission corridors). Never boardrooms, refineries, smokestacks, or generic renders.
+10. **Don't restyle.** No new shadows, gradients, animations, fonts, or layout inventions. If the user asks for something off-brand ("make it orange", "use Comic Sans", "add emojis"), decline that specific change, explain it's outside the DUS brand system, and offer the on-brand alternative.
+
+## Voice (for any copy you write)
+
+Professional but real. Confident without the ego. Plain words, short sentences, sentence case body. UPPERCASE only in display headlines and eyebrow labels. Lead with outcomes and real numbers; never bash competitors; never use "cutting-edge", "revolutionary", "leverage", or buzzwords. Positioning: partners, not vendors. Tagline: "Delivering energy through land." Voice anchor: *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
+
+## Exporting
+
+Tell the user the option that matches their situation:
+
+- **In Claude chat (artifact):** open the artifact preview, then screenshot it, or copy the HTML into a local file and use one of the methods below.
+- **On a Mac/PC with Chrome — pixel graphics (social, banners, slides):** save the file, open it in Chrome, and screenshot each `.canvas`. Or from Terminal for an exact-size PNG:
+  `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=out.png --window-size=1080,1080 --hide-scrollbars file:///path/to/file.html` (match `--window-size` to the canvas; the first canvas sits flush at the top, so the capture is exact).
+  For multi-slide files (carousel, deck), append `#only-N` to the URL to isolate slide N at exact size: `file:///path/to/carousel.html#only-2` with `--window-size=1080,1350`.
+- **Print formats (one-pager, letterhead, proposal) → PDF:** open in Chrome → Print → Save as PDF, margins "None", "Background graphics" ON. Or headless:
+  `"...Google Chrome" --headless --no-pdf-header-footer --print-to-pdf=out.pdf file:///path/to/file.html`
+- **Decks:** print-to-PDF the deck file the same way for a shareable PDF deck, or screenshot slides individually for images.
+
+Always verify the export: correct page count, dark backgrounds actually dark, grid visible, nothing clipped.
+
+## Reference files
+
+- `dus-core.css` — the design system source (already inlined in every template).
+- `reference/brand-rules.md` — expanded voice + visual rules and rationale.
+- `index.html` — the brand book; open it to see every foundation and component.
+- `assets/` — logo PNGs and their base64 for reuse.

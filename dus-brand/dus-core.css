@@ -1,0 +1,265 @@
+/* ==========================================================================
+   DUDLEY UTILITY SERVICES — CORE DESIGN SYSTEM  v2.0
+   Refined by Benali from the Dudley Land Company brand guidelines.
+   This block is inlined verbatim into every DUS template. Do not restyle.
+   Concept: "The route and the grid" — plat-map survey grids, a green
+   right-of-way route line, squared structural geometry, teal depth.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand: DUS Teal (primary) ---- */
+  --teal-950: #021018;
+  --teal-900: #032230;
+  --teal-800: #033349;
+  --teal-700: #02425C;
+  --teal-600: #014A65;
+  --teal-500: #015270;   /* DUS Teal — primary */
+  --teal-400: #0A7196;
+  --teal-300: #2E93B8;
+  --teal-200: #7EC0D6;
+  --teal-100: #D6ECF3;
+  --teal-050: #EDF6FA;
+
+  /* ---- Brand: Dudley Green (accent — use sparingly) ---- */
+  --green-700: #2E9A34;
+  --green-600: #38B03E;
+  --green-500: #41BE48;  /* Dudley Green */
+  --green-400: #67CC6C;
+  --green-100: #E4F7E5;
+
+  /* ---- Neutrals ---- */
+  --ink-950: #06090B;    /* near-black ground (never pure #000 on large fields) */
+  --ink-900: #101417;
+  --ink-800: #2B2B2B;    /* Dudley dark neutral — primary text */
+  --ink-700: #444444;
+  --ink-600: #6E6E6E;
+  --ink-500: #949494;
+  --ink-400: #BEBEBE;
+  --neutral-300: #D6D6D6;
+  --neutral-200: #EBEBEB; /* Dudley light neutral */
+  --neutral-100: #F5F5F5;
+  --white: #FFFFFF;
+
+  /* ---- Semantic ---- */
+  --brand: var(--teal-500);
+  --accent: var(--green-500);
+  --text: var(--ink-800);
+  --text-2: var(--ink-600);
+  --text-3: var(--ink-500);
+  --on-dark: rgba(255,255,255,0.94);
+  --on-dark-2: rgba(255,255,255,0.72);
+  --on-dark-3: rgba(255,255,255,0.50);
+  --hairline-dark: rgba(255,255,255,0.16);
+  --hairline: var(--neutral-200);
+
+  /* ---- Signature surfaces ----
+     Teal field: light enters top-left, land-dark settles bottom-right. */
+  --field-teal: linear-gradient(142deg, #026687 0%, #015270 34%, #033349 66%, #071C26 100%);
+  --field-ink:  linear-gradient(150deg, #1A2228 0%, #101417 55%, #06090B 100%);
+  --glow-green: radial-gradient(ellipse 60% 42% at 18% 104%, rgba(65,190,72,0.16), transparent 70%);
+
+  /* ---- Type ---- */
+  --font: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ---- Radius: squared and structural ---- */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-pill: 999px;      /* eyebrow pills and status chips ONLY */
+
+  /* ---- Shadows: cool, subtle ---- */
+  --shadow-sm: 0 1px 2px rgba(3,34,48,0.07), 0 1px 3px rgba(3,34,48,0.08);
+  --shadow-md: 0 4px 14px rgba(3,34,48,0.10), 0 2px 4px rgba(3,34,48,0.06);
+  --shadow-lg: 0 16px 40px rgba(3,34,48,0.16), 0 4px 10px rgba(3,34,48,0.07);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  font-family: var(--font);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ==========================================================================
+   SURVEY GRID — plat-map pattern. Fine lines every 44px, a heavier
+   "section line" every 4th cell (176px). Inline SVG tile = prints clean.
+   ========================================================================== */
+.dus-grid-dark, .dus-grid-light { position: relative; }
+.dus-grid-dark::before, .dus-grid-light::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-repeat: repeat; background-size: 176px 176px;
+}
+.dus-grid-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='176' height='176'%3E%3Cg stroke='%23FFFFFF' stroke-opacity='0.05' stroke-width='1'%3E%3Cpath d='M44.5 0v176M88.5 0v176M132.5 0v176M0 44.5h176M0 88.5h176M0 132.5h176'/%3E%3C/g%3E%3Cg stroke='%23FFFFFF' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M175.5 0v176M0 175.5h176'/%3E%3C/g%3E%3C/svg%3E");
+}
+.dus-grid-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='176' height='176'%3E%3Cg stroke='%23015270' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M44.5 0v176M88.5 0v176M132.5 0v176M0 44.5h176M0 88.5h176M0 132.5h176'/%3E%3C/g%3E%3Cg stroke='%23015270' stroke-opacity='0.13' stroke-width='1'%3E%3Cpath d='M175.5 0v176M0 175.5h176'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* Fade the grid toward the top so type stays clean: add .dus-grid-fade */
+.dus-grid-fade::before {
+  background-image: inherit;
+}
+
+/* Dark field helpers — gradient + green under-glow + grid stack correctly */
+.dus-field-teal { background: var(--glow-green), var(--field-teal); color: var(--on-dark); }
+.dus-field-ink  { background: var(--glow-green), var(--field-ink);  color: var(--on-dark); }
+
+/* Horizon rule — the green land line anchoring dark panels */
+.dus-horizon { position: relative; }
+.dus-horizon::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+  background: linear-gradient(90deg, var(--green-500) 0%, var(--green-600) 60%, var(--teal-400) 100%);
+}
+
+/* ==========================================================================
+   ROUTE ALIGNMENT — the right-of-way motif, drawn like a surveyor's
+   alignment sheet: dash-dot centerline, easement corridor band with dashed
+   edges, square PI monuments with center points, perpendicular station
+   ticks, faint parcel boundaries. ONE per composition, behind content,
+   never through body text.
+   Variants (inline SVG; canonical markup lives in the templates + index):
+     full      1200x320  parcels + corridor + stationing   covers, title slides
+     corridor  1200x200  corridor band, no parcels/labels  social, carousel
+     slim      1200x96   centerline + ticks + monuments    banners, footers
+   Class-styled below. Add .rw-on-light on light surfaces.
+   ========================================================================== */
+.dus-route { line-height: 0; }
+.dus-route svg { width: 100%; height: auto; display: block; }
+.dus-route .rw-parcel path { stroke: #FFFFFF; stroke-opacity: .06; stroke-width: 1; }
+.dus-route .rw-band { fill: #41BE48; fill-opacity: .05; }
+.dus-route .rw-edge { stroke: #41BE48; stroke-opacity: .28; stroke-width: 1; }
+.dus-route .rw-center { stroke: #41BE48; stroke-width: 2; stroke-opacity: .95; }
+.dus-route .rw-tick line { stroke: #41BE48; stroke-opacity: .45; stroke-width: 1.4; }
+.dus-route .rw-mon rect { stroke: #41BE48; stroke-width: 1.6; fill: none; }
+.dus-route .rw-dot circle { fill: #41BE48; }
+.dus-route .rw-label text { font: 700 10.5px var(--font); letter-spacing: .22em; fill: #FFFFFF; fill-opacity: .34; }
+.dus-route.rw-on-light .rw-parcel path { stroke: #015270; stroke-opacity: .10; }
+.dus-route.rw-on-light .rw-band { fill-opacity: .06; }
+.dus-route.rw-on-light .rw-edge { stroke-opacity: .42; }
+.dus-route.rw-on-light .rw-center { stroke: #38B03E; stroke-opacity: 1; }
+.dus-route.rw-on-light .rw-tick line { stroke: #38B03E; stroke-opacity: .5; }
+.dus-route.rw-on-light .rw-mon rect { stroke: #38B03E; }
+.dus-route.rw-on-light .rw-dot circle { fill: #38B03E; }
+.dus-route.rw-on-light .rw-label text { fill: #015270; fill-opacity: .45; }
+
+/* ==========================================================================
+   TYPE SYSTEM — Lato only. Black 900 carries the brand.
+   ========================================================================== */
+.dus-display {            /* covers, title slides, banners — short, declarative */
+  font-weight: 900; letter-spacing: -0.02em; line-height: 0.98;
+  text-transform: uppercase;
+}
+.dus-h1 { font-weight: 900; letter-spacing: -0.022em; line-height: 1.06; }
+.dus-h2 { font-weight: 900; letter-spacing: -0.018em; line-height: 1.12; }
+.dus-h3 { font-weight: 700; letter-spacing: -0.008em; line-height: 1.22; }
+.dus-body { font-weight: 400; line-height: 1.6; }
+.dus-lede { font-weight: 400; line-height: 1.5; }
+
+/* Eyebrow — uppercase, tracked, with a leading survey-marker square */
+.dus-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.dus-eyebrow::before {
+  content: ""; width: 9px; height: 9px; background: var(--green-500);
+  flex: 0 0 auto;
+}
+.dus-eyebrow--teal { color: var(--teal-500); }
+.dus-eyebrow--dark { color: var(--on-dark-2); }
+
+/* Pill — dark-surface label chip (social eyebrows, status) */
+.dus-pill {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 9px 18px; border-radius: var(--r-pill);
+  background: rgba(65,190,72,0.14);
+  border: 1px solid rgba(65,190,72,0.36);
+  color: var(--green-400);
+  font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+}
+
+/* Micro label — plat-sheet annotation. Decorative metadata only. */
+.dus-micro {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.dus-micro--dark { color: var(--on-dark-3); }
+
+/* Accent rule — green emphasis line */
+.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
+
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+
+/* Stat block — the proof point */
+.dus-stat { display: flex; flex-direction: column; gap: 6px; }
+.dus-stat .value {
+  font-weight: 900; letter-spacing: -0.03em; line-height: 0.9;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.dus-stat .value .unit { color: var(--green-500); }
+.dus-stat .label {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+}
+.dus-stat--dark .value { color: var(--white); }
+.dus-stat--dark .label { color: var(--on-dark-2); }
+.dus-stat--light .value { color: var(--teal-500); }
+.dus-stat--light .label { color: var(--text-2); }
+
+/* Checklist — green circle check (parent-brand motif, kept) */
+.dus-check { list-style: none; display: flex; flex-direction: column; }
+.dus-check li { display: flex; align-items: flex-start; gap: 14px; font-weight: 700; }
+.dus-check li::before {
+  content: ""; flex: 0 0 auto; width: 1.35em; height: 1.35em; margin-top: 0.02em;
+  border-radius: 50%; background-color: var(--green-500);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.6 3.6 7.4-8.2' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
+}
+
+/* Card — white, hairline border, optional green top bar */
+.dus-card {
+  background: var(--white); border: 1px solid var(--neutral-200);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+}
+.dus-card--accent { border-top: 4px solid var(--green-500); }
+
+/* Corner ticks — plat-sheet frame corners on light print surfaces */
+.dus-ticks { position: relative; }
+.dus-ticks::before, .dus-ticks::after,
+.dus-ticks > .tick-b::before, .dus-ticks > .tick-b::after {
+  content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+  background-repeat: no-repeat; background-size: 14px 14px;
+}
+.dus-ticks::before { top: 0; left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+.dus-ticks::after { top: 0; right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+.dus-ticks > .tick-b::before { bottom: 0; left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+.dus-ticks > .tick-b::after { bottom: 0; right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+
+/* Footer band — document/deck footer */
+.dus-band {
+  background: var(--ink-950); color: var(--on-dark-2);
+  border-top: 4px solid var(--green-500);
+}
+
+/* Buttons (web/interactive contexts) */
+.dus-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px; border: none; border-radius: var(--r-md);
+  font-family: var(--font); font-size: 15px; font-weight: 700; letter-spacing: 0.02em;
+  cursor: pointer; text-decoration: none;
+  transition: filter 160ms cubic-bezier(0.4,0,0.2,1), transform 120ms cubic-bezier(0.4,0,0.2,1);
+}
+.dus-btn:hover { filter: brightness(0.94); }
+.dus-btn:active { transform: scale(0.97); }
+.dus-btn--primary { background: var(--teal-500); color: var(--white); }
+.dus-btn--accent  { background: var(--green-500); color: var(--ink-950); }
+.dus-btn--ghost   { background: transparent; color: var(--teal-500); box-shadow: inset 0 0 0 1.5px var(--teal-500); }
