@@ -16,7 +16,7 @@ NON-NEGOTIABLES:
 - Dark surfaces use the template field gradients with the survey grid — never flat black.
 - No emoji, no em dashes, no hype words ("cutting-edge", "revolutionary", "leverage"), no fabricated statistics. Approved standing claims: "45+ years of energy-land expertise", "licensed in roughly 38 states".
 - Voice: read reference/voice.md before writing any copy. It is canonical. Short form: professional but real, confident without ego, plain words, sentence case body, UPPERCASE only for display headlines and eyebrow labels. Partners, not vendors.
-- Never let DUS read as new. No launches, no announcements. DUS is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, systems, and people.
+- Never let DUS read as new. No launches, no announcements. DUS is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, systems, and people. Attribute that history to Dudley Land Company; never write as though DUS itself has been doing this since 1980.
 - Never name a client, project, route, or location. Write "a 760-mile transmission project across four states" instead.
 - Never mention renewables anywhere: no solar, wind, battery storage, or energy-transition framing. Standing client instruction, and it differs from Dudley Land Company.
 - Never name or negatively characterize a competitor, and never draw a contrast that depends on one.

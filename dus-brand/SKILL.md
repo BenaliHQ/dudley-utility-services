@@ -56,7 +56,7 @@ Professional but real. Confident without the ego. Plain words, short sentences, 
 
 Four things that break the brand faster than any visual mistake:
 
-1. **Never let DUS read as new.** No launches, no announcements, no arriving. DUS is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, systems, and people. Inherit rather than announce.
+1. **Never let DUS read as new, and never overclaim the history.** No launches, no announcements, no arriving. DUS is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, systems, and people. Inherit rather than announce, and name Dudley Land Company when the history is the point. Writing as though DUS itself has been doing this since 1980 is a false claim.
 2. **Never name a client, project, route, or location.** Write "a 760-mile transmission project across four states."
 3. **Never mention renewables.** No solar, wind, battery storage, or energy-transition framing anywhere. Standing client instruction, and it differs from Dudley Land Company.
 4. **Every claim carries a mechanism.** "We reduce risk" is a claim. "We convert blanket easements to defined right-of-way before survey" is a mechanism. Claims without mechanisms get cut.

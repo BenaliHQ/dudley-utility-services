@@ -68,6 +68,8 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 **Established, never new.** DUS is not a startup and never reads as one. This is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, the same systems, and the same people. Inherit rather than announce.
 
+**Attribute the history honestly.** Dudley Land Company earned the 45 years and DUS runs on it. Writing as though DUS itself has been doing this since 1980 crosses from inheritance into a false claim, and this buyer will check. Name Dudley Land Company when the history is the point.
+
 **Certain, never boastful.** Dudley Land Company's standard carries straight over: confidence without the ego, a reputation earned through results rather than self-promotion, and aiming to be the most trusted voice in the room over the loudest. Replace every superlative with the specific thing that would have justified it.
 
 **Specific over comprehensive.** One concrete detail about how a corridor gets cleared beats a list of twenty-three services. Cut the list, keep the detail.
@@ -118,11 +120,11 @@ Everything else must be supplied by the user. If a fact or number is missing, as
 
 **Announcing instead of inheriting**
 Before: "As we launch Dudley Utility Services, we're building a team ready to take on utility infrastructure projects nationwide."
-After: "We've been hiring landmen since 1980, across roughly 38 states. Dudley Utility Services puts those same people on utility projects."
+After: "Dudley Land Company has been recruiting and training landmen since 1980. Those are the people who staff our utility projects."
 
 **Superlatives standing in for substance**
 Before: "Our industry-leading team delivers world-class right-of-way services with unmatched attention to detail."
-After: "Ask us about any parcel and you'll get the deed reference, the tract number, the acreage, and where it stands. Files close within five days of signing."
+After: "Every parcel on your project comes with its deed reference, tract number, acreage, and current status. Files close within five days of signing."
 
 **A claim with no mechanism**
 Before: "We keep your project on schedule."
