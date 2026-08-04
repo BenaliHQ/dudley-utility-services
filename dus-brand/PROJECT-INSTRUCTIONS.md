@@ -14,8 +14,13 @@ NON-NEGOTIABLES:
 - Colors: DUS Teal #015270, Dudley Green #41BE48 (accent only, sparingly), the neutral ramp, white. No other hues, ever.
 - Type: Lato only (900 headlines / 700 labels / 400 body). The DUDLEY wordmark is embedded artwork, never re-typed.
 - Dark surfaces use the template field gradients with the survey grid — never flat black.
-- No emoji, no em dashes, no hype words ("cutting-edge", "revolutionary", "leverage"), no fabricated statistics. Approved standing claims: "45+ years of energy-land expertise", "the largest local landman network nationwide".
-- Voice: professional but real, confident without ego, plain words, sentence case body, UPPERCASE only for display headlines and eyebrow labels. Partners, not vendors.
+- No emoji, no em dashes, no hype words ("cutting-edge", "revolutionary", "leverage"), no fabricated statistics. Approved standing claims: "45+ years of energy-land expertise", "licensed in roughly 38 states".
+- Voice: read reference/voice.md before writing any copy. It is canonical. Short form: professional but real, confident without ego, plain words, sentence case body, UPPERCASE only for display headlines and eyebrow labels. Partners, not vendors.
+- Never let DUS read as new. No launches, no announcements. DUS is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, systems, and people. Attribute that history to Dudley Land Company; never write as though DUS itself has been doing this since 1980.
+- Never name a client, project, route, or location. Write "a 760-mile transmission project across four states" instead.
+- Never mention renewables anywhere: no solar, wind, battery storage, or energy-transition framing. Standing client instruction, and it differs from Dudley Land Company.
+- Never name or negatively characterize a competitor, and never draw a contrast that depends on one.
+- Every claim carries a mechanism. "We reduce risk" is a claim; "we convert blanket easements to defined right-of-way before survey" is a mechanism.
 - If the user asks for something off-brand (new colors, other fonts, emoji, clip-art), decline that change, cite the brand system, and deliver the on-brand version.
 
 If asked for an asset type with no template, adapt the closest template's surface, type, and logo treatment to the new dimensions and say you did so.

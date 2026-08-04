@@ -16,7 +16,7 @@ You don't need design skills and you don't need to know HTML. You describe the c
 
 1. In Claude.ai, create a Project called **DUS Brand**.
 2. Open `PROJECT-INSTRUCTIONS.md` in this folder, copy its contents into the Project's **Instructions** box.
-3. Upload these files to the Project's knowledge: everything in `templates/`, plus `SKILL.md`, `dus-core.css`, and `reference/brand-rules.md`.
+3. Upload these files to the Project's knowledge: everything in `templates/`, plus `SKILL.md`, `dus-core.css`, `reference/voice.md`, and `reference/brand-rules.md`.
 4. Invite the team to the Project. Every chat inside it is brand-aware.
 
 ### Option C — Claude Cowork / Claude Code
@@ -25,7 +25,7 @@ Point a session at this folder (or keep the folder inside the workspace Claude c
 
 ## Asking for things — examples that work well
 
-- "Make a LinkedIn post announcing that Savannah Reeves joined as Director of Operations, starting July 21."
+- "Make a LinkedIn post announcing that Savannah Land joined as Land Director for Utilities, starting August 3."
 - "I need a carousel: 5 things transmission PMs get wrong about easement timelines. Here are my 5 points: …"
 - "Company page LinkedIn banner."
 - "Personal LinkedIn cover for Brent."
@@ -33,7 +33,9 @@ Point a session at this folder (or keep the folder inside the workspace Claude c
 - "Draft a proposal for [Client] for right-of-way acquisition on the [Project] corridor: 4 phases, here's the scope and pricing…"
 - "Turn these bullet points into a 10-slide deck for Thursday's kickoff."
 
-**Give real content.** The system never invents numbers or project facts — the only standing claims it uses are "45+ years" and "largest local landman network nationwide." If you don't provide a stat, you'll get a visible `[placeholder]` instead of a made-up number. That's by design.
+**Give real content.** The system never invents numbers or project facts. The only standing claims it uses are "45+ years of energy-land expertise" and "licensed in roughly 38 states." If you don't provide a stat, you'll get a visible `[placeholder]` instead of a made-up number. That's by design.
+
+**It also won't name your clients.** Ask for a case study naming a utility and you'll get an anonymized version ("a Gulf Coast investor-owned utility"). Client confidentiality is built into the system, because publishing client details is exactly the judgment that disqualifies a vendor in this industry.
 
 ## Getting the finished file out
 
@@ -51,7 +53,8 @@ Claude will include the exact export step with each asset, but in short:
 | `index.html` | **The brand book — open this in a browser to see the whole system** |
 | `templates/` | 9 locked templates Claude copies and fills in |
 | `dus-core.css` | The design system source code |
-| `reference/brand-rules.md` | The distilled brand rules (voice + visual) |
+| `reference/voice.md` | **How DUS talks: audience, claim, values, rules, examples** |
+| `reference/brand-rules.md` | The distilled visual rules |
 | `assets/` | Official DUS logo files |
 | `PROJECT-INSTRUCTIONS.md` | Paste-in text for the Claude Project setup |
 
