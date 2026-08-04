@@ -12,7 +12,7 @@ Source: Dudley Utility Services brand voice engagement, Demandcast, August 2026.
 
 **Landowners read our material too.** They're checking whether the person who knocked on their door is legitimate. Plain language and visible credentials do that work.
 
-**Prospective land agents read it as well.** Careers material speaks to them. What lands is specifics about pay, training, and how field staff are treated.
+**Prospective right-of-way agents read it as well.** Careers material speaks to them. What lands is specifics about pay, training, and how field staff are treated.
 
 Most readers arrive warm, referred by someone they already trust. They aren't deciding whether they need land services. They're checking whether this company is real, which calls for substantiation rather than persuasion. Show the work.
 
