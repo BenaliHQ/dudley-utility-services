@@ -44,13 +44,24 @@ For carousels and decks: duplicate the appropriate slide/page section for more s
 5. **One route line max** per composition, decorative, never through body text.
 6. **Squared geometry.** Small radii (3/6/10px). Pills are for eyebrow labels and chips only. No blobs, no big rounded corners, no circles except checklist checkmarks.
 7. **No emoji. No em dashes. No exclamation-point hype.**
-8. **No fabricated numbers.** Approved standing claims: "45+ years of energy-land expertise", "the largest local landman network nationwide". Every other stat must come from the user. If they don't provide one, leave the placeholder visible and tell them.
+8. **No fabricated numbers.** Approved standing claims: "45+ years of energy-land expertise" and "licensed in roughly 38 states" (confirm the current count before print). Every other stat must come from the user. If they don't provide one, leave the placeholder visible and tell them.
 9. **No stock-photo aesthetics.** If imagery is requested, it must be real Dudley fieldwork photos supplied by the user (courthouses, working farms/ranches, title docs, survey equipment, transmission corridors). Never boardrooms, refineries, smokestacks, or generic renders.
 10. **Don't restyle.** No new shadows, gradients, animations, fonts, or layout inventions. If the user asks for something off-brand ("make it orange", "use Comic Sans", "add emojis"), decline that specific change, explain it's outside the DUS brand system, and offer the on-brand alternative.
 
 ## Voice (for any copy you write)
 
-Professional but real. Confident without the ego. Plain words, short sentences, sentence case body. UPPERCASE only in display headlines and eyebrow labels. Lead with outcomes and real numbers; never bash competitors; never use "cutting-edge", "revolutionary", "leverage", or buzzwords. Positioning: partners, not vendors. Tagline: "Delivering energy through land." Voice anchor: *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
+**Read `reference/voice.md` before writing a single line of DUS copy.** It's the canonical voice and messaging reference: audience, claim, values, register, banned constructions, and the three tests every piece has to pass. This section is the short form, not a substitute.
+
+Professional but real. Confident without the ego. Plain words, short sentences, sentence case body. UPPERCASE only in display headlines and eyebrow labels. Partners, not vendors: "we" is Dudley, "you" and "your project" are the reader. Voice anchor: *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
+
+Four things that break the brand faster than any visual mistake:
+
+1. **Never let DUS read as new.** No launches, no announcements, no arriving. DUS is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, systems, and people. Inherit rather than announce.
+2. **Never name a client, project, route, or location.** Write "a 760-mile transmission project across four states." Assume the answer is always no.
+3. **Never mention renewables.** No solar, wind, battery storage, or energy-transition framing anywhere. Standing client instruction, and it differs from Dudley Land Company.
+4. **Every claim carries a mechanism.** "We reduce risk" is a claim. "We convert blanket easements to defined right-of-way before survey" is a mechanism. Claims without mechanisms get cut.
+
+**Mission and claim are not the same thing.** "Delivering energy through land" is the inherited Dudley mission statement. "Creating certainty through strategic land solutions" is what DUS sells. Neither one is a tagline to stamp on every surface.
 
 ## Exporting
 
@@ -69,6 +80,7 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 ## Reference files
 
 - `dus-core.css` — the design system source (already inlined in every template).
-- `reference/brand-rules.md` — expanded voice + visual rules and rationale.
+- `reference/voice.md` — **the canonical voice and messaging reference. Read it before writing DUS copy.**
+- `reference/brand-rules.md` — expanded visual rules and rationale.
 - `index.html` — the brand book; open it to see every foundation and component.
 - `assets/` — logo PNGs and their base64 for reuse.

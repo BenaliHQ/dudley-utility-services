@@ -2,6 +2,8 @@
 
 Source of truth: Dudley Land Company Brand Guidelines (26 pp., July 2025, by Benali) + the DUS Design System v2.0 refinement (July 2026). DUS shares Dudley's typography, black/green language, and voice; **DUS Teal `#015270`** is the differentiator that marks a piece as Utility Services rather than Land Company.
 
+> **Voice is not in this file.** See `voice.md` for everything about how DUS talks. This document is the visual system.
+
 ## The concept: the route and the grid
 
 DUS's product is a defensible route across land: survey grids, plat maps, section lines, corridor easements. The system encodes that literally:
@@ -37,13 +39,9 @@ The DUDLEY wordmark is custom condensed artwork. It is never re-typed, stretched
 
 ## Voice
 
-Professional but real. Confident without the ego. "We're not trying to be the loudest voice in the room. We're trying to be the most trusted."
+**Voice lives in `voice.md`, not here.** That file is canonical: audience, claim, inherited values, register, mechanics, the never list, the three tests, and before/after examples. This document covers the visual system only.
 
-- Plain words, short sentences. Landmen can spot corporate BS a mile away.
-- Real numbers: actual timelines, actual budgets, measurable outcomes. Standing approved claims: 45+ years of energy-land expertise; the largest local landman network nationwide. Everything else must be supplied, not invented.
-- Compete on outcomes, never bash competitors. "They coordinate contractors. We integrate solutions."
-- Partners, not vendors. "We" = Dudley; "you / your project" = the reader.
-- Never: emoji, exclamation hype, "cutting-edge"/"revolutionary" (unearned), "leverage", political commentary, renewables > ~20% of content mix.
+The one-line version, so this page stands alone: professional but real, confident without the ego. *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
 
 ## Imagery
 
