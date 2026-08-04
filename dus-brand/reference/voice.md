@@ -105,6 +105,7 @@ Run all three on any copy before it ships.
 - **Never brag about coming in under budget.** In this market that reads as a bad estimate. The standard is in budget and on schedule.
 - **Never use oil and gas vocabulary.** No upstream, midstream, minerals, or leases in that sense.
 - **Never use unverified figures.** Dollar amounts of past work, change-order comparisons, market-share claims.
+- **Never turn a client's contract requirement into a DUS promise.** The RFP and statement-of-work library describes what utilities require of their vendors. Those deadlines, thresholds, and service levels are obligations imposed on us, and the numbers belong to the client's contract. Use that material to understand the work. Never lift a figure out of it and publish it as a Dudley standard.
 - **Never use category filler.** Banned: best-in-industry, turnkey, world-class, cutting-edge, revolutionary, seamless, industry-leading, scaled to fit your needs, one-stop shop, leverage.
 
 ## Approved standing claims
@@ -120,11 +121,11 @@ Everything else must be supplied by the user. If a fact or number is missing, as
 
 **Announcing instead of inheriting**
 Before: "As we launch Dudley Utility Services, we're building a team ready to take on utility infrastructure projects nationwide."
-After: "Dudley Land Company has been recruiting and training landmen since 1980. Those are the people who staff our utility projects."
+After: "Dudley Land Company has spent 45+ years building a national network of land professionals. Dudley Utility Services recruits its right-of-way agents out of it."
 
 **Superlatives standing in for substance**
 Before: "Our industry-leading team delivers world-class right-of-way services with unmatched attention to detail."
-After: "Every parcel on your project comes with its deed reference, tract number, acreage, and current status. Files close within five days of signing."
+After: "Every parcel on your project carries its deed reference, tract number, acreage, and current status, so you can see where the corridor stands without asking."
 
 **A claim with no mechanism**
 Before: "We keep your project on schedule."
@@ -138,7 +139,7 @@ After: "Our agents show up with their credentials on and their hard hats on. Uti
 
 **Terms of the trade, used without explanation:** easement, right-of-way, corridor, parcel, tract, landowner, survey permission, title research, good-faith offer, condemnation, eminent domain, mobilization, closeout, retainage, encroachment, in-service date, investor-owned utility, certificate of public convenience and necessity.
 
-**They're land managers, not project managers.** Dudley's own term, used deliberately, because the role stays multifaceted rather than specialized.
+**Get the job titles right.** On the utility side the field staff are **right-of-way agents** or **land representatives**, and the people running the work are **land managers**. Garrett is explicit: "we don't call them project managers, we call them land managers." **Landman is the oil and gas title**, and it belongs to Dudley Land Company's side of the business. Brent describes the relationship as a transferable skill set, so write the utility roles by their own names and reserve landmen for Dudley Land Company history.
 
 **"Powered by" works, used occasionally.** Brent's version: proven leadership powered by 45+ years of legacy. It's a device, not a tagline.
 
