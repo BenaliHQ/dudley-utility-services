@@ -112,7 +112,7 @@ Run all three on any copy before it ships.
 These are the only claims usable without the user supplying a source:
 
 - **45+ years of energy-land expertise** (Dudley Land Company founded 1980).
-- **Licensed in roughly 38 states.** Confirm the current count before it goes in print; the source map is a few years old.
+- **Licensed in roughly 38 states.** Confirmed by Jenny, August 2026. The figure is accurate or conservative, so "roughly 38" is safe to publish. Keep the hedge word; don't state an exact count.
 
 Everything else must be supplied by the user. If a fact or number is missing, ask or leave the placeholder visible. Never invent one.
 
