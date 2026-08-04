@@ -27,7 +27,7 @@ What the buyer is actually buying: **confidence that the corridor will clear on 
 **What backs the claim up:**
 
 - **45+ years.** Dudley Land Company since 1980, thousands of clients, thousands of landmen, licensed in roughly 38 states. DUS runs on that same infrastructure: accounting, finance, HR, systems, recruiting.
-- **Command of the process.** Land rights follow a ten-stage sequence from mobilization through retainage. Describing it accurately, including where it gets difficult, is the strongest credibility signal available.
+- **Command of the process.** Land rights follow a multi-stage sequence from mobilization through retainage. Describing it accurately, including where it gets difficult, is the strongest credibility signal available.
 - **Privately owned, controlling its own pace.** A fact buyers want, and the reason the culture claim is possible. It can't carry the differentiation alone, because other privately owned firms compete in the same territory.
 - **Culture, and what it produces.** Investment in pay, training, and land managers who stay cross-trained rather than narrowly specialized. The client sees it as continuity across a program instead of turnover mid-project.
 - **Utility only, surface only.** Five industries: electric transmission, electric distribution, fiber optics and broadband, gas utility, water utility.
@@ -77,7 +77,7 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 Run all three on any copy before it ships.
 
 1. **Logo swap.** Put a competitor's name on the sentence. If it still works, it's a slogan. Cut it or replace it.
-2. **Learn something.** Can the reader name one thing about how utility land work gets done that they didn't know? If not, the piece is decoration.
+2. **Certainty.** Does the reader come away understanding how DUS removes uncertainty on their project? Explaining the industry in general doesn't count. The subject is always how we work, not how the work works.
 3. **Mechanism.** Every claim carries the how. "We reduce risk" is a claim. "We convert blanket easements to defined right-of-way before survey" is a mechanism.
 
 ## Mechanics
@@ -95,8 +95,8 @@ Run all three on any copy before it ships.
 
 ## Never
 
-- **Never name a client, project, route, or location.** Write "a 760-mile transmission project across four states." Assume the answer is always no.
-- **Never name or characterize a competitor**, and never draw a contrast that depends on one.
+- **Never name a client, project, route, or location.** Write "a 760-mile transmission project across four states."
+- **Never name or negatively characterize a competitor**, and never draw a contrast that depends on one.
 - **Never mention renewables.** No solar, wind, battery storage, or energy-transition framing anywhere. This is a standing client instruction and it differs from Dudley Land Company, which does sell renewables land services.
 - **Never imply the company is new.** No launches, no announcements, no arriving.
 - **Never define industry basics.** Buyers know what an easement is. Defining it signals we can't tell what's basic in this industry, and it reads as talking down to people who do this work daily.
@@ -118,19 +118,19 @@ Everything else must be supplied by the user. If a fact or number is missing, as
 
 **Announcing instead of inheriting**
 Before: "As we launch Dudley Utility Services, we're building a team ready to take on utility infrastructure projects nationwide."
-After: "Dudley Utility Services staffs utility infrastructure projects through the same recruiting engine that's placed landmen across roughly 38 states since 1980."
+After: "We've been hiring landmen since 1980, across roughly 38 states. Dudley Utility Services puts those same people on utility projects."
 
 **Superlatives standing in for substance**
 Before: "Our industry-leading team delivers world-class right-of-way services with unmatched attention to detail."
-After: "Every parcel file carries the deed reference, tract number, acreage, and acquired status, and it closes within five days of the instrument being executed."
+After: "Ask us about any parcel and you'll get the deed reference, the tract number, the acreage, and where it stands. Files close within five days of signing."
 
 **A claim with no mechanism**
 Before: "We keep your project on schedule."
-After: "We prepare condemnation documentation in parallel with voluntary negotiation, so a single holdout parcel doesn't reset the schedule."
+After: "We start the condemnation paperwork while we're still negotiating, so one holdout doesn't push your in-service date."
 
 **Values as sentiment**
 Before: "Safety is one of our core values and we're committed to it on every project."
-After: "Our agents carry credentials and wear personal protective equipment on every property visit. Utilities increasingly require it, and it's the first thing a landowner reads."
+After: "Our agents show up with their credentials on and their hard hats on. Utilities ask for it more every year, and it's the first thing a landowner sizes up when someone walks onto their property."
 
 ## The words we use
 
