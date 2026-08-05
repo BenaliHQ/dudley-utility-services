@@ -314,6 +314,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 
 /* ---------- Grids and cards ---------- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.grid-3.weighted { grid-template-columns: 1.42fr 1fr 1fr; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .pad { padding: 30px 28px; }
 .rank { font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
@@ -322,10 +323,19 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .dus-card p { font-size: 15.5px; color: var(--text); }
 
 /* ---------- Pull panel with plat corner ticks ---------- */
-.pull { margin-top: 34px; padding: 34px 32px; background: var(--white);
-  border: 1px solid var(--neutral-200); border-left: 4px solid var(--teal-500); }
-.pull p { font-size: 17px; }
-.pull-punch { margin-top: 14px; color: var(--teal-500); font-size: 19px; }
+.pull { margin-top: 36px; padding: 44px 46px; background: var(--white);
+  border: 1px solid var(--neutral-200);
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+/* the tick carrier only exists to hang the bottom corner marks; keep it out of the grid */
+.pull > .tick-b { position: absolute; inset: 0; pointer-events: none; }
+.pull > p { font-size: 17px; }
+.pull-punchwrap { padding-left: 44px; border-left: 1px solid var(--neutral-200); }
+.pull-lead { margin-bottom: 14px; }
+.pull-punch { position: relative; padding-left: 22px;
+  font-weight: 900; letter-spacing: -0.02em; line-height: 1.14;
+  font-size: clamp(24px, 3.1vw, 36px); color: var(--teal-500); }
+.pull-punch::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
+  width: 5px; background: var(--green-500); }
 
 /* ---------- Claim ---------- */
 .claimbox { padding: 46px 42px 52px; position: relative; overflow: hidden; }
@@ -396,7 +406,9 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
-  .grid-3, .grid-2, .tensions, .ba-row, .nevers { grid-template-columns: 1fr; }
+  .grid-3, .grid-3.weighted, .grid-2, .tensions, .ba-row, .nevers, .pull { grid-template-columns: 1fr; }
+  .pull { gap: 30px; }
+  .pull-punchwrap { padding-left: 0; border-left: none; padding-top: 28px; border-top: 1px solid var(--neutral-200); }
   .ba-cell.before { border-right: none; border-bottom: 1px solid var(--neutral-200); }
   .sec { padding: 60px 0; }
   .hero { padding: 52px 0 68px; }
@@ -438,8 +450,8 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">01 &middot; Audience</div>
     <h2 class="dus-h1 sec-title">Who we're talking to</h2>
-    <p class="sec-lede">Three people read this material, and they don't carry equal weight.</p>
-    <div class="grid-3">
+    <p class="sec-lede">Three audiences read this material, but they don't carry equal weight.</p>
+    <div class="grid-3 weighted">
       <div class="dus-card dus-card--accent pad">
         <div class="rank">First</div>
         <h3 class="dus-h3">The utility buyer</h3>
@@ -458,7 +470,10 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
     </div>
     <div class="pull dus-ticks"><span class="tick-b"></span>
       <p class="dus-body">Most readers arrive warm, referred by someone they already trust. They aren't deciding whether they need land services. They're checking whether this company is real, which calls for substantiation rather than persuasion. <strong>Show the work.</strong></p>
-      <p class="dus-body pull-punch">What the buyer is actually buying: <strong>confidence that the corridor will clear on schedule.</strong></p>
+      <div class="pull-punchwrap">
+        <div class="dus-micro pull-lead">What the buyer is actually buying</div>
+        <p class="pull-punch">Confidence that the corridor will clear on schedule.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -492,7 +507,7 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
     <h2 class="dus-h1 sec-title">The values, inherited word for word</h2>
     <p class="sec-lede">DUS uses Dudley Land Company's mission and core values exactly as they're already written. Nothing is adapted for utility. Where values appear in copy, this language is used verbatim.</p>
     <div class="missionbar"><span class="dus-micro">Mission</span><span class="mission-line">Delivering Energy Through Land</span></div>
-    <div class="note"><strong>Current, with a review coming.</strong> Brent's Q3 and Q4 planning session in September takes a deeper look at purpose and core values and locks in the one-page plan for Dudley Utility Services. He doesn't expect a large shift, and anything that does change gets passed along.</div>
+    <div class="note"><strong>Current, with a review coming.</strong> Brent's Q4 planning session in September takes a deeper look at purpose and core values and locks in the one-page plan for Dudley Utility Services. He doesn't expect a large shift, and anything that does change gets passed along.</div>
     <div class="grid-2">
       <div class="dus-card pad valcard"><h3 class="dus-h3 valname">The People</h3><ul class="plain">
         <li>We treat others as we expect to be treated.</li><li>We are humble and kind.</li><li>We recognize the merit and achievements of others.</li><li>We hold ourselves and others in high regard.</li><li>We smile and laugh.</li></ul></div>

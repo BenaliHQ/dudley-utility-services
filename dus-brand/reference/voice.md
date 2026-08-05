@@ -36,7 +36,7 @@ What the buyer is actually buying: **confidence that the corridor will clear on 
 
 DUS uses Dudley Land Company's mission and core values exactly as written. Nothing is adapted for utility. Where values appear in copy, use this language verbatim.
 
-**Current, with a review coming.** Brent's Q3 and Q4 planning session in September takes a deeper look at purpose and core values and locks in the one-page plan for Dudley Utility Services. He doesn't expect a large shift, and anything that does change gets passed along. Treat this set as settled for now rather than settled forever.
+**Current, with a review coming.** Brent's Q4 planning session in September takes a deeper look at purpose and core values and locks in the one-page plan for Dudley Utility Services. He doesn't expect a large shift, and anything that does change gets passed along. Treat this set as settled for now rather than settled forever.
 
 **The People**
 - We treat others as we expect to be treated.
