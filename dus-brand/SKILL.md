@@ -52,6 +52,8 @@ For carousels and decks: duplicate the appropriate slide/page section for more s
 
 **Read `reference/voice.md` before writing a single line of DUS copy.** It's the canonical voice and messaging reference: audience, claim, values, register, banned constructions, and the three tests every piece has to pass. This section is the short form, not a substitute.
 
+**Anything about electric transmission also reads `reference/electric-transmission-pillar.md` first.** It's the settled positioning foundation for that topic: the one-line and one-paragraph position, what we believe, what we do, differentiation, and the USP. Transmission pages, one-pagers, and social posts derive from it rather than re-arguing the position, and its § Held for confirmation list gates what can't be published yet.
+
 Professional but real. Confident without the ego. Plain words, short sentences, sentence case body. UPPERCASE only in display headlines and eyebrow labels. Partners, not vendors: "we" is Dudley, "you" and "your project" are the reader. Voice anchor: *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
 
 Four things that break the brand faster than any visual mistake:
@@ -81,6 +83,7 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 
 - `dus-core.css` — the design system source (already inlined in every template).
 - `reference/voice.md` — **the canonical voice and messaging reference. Read it before writing DUS copy.**
+- `reference/electric-transmission-pillar.md` — **the settled electric transmission positioning. Read it before writing anything on that topic.**
 - `reference/brand-rules.md` — expanded visual rules and rationale.
 - `index.html` — the brand book; open it to see every foundation and component.
 - `assets/` — logo PNGs and their base64 for reuse.
