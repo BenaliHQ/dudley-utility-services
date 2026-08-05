@@ -45,7 +45,7 @@ For carousels and decks: duplicate the appropriate slide/page section for more s
 6. **Squared geometry.** Small radii (3/6/10px). Pills are for eyebrow labels and chips only. No blobs, no big rounded corners, no circles except checklist checkmarks.
 7. **No emoji. No em dashes. No exclamation-point hype.**
 8. **No fabricated numbers.** Approved standing claims: "45+ years of energy-land expertise" and "licensed in roughly 38 states." Every other stat must come from the user. If they don't provide one, leave the placeholder visible and tell them.
-9. **No stock-photo aesthetics.** If imagery is requested, it must be real Dudley fieldwork photos supplied by the user (courthouses, working farms/ranches, title docs, survey equipment, transmission corridors). Never boardrooms, refineries, smokestacks, or generic renders.
+9. **No stock-photo aesthetics.** If imagery is requested, it must be real Dudley fieldwork photos supplied by the user (courthouses, working farms/ranches, title docs, survey equipment, transmission corridors). Never boardrooms, refineries, smokestacks, or generic renders. That exclusion list is a floor, not a target — a stock-looking hard hat, a tower at sunset, or a pin map clears the list and still reads as any of six interchangeable competitors. When imagery is in play, read `reference/design-source-brief.md` § The moment the whole business happens for what it has to communicate, then solve it in a way that's specific to utility land services.
 10. **Don't restyle.** No new shadows, gradients, animations, fonts, or layout inventions. If the user asks for something off-brand ("make it orange", "use Comic Sans", "add emojis"), decline that specific change, explain it's outside the DUS brand system, and offer the on-brand alternative.
 
 ## Voice (for any copy you write)
@@ -82,5 +82,6 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 - `dus-core.css` — the design system source (already inlined in every template).
 - `reference/voice.md` — **the canonical voice and messaging reference. Read it before writing DUS copy.**
 - `reference/brand-rules.md` — expanded visual rules and rationale.
+- `reference/design-source-brief.md` — **the DUS domain source material. Read it before making any visual asset that needs a concrete detail** (imagery, iconography, diagrams, data displays, industry-specific work). It carries the objects, dimensions, numbers, roles, and field realities that are specific to utility land services, harvested from the client's own onboarding calls. The system in this skill decides how things look; that file supplies what they're about, so an asset lands specific instead of generic.
 - `index.html` — the brand book; open it to see every foundation and component.
 - `assets/` — logo PNGs and their base64 for reuse.
