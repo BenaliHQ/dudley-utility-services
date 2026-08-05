@@ -20,7 +20,7 @@ What the buyer is actually buying: **confidence that the corridor will clear on 
 
 ## What we say
 
-**The claim: creating certainty through strategic land solutions.** An easement is a permanent encumbrance on private property, negotiated one owner at a time, and a single holdout can stall a project. The utility is buying confidence, not paperwork.
+**The claim: creating certainty through strategic land solutions.** Easements are negotiated one owner at a time, and a single holdout can stall a project. The utility is buying confidence, not paperwork.
 
 **Mission and claim are different things.** "Delivering energy through land" is the inherited Dudley mission statement and it stays exactly as written. "Creating certainty through strategic land solutions" is what DUS sells. Don't collapse one into the other, and don't treat either as a tagline to stamp on every surface.
 
@@ -35,6 +35,8 @@ What the buyer is actually buying: **confidence that the corridor will clear on 
 ## The values, inherited word for word
 
 DUS uses Dudley Land Company's mission and core values exactly as written. Nothing is adapted for utility. Where values appear in copy, use this language verbatim.
+
+**Current, with a review coming.** Brent's Q3 and Q4 planning session in September takes a deeper look at purpose and core values and locks in the one-page plan for Dudley Utility Services. He doesn't expect a large shift, and anything that does change gets passed along. Treat this set as settled for now rather than settled forever.
 
 **The People**
 - We treat others as we expect to be treated.
@@ -68,7 +70,7 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 **Established, never new.** DUS is not a startup and never reads as one. This is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, the same systems, and the same people. Inherit rather than announce.
 
-**Attribute the history honestly.** Dudley Land Company earned the 45 years and DUS runs on it. Writing as though DUS itself has been doing this since 1980 crosses from inheritance into a false claim, and this buyer will check. Name Dudley Land Company when the history is the point.
+**Attribute the history honestly.** Dudley Land Company earned the 45 years and DUS runs on it. Writing as though DUS itself has been doing this since 1980 crosses from inheritance into a false claim. Name Dudley Land Company when the history is the point.
 
 **Certain, never boastful.** Dudley Land Company's standard carries straight over: confidence without the ego, a reputation earned through results rather than self-promotion, and aiming to be the most trusted voice in the room over the loudest. Replace every superlative with the specific thing that would have justified it.
 
