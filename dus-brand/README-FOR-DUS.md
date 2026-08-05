@@ -25,7 +25,7 @@ Point a session at this folder (or keep the folder inside the workspace Claude c
 
 ## Asking for things — examples that work well
 
-- "Make a LinkedIn post announcing that Savannah Land joined as Land Director for Utilities, starting August 3."
+- "Make a LinkedIn post announcing that Savannah Cano joined as Land Director for Utilities, starting August 3."
 - "I need a carousel: 5 things transmission PMs get wrong about easement timelines. Here are my 5 points: …"
 - "Company page LinkedIn banner."
 - "Personal LinkedIn cover for Brent."

@@ -42,6 +42,25 @@ samples/                 Rendered examples (PNG + PDF) of what the system produc
 - No emoji, no hype words, no invented numbers. Approved standing claims: 45+ years of energy-land expertise; licensed in roughly 38 states.
 - Voice is canonical in `dus-brand/reference/voice.md`. DUS never reads as new, never names a client, and never mentions renewables.
 
+## The site
+
+This repo is connected to Vercel through GitHub. **Pushing to `main` is the deploy** —
+Vercel builds and publishes automatically. There is no CLI upload and no manual deploy
+step; never run `vercel deploy` or upload from a temp folder.
+
+```
+index.html            landing page, links to everything below
+pages/                rendered pages (brand-voice, and whatever comes next)
+dus-brand/index.html  the brand book
+vercel.json           static config: clean URLs, security headers
+```
+
+Branch pushes get their own preview URL, which is the right way to share something for
+review before it goes to `main`.
+
+Adding a page: build it from a template per `dus-brand/SKILL.md`, drop it in `pages/`,
+add a link on `index.html`, and push.
+
 ## Making changes
 
 The templates are locked by design — consistency is the product. If something needs to evolve (new template, new claim, contact block updates), change it here and cut a new release so every copy stays in sync. Maintained with the Benali team.

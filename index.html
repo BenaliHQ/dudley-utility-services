@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dudley Utility Services — Brand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dus-brand/dus-core.css">
+<style>
+  body { background: var(--white); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+  .hero { padding: 84px 0 96px; }
+  .hero h1 { font-size: clamp(38px, 6vw, 68px); color: var(--white); margin-bottom: 22px; }
+  .hero p { font-size: 18px; line-height: 1.55; color: var(--on-dark-2); max-width: 620px; }
+  .kick { margin-bottom: 20px; }
+  .sec { padding: 76px 0; }
+  .sec h2 { font-size: 30px; color: var(--teal-500); margin: 14px 0 30px; }
+  .items { display: grid; gap: 18px; }
+  a.item { display: block; padding: 28px 30px; text-decoration: none;
+    background: var(--white); border: 1px solid var(--neutral-200);
+    border-top: 4px solid var(--green-500); border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm); transition: box-shadow 160ms, transform 120ms; }
+  a.item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  a.item h3 { font-weight: 900; letter-spacing: -0.018em; font-size: 21px; color: var(--teal-500); margin-bottom: 8px; }
+  a.item p { font-size: 15.5px; line-height: 1.6; color: var(--text-2); }
+  .foot { padding: 34px 0; }
+  .foot p { font-size: 12.5px; letter-spacing: .04em; color: var(--on-dark-2); }
+</style>
+</head>
+<body>
+
+<header class="hero dus-field-teal dus-grid-dark dus-horizon">
+  <div class="wrap">
+    <div class="dus-micro dus-micro--dark kick">Dudley Utility Services</div>
+    <h1 class="dus-display">BRAND</h1>
+    <p>The DUS design system, brand book, and the pages built from them.</p>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">Pages</div>
+    <h2 class="dus-h1">What's here</h2>
+    <div class="items">
+      <a class="item" href="/pages/brand-voice">
+        <h3>Brand Voice and Messaging</h3>
+        <p>Who we're talking to, what we claim, the inherited values, how we sound, the three tests, and what we never do. The working standard for the website, one-pagers, and social.</p>
+      </a>
+      <a class="item" href="/dus-brand/index.html">
+        <h3>Brand Book</h3>
+        <p>The visual system: logo rules, color, type, the route and grid motif, components, and live previews of every template.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="dus-band dus-grid-dark foot">
+  <div class="wrap"><p>Dudley Utility Services &middot; Brand system maintained with Demandcast</p></div>
+</footer>
+
+</body>
+</html>
