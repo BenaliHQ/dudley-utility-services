@@ -136,7 +136,7 @@ That set serves the buyer (safe, credentialed, professional in the field) and th
 
 The related voice guidance, already approved copy, describing the same requirement in words: *"Our agents show up with their credentials on and their hard hats on. Utilities ask for it more every year, and it's the first thing a landowner sizes up when someone walks onto their property."*
 
-**Two constraints worth knowing before you invest time.** No photography of real DUS crews exists. And Garrett would accept AI-generated placeholders, but not until the logo is settled, because the hard hat and the vest carry the logo. Both of those are arguments for solving this some way other than a photograph.
+**Two constraints worth knowing before you invest time.** No photography of real DUS crews exists. And Garrett won't shoot or generate it, placeholders included, until the branded hard hat and vest are designed, since that's a large part of what the pictures are meant to show. Both are arguments for solving this some way other than a photograph.
 
 > [!warning] Garrett's own visual reference is not a reference
 > Garrett points at his previous company's site as the model, and he'll likely keep doing it. He led that build, so it's loyalty rather than art direction. **Jenny's ruling: the design is outdated, it reads cheesy, and nothing visual gets inherited from it.** Not the imagery, not the layout, not the treatment. The only thing worth taking from that site is Garrett's *reasoning* about restraint for this audience, which is real and is captured below. If your AI goes looking at it for visual cues, that's a wrong turn.
@@ -209,7 +209,7 @@ These are decided. They're here so you don't spend time re-deciding them and so 
 
 Flagging these so nothing gets built twice.
 
-1. **Is the logo lockup final?** This is the big one, and it gates three things at once: the business cards due Friday, the hard hat and vest apparel, and any field imagery that shows the apparel. Garrett on 7/30: *"we got to decide what that's going to look like first on the logo and everything and then we'll do that."* A lockup already exists and ships in the skill. Jenny is raising this with him on 8/7. **Until it's answered, the cards are provisional** and should be presented that way.
+1. **What do the branded hard hats and vests look like?** Garrett won't shoot or generate field imagery until that's decided, including AI placeholders: *"we could probably even AI some if we wanted to just to start showing it, but we got to decide what that's going to look like first on the logo and everything."* Read in context he's talking about the logo **on the gear** — placement, treatment, whether it holds up small on a hard hat and on high-visibility yellow. **The lockup itself is settled** and ships in this skill, so nothing else waits on this. Business cards and print are unaffected.
 2. **The five map pins.** Unresolved, and it blocks any finished map asset.
 3. **Kudu's public name.** Internally "Kudu Land Suite." Brent: *"that's whatever the hell we're going to call it."* Garrett wants a technology presentation modeled on how his last company presented theirs.
 4. **No documented DUS safety record exists.** Safety is an explicitly scored buyer criterion and it's the thing Garrett most wants visible. Field standards inherit from Dudley Land Company practice, but there's no DUS-specific record to cite. Nothing gets invented to fill it.
