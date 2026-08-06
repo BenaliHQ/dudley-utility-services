@@ -66,6 +66,8 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 ## How we sound
 
+**First person, always.** We secure the land rights. We staff the field. Never "Dudley Utility Services secures" in our own copy; the company speaks as we and our on every page and every piece. (Jenny's ruling, 2026-08-05, during the transmission page review.)
+
 **Precise, and human.** Buyers are structured people who expect rigor. They also work with landowners every day, and they know a vendor who sounds like a person builds better landowner relationships. Garrett's version: we're regimented, we're controlled, and we're not robots.
 
 **Established, never new.** DUS is not a startup and never reads as one. This is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, the same systems, and the same people. Inherit rather than announce.
