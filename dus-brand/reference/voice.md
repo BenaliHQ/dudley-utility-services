@@ -76,6 +76,8 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 **Certain, never boastful.** Dudley Land Company's standard carries straight over: confidence without the ego, a reputation earned through results rather than self-promotion, and aiming to be the most trusted voice in the room over the loudest. Replace every superlative with the specific thing that would have justified it.
 
+**Don't knock the industry.** Nothing on a client-facing surface criticizes the field or its norms (flat day rates, other vendors' churn). We differentiate by what we do, never by what the industry fails to do. (Jenny's ruling, 2026-08-05, during the transmission page review.)
+
 **Specific over comprehensive.** One concrete detail about how a corridor gets cleared beats a list of twenty-three services. Cut the list, keep the detail.
 
 ## The three tests
