@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dudley Utility Services — Electric Transmission</title>
+<meta name="description" content="Dudley Utility Services secures land rights for electric transmission corridors, from first landowner contact through retainage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   DUDLEY UTILITY SERVICES — CORE DESIGN SYSTEM  v2.0
+   Refined by Benali from the Dudley Land Company brand guidelines.
+   This block is inlined verbatim into every DUS template. Do not restyle.
+   Concept: "The route and the grid" — plat-map survey grids, a green
+   right-of-way route line, squared structural geometry, teal depth.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand: DUS Teal (primary) ---- */
+  --teal-950: #021018;
+  --teal-900: #032230;
+  --teal-800: #033349;
+  --teal-700: #02425C;
+  --teal-600: #014A65;
+  --teal-500: #015270;   /* DUS Teal — primary */
+  --teal-400: #0A7196;
+  --teal-300: #2E93B8;
+  --teal-200: #7EC0D6;
+  --teal-100: #D6ECF3;
+  --teal-050: #EDF6FA;
+
+  /* ---- Brand: Dudley Green (accent — use sparingly) ---- */
+  --green-700: #2E9A34;
+  --green-600: #38B03E;
+  --green-500: #41BE48;  /* Dudley Green */
+  --green-400: #67CC6C;
+  --green-100: #E4F7E5;
+
+  /* ---- Neutrals ---- */
+  --ink-950: #06090B;    /* near-black ground (never pure #000 on large fields) */
+  --ink-900: #101417;
+  --ink-800: #2B2B2B;    /* Dudley dark neutral — primary text */
+  --ink-700: #444444;
+  --ink-600: #6E6E6E;
+  --ink-500: #949494;
+  --ink-400: #BEBEBE;
+  --neutral-300: #D6D6D6;
+  --neutral-200: #EBEBEB; /* Dudley light neutral */
+  --neutral-100: #F5F5F5;
+  --white: #FFFFFF;
+
+  /* ---- Semantic ---- */
+  --brand: var(--teal-500);
+  --accent: var(--green-500);
+  --text: var(--ink-800);
+  --text-2: var(--ink-600);
+  --text-3: var(--ink-500);
+  --on-dark: rgba(255,255,255,0.94);
+  --on-dark-2: rgba(255,255,255,0.72);
+  --on-dark-3: rgba(255,255,255,0.50);
+  --hairline-dark: rgba(255,255,255,0.16);
+  --hairline: var(--neutral-200);
+
+  /* ---- Signature surfaces ----
+     Teal field: light enters top-left, land-dark settles bottom-right. */
+  --field-teal: linear-gradient(142deg, #026687 0%, #015270 34%, #033349 66%, #071C26 100%);
+  --field-ink:  linear-gradient(150deg, #1A2228 0%, #101417 55%, #06090B 100%);
+  --glow-green: radial-gradient(ellipse 60% 42% at 18% 104%, rgba(65,190,72,0.16), transparent 70%);
+
+  /* ---- Type ---- */
+  --font: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ---- Radius: squared and structural ---- */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-pill: 999px;      /* eyebrow pills and status chips ONLY */
+
+  /* ---- Shadows: cool, subtle ---- */
+  --shadow-sm: 0 1px 2px rgba(3,34,48,0.07), 0 1px 3px rgba(3,34,48,0.08);
+  --shadow-md: 0 4px 14px rgba(3,34,48,0.10), 0 2px 4px rgba(3,34,48,0.06);
+  --shadow-lg: 0 16px 40px rgba(3,34,48,0.16), 0 4px 10px rgba(3,34,48,0.07);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  font-family: var(--font);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ==========================================================================
+   SURVEY GRID — plat-map pattern. Fine lines every 44px, a heavier
+   "section line" every 4th cell (176px). Inline SVG tile = prints clean.
+   ========================================================================== */
+.dus-grid-dark, .dus-grid-light { position: relative; }
+.dus-grid-dark::before, .dus-grid-light::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-repeat: repeat; background-size: 176px 176px;
+}
+.dus-grid-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='176' height='176'%3E%3Cg stroke='%23FFFFFF' stroke-opacity='0.05' stroke-width='1'%3E%3Cpath d='M44.5 0v176M88.5 0v176M132.5 0v176M0 44.5h176M0 88.5h176M0 132.5h176'/%3E%3C/g%3E%3Cg stroke='%23FFFFFF' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M175.5 0v176M0 175.5h176'/%3E%3C/g%3E%3C/svg%3E");
+}
+.dus-grid-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='176' height='176'%3E%3Cg stroke='%23015270' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M44.5 0v176M88.5 0v176M132.5 0v176M0 44.5h176M0 88.5h176M0 132.5h176'/%3E%3C/g%3E%3Cg stroke='%23015270' stroke-opacity='0.13' stroke-width='1'%3E%3Cpath d='M175.5 0v176M0 175.5h176'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* Fade the grid toward the top so type stays clean: add .dus-grid-fade */
+.dus-grid-fade::before {
+  background-image: inherit;
+}
+
+/* Dark field helpers — gradient + green under-glow + grid stack correctly */
+.dus-field-teal { background: var(--glow-green), var(--field-teal); color: var(--on-dark); }
+.dus-field-ink  { background: var(--glow-green), var(--field-ink);  color: var(--on-dark); }
+
+/* Horizon rule — the green land line anchoring dark panels */
+.dus-horizon { position: relative; }
+.dus-horizon::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+  background: linear-gradient(90deg, var(--green-500) 0%, var(--green-600) 60%, var(--teal-400) 100%);
+}
+
+/* ==========================================================================
+   ROUTE ALIGNMENT — the right-of-way motif, drawn like a surveyor's
+   alignment sheet: dash-dot centerline, easement corridor band with dashed
+   edges, square PI monuments with center points, perpendicular station
+   ticks, faint parcel boundaries. ONE per composition, behind content,
+   never through body text.
+   Variants (inline SVG; canonical markup lives in the templates + index):
+     full      1200x320  parcels + corridor + stationing   covers, title slides
+     corridor  1200x200  corridor band, no parcels/labels  social, carousel
+     slim      1200x96   centerline + ticks + monuments    banners, footers
+   Class-styled below. Add .rw-on-light on light surfaces.
+   ========================================================================== */
+.dus-route { line-height: 0; }
+.dus-route svg { width: 100%; height: auto; display: block; }
+.dus-route .rw-parcel path { stroke: #FFFFFF; stroke-opacity: .06; stroke-width: 1; }
+.dus-route .rw-band { fill: #41BE48; fill-opacity: .05; }
+.dus-route .rw-edge { stroke: #41BE48; stroke-opacity: .28; stroke-width: 1; }
+.dus-route .rw-center { stroke: #41BE48; stroke-width: 2; stroke-opacity: .95; }
+.dus-route .rw-tick line { stroke: #41BE48; stroke-opacity: .45; stroke-width: 1.4; }
+.dus-route .rw-mon rect { stroke: #41BE48; stroke-width: 1.6; fill: none; }
+.dus-route .rw-dot circle { fill: #41BE48; }
+.dus-route .rw-label text { font: 700 10.5px var(--font); letter-spacing: .22em; fill: #FFFFFF; fill-opacity: .34; }
+.dus-route.rw-on-light .rw-parcel path { stroke: #015270; stroke-opacity: .10; }
+.dus-route.rw-on-light .rw-band { fill-opacity: .06; }
+.dus-route.rw-on-light .rw-edge { stroke-opacity: .42; }
+.dus-route.rw-on-light .rw-center { stroke: #38B03E; stroke-opacity: 1; }
+.dus-route.rw-on-light .rw-tick line { stroke: #38B03E; stroke-opacity: .5; }
+.dus-route.rw-on-light .rw-mon rect { stroke: #38B03E; }
+.dus-route.rw-on-light .rw-dot circle { fill: #38B03E; }
+.dus-route.rw-on-light .rw-label text { fill: #015270; fill-opacity: .45; }
+
+/* ==========================================================================
+   TYPE SYSTEM — Lato only. Black 900 carries the brand.
+   ========================================================================== */
+.dus-display {            /* covers, title slides, banners — short, declarative */
+  font-weight: 900; letter-spacing: -0.02em; line-height: 0.98;
+  text-transform: uppercase;
+}
+.dus-h1 { font-weight: 900; letter-spacing: -0.022em; line-height: 1.06; }
+.dus-h2 { font-weight: 900; letter-spacing: -0.018em; line-height: 1.12; }
+.dus-h3 { font-weight: 700; letter-spacing: -0.008em; line-height: 1.22; }
+.dus-body { font-weight: 400; line-height: 1.6; }
+.dus-lede { font-weight: 400; line-height: 1.5; }
+
+/* Eyebrow — uppercase, tracked, with a leading survey-marker square */
+.dus-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.dus-eyebrow::before {
+  content: ""; width: 9px; height: 9px; background: var(--green-500);
+  flex: 0 0 auto;
+}
+.dus-eyebrow--teal { color: var(--teal-500); }
+.dus-eyebrow--dark { color: var(--on-dark-2); }
+
+/* Pill — dark-surface label chip (social eyebrows, status) */
+.dus-pill {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 9px 18px; border-radius: var(--r-pill);
+  background: rgba(65,190,72,0.14);
+  border: 1px solid rgba(65,190,72,0.36);
+  color: var(--green-400);
+  font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+}
+
+/* Micro label — plat-sheet annotation. Decorative metadata only. */
+.dus-micro {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.dus-micro--dark { color: var(--on-dark-3); }
+
+/* Accent rule — green emphasis line */
+.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
+
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+
+/* Stat block — the proof point */
+.dus-stat { display: flex; flex-direction: column; gap: 6px; }
+.dus-stat .value {
+  font-weight: 900; letter-spacing: -0.03em; line-height: 0.9;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.dus-stat .value .unit { color: var(--green-500); }
+.dus-stat .label {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+}
+.dus-stat--dark .value { color: var(--white); }
+.dus-stat--dark .label { color: var(--on-dark-2); }
+.dus-stat--light .value { color: var(--teal-500); }
+.dus-stat--light .label { color: var(--text-2); }
+
+/* Checklist — green circle check (parent-brand motif, kept) */
+.dus-check { list-style: none; display: flex; flex-direction: column; }
+.dus-check li { display: flex; align-items: flex-start; gap: 14px; font-weight: 700; }
+.dus-check li::before {
+  content: ""; flex: 0 0 auto; width: 1.35em; height: 1.35em; margin-top: 0.02em;
+  border-radius: 50%; background-color: var(--green-500);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.6 3.6 7.4-8.2' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
+}
+
+/* Card — white, hairline border, optional green top bar */
+.dus-card {
+  background: var(--white); border: 1px solid var(--neutral-200);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+}
+.dus-card--accent { border-top: 4px solid var(--green-500); }
+
+/* Corner ticks — plat-sheet frame corners on light print surfaces */
+.dus-ticks { position: relative; }
+.dus-ticks::before, .dus-ticks::after,
+.dus-ticks > .tick-b::before, .dus-ticks > .tick-b::after {
+  content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+  background-repeat: no-repeat; background-size: 14px 14px;
+}
+.dus-ticks::before { top: 0; left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+.dus-ticks::after { top: 0; right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+.dus-ticks > .tick-b::before { bottom: 0; left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+.dus-ticks > .tick-b::after { bottom: 0; right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+
+/* Footer band — document/deck footer */
+.dus-band {
+  background: var(--ink-950); color: var(--on-dark-2);
+  border-top: 4px solid var(--green-500);
+}
+
+/* Buttons (web/interactive contexts) */
+.dus-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px; border: none; border-radius: var(--r-md);
+  font-family: var(--font); font-size: 15px; font-weight: 700; letter-spacing: 0.02em;
+  cursor: pointer; text-decoration: none;
+  transition: filter 160ms cubic-bezier(0.4,0,0.2,1), transform 120ms cubic-bezier(0.4,0,0.2,1);
+}
+.dus-btn:hover { filter: brightness(0.94); }
+.dus-btn:active { transform: scale(0.97); }
+.dus-btn--primary { background: var(--teal-500); color: var(--white); }
+.dus-btn--accent  { background: var(--green-500); color: var(--ink-950); }
+.dus-btn--ghost   { background: transparent; color: var(--teal-500); box-shadow: inset 0 0 0 1.5px var(--teal-500); }
+
+/* ==========================================================================
+   ELECTRIC TRANSMISSION INDUSTRY PAGE — web layout.
+   Every color, type weight, surface, and component below comes from
+   dus-core.css. No new hues, no new fonts, no restyling.
+
+   Two deliberate deviations from pages/electric-transmission-pillar.html,
+   both from the 2026-08-05 design rulings:
+     1. Dark surfaces use a lifted teal ramp (teal-400 -> teal-700) so the
+        band reads perceptibly teal end to end rather than resolving to
+        near-black at the bottom-right. Tokens only; no new hues.
+     2. No .dus-horizon green rule on dark bands. Black-plus-green is
+        Dudley Land Company's look; teal is the DUS differentiator.
+   ========================================================================== */
+
+body { background: var(--white); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+img.dus-logo { display: block; width: auto; object-fit: contain; }
+
+/* Lifted teal fields — perceptibly teal across the whole surface */
+.field-teal-hero {
+  background: var(--glow-green),
+    linear-gradient(142deg, var(--teal-400) 0%, var(--teal-500) 38%, var(--teal-700) 100%);
+  color: var(--on-dark);
+}
+.field-teal-close {
+  background: var(--glow-green),
+    linear-gradient(142deg, var(--teal-500) 0%, var(--teal-600) 45%, var(--teal-800) 100%);
+  color: var(--on-dark);
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: 68px 0 88px; overflow: hidden; }
+.hero .dus-logo { height: 34px; margin-bottom: 52px; }
+.hero-kicker { margin-bottom: 20px; }
+.hero h1 { font-size: clamp(46px, 8vw, 96px); color: var(--white); margin-bottom: 28px; }
+.hero-lede { font-size: 19.5px; line-height: 1.55; color: var(--on-dark); max-width: 700px; }
+.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--hairline-dark); }
+.chiplabel { margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips .dus-pill { padding: 8px 17px; font-size: 12px; letter-spacing: .13em; }
+
+/* ---------- Sections ---------- */
+.sec { padding: 86px 0; }
+.sec-alt { background: var(--neutral-100); }
+.sec-dark { color: var(--on-dark); }
+.sec-title { font-size: clamp(30px, 3.8vw, 46px); color: var(--teal-500); margin: 14px 0 18px; }
+.sec-title.on-dark { color: var(--white); }
+.sec-lede { font-size: 17.5px; line-height: 1.62; color: var(--text-2); max-width: 740px; }
+.sec-lede.on-dark { color: var(--on-dark-2); }
+.sec-lede + .sec-lede { margin-top: 14px; }
+.sec-body { font-size: 16.5px; line-height: 1.65; color: var(--text); max-width: 760px; }
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.pad { padding: 30px 28px; }
+.dus-card h3 { color: var(--teal-500); margin-bottom: 12px; font-size: 20px; }
+.dus-card p { font-size: 15.5px; line-height: 1.62; color: var(--text); }
+
+.note { margin-top: 30px; padding: 22px 26px; background: var(--white);
+  border: 1px solid var(--neutral-200); border-left: 4px solid var(--green-500);
+  font-size: 15.5px; line-height: 1.65; color: var(--text); }
+.note strong { color: var(--teal-500); }
+
+/* ---------- Pull panel (the pricing example) ---------- */
+.pull { margin-top: 38px; padding: 44px 46px; background: var(--white);
+  border: 1px solid var(--neutral-200); position: relative;
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+.pull > .tick-b { position: absolute; inset: 0; pointer-events: none; }
+.pull p.dus-body { font-size: 17px; }
+.pull-punchwrap { padding-left: 44px; border-left: 1px solid var(--neutral-200); }
+.pull-lead { margin-bottom: 14px; }
+.pull-punch { position: relative; padding-left: 22px;
+  font-weight: 900; letter-spacing: -0.02em; line-height: 1.16;
+  font-size: clamp(23px, 2.9vw, 33px); color: var(--teal-500); }
+.pull-punch::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
+  width: 5px; background: var(--green-500); }
+
+/* ---------- The four moves ---------- */
+.moves { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 42px; margin-top: 42px; }
+.move { padding-top: 20px; border-top: 3px solid var(--teal-500); }
+.move .mnum { font-size: 11px; font-weight: 700; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--green-600); margin-bottom: 10px; }
+.move h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 12px; }
+.move p { font-size: 16px; line-height: 1.62; color: var(--text); }
+
+/* ---------- Credibility strip (inside "Who runs the work") ---------- */
+.credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+  margin: 40px 0 42px; padding: 34px 36px;
+  background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
+.cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--text-3); }
+.cred .value { font-weight: 900; letter-spacing: -0.035em; line-height: .9;
+  font-size: clamp(38px, 5.2vw, 62px); color: var(--teal-500); margin: 10px 0 12px;
+  font-variant-numeric: lining-nums tabular-nums; }
+.cred .label { font-size: 13px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-2); line-height: 1.4; }
+
+.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); }
+.usp-line { position: relative; padding-left: 22px;
+  font-weight: 900; letter-spacing: -0.02em; line-height: 1.22;
+  font-size: clamp(19px, 2.3vw, 27px); color: var(--teal-500); }
+.usp-line::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
+  width: 5px; background: var(--green-500); }
+
+/* ---------- Coverage band ---------- */
+.mapframe { margin-top: 38px; position: relative; overflow: hidden;
+  background: var(--neutral-100); border: 1px solid var(--neutral-200); }
+.mapframe .mapinner { position: relative; padding: 64px 40px; display: flex;
+  flex-direction: column; align-items: center; justify-content: center; gap: 22px; min-height: 300px; }
+.mapframe .dus-route { width: 100%; max-width: 900px; opacity: .95; }
+.maptext { text-align: center; max-width: 520px; }
+.maptext .dus-micro { display: block; margin-bottom: 10px; }
+.maptext p { font-size: 15.5px; line-height: 1.6; color: var(--text-2); }
+
+/* ---------- For landowners ---------- */
+.lo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 42px; margin-top: 40px; }
+.lo { padding-left: 20px; border-left: 3px solid var(--green-500); }
+.lo h3 { font-size: 19px; color: var(--teal-500); margin-bottom: 10px; }
+.lo p { font-size: 16px; line-height: 1.62; color: var(--text); }
+
+/* ---------- FAQ ---------- */
+.faq { margin-top: 40px; border-top: 1px solid var(--neutral-300); }
+.faq details { border-bottom: 1px solid var(--neutral-300); }
+.faq summary { display: flex; align-items: baseline; gap: 22px; padding: 26px 0;
+  cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::marker { content: ""; }
+.faq .qnum { flex: 0 0 auto; font-size: 13px; font-weight: 700; letter-spacing: .18em;
+  color: var(--green-600); font-variant-numeric: lining-nums tabular-nums; }
+.faq .qtext { flex: 1; font-weight: 900; letter-spacing: -0.015em; line-height: 1.25;
+  font-size: clamp(18px, 2.1vw, 23px); color: var(--teal-500); }
+.faq .sign { flex: 0 0 auto; position: relative; width: 15px; height: 15px; }
+.faq .sign::before, .faq .sign::after { content: ""; position: absolute; background: var(--teal-500);
+  transition: transform 160ms cubic-bezier(0.4,0,0.2,1), opacity 160ms cubic-bezier(0.4,0,0.2,1); }
+.faq .sign::before { left: 0; right: 0; top: 7px; height: 2px; }
+.faq .sign::after { top: 0; bottom: 0; left: 7px; width: 2px; }
+.faq details[open] .sign::after { opacity: 0; transform: scaleY(0); }
+.faq .ans { padding: 0 0 30px 51px; max-width: 840px;
+  font-size: 16.5px; line-height: 1.68; color: var(--text); }
+.faq .ans p + p { margin-top: 14px; }
+.faq .who { display: inline-block; margin-bottom: 12px; font-size: 11px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--text-3); }
+
+/* ---------- Close ---------- */
+.close { padding: 88px 0 68px; }
+.close-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+.close h2 { font-size: clamp(30px, 3.8vw, 46px); color: var(--white); margin: 14px 0 18px; }
+.close p { font-size: 17px; line-height: 1.6; color: var(--on-dark); max-width: 560px; }
+.close .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.onepager { padding: 30px 32px; border: 1px solid var(--hairline-dark); background: rgba(255,255,255,0.05); }
+.onepager h3 { font-size: 19px; color: var(--white); margin: 12px 0 12px; }
+.onepager p { font-size: 15.5px; line-height: 1.62; color: var(--on-dark-2); }
+/* Ghost button, dark-surface variant: the core --ghost is teal-on-white and
+   disappears against a teal band. Tokens only, no new hues. */
+.onepager .dus-btn { margin-top: 22px; background: transparent; color: var(--white);
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.45); }
+.onepager .dus-btn:hover { box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.8); filter: none; }
+
+.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--hairline-dark);
+  display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
+.footlogo { height: 26px; }
+.foottext { font-size: 12.5px; line-height: 1.7; letter-spacing: .04em; color: var(--on-dark-2); text-align: right; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .wrap { padding: 0 24px; }
+  .grid-2, .grid-3, .moves, .credstrip, .lo-grid, .pull, .close-grid { grid-template-columns: 1fr; }
+  .pull { gap: 30px; padding: 34px 28px; }
+  .pull-punchwrap { padding-left: 0; border-left: none; padding-top: 26px; border-top: 1px solid var(--neutral-200); }
+  .credstrip { gap: 30px; padding: 30px 28px; }
+  .sec { padding: 58px 0; }
+  .hero { padding: 48px 0 64px; }
+  .close { padding: 60px 0 52px; }
+  .faq .ans { padding-left: 0; }
+  .foottext { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ 01 · HERO ============================ -->
+<header class="hero field-teal-hero dus-grid-dark">
+  <div class="wrap">
+    <img class="dus-logo" src="data:image/png;base64,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" alt="Dudley Utility Services">
+    <div class="dus-micro dus-micro--dark hero-kicker">Industries &middot; Electric transmission</div>
+    <h1 class="dus-display">ELECTRIC<br>TRANSMISSION</h1>
+    <p class="hero-lede">We secure the land rights your transmission line runs on, from the first landowner conversation through retainage. A corridor clears one agreement at a time, so we price and staff from the parcel count and prepare condemnation alongside negotiation. Your in-service date doesn't rest on one signature.</p>
+    <div class="chipwrap">
+      <div class="dus-micro dus-micro--dark chiplabel">Project types</div>
+      <div class="chips">
+        <span class="dus-pill">Greenfield</span>
+        <span class="dus-pill">Rebuild</span>
+        <span class="dus-pill">Relocates</span>
+        <span class="dus-pill">Encroachment removal</span>
+        <span class="dus-pill">Substation siting</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================== 02 · WHAT PRICES A CORRIDOR ==================== -->
+<section id="pricing" class="sec">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">01 &middot; Cost and schedule</div>
+    <h2 class="dus-h1 sec-title">What prices a transmission corridor</h2>
+    <p class="sec-lede">Landowner count sets the cost and the calendar. Line miles don't. The work happens per owner: title, contact, offer, negotiation, closing, recording. An estimate built from mileage is already wrong before the first knock on a door.</p>
+    <div class="pull dus-ticks"><span class="tick-b"></span>
+      <div>
+        <div class="dus-micro pull-lead">Two nine-mile lines</div>
+        <p class="dus-body">On a map they look identical. One crossed about a dozen parcels. The other crossed a few hundred, and the land budget ran many times higher. Same mileage, different projects.</p>
+      </div>
+      <div class="pull-punchwrap">
+        <div class="dus-micro pull-lead">What we do about it</div>
+        <p class="pull-punch">We price and staff from the parcel count, every time.</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>The estimate is a deliverable in its own right.</strong> We build it parcel by parcel, with a market study and per-acre valuation behind it, so it holds for the life of the project. Utility capital gets allocated to be deployed, and a padded estimate costs the utility real money. In budget and on schedule is the standard we work to.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 · HOW THE CORRIDOR CLEARS ==================== -->
+<section id="how" class="sec sec-alt">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">02 &middot; Execution</div>
+    <h2 class="dus-h1 sec-title">How the corridor clears</h2>
+    <p class="sec-lede">Mobilization through retainage, four moves carry the schedule. Each one retires an uncertainty before it has a chance to turn into a delay.</p>
+    <div class="moves">
+      <div class="move">
+        <div class="mnum">Move one</div>
+        <h3 class="dus-h2">Title that never goes stale</h3>
+        <p>A light ownership pass tells us whose door to knock on. Title work then deepens through negotiation and keeps running to closing, so every offer goes to the actual current owner. Any parcel headed toward condemnation carries a full interest-holder search behind it.</p>
+      </div>
+      <div class="move">
+        <div class="mnum">Move two</div>
+        <h3 class="dus-h2">Good-faith negotiation to the statutory floor</h3>
+        <p>Every landowner gets a written offer, a plain description of the rights we're acquiring, and a drawing showing the line on their own property. State law often names that trio outright. We treat it as the floor everywhere, which keeps each acquisition defensible.</p>
+      </div>
+      <div class="move">
+        <div class="mnum">Move three</div>
+        <h3 class="dus-h2">Condemnation readiness in parallel</h3>
+        <p>Condemnation preparation runs alongside voluntary negotiation rather than starting once it fails, and we set the final offer knowing it has to hold up in testimony. The point is schedule protection: one holdout stays one parcel instead of becoming your in-service date.</p>
+      </div>
+      <div class="move">
+        <div class="mnum">Move four</div>
+        <h3 class="dus-h2">One phone number through construction</h3>
+        <p>Landowners get notice before crews cross, gates get managed the way the owner asked, and the landowner has one number that answers. Encroachments into existing right-of-way get negotiated out ahead of the crews. A single rebuild can carry hundreds of them.</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>While that runs, you receive the working record of your own corridor.</strong> An ownership line list carrying deed references, tract numbers, acreage, and current status per parcel. Weekly reporting with a progress map and named risks. A maintained right-of-way database, field files, title documents, survey plats, and acquisition check requests.
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 04 · KUDU =========================== -->
+<section id="kudu" class="sec">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">03 &middot; The record</div>
+    <h2 class="dus-h1 sec-title">Your corridor lives in Kudu</h2>
+    <p class="sec-lede">Kudu is Dudley Land Company's own land management suite, built in-house and web-based. Data gets entered once at the parcel and owner level and flows through the rest of the project, so the record the field works from and the record you read are the same record.</p>
+    <div class="grid-3" style="margin-top: 38px;">
+      <div class="dus-card dus-card--accent pad">
+        <h3 class="dus-h3">The line list, always current</h3>
+        <p>Every parcel carries its legal description, ownership, contact history, and documents in one place. Status moves on dated events as the work happens, so the report reflects the file rather than someone's reconstruction of it.</p>
+      </div>
+      <div class="dus-card dus-card--accent pad">
+        <h3 class="dus-h3">Your own log-in to the live system</h3>
+        <p>We set your team up with remote access to the same system our land managers use, from a computer, a tablet, or a phone. Query an owner, read the contact notes, track spending, and run the report you need yourself.</p>
+      </div>
+      <div class="dus-card dus-card--accent pad">
+        <h3 class="dus-h3">A progress map you can read at a glance</h3>
+        <p>Kudu's mapping module draws from live project data and color-codes parcels by status. Click a parcel to see who owns it and where it stands. You can see how much of the corridor is clear without reading a table.</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>Utilities require their land vendor to run an operating system that manages project data.</strong> Kudu replaces the fragmented spreadsheets and static reports that usually stand in for one. It belongs to Dudley, so it changes as the work changes.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 05 · WHO RUNS THE WORK ===================== -->
+<section id="people" class="sec sec-alt">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">04 &middot; The people</div>
+    <h2 class="dus-h1 sec-title">Who runs the work</h2>
+    <p class="sec-lede">Land managers run the program and right-of-way agents meet the landowners. We cross-train our land managers across the whole phase walk instead of keeping narrow specialists, and we invest in pay in a field where day rates have sat flat for years. What that buys you is continuity: land managers who know the whole phase walk and stay, with the institutional knowledge of your corridor staying on the program with them.</p>
+
+    <div class="credstrip">
+      <div class="cred">
+        <div class="lead">Since 1980</div>
+        <div class="value">45+</div>
+        <div class="label">Years, Dudley Land Company</div>
+      </div>
+      <div class="cred">
+        <div class="lead">Licensed in roughly</div>
+        <div class="value">38</div>
+        <div class="label">States</div>
+      </div>
+      <div class="cred">
+        <div class="lead">Leadership brings</div>
+        <div class="value">25</div>
+        <div class="label">Years running utility land programs</div>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="dus-card pad">
+        <h3 class="dus-h3">Recruited through a network that already exists</h3>
+        <p>Dudley Land Company has recruited and fielded land professionals since 1980 and holds licenses in roughly 38 states. Dudley Utility Services hires its right-of-way agents out of that network and runs on the same accounting, human resources, systems, and recruiting infrastructure. Staffing a program draws on an engine that's already built.</p>
+      </div>
+      <div class="dus-card pad">
+        <h3 class="dus-h3">Agents local to your project area</h3>
+        <p>Landowners in different regions carry different expectations, and the agent who already works that county builds the relationship faster. We staff the field from the area the line crosses, which is where landowner relationships actually get made.</p>
+      </div>
+      <div class="dus-card pad">
+        <h3 class="dus-h3">Privately owned, controlling its own pace</h3>
+        <p>Dudley is privately owned, and that's what makes the investment in people possible. You get continuity of ownership across the life of a program, decision-makers you can reach, and a company free to build for the long term.</p>
+      </div>
+    </div>
+
+    <div class="usp">
+      <div class="dus-micro" style="margin-bottom: 14px;">What that adds up to</div>
+      <p class="usp-line">Certainty through continuity: transmission programs staffed by cross-trained land managers recruited through Dudley Land Company's 45-year network, compensated to stay, and built to finish the program they start.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 06 · COVERAGE BAND ======================= -->
+<section id="coverage" class="sec">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">05 &middot; Coverage</div>
+    <h2 class="dus-h1 sec-title">Available where and when you need us</h2>
+    <p class="sec-lede">Dudley Land Company's network holds licenses in roughly 38 states, and Dudley Utility Services staffs out of it. Wherever the line runs, we put agents on it who work the ground it crosses.</p>
+    <!-- TODO: replace the placeholder frame below with the shared coverage map asset
+         ("DUS New Map.png" in the Dudley Land Company drive) once Reese sizes it for web. -->
+    <div class="mapframe dus-grid-light">
+      <div class="mapinner">
+        <div class="dus-route rw-on-light" aria-hidden="true"><svg viewBox="0 0 1200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="rw-band" d="M-40.0 114.0 L236.3 114.0 L396.3 46.0 L722.8 46.0 L892.0 99.7 L1238.4 68.1 L1241.6 103.9 L888.0 136.3 L717.2 82.0 L403.7 82.0 L243.7 150.0 L-40.0 150.0 Z"/><path class="rw-edge" d="M-40.0 114.0 L236.3 114.0 L396.3 46.0 L722.8 46.0 L892.0 99.7 L1238.4 68.1" stroke-dasharray="10 8"/><path class="rw-edge" d="M-40.0 150.0 L243.7 150.0 L403.7 82.0 L717.2 82.0 L888.0 136.3 L1241.6 103.9" stroke-dasharray="10 8"/><path class="rw-center" d="M-40.0 132.0 L240.0 132.0 L400.0 64.0 L720.0 64.0 L890.0 118.0 L1240.0 86.0" stroke-dasharray="28 7 3 7"/><g class="rw-tick"><line x1="-3.0" y1="126.0" x2="-3.0" y2="138.0"/><line x1="71.0" y1="126.0" x2="71.0" y2="138.0"/><line x1="145.0" y1="126.0" x2="145.0" y2="138.0"/><line x1="286.4" y1="105.7" x2="291.1" y2="116.8"/><line x1="354.5" y1="76.8" x2="359.2" y2="87.8"/><line x1="501.1" y1="58.0" x2="501.1" y2="70.0"/><line x1="575.1" y1="58.0" x2="575.1" y2="70.0"/><line x1="649.1" y1="58.0" x2="649.1" y2="70.0"/><line x1="795.3" y1="81.6" x2="791.7" y2="93.1"/><line x1="936.0" y1="107.8" x2="937.1" y2="119.7"/><line x1="1009.7" y1="101.0" x2="1010.8" y2="113.0"/><line x1="1083.4" y1="94.3" x2="1084.5" y2="106.2"/><line x1="1157.1" y1="87.6" x2="1158.2" y2="99.5"/></g><g class="rw-mon"><rect x="234.5" y="126.5" width="11" height="11"/><rect x="394.5" y="58.5" width="11" height="11"/><rect x="714.5" y="58.5" width="11" height="11"/><rect x="884.5" y="112.5" width="11" height="11"/></g><g class="rw-dot"><circle cx="240" cy="132" r="2.0"/><circle cx="400" cy="64" r="2.0"/><circle cx="720" cy="64" r="2.0"/><circle cx="890" cy="118" r="2.0"/></g></svg></div>
+        <div class="maptext">
+          <span class="dus-micro">Coverage map &middot; artwork pending</span>
+          <p>Local agents carry the coverage. Tell us where the line runs and we'll show you how we'd staff it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 07 · FOR LANDOWNERS ====================== -->
+<section id="landowners" class="sec sec-alt">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">06 &middot; For landowners</div>
+    <h2 class="dus-h1 sec-title">If a Dudley agent knocked on your door</h2>
+    <p class="sec-lede">A transmission line needs an easement across the properties along its route. The utility hired us to work that out with each owner, one at a time. Here's what that looks like on your property, and what you can expect from the person you're talking with.</p>
+    <div class="lo-grid">
+      <div class="lo">
+        <h3 class="dus-h3">A conversation before anything happens on your land</h3>
+        <p>The first visit covers what the project is, where the line may sit, what the survey crews would do, the construction timeline, and the access the crew needs. That includes the practical details, down to locked gates and how much notice you want before anyone comes out.</p>
+      </div>
+      <div class="lo">
+        <h3 class="dus-h3">Everything in writing</h3>
+        <p>You get a written offer, a plain description of the rights we're asking to acquire, and a drawing showing where the line would sit on your property. Keep all three. Take the time you need with them, and take them to your own attorney or appraiser if you want a second read.</p>
+      </div>
+      <div class="lo">
+        <h3 class="dus-h3">Notice before crews cross</h3>
+        <p>Once construction starts, you get notice before anyone crosses your property, your gates get handled the way you asked, and you have one phone number that answers. If something on the ground doesn't match what you were told, that's the number to call.</p>
+      </div>
+      <div class="lo">
+        <h3 class="dus-h3">The agent at your door is local</h3>
+        <p>We staff agents from the area your property is in. The person having this conversation with you works this region and knows the county, because landowners in different parts of the country carry different expectations and a local agent is the one who understands yours.</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>Checking whether we're legitimate is fair, and we expect it.</strong> Ask the agent for identification and for the name of the utility behind the project. Then confirm it with that utility directly, using the contact information on your bill or on the utility's own website. Landowners check on us, and this page is part of what we publish so that check has something to land on.
+    </div>
+  </div>
+</section>
+
+<!-- =========================== 08 · FAQ ============================= -->
+<section id="faq" class="sec">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal">07 &middot; Questions</div>
+    <h2 class="dus-h1 sec-title">Questions we get</h2>
+    <p class="sec-lede">Four questions we get most often, two from the utilities that hire us and two from the landowners we meet.</p>
+    <div class="faq">
+      <details open>
+        <summary>
+          <span class="qnum">01</span>
+          <span class="qtext">How do you build an estimate for a transmission program?</span>
+          <span class="sign" aria-hidden="true"></span>
+        </summary>
+        <div class="ans">
+          <span class="who">From a utility</span>
+          <p>From the parcel count. We identify ownership along the route first, then build the estimate parcel by parcel with a market study and per-acre valuation behind it. Mileage tells you very little about what the land work will cost, because the effort happens per owner rather than per mile.</p>
+          <p>We treat the estimate as a deliverable in its own right, built to hold for the life of the project. In budget and on schedule is the standard we work to.</p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <span class="qnum">02</span>
+          <span class="qtext">What happens when a landowner won't sign?</span>
+          <span class="sign" aria-hidden="true"></span>
+        </summary>
+        <div class="ans">
+          <span class="who">From a utility</span>
+          <p>Condemnation preparation runs alongside voluntary negotiation rather than starting once negotiation fails, and we set the final offer knowing it has to hold up in testimony. Title work on that parcel goes deep enough to support a full interest-holder search.</p>
+          <p>Almost every easement on a transmission line still gets signed voluntarily. The parallel track exists so the one that doesn't stays one parcel instead of becoming your in-service date.</p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <span class="qnum">03</span>
+          <span class="qtext">What will I be shown before I'm asked to sign anything?</span>
+          <span class="sign" aria-hidden="true"></span>
+        </summary>
+        <div class="ans">
+          <span class="who">From a landowner</span>
+          <p>Three things: a written offer, a plain description of the rights being acquired, and a drawing showing where the line would sit on your property. State law often requires that trio, and we provide it everywhere we work.</p>
+          <p>They're yours to keep and yours to think about. Ask your agent anything that isn't clear, and take them to your own attorney or appraiser if you want an outside opinion.</p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <span class="qnum">04</span>
+          <span class="qtext">How do I confirm the person at my door is who they say they are?</span>
+          <span class="sign" aria-hidden="true"></span>
+        </summary>
+        <div class="ans">
+          <span class="who">From a landowner</span>
+          <p>Ask for identification and for the name of the utility behind the project. Then contact that utility directly, using the number on your bill or on its website, and confirm both the project and the company working it.</p>
+          <p>Our right-of-way agents are staffed from the area your property is in, so the person at your door works your region rather than passing through it.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== 09 · CLOSE ============================ -->
+<section id="close" class="close field-teal-close dus-grid-dark sec-dark">
+  <div class="wrap">
+    <div class="close-grid">
+      <div>
+        <div class="dus-eyebrow dus-eyebrow--dark">08 &middot; Next</div>
+        <h2 class="dus-h1">Tell us where the line runs</h2>
+        <p>Bring us the route, the schedule, and the in-service date you're working toward. We'll walk you through how we'd staff it, how we'd price it off the parcel count, and what it takes to clear it on time.</p>
+        <div class="actions">
+          <!-- TODO: point at the site's Meet With Dudley form once the site shell exists. -->
+          <a class="dus-btn dus-btn--accent" href="#">Meet With Dudley</a>
+        </div>
+      </div>
+      <!-- TODO: replace href="#" with the electric transmission one-pager PDF once it's built.
+           The one-pager is this page's content, laid out for print and internal circulation. -->
+      <div class="onepager">
+        <div class="dus-micro dus-micro--dark">One-pager</div>
+        <h3 class="dus-h3">The same page, send-ready</h3>
+        <p>Everything here on a single sheet, formatted to forward. Circulate it internally when you're building a vendor list, briefing your team, or taking a recommendation up the chain.</p>
+        <a class="dus-btn dus-btn--primary" href="#" download>Download the one-pager</a>
+      </div>
+    </div>
+
+    <div class="foot">
+      <img class="dus-logo footlogo" src="data:image/png;base64,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" alt="Dudley Utility Services">
+      <div class="foottext">Dudley Utility Services &middot; Electric transmission<br>Delivering energy through land</div>
+    </div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
