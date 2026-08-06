@@ -312,7 +312,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .hero-kicker { margin-bottom: 20px; }
 .hero h1 { font-size: clamp(46px, 8vw, 96px); color: var(--white); margin-bottom: 28px; }
 .hero-lede { font-size: 19.5px; line-height: 1.55; color: var(--on-dark); max-width: 700px; }
-.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--hairline-dark); }
+.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--green-500); }
 .chiplabel { margin-bottom: 16px; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chips .dus-pill { padding: 8px 17px; font-size: 12px; letter-spacing: .13em; }
@@ -444,10 +444,13 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .onepager .dus-btn { margin-top: 26px; box-shadow: none; }
 .onepager .dus-btn:hover { box-shadow: 0 4px 16px rgba(65,190,72,0.25); }
 
-.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--hairline-dark);
+.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--green-500);
   display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
 .footlogo { height: 26px; }
 .foottext { font-size: 12.5px; line-height: 1.7; letter-spacing: .04em; color: var(--on-dark-2); text-align: right; }
+
+/* ---------- Kudu card icons ---------- */
+.kudu-icon { width: 48px; height: 48px; margin-bottom: 18px; display: block; }
 
 /* ---------- Round-5 additions ---------- */
 h1, h2, h3, .sec-title { text-wrap: balance; }
@@ -663,12 +666,15 @@ p, li { text-wrap: pretty; }
     <div class="dus-micro" style="margin-top: 44px; margin-bottom: 4px;">You get</div>
     <div class="grid-3" style="margin-top: 14px;">
       <div class="dus-card dus-card--accent pad">
+        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg1)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM16 20V4H4V19C4 19.5523 4.44772 20 5 20H16ZM6 7H14V9H6V7ZM6 11H14V13H6V11ZM6 15H11V17H6V15Z"/></svg>
         <h3 class="dus-h3">A line list that's always current</h3>
       </div>
       <div class="dus-card dus-card--accent pad">
+        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg2)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"/></svg>
         <h3 class="dus-h3">Your own login to the live system</h3>
       </div>
       <div class="dus-card dus-card--accent pad">
+        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg3)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 5L9 2L15 5L21.303 2.2987C21.5569 2.18992 21.8508 2.30749 21.9596 2.56131C21.9862 2.62355 22 2.69056 22 2.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V5ZM16 19.3955L20 17.6812V5.03308L16 6.74736V19.3955ZM14 19.2639V6.73607L10 4.73607V17.2639L14 19.2639ZM8 17.2526V4.60451L4 6.31879V18.9669L8 17.2526Z"/></svg>
         <h3 class="dus-h3">A progress map you can read at a glance</h3>
       </div>
     </div>
