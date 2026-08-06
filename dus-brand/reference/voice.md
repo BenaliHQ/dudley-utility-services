@@ -66,6 +66,8 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 ## How we sound
 
+**First person, always.** We secure the land rights. We staff the field. Never "Dudley Utility Services secures" in our own copy; the company speaks as we and our on every page and every piece. (Jenny's ruling, 2026-08-05, during the transmission page review.)
+
 **Precise, and human.** Buyers are structured people who expect rigor. They also work with landowners every day, and they know a vendor who sounds like a person builds better landowner relationships. Garrett's version: we're regimented, we're controlled, and we're not robots.
 
 **Established, never new.** DUS is not a startup and never reads as one. This is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, the same systems, and the same people. Inherit rather than announce.
@@ -73,6 +75,8 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 **Attribute the history honestly.** Dudley Land Company earned the 45 years and DUS runs on it. Writing as though DUS itself has been doing this since 1980 crosses from inheritance into a false claim. Name Dudley Land Company when the history is the point.
 
 **Certain, never boastful.** Dudley Land Company's standard carries straight over: confidence without the ego, a reputation earned through results rather than self-promotion, and aiming to be the most trusted voice in the room over the loudest. Replace every superlative with the specific thing that would have justified it.
+
+**Don't knock the industry.** Nothing on a client-facing surface criticizes the field or its norms (flat day rates, other vendors' churn). We differentiate by what we do, never by what the industry fails to do. (Jenny's ruling, 2026-08-05, during the transmission page review.)
 
 **Specific over comprehensive.** One concrete detail about how a corridor gets cleared beats a list of twenty-three services. Cut the list, keep the detail.
 
