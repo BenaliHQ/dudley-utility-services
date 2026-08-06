@@ -30,6 +30,7 @@ You are producing brand assets for **Dudley Utility Services (DUS)**, the utilit
 | Service overview, leave-behind, flyer, PDF handout | `templates/one-pager.html` | US Letter |
 | A letter, memo, or anything on letterhead | `templates/letterhead.html` | US Letter |
 | Proposal, SOW, engagement doc | `templates/proposal.html` | US Letter ×4 |
+| Business card (front + back) | `templates/business-card.html` | 1050×600 ×2 |
 
 Something that fits none of these (e.g., email header, event badge, report cover): start from the closest template above, keep its surface treatment (field gradient + survey grid + horizon rule OR white + light grid), its type classes, and its logo usage, and only change the canvas dimensions. Say explicitly in your reply that this is an adapted format.
 
