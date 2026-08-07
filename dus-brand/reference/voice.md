@@ -80,7 +80,14 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 **Don't knock the industry.** Nothing on a client-facing surface criticizes the field or its norms (flat day rates, other vendors' churn). We differentiate by what we do, never by what the industry fails to do. (Jenny's ruling, 2026-08-05, during the transmission page review.)
 
-**Specific over comprehensive.** One concrete detail about how a right-of-way gets cleared beats a list of twenty-three services. Cut the list, keep the detail. Results-oriented specifics are the shape the client asked for themselves (8/7): miles negotiated, voltages worked, obstacles cleared, doors knocked.
+**Specific over comprehensive.** One concrete detail beats a list of twenty-three services. The analogy that made this land with the client (Khalil, 8/7): a ballplayer who says "I can play first, second, third, and I pitch sometimes" has told you nothing. One who says "I batted .350 last year with one error in 65 games" has told you everything. A services list is the first sentence; we write the second. Cut the list, keep the detail.
+
+Specifics come in two shapes, and the client endorsed both on 8/7:
+
+- **Results.** Miles of right-of-way negotiated, condemnation rate, voltages worked, how many agents mobilized and how fast. Garrett's own sketch of the shape: "negotiated over 7,000 miles of transmission right-of-way with less than 2% condemnation." Every number must be client-verified in writing before it publishes; the shape is approved, the figures are not yet.
+- **Practice.** What a service actually looks like on the ground. "Landowner negotiation" says nothing. "We knock doors, meet with landowner associations, attend the open houses and the city council meetings" shows the work (Savannah's own examples). When there's no number, the detail of practice does the same job.
+
+Garrett's summary of the rule, in his words: results-oriented specifics. His read of the field: "If you look at all these other websites, they're just like, these are all the services we offer. It's very static." This rule is why we aren't that.
 
 ## The three tests
 
