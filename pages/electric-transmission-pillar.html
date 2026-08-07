@@ -303,6 +303,14 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
   padding-bottom: 3px; border-bottom: 2px solid transparent; }
 .toc a:hover { color: var(--teal-500); border-bottom-color: var(--green-500); }
 
+/* ---------- Element explainers (for the client's review) ---------- */
+.explain { margin: 14px 0 34px; padding: 16px 20px; background: var(--teal-050); border-radius: 4px; max-width: 780px; }
+.explain .xlabel { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--teal-500); margin-bottom: 8px; }
+.explain p { font-size: 15px; line-height: 1.55; color: var(--text); }
+.explain--dark { background: rgba(255,255,255,.08); }
+.explain--dark .xlabel { color: var(--teal-200); }
+.explain--dark p { color: var(--on-dark-2, #cfe2ea); }
+
 /* ---------- Sections ---------- */
 .sec { padding: 88px 0; }
 .sec-alt { background: var(--neutral-100); }
@@ -455,9 +463,10 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
 
 <section id="position" class="sec">
   <div class="wrap">
+    <div class="explain"><span class="xlabel">What this page is</span><p>The internal foundation for everything DUS says about electric transmission. Nothing here is website copy. When we write a page, a post, or a one-pager about transmission, it gets built from this foundation, so the message stays consistent no matter who writes it. Comment on anything that doesn't sound like you.</p></div>
     <div class="dus-eyebrow dus-eyebrow--teal">01 &middot; The position</div>
     <h2 class="dus-h1 sec-title">The position, settled</h2>
-    <p class="sec-lede">The one-liner answers the client's first question: what do you do for me?</p>
+    <div class="explain"><span class="xlabel">The one-liner and the paragraph</span><p>The shortest true answers to &ldquo;what do you do for me?&rdquo; The one-liner is the elevator version; the paragraph is the full thought behind it. Every piece of transmission copy, short or long, gets derived from these two. Garrett's sketch from the 8/7 call sits in the one-liner slot now, and it updates as you send us your thinking on the differentiator.</p></div>
     <div class="claimbox dus-field-teal dus-grid-dark dus-horizon">
       <div class="dus-micro dus-micro--dark">In one line</div>
       <p class="claim-line">Dudley Utility Services creates certainty for electric transmission projects: securing critical land rights, navigating stakeholder relationships, and protecting the path from development through construction.</p>
@@ -472,7 +481,7 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">02 &middot; The USP</div>
     <h2 class="dus-h1 sec-title">What only we can offer</h2>
-    <p class="sec-lede">The USP answers the client's harder question: why you, and not the other vendors on the master service agreement?</p>
+    <div class="explain"><span class="xlabel">The unique selling proposition</span><p>The answer to the harder question: why you, and not the other vendors on the master service agreement? A USP only works if competitors can't copy it without changing how they operate. Ours rests on structure rather than track record, because the DUS record is still being built.</p></div>
     <div class="pull dus-ticks"><span class="tick-b"></span>
       <div>
         <div class="dus-micro pull-lead">The unique selling proposition</div>
@@ -493,10 +502,10 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">03 &middot; Beliefs</div>
     <h2 class="dus-h1 sec-title">What we believe</h2>
-    <p class="sec-lede">Six positions on transmission land work: how it actually runs, and how DUS writes about it.</p>
+    <div class="explain"><span class="xlabel">The beliefs</span><p>What DUS holds true about transmission land work. Every belief shapes how we write: if a piece contradicts one of these, it's off-message. Read them as &ldquo;this is how we see the work.&rdquo;</p></div>
     <div class="tensions">
       <div class="tension"><h3 class="dus-h2 tname">The utility is buying certainty</h3><p class="dus-body">Easements get negotiated one owner at a time, and a single holdout can stall the entire line. The right-of-way director is buying confidence that the right-of-way clears on schedule.</p></div>
-      <div class="tension"><h3 class="dus-h2 tname">Landowner count drives cost. Line miles don't.</h3><p class="dus-body">Two nine-mile lines can look identical on a map. One crossed ten parcels; the other crossed 250 and cost more than eight times as much. Everything DUS prices and plans starts from the parcel count.</p></div>
+      <div class="tension"><h3 class="dus-h2 tname">Landowner count drives cost. Line miles don't.</h3><p class="dus-body">Two nine-mile lines can look identical on a map. One crossed ten parcels; the other crossed 250 and cost more than eight times as much. DUS staffs and plans from the parcel count.</p></div>
       <div class="tension"><h3 class="dus-h2 tname">The right-of-way clears because landowners say yes</h3><p class="dus-body">Almost every easement is signed voluntarily, and a landowner who's treated fairly signs sooner. Plain answers, a written offer with a drawing, notice before crews cross, and a local agent at the door. They check on us too: the site has to prove the person at their door is legitimate.</p></div>
       <div class="tension"><h3 class="dus-h2 tname">Transmission is its own discipline</h3><p class="dus-body">Project-shaped work: one docket, a certificate of public convenience and necessity, condemnation authority behind the negotiation, easements specified to the foot. It rewards estimate discipline, documentation, compliance, and confidentiality, and DUS builds its programs around those demands.</p></div>
       <div class="tension"><h3 class="dus-h2 tname">In budget, not under</h3><p class="dus-body">Money parked against a padded estimate has a real cost to the utility, and a blown budget costs more. Clients score how dialed-in the estimate was (how much this matters varies client to client; supporting color, never the lead), so we treat the estimate as a deliverable in its own right.</p></div>
@@ -509,10 +518,11 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">04 &middot; Capability</div>
     <h2 class="dus-h1 sec-title">What we do</h2>
+    <div class="explain"><span class="xlabel">What we do</span><p>The scope of the work in one breath, and the four practices that protect a schedule. This is the plain answer to &ldquo;what would you actually be doing on our project?&rdquo;</p></div>
     <p class="sec-lede">DUS secures land rights for electric transmission projects, mobilization through retainage: survey permission, title, easement negotiation, condemnation support, construction liaison, closeout. Land scope only, surface rights only, run by land managers.</p>
     <h3 class="dus-h2 sub">How the work removes uncertainty</h3>
     <ul class="dus-check backers">
-      <li><span><strong>Priced and staffed from the parcel count</strong>, from day one.</span></li>
+      <li><span><strong>Staffed and planned from the parcel count</strong>, from day one.</span></li>
       <li><span><strong>Title runs continuously</strong>, so every offer goes to the actual current owner.</span></li>
       <li><span><strong>Blanket easements become defined right-of-way</strong>: a surveyed, defensible right-of-way.</span></li>
       <li><span><strong>Prepared for every path</strong>: every parcel's file built to hold up anywhere, so one holdout stays one parcel, never the in-service date.</span></li>
@@ -524,11 +534,11 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">05 &middot; Differentiation</div>
     <h2 class="dus-h1 sec-title">What makes us different</h2>
-    <p class="sec-lede">Every qualified competitor claims experience, capacity, and process. This is what survives when a competitor's name is pasted over ours.</p>
+    <div class="explain"><span class="xlabel">The differentiators</span><p>Why DUS instead of another qualified vendor. Every competitor claims experience and process, so these four are the claims that survive having a competitor's name pasted over them. Each names something structural that's hard to copy.</p></div>
     <div class="grid-2">
       <div class="dus-card dus-card--accent pad">
         <h3 class="dus-h3">Land managers who stay</h3>
-        <p class="dus-body">Cross-trained across the whole phase walk rather than narrowly specialized, and compensated to stay in a field where day rates have sat flat for years. What the client gets is continuity: institutional knowledge that stays on the program.</p>
+        <p class="dus-body">Cross-trained across the whole program rather than narrowly specialized, and compensated to stay. What the client gets is continuity: institutional knowledge that stays on the program.</p>
       </div>
       <div class="dus-card dus-card--accent pad">
         <h3 class="dus-h3">A staffing engine competitors would have to build</h3>
@@ -550,7 +560,7 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">06 &middot; The scoring sheet</div>
     <h2 class="dus-h1 sec-title">The six things utilities score, answered</h2>
-    <p class="sec-lede">Utility RFPs score land vendors on the same six things. Each one has an answer here; two still need facts from DUS.</p>
+    <div class="explain"><span class="xlabel">The scoring sheet</span><p>Utility RFPs grade land vendors on the same six things. This maps each one to our answer, and it's honest about the two where DUS still owes facts. When a proposal or page has to hit a scored criterion, the answer starts here.</p></div>
     <div class="grid-3">
       <div class="dus-card pad"><h3 class="dus-h3">Capacity and staffing</h3><p class="dus-body">The recruiting engine and cross-trained land managers. Structural, already in place.</p></div>
       <div class="dus-card pad"><h3 class="dus-h3">Safety record</h3><p class="dus-body">Standards inherit from Dudley Land Company practice. A documented DUS record still needs gathering; nothing gets invented.</p></div>
