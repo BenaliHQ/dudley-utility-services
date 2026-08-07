@@ -380,7 +380,9 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
 .never { padding-top: 18px; border-top: 1px solid var(--hairline-dark); }
 .never h3 { color: var(--white); font-size: 17px; margin-bottom: 8px; }
 .never p { font-size: 15px; line-height: 1.6; color: var(--on-dark-2); }
-.banned { margin-top: 46px; padding-top: 26px; border-top: 4px solid var(--green-500); }
+.banned { margin-top: 46px; padding-top: 26px; border-top: 4px solid var(--teal-300); }
+/* Section 06 on a perceptibly-teal field: teal-400 to teal-700, no green glow, never ink */
+.field-teal-never { background: linear-gradient(160deg, #0A7196 0%, #015270 48%, #02425C 100%); color: var(--on-dark); }
 .banned p { margin-top: 12px; font-size: 15.5px; line-height: 1.9; color: var(--on-dark-2); }
 
 /* ---------- Before / after ---------- */
@@ -548,7 +550,7 @@ ul.plain li::before { content: ""; position: absolute; left: 0; top: .55em;
   </div>
 </section>
 
-<section id="never" class="sec sec-dark dus-field-ink dus-grid-dark">
+<section id="never" class="sec sec-dark field-teal-never dus-grid-dark">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--dark">06 &middot; Hard rules</div>
     <h2 class="dus-h1 sec-title on-dark">Never</h2>
