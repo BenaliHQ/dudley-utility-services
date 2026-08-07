@@ -1,6 +1,6 @@
 # DUS Social Content Pillars
 
-**Canonical.** This file is the settled foundation for DUS social content. Every post inherits from it; when the pillar set changes, it changes here first. Voice: `voice.md` governs, no exceptions. Working mirror and review trail live in Jenny's WorkDesk vault (dus-positioning project).
+**Canonical.** This file is the settled foundation for DUS social content. Every post inherits from it; when the pillar set changes, it changes here first. Voice: `voice.md` governs, no exceptions. Working mirror and review trail live in Jenny's WorkDesk vault (dus-positioning project). Settled by Jenny 2026-08-06.
 
 **What this is.** The four social pillars defined from the DUS perspective, each with the angles its example posts draw from. Per reference/pillar-definitions: the set maps to the four inherited Dudley values, industries are a dimension inside them, and certainty is the spine every pillar expresses without naming. Pillar titles are full thoughts, not nouns, so a person or an AI can route a piece of content by title alone (Jenny's ruling, 2026-08-06).
 
@@ -10,7 +10,7 @@
 
 ---
 
-## Pillar 1 — Who does the work decides how it goes
+## Pillar 1 — The people on the project are the project
 
 *Maps to: The People*
 
@@ -57,13 +57,16 @@
 
 ## Pillar 4 — The work is the proof
 
-*Maps to: The Example · redrawn per Jenny's draft-1 ruling — rule on this version*
+*Maps to: The Example*
 
 **The angle:** demonstrate expertise, never claim it. Garrett's own thesis: real business development is delivering on time and in budget. Posts under this pillar are receipts — outcomes held, challenges closed, case studies as DUS work completes, always anonymized per the confidentiality rule.
 
 **The boundary with pillar 3:** pillar 3 shows *how* Dudley works (method); pillar 4 shows *what that produced* (outcome). A post about negotiating encroachments belongs to pillar 3; a post about the rebuild that energized on schedule because of it belongs here.
 
 **What it produces:** the case-study bank. It starts thin by design and fills as work completes — early posts tell generalized outcome stories from the proof bank; real anonymized program results attach as they land.
+
+> [!important] What fills this pillar: real stories
+> The posts here (and much of pillar 1) run on things that actually happened. We need Garrett and Savannah's real stories — challenges they walked into, what they did, how it ended — collected directly from them. Without the stories, this pillar stays structural; with them, it becomes the strongest set on the feed.
 
 **Example post angles:**
 1. The estimate that held: the two nine-mile lines told as an outcome — the budget that didn't move.
@@ -73,13 +76,14 @@
 
 ---
 
-## Open calls for Jenny
+## Settled (Jenny, 2026-08-06)
 
-1. **Format set.** Khalil's spec is 4–5 posts per pillar, different formats. Proposed per pillar: 2 text posts, 1 text + graphic, 1 document/carousel, 1 short-clip script.
-2. **Pillar 4** — redrawn above around demonstrate-don't-claim with a named boundary against pillar 3. Rule on it.
-3. **Pillar 3, angle 5** (closeout/retainage) — keep or cut at Stage 2.
-
-**Settled 2026-08-06:** voices (company + Garrett per piece, Savannah later) · canonical home (`dus-brand/reference/social-pillars.md` in the repo) · Stage 2 model question shelved as insignificant · no Kudu hold — nothing about Kudu waits on Garrett.
+- **All four pillar titles and framings** are final, including pillar 4's demonstrate-don't-claim redraw.
+- **Format set per pillar:** 2 text posts · 1 text + graphic · 1 document/carousel · 1 short-clip script.
+- **Voices:** every piece written from the company voice and the same piece tailored to Garrett; Savannah joins the pattern once her voice is established.
+- **Canonical home:** `dus-brand/reference/social-pillars.md` in the repo; this vault note is the working mirror.
+- **No Kudu hold** — nothing about Kudu waits on Garrett.
+- One flag stays for Stage 2: pillar 3, angle 5 (closeout/retainage) ships only if it reads as command rather than explanation.
 
 ## Sources
 
