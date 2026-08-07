@@ -14,7 +14,7 @@
 
 *Maps to: The People*
 
-**The angle:** the people on a project determine how the project goes. DUS invests in the people who do the work — cross-training land managers across every step, staffing right-of-way agents local to the ground they walk, recruiting through an engine built since 1980 — because that investment is what the client actually feels.
+**The angle:** the people on a project determine how the project goes. DUS invests in the people who do the work: cross-training land managers across every step, staffing right-of-way agents local to the ground they walk, and recruiting through an engine built since 1980. That investment is what the client actually feels.
 
 **What it produces:** the culture-and-craft record. Posts that show what a utility land career at Dudley looks like, what cross-training means in practice, and why the person at the landowner's door matters to the schedule.
 
