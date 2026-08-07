@@ -8,15 +8,17 @@ Source: Dudley Utility Services brand voice engagement, Demandcast, August 2026.
 
 ## Who we're talking to
 
-**The utility buyer comes first.** A right-of-way manager, supervisor, or lead at a regulated investor-owned utility. They decide whether Dudley gets on a master service agreement and into the bid. When a piece can only serve one reader well, it serves them.
+**The utility company comes first: the client.** The people deciding inside it run from right-of-way manager, supervisor, and lead up through director, vice president, and the president. They decide whether Dudley gets on a master service agreement and into the bid. When a piece can only serve one reader well, it serves them. ("Buyer" is not a word utility people use, and their own buyers purchase rights; write client or utility company. Garrett and Savannah, 8/7.)
 
 **Landowners read our material too.** They're checking whether the person who knocked on their door is legitimate. Plain language and visible credentials do that work.
 
 **Prospective right-of-way agents read it as well.** Careers material speaks to them. What lands is specifics about pay, training, and how field staff are treated.
 
+**Partners come later.** EPCs, survey companies, and engineering firms sometimes bring Dudley into their bids. A partner one-pager is a future artifact (Savannah's ask, 8/7); the three audiences above govern current material.
+
 Most readers arrive warm, referred by someone they already trust. They aren't deciding whether they need land services. They're checking whether this company is real, which calls for substantiation rather than persuasion. Show the work.
 
-What the buyer is actually buying: **confidence that the corridor will clear on schedule.**
+What the client is actually buying: **confidence that the right-of-way will clear on schedule.**
 
 ## What we say
 
@@ -28,9 +30,9 @@ What the buyer is actually buying: **confidence that the corridor will clear on 
 
 - **45+ years.** Dudley Land Company since 1980, thousands of clients, thousands of landmen, licensed in roughly 38 states. DUS runs on that same infrastructure: accounting, finance, HR, systems, recruiting.
 - **Command of the process.** Land rights follow a multi-stage sequence from mobilization through retainage. Describing it accurately, including where it gets difficult, is the strongest credibility signal available.
-- **Privately owned, controlling its own pace.** A fact buyers want, and the reason the culture claim is possible. It can't carry the differentiation alone, because other privately owned firms compete in the same territory.
+- **Privately owned, controlling its own pace.** A fact clients want, and the reason the culture claim is possible. It can't carry the differentiation alone, because other privately owned firms compete in the same territory.
 - **Culture, and what it produces.** Investment in pay, training, and land managers who stay cross-trained rather than narrowly specialized. The client sees it as continuity across a program instead of turnover mid-project.
-- **Utility only, surface only.** Five industries: electric transmission, electric distribution, fiber optics and broadband, gas utility, water utility.
+- **Utility focused, surface driven.** Five industries: electric transmission, electric distribution, fiber optics and broadband, gas utility, water utility. (Never "only": the services keep expanding and "only" reads as restrictive. Garrett, 8/7. The gas industry is gas utility, never gas pipeline.)
 
 ## The values, inherited word for word
 
@@ -68,7 +70,7 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 **First person, always.** We secure the land rights. We staff the field. Never "Dudley Utility Services secures" in our own copy; the company speaks as we and our on every page and every piece. (Jenny's ruling, 2026-08-05, during the transmission page review.)
 
-**Precise, and human.** Buyers are structured people who expect rigor. They also work with landowners every day, and they know a vendor who sounds like a person builds better landowner relationships. Garrett's version: we're regimented, we're controlled, and we're not robots.
+**Precise, and human.** Our clients are structured people who expect rigor, across every department Dudley touches: engineering, public outreach, land, real estate, regulatory, procurement. They also work with landowners every day, and they know a vendor who sounds like a person builds better landowner relationships. Garrett's version: we're regimented, we're controlled, and we're not robots.
 
 **Established, never new.** DUS is not a startup and never reads as one. This is Dudley Land Company's 45+ years applied to utility infrastructure, under the same ownership, the same systems, and the same people. Inherit rather than announce.
 
@@ -78,7 +80,7 @@ DUS uses Dudley Land Company's mission and core values exactly as written. Nothi
 
 **Don't knock the industry.** Nothing on a client-facing surface criticizes the field or its norms (flat day rates, other vendors' churn). We differentiate by what we do, never by what the industry fails to do. (Jenny's ruling, 2026-08-05, during the transmission page review.)
 
-**Specific over comprehensive.** One concrete detail about how a corridor gets cleared beats a list of twenty-three services. Cut the list, keep the detail.
+**Specific over comprehensive.** One concrete detail about how a right-of-way gets cleared beats a list of twenty-three services. Cut the list, keep the detail. Results-oriented specifics are the shape the client asked for themselves (8/7): miles negotiated, voltages worked, obstacles cleared, doors knocked.
 
 ## The three tests
 
@@ -107,7 +109,9 @@ Run all three on any copy before it ships.
 - **Never name or negatively characterize a competitor**, and never draw a contrast that depends on one.
 - **Never mention renewables.** No solar, wind, battery storage, or energy-transition framing anywhere. This is a standing client instruction and it differs from Dudley Land Company, which does sell renewables land services.
 - **Never imply the company is new.** No launches, no announcements, no arriving.
-- **Never define industry basics.** Buyers know what an easement is. Defining it signals we can't tell what's basic in this industry, and it reads as talking down to people who do this work daily.
+- **Never lead with condemnation.** It's a capability we carry and can state, mid-sentence, mid-list. It is never a headline, never the front of anything, and never prominent where landowners will read it. Same for eminent domain. (Savannah, 8/7: a trigger word in the field; Garrett: 100%.)
+- **Never use land vocabulary utilities don't use.** No "corridor": write right-of-way. No "buyer": write client or utility company. No "gas pipeline" as an industry: it's gas utility. Terminology corrections from the client accumulate here; they send terms as they catch them.
+- **Never define industry basics.** Clients know what an easement is. Defining it signals we can't tell what's basic in this industry, and it reads as talking down to people who do this work daily.
 - **Never brag about coming in under budget.** In this market that reads as a bad estimate. The standard is in budget and on schedule.
 - **Never use oil and gas vocabulary.** No upstream, midstream, minerals, or leases in that sense.
 - **Never use unverified figures.** Dollar amounts of past work, change-order comparisons, market-share claims.
@@ -131,11 +135,11 @@ After: "Dudley Land Company has spent 45+ years building a national network of l
 
 **Superlatives standing in for substance**
 Before: "Our industry-leading team delivers world-class right-of-way services with unmatched attention to detail."
-After: "Every parcel on your project carries its deed reference, tract number, acreage, and current status, so you can see where the corridor stands without asking."
+After: "Every parcel on your project carries its deed reference, tract number, acreage, and current status, so you can see where the right-of-way stands without asking."
 
 **A claim with no mechanism**
 Before: "We keep your project on schedule."
-After: "We start the condemnation paperwork while we're still negotiating, so one holdout doesn't push your in-service date."
+After: "We keep every parcel's file complete and ready for whatever path it takes, so one holdout doesn't push your in-service date."
 
 **Values as sentiment**
 Before: "Safety is one of our core values and we're committed to it on every project."
@@ -143,7 +147,7 @@ After: "Our agents show up with their credentials on and their hard hats on. Uti
 
 ## The words we use
 
-**Terms of the trade, used without explanation:** easement, right-of-way, corridor, parcel, tract, landowner, survey permission, title research, good-faith offer, condemnation, eminent domain, mobilization, closeout, retainage, encroachment, in-service date, investor-owned utility, certificate of public convenience and necessity.
+**Terms of the trade, used without explanation:** easement, right-of-way, parcel, tract, landowner, survey permission, title research, good-faith offer, condemnation, eminent domain, mobilization, closeout, retainage, encroachment, in-service date, investor-owned utility, certificate of public convenience and necessity.
 
 **Get the job titles right.** On the utility side the field staff are **right-of-way agents** or **land representatives**, and the people running the work are **land managers**. Garrett is explicit: "we don't call them project managers, we call them land managers." **Landman is the oil and gas title**, and it belongs to Dudley Land Company's side of the business. Brent describes the relationship as a transferable skill set, so write the utility roles by their own names and reserve landmen for Dudley Land Company history.
 
