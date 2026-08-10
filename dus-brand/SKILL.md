@@ -74,6 +74,9 @@ Tell the user the option that matches their situation:
 - **On a Mac/PC with Chrome — pixel graphics (social, banners, slides):** save the file, open it in Chrome, and screenshot each `.canvas`. Or from Terminal for an exact-size PNG:
   `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=out.png --window-size=1080,1080 --hide-scrollbars file:///path/to/file.html` (match `--window-size` to the canvas; the first canvas sits flush at the top, so the capture is exact).
   For multi-slide files (carousel, deck), append `#only-N` to the URL to isolate slide N at exact size: `file:///path/to/carousel.html#only-2` with `--window-size=1080,1350`.
+- **Business cards (PNG for Vistaprint):** The business card template uses a flatten-and-isolate script. Append `#only-1` (front) or `#only-2` (back) to the URL — the script clones the target canvas into an empty body so nothing shifts. Export at 3x for print quality:
+  `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=front.png --window-size=1050,600 --force-device-scale-factor=3 --hide-scrollbars --disable-gpu file:///path/to/business-card.html#only-1`
+  This produces a 3150x1800 PNG (900 DPI equivalent at 3.5"x2"). Print vendor: Vistaprint, Soft Touch Rounded Corners template.
 - **Print formats (one-pager, letterhead, proposal) → PDF:** open in Chrome → Print → Save as PDF, margins "None", "Background graphics" ON. Or headless:
   `"...Google Chrome" --headless --no-pdf-header-footer --print-to-pdf=out.pdf file:///path/to/file.html`
 - **Decks:** print-to-PDF the deck file the same way for a shareable PDF deck, or screenshot slides individually for images.
