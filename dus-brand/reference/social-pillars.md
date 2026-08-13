@@ -40,7 +40,7 @@
 2. The walk-away: when a schedule is unrealistic, we don't take the job (Garrett, 8/7). Certainty includes saying no.
 3. What a landowner should expect in writing before anyone asks them to sign — the offer, the rights, the drawing.
 4. One phone number through construction: the smallest service commitment with the biggest goodwill return.
-5. In budget, not under: why holding the estimate beats padding it. Scope, staffing, and schedule start from the landowner count; pricing varies by contract (lump sum, time and materials, milestones), so this stays supporting color, never the lead.
+5. In budget, not under: why holding the estimate beats padding it. Scope, staffing, and schedule start from the parcel count (title and estimating run per parcel; survey permission and negotiation run per landowner); pricing varies by contract (lump sum, time and materials, milestones), so this stays supporting color, never the lead.
 
 ## Pillar 3 — How the work works
 
@@ -104,7 +104,7 @@ Two facts drive the near-term order: Garrett expects the DUS LinkedIn to out-pul
 
 - Right-of-way replaces corridor throughout; secures replaces clears (voice.md terminology rules, PRs #18 and #26).
 - Standing rules pick up the condemnation rule (explicitly covers social, per Khalil; Garrett: "100%"), the terminology swaps, and results-oriented specifics as the client's own asked-for proof shape.
-- Pillar 2 rebalanced after the 8/7 weight check: the price-from-parcel-count and estimate-as-deliverable angles dropped (the estimate matters to roughly half of clients; lump-sum, time-and-materials, and milestone pricing all happen, per Savannah). Schedule-certainty angles replace them. Landowner-vs-parcel count phrasing follows the corrected transmission pillar and tracks Savannah's open comment there.
+- Pillar 2 rebalanced after the 8/7 weight check: the price-from-parcel-count and estimate-as-deliverable angles dropped (the estimate matters to roughly half of clients; lump-sum, time-and-materials, and milestone pricing all happen, per Savannah). Schedule-certainty angles replace them. Count phrasing follows Jenny's 8/13 ruling on Savannah's comment 12: parcel count is the messaging anchor; title and estimating run per parcel, survey permission and negotiation run per landowner.
 - Pillar 4 carries the incoming verified-figures list and the association story; the $2M annotation now reflects that 8/7 came and went without confirmation.
 - Pillars 1 and 3 gain 8/7 material: Savannah's arc (pending her OK), work-week texture, service breadth.
 - Weighting section added.
