@@ -137,7 +137,7 @@ Run all three on any copy before it ships.
 These are the only claims usable without the user supplying a source:
 
 - **45+ years of energy-land expertise** (Dudley Land Company founded 1980).
-- **35 years of leadership** in utility land (the client's own SOQ, 8/14; supersedes the earlier 25 figure).
+- **35+ combined years of leadership** in utility land (the client's own SOQ, 8/14: Garrett 25+, Savannah 10+). Write "combined"; never imply one person's 35. Supersedes the earlier 25 figure.
 - **Voltages executed from 34.5 kV up to 765 kV** (Garrett, 8/14 meeting, stated on tape with instruction to use it; 500 kV named too). Attribute to leadership and team experience, never to a DUS track record. It answers the first question clients ask right now ("do you have experience with 765?").
 - **Coverage as capability:** DUS works anywhere in the lower 48 and operates within each state's requirements. (Garrett and Savannah, 8/14.)
 - ~~**Active state registrations in roughly 38 states.**~~ **Retired on DUS surfaces 8/14** (client ruling: no state count tied to licensure or registration — see the Never entry). The DLC registrations map stays internal context and DLC-side history only.
