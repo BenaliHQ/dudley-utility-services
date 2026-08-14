@@ -28,7 +28,7 @@ What the client is actually buying: **confidence that the right-of-way will be s
 
 **What backs the claim up:**
 
-- **45+ years.** Dudley Land Company since 1980, thousands of clients, thousands of landmen, licensed in roughly 38 states. DUS runs on that same infrastructure: accounting, finance, HR, systems, recruiting.
+- **45+ years.** Dudley Land Company since 1980, thousands of clients, thousands of landmen, active state registrations in roughly 38 states. DUS runs on that same infrastructure: accounting, finance, HR, systems, recruiting.
 - **Command of the process.** Land rights follow a multi-stage sequence from mobilization through retainage. Describing it accurately, including where it gets difficult, is the strongest credibility signal available.
 - **Privately owned, controlling its own pace.** A fact clients want, and the reason the culture claim is possible. It can't carry the differentiation alone, because other privately owned firms compete in the same territory.
 - **Culture, and what it produces.** Investment in pay, training, and land managers who stay cross-trained rather than narrowly specialized. The client sees it as continuity across a program instead of turnover mid-project.
@@ -130,7 +130,7 @@ Run all three on any copy before it ships.
 These are the only claims usable without the user supplying a source:
 
 - **45+ years of energy-land expertise** (Dudley Land Company founded 1980).
-- **Licensed in roughly 38 states.** Confirmed by Jenny, August 2026. The figure is accurate or conservative, so "roughly 38" is safe to publish. Keep the hedge word; don't state an exact count.
+- **Active state registrations in roughly 38 states.** Confirmed by Jenny, August 2026; wording settled 8/13. The source is Dudley Land Company's "Our Active State Registrations" map, so write **registrations**, never "licensed" (the map counts registrations to operate, and no professional license type stands behind the claim — Savannah's catch, 8/12). The figure is accurate or conservative, so "roughly 38" is safe to publish. Keep the hedge word; don't state an exact count.
 
 Everything else must be supplied by the user. If a fact or number is missing, ask or leave the placeholder visible. Never invent one.
 
