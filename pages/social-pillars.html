@@ -474,6 +474,18 @@ p, li { text-wrap: pretty; }
 .rec { position: relative; padding-left: 30px; font-size: 16px; line-height: 1.55; color: var(--text); }
 .rec::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--green-600); font-weight: 900; }
 
+/* ---------- Element explainers (for the client's review) ---------- */
+.explain { margin: 14px 0 34px; padding: 18px 22px; background: linear-gradient(135deg, var(--teal-500), var(--teal-700)); border-radius: 4px; max-width: 780px; }
+.explain .xlabel { display: block; font-size: 17px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--teal-200); margin-bottom: 10px; }
+.explain p { font-size: 17px; line-height: 1.6; color: var(--white); }
+.explain .xlabel b { color: var(--white); }
+.explain--page { max-width: 900px; margin: 10px auto 46px; text-align: center; padding: 30px 36px; }
+.explain--page .xlabel { font-size: 15px; letter-spacing: .14em; }
+.explain--page p { font-size: 18.5px; }
+.explain--page .xcta { display: block; margin-top: 14px; font-size: 19px; font-weight: 800; color: var(--white); }
+.angs-label { margin-top: 34px; }
+.angs-label + ol.angs { margin-top: 12px; }
+
 /* ---------- Social pillars page ---------- */
 ol.angs { margin: 34px 0 0 22px; max-width: 780px; padding: 0; }
 ol.angs li { margin: 13px 0; font-size: 16.5px; line-height: 1.6; color: var(--text); padding-left: 6px; }
@@ -521,8 +533,10 @@ ol.angs li::marker { color: var(--green-600); font-weight: 800; }
 
 <section id="how" class="sec">
   <div class="wrap">
+    <div class="explain explain--page"><span class="xlabel">What this page is</span><p>The plan for DUS social content, before any posts get written. A content pillar is a theme the feed keeps returning to; posting inside a small, settled set of themes is what makes a company feed read intentional instead of random. This page settles our four. Nothing on it is a finished post: the numbered lists are topics waiting to be written. Once the pillars feel right to you, we write four to five example posts under each, and every piece comes to you for approval before anything publishes.<span class="xcta">Comment on anything that doesn't ring true or doesn't sound like you.</span></p></div>
     <div class="dus-eyebrow dus-eyebrow--teal">01 &middot; How this works</div>
     <h2 class="dus-h1 sec-title">One system, every voice</h2>
+    <div class="explain"><span class="xlabel">What this section is: <b>The rules every post inherits</b></span><p>Three cards and two rule boxes. The voices card matters most to you two: most pieces will exist twice, written once from the company and once as Garrett, with Savannah joining as her voice gets established. The rule boxes below the cards are the guardrails from your own feedback; they apply to every post automatically.</p></div>
     <p class="sec-lede">The four pillars come from the Dudley values: people, service, product, example. Each carries a full-thought title, so anyone can tell where a piece of content belongs by the title alone.</p>
     <div class="grid-3" style="margin-top: 38px;">
       <div class="dus-card pad">
@@ -551,10 +565,12 @@ ol.angs li::marker { color: var(--green-600); font-weight: 800; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">Pillar one &middot; The People</div>
     <h2 class="dus-h1 sec-title">The people on the project are the project</h2>
+    <div class="explain"><span class="xlabel">What this section is: <b>The first pillar, and how to read all four</b></span><p>Every pillar section on this page has the same three parts: the idea in plain terms (the paragraph below), the kind of material it builds up over time (the green-edged box), and a numbered list of example post topics. Those are subjects we'd write about under this pillar. Each one becomes real drafts in several formats: plain text posts, a text-plus-graphic, a card-style carousel you swipe through, and a short video script.</p></div>
     <p class="sec-lede">The people on a project determine how the project goes. We invest in the people who do the work: cross-training land managers across every step, staffing right-of-way agents local to the ground they walk, and recruiting through an engine built since 1980. That investment is what the client actually feels.</p>
     <div class="note produces">
       <strong>What it produces:</strong> the culture-and-craft record. What a utility land career at Dudley looks like, what cross-training means in practice, and why the person at the landowner's door matters to the schedule.
     </div>
+    <div class="dus-micro angs-label">Example post topics under this pillar</div>
     <ol class="angs">
       <li>Trainability over pre-skill: what we actually look for when we hire a right-of-way agent. (A real story we'd like to tell here, with Savannah's OK: her own path from first interview to director.)</li>
       <li>What a cross-trained land manager knows that a specialist doesn't.</li>
@@ -569,10 +585,12 @@ ol.angs li::marker { color: var(--green-600); font-weight: 800; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">Pillar two &middot; The Service</div>
     <h2 class="dus-h1 sec-title">Service gets measured twice</h2>
+    <div class="explain"><span class="xlabel">What this section is: <b>The service pillar</b></span><p>Posts that show a schedule and a budget being protected, and a landowner treated right, without us ever writing the words "great service." Your Aug 7 feedback reshaped this one: schedule protection now leads, and the estimate supports the story instead of carrying it.</p></div>
     <p class="sec-lede">Exceptional service in utility land work gets judged by two people at once: the client watching the schedule and the budget, and the landowner across the kitchen table. Posts under this pillar show both getting the same standard.</p>
     <div class="note produces">
       <strong>What it produces:</strong> the proof pillar. On-budget, on-schedule evidence accumulates here as our work completes. Until then, posts show the mechanisms that produce it. Per your Aug 7 feedback, the estimate colors this pillar rather than carrying it; schedule protection leads.
     </div>
+    <div class="dus-micro angs-label">Example post topics under this pillar</div>
     <ol class="angs">
       <li>The in-service date is sacred: what signing on to a schedule means for how we staff and plan from day one.</li>
       <li>The walk-away: when a schedule is unrealistic, we don't take the job. Certainty includes saying no.</li>
@@ -587,10 +605,12 @@ ol.angs li::marker { color: var(--green-600); font-weight: 800; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">Pillar three &middot; The Product</div>
     <h2 class="dus-h1 sec-title">How the work works</h2>
+    <div class="explain"><span class="xlabel">What this section is: <b>The pillar that shows the work</b></span><p>Posts about the problems a right-of-way throws and how Dudley handles them. Readers who do this work daily judge a company by whether it talks about the work the way people who do it talk about it. This set needs nothing further from you, so it's where we start.</p></div>
     <p class="sec-lede">We show command of the work by showing the work: the challenges a right-of-way throws and what Dudley does about them. The reader knows this work inside and out, so nothing here explains their job to them.</p>
     <div class="note produces">
       <strong>What it produces:</strong> the demonstrated-command record. Problem-shaped posts: what came up, what we did, what it protected. The depth position gets earned here without a single claim of expertise.
     </div>
+    <div class="dus-micro angs-label">Example post topics under this pillar</div>
     <ol class="angs">
       <li>Whose system your line list lives in decides what you inherit at closeout.</li>
       <li>Converting blanket easements to defined right-of-way: what the landowner gets back, what the utility gains.</li>
@@ -606,10 +626,12 @@ ol.angs li::marker { color: var(--green-600); font-weight: 800; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">Pillar four &middot; The Example</div>
     <h2 class="dus-h1 sec-title">The work is the proof</h2>
+    <div class="explain"><span class="xlabel">What this section is: <b>The receipts pillar</b></span><p>Real outcomes, told as they happened, anonymized. It starts small on purpose: nothing here publishes until the figures you're compiling arrive verified in writing, and any story told in your name gets your sign-off first.</p></div>
     <p class="sec-lede">Demonstrate expertise, never claim it. Real business development is delivering on time and in budget, so posts under this pillar are receipts: outcomes held, challenges closed, case studies as our work completes, always anonymized.</p>
     <div class="note produces">
       <strong>The boundary with pillar three:</strong> pillar three shows how we work. Pillar four shows what that produced. Negotiating encroachments is pillar three; the rebuild that energized on schedule because of it lives here.
     </div>
+    <div class="dus-micro angs-label">Example post topics under this pillar</div>
     <ol class="angs">
       <li>The estimate that held: two nine-mile lines told as an outcome.</li>
       <li>The give-back that came back as new work.</li>
@@ -625,6 +647,7 @@ ol.angs li::marker { color: var(--green-600); font-weight: 800; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal">The ask</div>
     <h2 class="dus-h1 sec-title">Bring us your stories</h2>
+    <div class="explain"><span class="xlabel">What this section is: <b>The one thing we need from you</b></span><p>Pillars one and four only get strong with real stories. A story you tell us in two minutes on a call becomes a drafted post in your voice, and you approve it before it goes anywhere.</p></div>
     <p class="sec-lede">Pillars one and four run on things that actually happened. Garrett, Savannah: bring us the challenges you walked into, what you did, and how it ended. We'll do the rest.</p>
     <div class="note">
       <strong>What a story needs:</strong> the situation, what you did, and what it protected or produced. Client and project names stay out of anything public; the story is what carries.
