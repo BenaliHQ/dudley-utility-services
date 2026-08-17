@@ -394,21 +394,30 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cov-figure { position: relative; margin-top: 30px; }
 .cov-map { display: block; width: 100%; height: auto; }
 .cov-map path { fill: #E9ECEE; stroke: var(--white); stroke-width: 1.3; stroke-linejoin: round; }
-.cov-cols { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr);
-  align-items: center; padding: 0 3%; }
-.cov-col { position: relative; text-align: center; padding: 0 clamp(10px, 1.8vw, 26px); }
-.cov-col + .cov-col::before { content: ""; position: absolute; left: 0; top: 6%; bottom: 6%;
+/* Columns are placed by the TOP OF THEIR TEXT, as a percentage of the map box, so the
+   copy stays inside the country outline at every width. The icon hangs above that line
+   and is allowed to cross the coast, the way it does in the reference graphic. Column
+   width is set by the headline (which never wraps); the body copy is inset inside it. */
+.cov-cols { position: absolute; inset: 0; }
+.cov-col { position: absolute; width: 21.5%; text-align: center; }
+.cov-col--a { left: 12.35%; top: 42.7%; }
+.cov-col--b { left: 37.35%; top: 42.7%; }
+.cov-col--c { left: 62.35%; top: 42.7%; }
+.cov-col::before { content: ""; position: absolute; left: -8%; top: -18%; height: 118%;
   width: 1px; background: var(--neutral-300); }
-.cov-icon { width: clamp(44px, 5.4vw, 66px); height: clamp(44px, 5.4vw, 66px); border-radius: 50%;
+.cov-col--a::before { display: none; }
+.cov-icon { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+  width: clamp(44px, 5.4vw, 66px); height: clamp(44px, 5.4vw, 66px); border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; }
 .cov-icon svg { width: 54%; height: 54%; display: block; }
 .cov-col h3 { font-size: clamp(14px, 1.55vw, 19px); font-weight: 900; letter-spacing: .05em;
-  text-transform: uppercase; line-height: 1.15; margin: 0; }
+  text-transform: uppercase; line-height: 1.15; margin: 0; white-space: nowrap; }
 .cov-rule { position: relative; height: 1px; background: var(--neutral-300);
   margin: 12px auto 14px; width: 82%; }
 .cov-rule::after { content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 5px;
   border-radius: 50%; transform: translate(-50%, -50%); background: currentColor; }
-.cov-col p { font-size: clamp(13px, 1.35vw, 16px); line-height: 1.5; color: var(--text-2); margin: 0; }
+.cov-col p { font-size: clamp(13px, 1.35vw, 16px); line-height: 1.5; color: var(--text);
+  margin: 0 auto; max-width: 84%; }
 .cov-col--a { color: var(--teal-500); }
 .cov-col--b { color: var(--green-700); }
 .cov-col--c { color: var(--teal-400); }
@@ -516,9 +525,13 @@ p, li { text-wrap: pretty; }
   .foottext { text-align: left; }
   .lo-split { grid-template-columns: 1fr; gap: 32px; }
   .cov-figure { margin-top: 24px; }
-  .cov-cols { position: static; padding: 0; gap: 30px 18px; margin-top: 26px; }
-  .cov-col + .cov-col::before { display: none; }
-  .cov-col { padding: 0; }
+  .cov-cols { position: static; display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 30px 18px; margin-top: 26px; }
+  .cov-col { position: static; width: auto; text-align: center; }
+  .cov-col h3 { white-space: normal; }
+  .cov-col p { max-width: 100%; }
+  .cov-col::before { display: none; }
+  .cov-icon { position: static; transform: none; margin: 0 auto 14px; }
   .cov-map { max-width: 620px; margin: 0 auto; }
   .lo-grid { grid-template-columns: 1fr; }
   .site-nav { padding: 0 24px; }
