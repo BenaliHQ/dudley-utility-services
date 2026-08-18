@@ -10,7 +10,7 @@ DUS's product is a defensible route across land: survey grids, plat maps, sectio
 
 - **Survey grid** — every dark brand surface carries a fine plat-style grid: 44px cells with a heavier "section line" every 4th cell. It reads as precision, not decoration.
 - **Route alignment** — the right-of-way drawn like a surveyor's alignment sheet: a green dash-dot centerline (civil centerline linetype), a translucent easement corridor with dashed edges, square PI monuments with center points, perpendicular station ticks, and faint parcel boundaries. Three tiers: full (with parcels and stationing labels) for covers and title slides, corridor (band only) for social scale, slim (centerline only) for banners. One per composition, maximum, always behind content.
-- **Horizon rule** — a green line anchoring the bottom of dark panels: the land. "Delivering energy through land" rendered as geometry.
+- **Horizon rule** — a green line anchoring the bottom of dark panels: the land itself, the surface the whole business works on, rendered as geometry.
 - **Squared structure** — small radii, corner ticks, hairlines. Sturdy, engineered, nothing soft.
 
 ## Color

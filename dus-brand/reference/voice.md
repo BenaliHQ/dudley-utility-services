@@ -26,7 +26,7 @@ What the client is actually buying: **confidence that the right-of-way will be s
 
 **The claim: creating certainty through strategic land solutions.** Easements are negotiated one owner at a time, and a single holdout can stall a project. The utility is buying confidence, not paperwork.
 
-**Mission and claim are different things.** "Delivering energy through land" is Dudley Land Company's mission statement, and **DUS no longer uses it on any surface** (Jenny, 2026-08-17). "Creating certainty through strategic land solutions" is what DUS sells, and it works as a display line where a surface calls for the positioning statement: the client set it on the SOQ cover, and Jenny approved the usage (2026-08-17). Never set it with a trademark symbol; the phrase isn't trademarked.
+**Mission and claim are different things.** "Delivering energy through land" is Dudley Land Company's mission statement, and it is **retired for DUS: not to be used on any DUS surface unless this rule is changed** (Jenny, 2026-08-17). It stays DLC's line, unchanged, on DLC's own surfaces. "Creating certainty through strategic land solutions" is what DUS sells, and it works as a display line where a surface calls for the positioning statement: the client set it on the SOQ cover, and Jenny approved the usage (2026-08-17). Never set it with a trademark symbol; the phrase isn't trademarked.
 
 **What backs the claim up:**
 
@@ -38,7 +38,7 @@ What the client is actually buying: **confidence that the right-of-way will be s
 
 ## The values, inherited word for word
 
-DUS uses Dudley Land Company's mission and core values exactly as written. Nothing is adapted for utility. Where values appear in copy, use this language verbatim.
+DUS uses Dudley Land Company's core values exactly as written. Nothing is adapted for utility. Where values appear in copy, use this language verbatim. (The DLC mission statement is a separate matter: retired for DUS surfaces — see § What we say.)
 
 **Current, with a review coming.** Brent's Q4 planning session in September takes a deeper look at purpose and core values and locks in the one-page plan for Dudley Utility Services. He doesn't expect a large shift, and anything that does change gets passed along. Treat this set as settled for now rather than settled forever.
 
