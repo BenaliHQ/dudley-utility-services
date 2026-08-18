@@ -178,7 +178,7 @@ On the buyer's side, the hierarchy matters because it's who the material is aime
 
 **"Creating certainty through strategic land solutions."** Garrett wrote it himself before Demandcast touched anything, and his thesis behind it is *"the uncertainty is what kills them."*
 
-Two cautions, both already settled. It is **not a tagline to stamp on every surface**. And it is separate from **"Delivering energy through land,"** which is the inherited Dudley mission statement and stays exactly as written. Neither collapses into the other.
+Two cautions, both already settled. It works as a display line where a surface calls for the positioning statement (approved 2026-08-17). And it is separate from **"Delivering energy through land,"** Dudley Land Company's mission statement, which is retired for DUS surfaces as of 2026-08-17: not to be used unless that rule changes. Neither collapses into the other.
 
 An adjacent one worth knowing because it will show up in the transcripts and it's counterintuitive: **in budget, never under.** Utility capital is allocated to be deployed, so coming in under budget is a failure, not a win. Nothing DUS publishes ever brags about saving the client money.
 

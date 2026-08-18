@@ -64,7 +64,7 @@ Four things that break the brand faster than any visual mistake:
 3. **Never mention renewables.** No solar, wind, battery storage, or energy-transition framing anywhere. Standing client instruction, and it differs from Dudley Land Company.
 4. **Every claim carries a mechanism.** "We reduce risk" is a claim. "We convert blanket easements to defined right-of-way before survey" is a mechanism. Claims without mechanisms get cut.
 
-**Mission and claim are not the same thing.** "Delivering energy through land" is the inherited Dudley mission statement. "Creating certainty through strategic land solutions" is what DUS sells. Neither one is a tagline to stamp on every surface.
+**Mission and claim are not the same thing.** "Delivering energy through land" is Dudley Land Company's mission statement, retired for DUS surfaces: not to be used unless the rule in `reference/voice.md` is changed (Jenny, 2026-08-17). "Creating certainty through strategic land solutions" is what DUS sells, and it works as a display line where a surface calls for the positioning statement.
 
 ## Exporting
 
