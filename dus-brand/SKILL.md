@@ -55,6 +55,8 @@ For carousels and decks: duplicate the appropriate slide/page section for more s
 
 **Anything about electric transmission also reads `reference/electric-transmission-pillar.md` first.** It's the settled positioning foundation for that topic: the one-line and one-paragraph position, what we believe, what we do, differentiation, and the USP. Transmission pages, one-pagers, and social posts derive from it rather than re-arguing the position, and its § Held for confirmation list gates what can't be published yet.
 
+**The other four services each have a pillar of the same shape: `reference/electric-distribution-pillar.md`, `reference/fiber-optics-broadband-pillar.md`, `reference/gas-utility-pillar.md`, `reference/water-utility-pillar.md`.** Anything about one of those services reads its pillar first. All four are drafts in review (2026-08-19): the one-liners are proposed, not client-settled, and each pillar's § What this pillar still needs lists what can't be published yet.
+
 Professional but real. Confident without the ego. Plain words, short sentences, sentence case body. UPPERCASE only in display headlines and eyebrow labels. Partners, not vendors: "we" is Dudley, "you" and "your project" are the reader. Voice anchor: *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
 
 Four things that break the brand faster than any visual mistake:
@@ -88,6 +90,7 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 - `dus-core.css` — the design system source (already inlined in every template).
 - `reference/voice.md` — **the canonical voice and messaging reference. Read it before writing DUS copy.**
 - `reference/electric-transmission-pillar.md` — **the settled electric transmission positioning. Read it before writing anything on that topic.**
+- `reference/electric-distribution-pillar.md`, `reference/fiber-optics-broadband-pillar.md`, `reference/gas-utility-pillar.md`, `reference/water-utility-pillar.md` — the four sibling service pillars (drafts in review, 2026-08-19). Same rule: read the service's pillar before writing on that service.
 - `reference/brand-rules.md` — expanded visual rules and rationale.
 - `reference/design-source-brief.md` — **the DUS domain source material. Read it before making any visual asset that needs a concrete detail** (imagery, iconography, diagrams, data displays, industry-specific work). It carries the objects, dimensions, numbers, roles, and field realities that are specific to utility land services, harvested from the client's own onboarding calls. The system in this skill decides how things look; that file supplies what they're about, so an asset lands specific instead of generic.
 - `index.html` — the brand book; open it to see every foundation and component.
