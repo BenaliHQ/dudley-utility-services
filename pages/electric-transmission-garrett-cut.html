@@ -738,9 +738,19 @@ p, li { text-wrap: pretty; }
 
     <style>
       /* presentation options — the loser gets removed once Garrett picks */
+      .pick-note { margin-top: 34px; padding: 24px 28px; border-radius: 4px;
+        background: linear-gradient(135deg, var(--teal-500), var(--teal-700)); }
+      .pick-note .pn-label { display: block; font-size: 13px; font-weight: 800; letter-spacing: .14em;
+        text-transform: uppercase; color: var(--teal-200); margin-bottom: 10px; }
+      .pick-note p { font-size: 16.5px; line-height: 1.6; color: var(--white); max-width: 860px; }
       .tier2 { margin-top: 22px; padding: 18px 24px; background: var(--neutral-100); border-left: 4px solid var(--green-500); }
       .tier2 p { font-size: 15px; color: var(--text); line-height: 1.7; }
     </style>
+
+    <div class="pick-note">
+      <span class="pn-label">For your review: this section comes two ways</span>
+      <p>Your capability list was too good to cut, so we designed it both ways. Option A presents every service exactly as Garrett wrote it, in full. Option B keeps the same scope but leads with the two services that carry the most weight and holds the rest to one line, following the specific-over-comprehensive direction from our earlier sessions. Tell us which one reads better to a client, or mark up a blend of the two.</p>
+    </div>
 
     <div class="dus-micro" style="margin-top: 40px; color: var(--green-600);">Option A &middot; Every service, carded</div>
     <div class="grid-2" style="margin-top: 26px;">
