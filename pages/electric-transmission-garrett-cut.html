@@ -375,6 +375,11 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 
 /* ---------- Credibility strip (inside "Who runs the work") ---------- */
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+}
+.credstrip--2 { grid-template-columns: repeat(2, 1fr); }
+.cred-head { grid-column: 1 / -1; font-size: 21px; font-weight: 900; letter-spacing: -0.01em;
+  color: var(--teal-500); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--neutral-200); }
+.credstrip-inner-void { display: grid; gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
   background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
 .cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
@@ -901,8 +906,8 @@ p, li { text-wrap: pretty; }
     <h2 class="dus-h1 sec-title reveal">Experienced leadership, backed by proven resources</h2>
     <p class="sec-lede reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
 
-    <div class="dus-micro" style="margin-bottom: 14px;">Leadership brings</div>
-    <div class="credstrip">
+    <div class="credstrip credstrip--2">
+      <h3 class="cred-head">Leadership brings</h3>
       <div class="cred">
         <div class="value">35+</div>
         <div class="label">Combined years</div>
@@ -919,7 +924,7 @@ p, li { text-wrap: pretty; }
         <p>We recruit land professionals through the network Dudley Land Company has developed across 45+ years of energy-land work.</p>
       </div>
       <div class="dus-card pad">
-        <h3 class="dus-h3">Familiar with your project area</h3>
+        <h3 class="dus-h3">Familiar with<br>the project area</h3>
         <p>We place land professionals who know the area, understand regional expectations, and can speak credibly with the landowners along your route.</p>
       </div>
       <div class="dus-card pad">
@@ -1069,7 +1074,7 @@ p, li { text-wrap: pretty; }
         <div class="dus-eyebrow dus-eyebrow--teal reveal">For community members</div>
         <h2 class="dus-h1 sec-title reveal">Respect starts with the first conversation</h2>
         <p class="lo-line">We communicate clearly, listen carefully, and make sure landowners understand the project, the process, and what to expect before work begins on their property.</p>
-        <p class="lo-line lo-fair"><strong>In every interaction, our job is to reflect well on the client we represent.</strong></p>
+        <p class="lo-line lo-fair"><strong>Every interaction upholds the reputation you've built with your community.</strong></p>
       </div>
     </div>
 
