@@ -288,10 +288,87 @@ body { margin: 0; padding: 40px; display: flex; flex-direction: column; align-it
 .page { position: relative; width: 8.5in; height: 11in; overflow: hidden; background: var(--white); page-break-after: always; box-shadow: var(--shadow-md); display: flex; flex-direction: column; }
 .page:last-child { page-break-after: auto; }
 .dus-logo { display: block; width: auto; object-fit: contain; }
+/* ================================================================
+   PRINT-FRIENDLY MODE
+   Converts dark teal surfaces to light for clean, ink-efficient
+   printing. Activated by toggle button, ?print URL, or ⌘P/Ctrl+P.
+   Cover + Kudu + Closing get subtle teal-050 tint; all other dark
+   sections go white. Brand accents (green rules, checkmarks) stay.
+   ================================================================ */
+
+/* ---- Toggle button ---- */
+#view-toggle {
+  position: fixed; top: 16px; right: 16px; z-index: 100;
+  padding: 10px 20px; border: none; border-radius: var(--r-md);
+  background: var(--teal-500); color: white;
+  font-family: var(--font); font-size: 13px; font-weight: 700;
+  letter-spacing: .04em; cursor: pointer;
+  box-shadow: var(--shadow-md); transition: background .2s;
+}
+#view-toggle:hover { background: var(--teal-600); }
+body.print-mode #view-toggle {
+  background: var(--white); color: var(--teal-500);
+  box-shadow: inset 0 0 0 1.5px var(--teal-500), var(--shadow-sm);
+}
+
+/* ---- Global overrides ---- */
+body.print-mode { background: var(--white); }
+body.print-mode .page { box-shadow: none; }
+
+/* Dark surfaces → white (default for all teal fields) */
+body.print-mode .dus-field-teal {
+  background: var(--white) !important;
+  color: var(--text) !important;
+}
+
+/* Hide dark grid overlays — clean print surfaces */
+body.print-mode .dus-grid-dark::before { display: none; }
+
+/* Logos: white → black via filter */
+body.print-mode .dus-logo { filter: brightness(0); }
+
+/* Semantic color overrides */
+body.print-mode .dus-eyebrow--dark { color: var(--teal-500) !important; }
+body.print-mode .dus-stat--dark .value { color: var(--teal-500) !important; }
+body.print-mode .dus-stat--dark .label { color: var(--text-2) !important; }
+body.print-mode .dus-micro--dark { color: var(--text-3) !important; }
+
+/* ---- Page 1: Cover — teal-050 for branded presence ---- */
+body.print-mode .cover-band { background: var(--teal-050) !important; }
+body.print-mode .cover-band .dus-display { color: var(--teal-700) !important; }
+body.print-mode .cover-band .dus-micro--dark { color: var(--teal-500) !important; }
+body.print-mode .cover-industries span { color: var(--ink-600) !important; }
+body.print-mode .cover-industries span + span::before { color: var(--green-600) !important; }
+
+/* ---- Page 1: Values — white with teal headings ---- */
+body.print-mode .values-band { border-top: 1px solid var(--neutral-200); }
+body.print-mode .values-grid .name { color: var(--teal-700) !important; }
+body.print-mode .values-grid .line { color: var(--ink-700) !important; }
+
+/* ---- Page 2: Kudu — teal-050 for tech highlight ---- */
+body.print-mode .kudu-band { background: var(--teal-050) !important; border-top: 1px solid var(--neutral-200); }
+body.print-mode .kudu-band .dus-h2 { color: var(--teal-700) !important; }
+body.print-mode .kudu-copy { color: var(--ink-700) !important; }
+body.print-mode .kudu-list li { color: var(--ink-800) !important; }
+
+/* ---- Page 3: National Footprint — white ---- */
+body.print-mode .footprint { border-top: 1px solid var(--neutral-200); }
+body.print-mode .footprint .dus-h2 { color: var(--teal-700) !important; }
+body.print-mode .map-wrap { background: rgba(1,82,112,.04) !important; border-color: var(--neutral-200) !important; }
+
+/* ---- Page 3: Footer — white, green top-rule ---- */
+body.print-mode .pagefoot { background: var(--white) !important; color: var(--text) !important; }
+
+/* ---- Page 4: Closing — teal-050, bookends with cover ---- */
+body.print-mode .closing-band { background: var(--teal-050) !important; border-top: 1px solid var(--neutral-200); }
+body.print-mode .closing-band .dus-display { color: var(--teal-700) !important; }
+
+/* ---- @media print ---- */
 @media print {
   body { display: block; padding: 0; gap: 0; background: var(--white); }
   .page { margin: 0; box-shadow: none; break-after: page; page-break-after: always; }
   .page:last-child { break-after: auto; page-break-after: auto; }
+  #view-toggle { display: none !important; }
 }
 
 /* ---- shared ---- */
@@ -561,6 +638,31 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
       </div>
     </section>
   </main>
+
+  <!-- Print/Digital toggle -->
+  <button id="view-toggle" onclick="toggleView()">Print View</button>
+  <script>
+    function toggleView() {
+      document.body.classList.toggle('print-mode');
+      document.getElementById('view-toggle').textContent =
+        document.body.classList.contains('print-mode') ? 'Digital View' : 'Print View';
+    }
+    // Auto-activate from ?print URL param
+    if (new URLSearchParams(location.search).has('print')) {
+      document.body.classList.add('print-mode');
+      document.getElementById('view-toggle').textContent = 'Digital View';
+    }
+    // Auto-apply print-mode when printing (Ctrl+P / ⌘P)
+    window.addEventListener('beforeprint', function() {
+      document.body.classList.add('print-mode');
+    });
+    window.addEventListener('afterprint', function() {
+      if (!new URLSearchParams(location.search).has('print')) {
+        document.body.classList.remove('print-mode');
+        document.getElementById('view-toggle').textContent = 'Print View';
+      }
+    });
+  </script>
 
 </body>
 </html>
