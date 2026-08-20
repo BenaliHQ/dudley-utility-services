@@ -677,6 +677,57 @@ p, li { text-wrap: pretty; }
         <p>We listen, communicate with transparency, and treat everyone with respect, protecting your reputation and earning trust.</p>
       </div>
     </div>
+
+    <style>
+      /* faceoff mocks only — removed once a direction is chosen */
+      .rail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 28px; margin-top: 30px; }
+      .rail-station { position: relative; padding-top: 26px; }
+      .rail-station::before { content: ""; position: absolute; top: 8px; left: 16px; right: -28px; height: 0;
+        border-top: 2px dashed rgba(65,190,72,0.5); }
+      .rail-station:nth-child(4n)::before { display: none; }
+      .rail-station::after { content: ""; position: absolute; top: 3px; left: 0; width: 10px; height: 10px;
+        background: var(--white); border: 2px solid var(--green-600); }
+      .rail-num { font-size: 11px; font-weight: 700; letter-spacing: .18em; color: var(--green-600); margin-bottom: 6px; }
+      .rail-name { font-weight: 900; font-size: 16.5px; color: var(--teal-500); line-height: 1.25; margin-bottom: 6px; }
+      .rail-line { font-size: 14.5px; color: var(--text-2); line-height: 1.5; }
+      .tier2 { margin-top: 22px; padding: 18px 24px; background: var(--neutral-100); border-left: 4px solid var(--green-500); }
+      .tier2 p { font-size: 15px; color: var(--text); line-height: 1.7; }
+      @media (max-width: 900px) {
+        .rail-grid { grid-template-columns: 1fr 1fr; }
+        .rail-station:nth-child(2n)::before { display: none; }
+      }
+    </style>
+
+    <div class="dus-micro" style="margin-top: 64px; color: var(--green-600);">Option B &middot; Lifecycle rail</div>
+    <div class="rail-grid">
+      <div class="rail-station"><div class="rail-num">01</div><div class="rail-name">Project management and administration</div><p class="rail-line">Maintain control.</p></div>
+      <div class="rail-station"><div class="rail-num">02</div><div class="rail-name">Routing and siting</div><p class="rail-line">Establish the path.</p></div>
+      <div class="rail-station"><div class="rail-num">03</div><div class="rail-name">Title and ownership</div><p class="rail-line">Know the property.</p></div>
+      <div class="rail-station"><div class="rail-num">04</div><div class="rail-name">Survey and field support</div><p class="rail-line">Prepare for acquisition.</p></div>
+      <div class="rail-station"><div class="rail-num">05</div><div class="rail-name">Right of way acquisition</div><p class="rail-line">Secure the rights.</p></div>
+      <div class="rail-station"><div class="rail-num">06</div><div class="rail-name">Non-environmental permitting</div><p class="rail-line">Coordinating the requirements.</p></div>
+      <div class="rail-station"><div class="rail-num">07</div><div class="rail-name">Construction support</div><p class="rail-line">Keep the work moving.</p></div>
+      <div class="rail-station"><div class="rail-num">08</div><div class="rail-name">Project closeout</div><p class="rail-line">Finish with clarity.</p></div>
+    </div>
+
+    <div class="dus-micro" style="margin-top: 64px; color: var(--green-600);">Option C &middot; Two tiers (anchor cards + the rest in one line)</div>
+    <div class="grid-2" style="margin-top: 26px;">
+      <div class="dus-card dus-card--accent pad">
+        <div class="dus-micro" style="margin-bottom: 8px;">Right of way acquisition</div>
+        <h3 class="dus-h3">Secure the rights</h3>
+        <p>Landowner engagement, easement acquisition, fee acquisition, temporary rights, access agreements, rights of entry, and support for complex acquisitions through final resolution.</p>
+      </div>
+      <div class="dus-card dus-card--accent pad">
+        <div class="dus-micro" style="margin-bottom: 8px;">Project management and administration</div>
+        <h3 class="dus-h3">Maintain control</h3>
+        <p>Project controls, risk identification and mitigation, staffing, cost and schedule tracking, document management, recording, reporting, quality control, and client coordination.</p>
+      </div>
+    </div>
+    <div class="tier2">
+      <div class="dus-micro" style="margin-bottom: 8px;">Across the rest of the lifecycle</div>
+      <p>Routing and siting &middot; Title and ownership &middot; Survey and field support &middot; Non-environmental permitting &middot; Construction support &middot; Project closeout</p>
+    </div>
+
   </div>
 </section>
 
@@ -728,6 +779,7 @@ p, li { text-wrap: pretty; }
     <div class="dus-eyebrow dus-eyebrow--teal reveal">What we do</div>
     <h2 class="dus-h1 sec-title reveal">Land services across the project lifecycle</h2>
     <p class="sec-lede reveal">From early project development through construction and closeout, we provide the land expertise and field resources required to move utility projects forward.</p>
+    <div class="dus-micro" style="margin-top: 40px; color: var(--green-600);">Option A &middot; Accordion</div>
     <div class="faq" style="margin-top: 34px;">
       <details>
         <summary><span class="qnum">01</span><span class="qtext">Project management and administration</span><span class="sign" aria-hidden="true"></span></summary>
