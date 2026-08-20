@@ -4,19 +4,19 @@
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026), the client working sessions of August 7 and 14, 2026 (Garrett Gill and Savannah Cano), and the RFP and statement-of-work audit (which includes one gas utility statement of work). Evidence inventory: the vault's water-and-gas evidence note, 2026-08-19.
 
-**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** Garrett committed on 8/7 to send his own written explanation of gas utility versus gas pipeline; it hasn't arrived, and it's the most important input this pillar is still owed. Gaps in § What this pillar still needs.
+**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** The gas-utility-versus-pipeline distinction gets captured live at the 8/21 session (Jenny's ruling, 8/19: no written version is coming, and it isn't to be requested). Gaps in § What this pillar still needs.
 
 ---
 
 ## The position, in one line and one paragraph
 
-**One line:** Gas utility work is utility work, and the difference matters. Dudley Utility Services holds that line precisely: utility land leadership on one side, Dudley Land Company's oil and gas depth on the other, and every necessary right secured with the discipline your electric work already gets. *(Proposed. Reshaped 2026-08-19 after Jenny's review: each service's line gets its own shape rather than inheriting transmission's mold, and this one leads with the boundary fluency that's genuinely DUS's alone. Needs the client's read, and Garrett's gas blurb may sharpen it.)*
+**One line:** Gas utility work is utility work, and the difference matters. Dudley Utility Services holds that line precisely: utility land leadership on one side, Dudley Land Company's oil and gas depth on the other, and every necessary right secured with the discipline your electric work already gets. *(Proposed. Reshaped 2026-08-19 after Jenny's review: each service's line gets its own shape rather than inheriting transmission's mold, and this one leads with the boundary fluency that's genuinely DUS's alone. Needs the client's read, and the 8/21 dive may sharpen it.)*
 
 **One paragraph:** Dudley Utility Services secures land rights for gas utility projects. This is utility work, the delivery side of the gas business, and it has nothing to do with the upstream and midstream world; the two get confused even inside the industry, and DUS holds that line precisely because Dudley lives on both sides of it, with Dudley Land Company serving the oil and gas side and DUS serving utilities only. Major gas utility work runs with transmission's discipline: project-shaped, regulated, easement widths specified, temporary construction easements negotiated along the route, facility sites acquired alongside the line, and every parcel's file kept ready for whatever path it takes. The majors hire their gas land work through the same master service agreements and the same procurement rigor as their electric work, so the standard is one standard. The team is cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network. What the utility gets is certainty: land rights secured on the gas side of the house to the same standard the electric side already scores.
 
 ## What we believe
 
-**Gas utility is its own discipline, and the name matters.** Gas utility work belongs to the power side of the house. It isn't gas pipeline work, nothing here is upstream or midstream, and the two get confused even by people inside the industry. DUS can hold that boundary precisely because Dudley works both sides of it: Dudley Land Company carries the oil and gas depth, and DUS applies land discipline to utilities only. *(Garrett, 8/7: "we're doing gas utility, but we're not doing like gas pipeline... it took me a while to even grasp it because even at CLS there was a lot of crossover and confusion between the two departments"; Garrett, 7/21: "we don't do anything upstream at all or midstream. Ours is all utility." His fuller written explanation is owed and gets folded in when it arrives.)*
+**Gas utility is its own discipline, and the name matters.** Gas utility work belongs to the power side of the house. It isn't gas pipeline work, nothing here is upstream or midstream, and the two get confused even by people inside the industry. DUS can hold that boundary precisely because Dudley works both sides of it: Dudley Land Company carries the oil and gas depth, and DUS applies land discipline to utilities only. *(Garrett, 8/7: "we're doing gas utility, but we're not doing like gas pipeline... it took me a while to even grasp it because even at CLS there was a lot of crossover and confusion between the two departments"; Garrett, 7/21: "we don't do anything upstream at all or midstream. Ours is all utility." The distinction gets sharpened live from the 8/21 session.)*
 
 **Major gas work runs with transmission's discipline.** The gas utility work in our source material is project-shaped: regulated, condemnation-capable, easement widths specified, a temporary construction easement negotiated along the entire route, and facility sites, like regulator stations, acquired alongside the line. It rewards the same estimate discipline, documentation, and compliance posture transmission rewards. *(RFP/SOW audit: the gas statement of work reviewed behaves like transmission procedurally. Stated as how the work runs, never as a contrast that diminishes any line of business.)*
 
@@ -65,12 +65,12 @@ To match it, a competitor would have to stand alongside an oil-and-gas land comp
 ## Proof material for downstream copy
 
 - **Usable now, anonymized:** the gas-utility-versus-pipeline distinction as an industry confusion DUS resolves (Garrett's own insight); major gas work bought through the same master service agreements as electric; the project shape (specified widths, route-length temporary construction easements, facility sites), stated generically.
-- **Held for the client:** Garrett's written gas-utility-versus-pipeline explanation (committed 8/7, not yet received); any gas proof figure.
+- **Held for the client:** any gas proof figure.
 - **Off-limits, standing:** every client, project, route, or location name; any deadline, threshold, or service level from the contract library published as a DUS standard; all oil and gas vocabulary (upstream, midstream, minerals, leases) except when naming the boundary itself.
 
 ## What this pillar still needs
 
-- **Garrett's gas blurb.** He typed one on his own initiative on 8/7 and committed to send it. It's the anchor input. Ask Friday.
+- **The gas-utility-versus-pipeline difference, in Garrett's words, captured live** at the 8/21 session. It's the anchor input for this pillar.
 - **The gas buyer, by title,** and whether it's the same right-of-way organization as electric at the majors or a separate gas land group.
 - **Gas proof** in writing: miles, projects, or client count on the gas side.
 - **The safety question,** which lands harder on gas than anywhere else. What's documentable, from operations.
