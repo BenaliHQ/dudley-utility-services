@@ -59,7 +59,7 @@
   --text-3: var(--ink-500);
   --on-dark: rgba(255,255,255,0.94);
   --on-dark-2: rgba(255,255,255,0.72);
-  --on-dark-3: rgba(255,255,255,0.50);
+  --on-dark-3: rgba(255,255,255,0.64);
   --hairline-dark: rgba(255,255,255,0.16);
   --hairline: var(--neutral-200);
 
@@ -85,6 +85,9 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html {
+  scroll-padding-top: 56px;
+}
 html, body {
   font-family: var(--font);
   color: var(--text);
@@ -320,10 +323,10 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 /* ---------- Sticky section nav ---------- */
 .tocbar { position: sticky; top: 0; z-index: 20; background: var(--white);
   border-bottom: 1px solid var(--hairline); }
-.toc { display: flex; gap: 30px; overflow-x: auto; padding-top: 15px; padding-bottom: 15px; }
+.toc { display: flex; gap: 30px; overflow-x: auto; }
 .toc a { white-space: nowrap; text-decoration: none; color: var(--text-2);
   font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  padding-bottom: 3px; border-bottom: 2px solid transparent; }
+  padding: 14px 0; border-bottom: 2px solid transparent; }
 .toc a:hover { color: var(--teal-500); border-bottom-color: var(--green-500); }
 
 /* ---------- Sections ---------- */
@@ -427,7 +430,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cov-col h3 { color: currentColor; }
 
 /* ---------- For landowners ---------- */
-.lo-commitments { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--neutral-300); }
+.lo-commitments { margin-top: 44px; padding-top: 34px; border-top: 1px solid var(--neutral-300); }
 .lo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 42px; }
 .lo { padding-left: 20px; border-left: 3px solid var(--green-500); }
 .lo h3 { font-size: 19px; color: var(--teal-500); margin-bottom: 10px; }
@@ -540,7 +543,7 @@ p, li { text-wrap: pretty; }
   .site-nav-links { display: none; }
   .nav-burger { display: block; }
   .toc { gap: 20px; }
-  .toc a { font-size: 11px; }
+  .toc a { font-size: 11px; padding: 16px 0; }
 }
 @media (max-width: 600px) {
   .cov-cols { grid-template-columns: 1fr; gap: 26px; }
@@ -726,29 +729,30 @@ p, li { text-wrap: pretty; }
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Your project record</div>
     <h2 class="dus-h1 sec-title reveal">Real-time project intelligence for risk management</h2>
     <p class="sec-lede reveal">Kudu is Dudley's own land management suite, built in-house and web-based, in place of the fragmented spreadsheets and static weekly reports that usually stand in for a land system.</p>
-    <div class="dus-micro" style="margin-top: 44px; margin-bottom: 4px;">You get</div>
+    <div class="dus-micro" style="margin-top: 44px; margin-bottom: 16px;">You get</div>
     <div class="grid-2" style="margin-top: 14px;">
       <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg2)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"/></svg>
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg2)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"/></svg>
         <h3 class="dus-h3">Real-time project intelligence</h3>
         <p>We update status when work happens, keeping reports aligned with the latest documented activity on every parcel.</p>
       </div>
       <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg1)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM16 20V4H4V19C4 19.5523 4.44772 20 5 20H16ZM6 7H14V9H6V7ZM6 11H14V13H6V11ZM6 15H11V17H6V15Z"/></svg>
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg1)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM16 20V4H4V19C4 19.5523 4.44772 20 5 20H16ZM6 7H14V9H6V7ZM6 11H14V13H6V11ZM6 15H11V17H6V15Z"/></svg>
         <h3 class="dus-h3">A line list that's always current</h3>
         <p>We maintain deed references, tract numbers, acreage, ownership, and acquisition status in one working project record.</p>
       </div>
       <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg3)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 5L9 2L15 5L21.303 2.2987C21.5569 2.18992 21.8508 2.30749 21.9596 2.56131C21.9862 2.62355 22 2.69056 22 2.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V5ZM16 19.3955L20 17.6812V5.03308L16 6.74736V19.3955ZM14 19.2639V6.73607L10 4.73607V17.2639L14 19.2639ZM8 17.2526V4.60451L4 6.31879V18.9669L8 17.2526Z"/></svg>
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg3)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 5L9 2L15 5L21.303 2.2987C21.5569 2.18992 21.8508 2.30749 21.9596 2.56131C21.9862 2.62355 22 2.69056 22 2.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V5ZM16 19.3955L20 17.6812V5.03308L16 6.74736V19.3955ZM14 19.2639V6.73607L10 4.73607V17.2639L14 19.2639ZM8 17.2526V4.60451L4 6.31879V18.9669L8 17.2526Z"/></svg>
         <h3 class="dus-h3">A progress map you can read at a glance</h3>
         <p>We send progress maps, named risks, and current status in the reporting format your team prefers to receive.</p>
       </div>
       <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" viewBox="0 0 24 24" fill="url(#dg4)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M3 10H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10ZM9 12V14H15V12H9ZM2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V8H2V4Z"/></svg>
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg4)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M3 10H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10ZM9 12V14H15V12H9ZM2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V8H2V4Z"/></svg>
         <h3 class="dus-h3">The complete working record</h3>
         <p>We keep title documents, survey plats, field records, and acquisition files organized and accounted for through closeout.</p>
       </div>
     </div>
+  </div>
   </section>
 
 <!-- ===================== 06 · WHO RUNS THE WORK ===================== -->
@@ -907,19 +911,19 @@ p, li { text-wrap: pretty; }
       </svg>
       <div class="cov-cols">
         <div class="cov-col cov-col--a">
-          <span class="cov-icon"><svg><use href="#cov-icon-globe"/></svg></span>
+          <span class="cov-icon"><svg aria-hidden="true"><use href="#cov-icon-globe"/></svg></span>
           <h3>National reach</h3>
           <div class="cov-rule"></div>
           <p>Experienced land professionals across key utility markets</p>
         </div>
         <div class="cov-col cov-col--b">
-          <span class="cov-icon"><svg><use href="#cov-icon-pin"/></svg></span>
+          <span class="cov-icon"><svg aria-hidden="true"><use href="#cov-icon-pin"/></svg></span>
           <h3>Local knowledge</h3>
           <div class="cov-rule"></div>
           <p>Teams selected for regional experience and market familiarity</p>
         </div>
         <div class="cov-col cov-col--c">
-          <span class="cov-icon"><svg><use href="#cov-icon-team"/></svg></span>
+          <span class="cov-icon"><svg aria-hidden="true"><use href="#cov-icon-team"/></svg></span>
           <h3>Scalable resources</h3>
           <div class="cov-rule"></div>
           <p>Staffing built around the size, schedule, and complexity of your project</p>
