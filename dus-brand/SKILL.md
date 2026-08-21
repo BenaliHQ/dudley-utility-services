@@ -57,6 +57,10 @@ For carousels and decks: duplicate the appropriate slide/page section for more s
 
 **The other four services each have a pillar of the same shape: `reference/electric-distribution-pillar.md`, `reference/fiber-optics-broadband-pillar.md`, `reference/gas-utility-pillar.md`, `reference/water-utility-pillar.md`.** Anything about one of those services reads its pillar first. All four are drafts in review (2026-08-19): the one-liners are proposed, not client-settled, and each pillar's § What this pillar still needs lists what can't be published yet.
 
+**For facts about the work itself — what DUS does, which services a capability applies to, who buys, what they weigh — read the DUS Reference Library in Drive** at `Dudley/DUS/Reference Library`. Three docs: **Core Competencies — By Function and Service** (the nine land functions, their sub-points, and the function-by-service applicability matrix, plus the settled cost-driver, terminology, and voltage rulings), **Service Profiles — The Five Services**, and an **Index** carrying the extraction laws and a source ledger. Every claim there is sourced and marked GREEN (client-stated, publishable), YELLOW (inferred, confirm first), or RED (a named gap, never filled). The pillars own the position; the library owns the evidence. Never go back to meeting transcripts for a fact the library should hold — add it to the library first, then write.
+
+**Distribution has no page of its own as of 2026-08-21.** Garrett asked to fold it into the transmission material (transmission is 85–90% of DUS work for the next five years; distribution is a small fragment now that storm-hardening undergrounding is largely done). Its pillar's positioning may survive; its page premise does not. Do not draft a distribution page.
+
 Professional but real. Confident without the ego. Plain words, short sentences, sentence case body. UPPERCASE only in display headlines and eyebrow labels. Partners, not vendors: "we" is Dudley, "you" and "your project" are the reader. Voice anchor: *"We're not trying to be the loudest voice in the room. We're trying to be the most trusted."*
 
 Four things that break the brand faster than any visual mistake:
@@ -91,6 +95,7 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 - `reference/voice.md` — **the canonical voice and messaging reference. Read it before writing DUS copy.**
 - `reference/electric-transmission-pillar.md` — **the settled electric transmission positioning. Read it before writing anything on that topic.**
 - `reference/electric-distribution-pillar.md`, `reference/fiber-optics-broadband-pillar.md`, `reference/gas-utility-pillar.md`, `reference/water-utility-pillar.md` — the four sibling service pillars (drafts in review, 2026-08-19). Same rule: read the service's pillar before writing on that service.
+- **DUS Reference Library** (Google Drive, `Dudley/DUS/Reference Library`) — the evidence layer: core competencies by function and service, per-service profiles, and the source ledger. Not in this repo; it lives in Drive so client-side and cowork agents can read it too.
 - `reference/brand-rules.md` — expanded visual rules and rationale.
 - `reference/design-source-brief.md` — **the DUS domain source material. Read it before making any visual asset that needs a concrete detail** (imagery, iconography, diagrams, data displays, industry-specific work). It carries the objects, dimensions, numbers, roles, and field realities that are specific to utility land services, harvested from the client's own onboarding calls. The system in this skill decides how things look; that file supplies what they're about, so an asset lands specific instead of generic.
 - `index.html` — the brand book; open it to see every foundation and component.
