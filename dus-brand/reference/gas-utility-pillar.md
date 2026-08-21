@@ -8,17 +8,19 @@ Source: DUS positioning engagement, Demandcast, August 2026. Built from client i
 
 ---
 
+> **Ruling, 2026-08-20 (Jenny):** the gas-utility-versus-pipeline boundary is NOT the anchor of this pillar, and the both-sides-fluency differentiator is retired as wrong in practice: the DUS team is utility-focused and Dudley Land Company's oil-and-gas team is completely separate, so cross-expertise can't be claimed. The distinction still gets captured for our accuracy. The client-facing page runs TBD on the one-liner, the USP, two belief slots, and one differentiator slot until the 8/21 session supplies the real anchor.
+
 ## The position, in one line and one paragraph
 
-**One line:** Gas utility work is utility work, and the difference matters. Dudley Utility Services holds that line precisely: utility land leadership on one side, Dudley Land Company's oil and gas depth on the other, and every necessary right secured with the discipline your electric work already gets. *(Proposed. Reshaped 2026-08-19 after Jenny's review: each service's line gets its own shape rather than inheriting transmission's mold, and this one leads with the boundary fluency that's genuinely DUS's alone. Needs the client's read, and the 8/21 dive may sharpen it.)*
+**One line:** TBD, written from the 8/21 session. *(The 8/19 boundary-fluency draft is retired per the 8/20 ruling above; it read as teaching and anchored on a differentiator that doesn't hold in practice.)*
 
 **One paragraph:** Dudley Utility Services secures land rights for gas utility projects. This is utility work, the delivery side of the gas business, and it has nothing to do with the upstream and midstream world; the two get confused even inside the industry, and DUS holds that line precisely because Dudley lives on both sides of it, with Dudley Land Company serving the oil and gas side and DUS serving utilities only. Major gas utility work runs with transmission's discipline: project-shaped, regulated, easement widths specified, temporary construction easements negotiated along the route, facility sites acquired alongside the line, and every parcel's file kept ready for whatever path it takes. The majors hire their gas land work through the same master service agreements and the same procurement rigor as their electric work, so the standard is one standard. The team is cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network. What the utility gets is certainty: land rights secured on the gas side of the house to the same standard the electric side already scores.
 
 ## What we believe
 
-**Gas utility is its own discipline, and the name matters.** Gas utility work belongs to the power side of the house. It isn't gas pipeline work, nothing here is upstream or midstream, and the two get confused even by people inside the industry. DUS can hold that boundary precisely because Dudley works both sides of it: Dudley Land Company carries the oil and gas depth, and DUS applies land discipline to utilities only. *(Garrett, 8/7: "we're doing gas utility, but we're not doing like gas pipeline... it took me a while to even grasp it because even at CLS there was a lot of crossover and confusion between the two departments"; Garrett, 7/21: "we don't do anything upstream at all or midstream. Ours is all utility." The distinction gets sharpened live from the 8/21 session.)*
+**~~Gas utility is its own discipline, and the name matters~~ — RETIRED from client surfaces (Jenny, 8/20: teaching, and the boundary is not the anchor; kept here as evidence only).** Gas utility work belongs to the power side of the house. It isn't gas pipeline work, nothing here is upstream or midstream, and the two get confused even by people inside the industry. DUS can hold that boundary precisely because Dudley works both sides of it: Dudley Land Company carries the oil and gas depth, and DUS applies land discipline to utilities only. *(Garrett, 8/7: "we're doing gas utility, but we're not doing like gas pipeline... it took me a while to even grasp it because even at CLS there was a lot of crossover and confusion between the two departments"; Garrett, 7/21: "we don't do anything upstream at all or midstream. Ours is all utility." The distinction gets sharpened live from the 8/21 session.)*
 
-**Major gas work runs with transmission's discipline.** The gas utility work in our source material is project-shaped: regulated, condemnation-capable, easement widths specified, a temporary construction easement negotiated along the entire route, and facility sites, like regulator stations, acquired alongside the line. It rewards the same estimate discipline, documentation, and compliance posture transmission rewards. *(RFP/SOW audit: the gas statement of work reviewed behaves like transmission procedurally. Stated as how the work runs, never as a contrast that diminishes any line of business.)*
+**~~Major gas work runs with transmission's discipline~~ — RETIRED from client surfaces (Jenny, 8/20: a cross-industry comparison that means nothing to a gas reader; the documentary texture stays usable inside What we do).** The gas utility work in our source material is project-shaped: regulated, condemnation-capable, easement widths specified, a temporary construction easement negotiated along the entire route, and facility sites, like regulator stations, acquired alongside the line. It rewards the same estimate discipline, documentation, and compliance posture transmission rewards. *(RFP/SOW audit: the gas statement of work reviewed behaves like transmission procedurally. Stated as how the work runs, never as a contrast that diminishes any line of business.)*
 
 **Your gas and electric work deserve one standard.** The major utilities increasingly run gas utility work through the same master service agreements and the same companies as their electric work, with the same regulatory and estimating requirements. A vendor that clears the bar on one side of the house should clear it identically on the other. *(Garrett, 7/30, on how the majors buy, stated without naming anyone.)*
 
@@ -37,7 +39,7 @@ How the work removes uncertainty:
 
 ## Our differentiation
 
-**Fluency on both sides of the gas boundary.** The gas-utility-versus-pipeline confusion is real inside the industry. Dudley works both sides: Dudley Land Company on oil and gas, DUS on utilities only, so DUS staffs gas utility projects with people who know exactly which discipline they're in and which vocabulary, regulators, and instruments apply. *(Garrett, 8/7 and 7/21. This is the differentiation a competitor without an oil-and-gas land company can't claim.)*
+**~~Fluency on both sides of the gas boundary~~ — RETIRED (Jenny, 8/20): factually wrong in practice. The DUS team is utility-focused and the DLC oil-and-gas team is completely separate; cross-expertise can't be claimed as a differentiator. The gas differentiator slot is TBD until the 8/21 session.**
 
 **One vendor standard across the house.** The majors buy gas land work through the same master service agreements as electric. DUS brings the identical compliance posture, estimate discipline, and reporting to both, so the client's gas program inherits the standard their electric reviews already score. *(Garrett, 7/30, generalized.)*
 
@@ -47,7 +49,7 @@ How the work removes uncertainty:
 
 ## Our unique selling proposition
 
-**DUS delivers certainty on gas utility work through fluency and one standard: projects staffed by cross-trained land managers who know exactly where utility gas work ends and pipeline work begins, recruited through Dudley Land Company's 45-year network, and run with the same discipline the client's electric work scores.**
+**TBD — written from the 8/21 session.** *(The fluency-and-one-standard draft is retired per the 8/20 ruling; one-standard survives as a belief and differentiator, never as the USP anchor.)*
 
 To match it, a competitor would have to stand alongside an oil-and-gas land company of their own, retrain specialists into generalists, and rebuild a compensation structure and recruiting network four and a half decades deep.
 
