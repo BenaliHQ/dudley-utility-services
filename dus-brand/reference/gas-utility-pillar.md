@@ -4,7 +4,7 @@
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026), the client working sessions of August 7 and 14, 2026 (Garrett Gill and Savannah Cano), and the RFP and statement-of-work audit (which includes one gas utility statement of work). Evidence inventory: the vault's water-and-gas evidence note, 2026-08-19.
 
-**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** The gas-utility-versus-pipeline distinction gets captured live at the 8/21 session (Jenny's ruling, 8/19: no written version is coming, and it isn't to be requested). Gaps in § What this pillar still needs.
+**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** The gas-utility-versus-pipeline distinction gets captured live at the 8/21 session (Jenny's ruling, 8/19: no written version is coming, and it isn't to be requested). Gaps in § What this pillar still needs. **2026-08-20: the review page is now coded green/yellow/red page-wide per Jenny, and the proposed one-liner is withdrawn to a written-together-tomorrow placeholder — nothing invented goes in front of the client.**
 
 ---
 

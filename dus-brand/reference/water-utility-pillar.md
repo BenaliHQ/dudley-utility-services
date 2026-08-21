@@ -4,7 +4,7 @@
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026) and the client working sessions of August 7 and 14, 2026 (Garrett Gill and Savannah Cano). Evidence inventory: the vault's water-and-gas evidence note, 2026-08-19.
 
-**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** Water carries the thinnest source material of the five industries: no dedicated water discussion exists on any tape, and no water document sits in the contract library. This pillar states what's sourced and holds the rest; the gap list in § What this pillar still needs is the Friday agenda for this service.
+**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** Water carries the thinnest source material of the five industries: no dedicated water discussion exists on any tape, and no water document sits in the contract library. This pillar states what's sourced and holds the rest; the gap list in § What this pillar still needs is the Friday agenda for this service. **2026-08-20: the review page is now coded green/yellow/red page-wide per Jenny, and the proposed one-liner is withdrawn to a written-together-tomorrow placeholder — nothing invented goes in front of the client.**
 
 ---
 
