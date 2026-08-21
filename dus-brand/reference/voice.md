@@ -93,6 +93,8 @@ Specifics come in two shapes, and the client endorsed both on 8/7:
 
 Garrett's summary of the rule, in his words: results-oriented specifics. His read of the field: "If you look at all these other websites, they're just like, these are all the services we offer. It's very static." This rule is why we aren't that.
 
+**Credibility frames, mechanism proves.** DUS copy carries two registers, layered deliberately. The credibility register answers "can I trust you're real?": experienced leadership, disciplined execution, accountable teams, 45 years behind it. The mechanism register answers "how do you work?": parcel-count staffing, title to the requirement up front, every parcel's file ready for its path. Garrett writes the first naturally (his 8/17–18 revision pass on the transmission surfaces is the reference); our drafting standard produces the second. Every surface opens with the credibility frame and proves it with mechanisms. A passage that's all posture fails the logo swap, and a passage that's all mechanism buries who's talking. When in doubt: his frame, our proof. (Jenny's ruling, 2026-08-20, from the transmission rewrite audit; calibrating with the client at the 8/21 session.)
+
 ## The three tests
 
 Run all three on any copy before it ships.
