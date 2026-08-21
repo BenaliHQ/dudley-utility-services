@@ -32,8 +32,8 @@ How the work removes uncertainty:
 
 - **Title done up front, confirmed to the end.** The client's stated requirement, met before offers go out and kept current through recording. *(Savannah's model, 8/14, inherited.)*
 - **Agreements in writing, plainly.** A written offer, a plain description of the rights, a drawing of the work on that owner's property. The floor everywhere we work. *(Inherited.)*
-- **Both speeds, one standard.** Project discipline on the long route, distribution-style responsiveness on relocations, the same file either way. *(Garrett, 7/30, on relocations; the framing is ours and needs his read.)*
-- **The record lives in Kudu.** Real-time project intelligence and visibility for risk management. *(Kudu framing settled, Garrett's phrase, 8/14.)*
+- **Both speeds held to one standard.** Project discipline on the long route, distribution-style responsiveness on relocations, the same file either way. *(Garrett, 7/30, on relocations; the framing is ours and needs his read.)*
+- **Every route recorded in Kudu.** Real-time project intelligence and visibility for risk management. *(Kudu framing settled, Garrett's phrase, 8/14.)*
 
 ## Our differentiation
 

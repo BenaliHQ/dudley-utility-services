@@ -33,7 +33,7 @@ How the work removes uncertainty:
 - **Title done up front, confirmed to the end.** The client's stated requirement, met before offers go out and kept current through recording. *(Savannah's model, 8/14, inherited.)*
 - **Every necessary right, secured.** Easements, widenings, temporary construction easements, crossing and encroachment agreements, facility sites: the project ends with legal access to build, operate, and maintain. *(Inherited frame, reshaped to the gas evidence.)*
 - **Prepared for every path.** Voluntary agreement is the goal and the norm; every parcel's file is built to hold up anywhere, so one holdout stays one parcel. Condemnation support is a capability we carry, never a place we start. *(Inherited; the gas work in our source material is condemnation-capable, RFP/SOW audit.)*
-- **The record lives in Kudu.** Real-time project intelligence and visibility for risk management, one system across the client's gas and electric work. *(Kudu framing settled, Garrett's phrase, 8/14.)*
+- **Every parcel recorded in Kudu.** Real-time project intelligence and visibility for risk management, one system across the client's gas and electric work. *(Kudu framing settled, Garrett's phrase, 8/14.)*
 
 ## Our differentiation
 
