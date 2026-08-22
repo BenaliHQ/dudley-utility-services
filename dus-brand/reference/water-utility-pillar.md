@@ -4,21 +4,19 @@
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026) and the client working sessions of August 7 and 14, 2026 (Garrett Gill and Savannah Cano). Evidence inventory: the vault's water-and-gas evidence note, 2026-08-19.
 
-**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** Water carries the thinnest source material of the five industries: no dedicated water discussion exists on any tape, and no water document sits in the contract library. This pillar states what's sourced and holds the rest; the gap list in § What this pillar still needs is the Friday agenda for this service.
+**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** Water carries the thinnest source material of the five industries: no dedicated water discussion exists on any tape, and no water document sits in the contract library. This pillar states what's sourced and holds the rest; the gap list in § What this pillar still needs is the Friday agenda for this service. **2026-08-20: the review page is now coded green/yellow/red page-wide per Jenny, and the proposed one-liner is withdrawn to a written-together-tomorrow placeholder — nothing invented goes in front of the client.**
 
 ---
 
 ## The position, in one line and one paragraph
 
-**One line:** Dudley Utility Services creates certainty for water infrastructure projects: land rights secured along the route with utility discipline, whoever's building it. *(Proposed. Built on the shape of Garrett's settled transmission sketch and the water evidence in hand. Needs the client's read more than any other service's line does.)*
+**One line:** Utilities, districts, and developers all build water infrastructure. Dudley Utility Services secures the land for all of them: title done up front, agreements in writing, and the route secured with utility discipline, whoever's building the line. *(Proposed, and the weakest of the four by design: no water-specific evidence exists yet, so this line leans on the whoever's-building frame, the one genuinely water-flavored thing on tape. Reshaped 2026-08-19 after Jenny's review, off transmission's mold. The Friday dive should replace it with the client's own sketch.)*
 
-**One paragraph:** Dudley Utility Services secures land rights for water utility projects. Water is its own industry at Dudley, deliberately kept separate from gas, and its work runs the full range: waterline projects that stretch hundreds of miles, and relocations and local work that move at the pace of a customer-driven system. The client isn't always a utility. Municipalities, districts, and the infrastructure companies building for them hire the same land work, and they get the same discipline: title to the requirement up front, written offers with a drawing of the work, agents who know the area, files complete at closeout. The team is cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network. What the client gets is certainty: a route secured, a community treated well along it, and a record that proves both.
+**One paragraph:** Dudley Utility Services secures land rights for water utility projects, including waterline projects that stretch hundreds of miles and relocations and local work that move at the pace of a customer-driven system. The client isn't always a utility. Municipalities, districts, and the infrastructure companies building for them hire the same land work, and they get the same discipline: title to the requirement up front, written offers with a drawing of the work, agents who know the area, files complete at closeout. The team is cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network. What the client gets is certainty: a route secured, a community treated well along it, and a record that proves both.
 
 ## What we believe
 
-**Water is its own industry, on purpose.** Water and gas are "two totally separate" businesses at Dudley, by Garrett's explicit instruction, and the work gets its own page, its own pillar, and its own vocabulary rather than a shared pipeline bucket. *(Garrett, 7/21.)*
-
-**The client is whoever's building.** The live water opportunities in leadership's world include a waterline project measured in hundreds of miles run by a company, not a utility. Municipalities, districts, utilities, and infrastructure developers all hire the same land work, so the pillar speaks to the client, whoever that is. *(Garrett, 8/14, generalized and unnamed; the client-never-buyer rule and the may-not-be-a-utility rule both come from this evidence and live in voice.md.)*
+**Whoever's building deserves utility discipline.** Waterline projects get built by utilities, municipalities, districts, and developers alike, and whoever's building gets the same standard: title to the requirement up front, agreements in writing, and a file that's complete at closeout. *(Garrett, 8/14, generalized and unnamed. Rewritten per Jenny 8/20: the earlier "water is its own industry" block stated a taxonomy fact, never a belief about the work — the water-gas separation stays a standing structural ruling (Garrett, 7/21) recorded here as an annotation, never repeated as positioning. One belief slot stays open (TBD) for the 8/21 session.)*
 
 **Water work spans both shapes.** Long linear builds carry project discipline; waterline relocations behave like distribution, customer-driven and faster-moving. A water land partner has to hold both: estimate and file discipline on the big route, responsiveness on the local work. *(Garrett, 7/30: relocating water lines is "more of that distribution kind, direct customer base." The long-route shape is his 8/14 description of the live opportunity.)*
 
@@ -32,8 +30,8 @@ How the work removes uncertainty:
 
 - **Title done up front, confirmed to the end.** The client's stated requirement, met before offers go out and kept current through recording. *(Savannah's model, 8/14, inherited.)*
 - **Agreements in writing, plainly.** A written offer, a plain description of the rights, a drawing of the work on that owner's property. The floor everywhere we work. *(Inherited.)*
-- **Both speeds, one standard.** Project discipline on the long route, distribution-style responsiveness on relocations, the same file either way. *(Garrett, 7/30, on relocations; the framing is ours and needs his read.)*
-- **The record lives in Kudu.** Real-time project intelligence and visibility for risk management. *(Kudu framing settled, Garrett's phrase, 8/14.)*
+- **High standards, at either speed.** Project discipline on the long route, distribution-style responsiveness on relocations, the same file either way. *(Garrett, 7/30, on relocations; the framing is ours and needs his read.)*
+- **Every route recorded in Kudu.** Real-time project intelligence and visibility for risk management. *(Kudu framing settled, Garrett's phrase, 8/14.)*
 
 ## Our differentiation
 
@@ -47,7 +45,7 @@ How the work removes uncertainty:
 
 ## Our unique selling proposition
 
-**DUS delivers certainty on water infrastructure through one standard: routes and relocations staffed by cross-trained land managers recruited through Dudley Land Company's 45-year network, compensated to stay, and run with the discipline the electric majors score, for whoever's building the line.**
+**TBD — written from the 8/21 session.** *(Jenny's ruling 8/20: the earlier machinery-only draft is retired from the client surface; the review page shows TBD. The retired draft, for the record: certainty through one standard, cross-trained land managers, the 45-year recruiting network, the electric majors' discipline, whoever's building the line.)*
 
 To match it, a competitor would have to retrain specialists into generalists, rebuild a compensation structure, and stand up a 45-year recruiting network. *(Proposed with less confidence than its siblings: water-specific differentiation in the client's own words doesn't exist yet, so this USP rests entirely on inherited machinery. Friday should test whether the client sees a sharper water-specific edge.)*
 
