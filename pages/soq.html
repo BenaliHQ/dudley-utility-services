@@ -321,6 +321,7 @@ body.print-mode #view-toggle {
 /* ---- Global overrides ---- */
 body.print-mode { background: #DDDFE1; }
 body.print-mode .page { box-shadow: none; }
+body.print-mode .dus-card { box-shadow: none; }
 
 /* Dark surfaces → white (default for all teal fields) */
 body.print-mode .dus-field-teal {
@@ -346,7 +347,7 @@ body.print-mode .dus-micro--dark { color: var(--text-3) !important; }
 
 /* ---- Page 1: Cover — white ---- */
 body.print-mode .cover-band { background: var(--white) !important; }
-body.print-mode .cover-band .dus-display { background: linear-gradient(90deg, var(--teal-500), var(--green-500)) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
+body.print-mode .cover-band .dus-display { color: var(--teal-500) !important; }
 body.print-mode .cover-band .dus-micro--dark {
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--teal-500) !important;
@@ -378,8 +379,8 @@ body.print-mode .pagefoot { background: var(--white) !important; color: var(--te
 
 /* ---- Page 4: Closing — white ---- */
 body.print-mode .closing-band { background: var(--white) !important; border-top: 1px solid var(--neutral-200); }
-body.print-mode .closing-band .dus-display { background: linear-gradient(90deg, var(--teal-500), var(--green-500)) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
-body.print-mode .closing-foot .dus-micro--dark { background: linear-gradient(90deg, var(--teal-500), var(--green-500)) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; font-size: 9pt !important; font-weight: 700 !important; letter-spacing: .08em !important; }
+body.print-mode .closing-band .dus-display { color: var(--teal-500) !important; }
+body.print-mode .closing-foot .dus-micro--dark { color: var(--teal-500) !important; font-size: 9pt !important; font-weight: 700 !important; letter-spacing: .08em !important; }
 
 /* ---- @media print ---- */
 @media print {
@@ -387,6 +388,7 @@ body.print-mode .closing-foot .dus-micro--dark { background: linear-gradient(90d
   .page { margin: 0; box-shadow: none; break-after: page; page-break-after: always; }
   .page:last-child { break-after: auto; page-break-after: auto; }
   #view-toggle { display: none !important; }
+  .dus-card { box-shadow: none !important; }
 }
 
 /* ---- shared ---- */
