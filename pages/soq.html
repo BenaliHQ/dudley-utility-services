@@ -348,12 +348,6 @@ body.print-mode .cover-band .dus-micro--dark {
 body.print-mode .cover-band .dus-micro--dark::before {
   content: ""; width: 12px; height: 12px; background: var(--green-500); flex-shrink: 0;
 }
-/* Page 1: Heritage stat — unify colors for print */
-body.print-mode .heritage-rows .dus-stat { background: var(--field-teal) !important; color: var(--white) !important; }
-body.print-mode .heritage-rows .dus-stat .value { color: var(--white) !important; }
-body.print-mode .heritage-rows .dus-stat .value .unit { color: var(--green-400) !important; }
-body.print-mode .heritage-rows .dus-stat .label { color: var(--on-dark-2) !important; }
-
 body.print-mode .cover-industries span { color: var(--ink-600) !important; }
 body.print-mode .cover-industries span + span::before { color: var(--green-600) !important; }
 
@@ -378,6 +372,7 @@ body.print-mode .map-legend .legend-label { color: var(--ink-700) !important; }
 body.print-mode .clients { background: var(--field-teal) !important; padding: .28in .55in 0; border-radius: 0; flex-grow: 1; }
 body.print-mode .client-cols .cat { color: var(--white) !important; border-bottom-color: var(--green-400) !important; }
 body.print-mode .client-cols .names { color: var(--on-dark-2) !important; }
+body.print-mode .client-cols .names li::before { background: var(--green-400) !important; }
 body.print-mode .clients + .pagefoot { background: var(--field-teal) !important; color: var(--on-dark-2) !important; border-top: none !important; }
 body.print-mode .clients + .pagefoot .dus-micro--dark { color: var(--on-dark-2) !important; }
 body.print-mode .clients + .pagefoot .dus-logo:not(.dus-logo-color) { display: block !important; }
@@ -422,11 +417,7 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .cover-industries span + span::before { content: "·"; margin-right: 14pt; color: var(--green-400); }
 .heritage { padding-top: .42in; }
 .heritage .body-copy { margin-top: .12in; }
-.heritage-rows { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: .16in; margin-top: .22in; }
-.heritage-rows .dus-stat { padding: .2in .22in; background: var(--glow-green), var(--field-teal); border: none; border-radius: var(--r-lg); box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.heritage-rows .dus-stat .value { font-size: 40pt; color: var(--white); }
-.heritage-rows .dus-stat .value .unit { color: var(--green-400); }
-.heritage-rows .dus-stat .label { font-size: 14pt; letter-spacing: .3em; color: var(--on-dark-2); }
+.heritage-rows { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .16in; margin-top: .22in; }
 .heritage-rows .dus-card { padding: .2in .22in; border-top: 4px solid var(--green-500); }
 .heritage-rows .k { display: flex; align-items: center; gap: 5px; font-size: 9.5pt; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-700); margin-bottom: 5pt; }
 .heritage-icon { width: 14px; height: 14px; flex-shrink: 0; stroke: var(--teal-500); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -445,7 +436,7 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .svc-card .desc { font-size: 9.5pt; line-height: 1.5; color: var(--ink-700); }
 .svc-icon { width: 16px; height: 16px; flex-shrink: 0; stroke: var(--teal-500); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .kudu-band { position: relative; margin-top: .34in; padding: .36in .55in .4in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; }
-.kudu-band .dus-h2 { color: var(--white); font-size: 17pt; margin-top: 5pt; max-width: 5.6in; }
+.kudu-band .dus-h2 { color: var(--white); font-size: 14.5pt; margin-top: 5pt; max-width: 5.6in; }
 .kudu-copy { margin-top: .14in; font-size: 9.8pt; line-height: 1.55; color: var(--on-dark-2); max-width: 6.9in; }
 .kudu-list { margin-top: .22in; display: grid; grid-template-columns: 1fr 1fr; gap: 9pt .3in; }
 .kudu-list li { font-size: 9.5pt; color: var(--on-dark); }
@@ -458,21 +449,23 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .bio-card .who { font-size: 13.5pt; font-weight: 900; color: var(--teal-700); }
 .bio-card .title { font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-700); margin: 4pt 0 8pt; }
 .bio-card .bio { font-size: 9.8pt; line-height: 1.5; color: var(--ink-700); }
-.footprint { position: relative; margin-top: .32in; padding: .32in .55in .3in; }
+.footprint { position: relative; margin-top: .26in; padding: .26in .55in .22in; }
 .footprint .dus-h2 { color: var(--white); font-size: 17pt; margin-top: 5pt; }
-.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .16in; margin-top: .22in; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .12in; margin-top: .18in; }
 .stat-grid .dus-stat .value { font-size: 22pt; }
 .stat-grid .dus-stat .value.small { font-size: 17pt; line-height: 1.1; }
 .stat-grid .dus-stat .label { font-size: 7.5pt; line-height: 1.4; }
-.map-wrap { position: relative; margin-top: .22in; background: rgba(255,255,255,.06); border: 1px solid var(--hairline-dark); border-radius: var(--r-md); padding: .14in; }
-.map-wrap img { width: 100%; height: 2.05in; object-fit: contain; display: block; }
+.map-wrap { position: relative; margin-top: .16in; background: rgba(255,255,255,.06); border: 1px solid var(--hairline-dark); border-radius: var(--r-md); padding: .14in; }
+.map-wrap img { width: 100%; height: 1.7in; object-fit: contain; display: block; }
 .map-legend { position: absolute; bottom: .18in; right: .22in; display: flex; align-items: center; gap: 5px; }
 .map-legend .legend-swatch { width: 10px; height: 10px; background: var(--green-500); border-radius: 1px; flex-shrink: 0; }
 .map-legend .legend-label { font-family: var(--font); font-size: 7pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.7); }
 .clients { padding: .28in .55in 0; }
 .client-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .2in; margin-top: .14in; }
 .client-cols .cat { font-size: 8.5pt; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--teal-500); padding-bottom: 5pt; border-bottom: 2px solid var(--green-500); margin-bottom: 7pt; }
-.client-cols .names { font-size: 9.3pt; line-height: 1.6; color: var(--ink-700); }
+.client-cols .names { font-size: 9.3pt; line-height: 1.6; color: var(--ink-700); list-style: none; padding: 0; margin: 0; }
+.client-cols .names li { padding-left: 14px; position: relative; }
+.client-cols .names li::before { content: ""; position: absolute; left: 0; top: .45em; width: 6px; height: 6px; background: var(--green-500); }
 
 /* ---- page 4: why us · contact · closing ---- */
 .whyus { padding-top: .5in; }
@@ -509,12 +502,8 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
     <section class="heritage pad">
       <div class="dus-eyebrow dus-eyebrow--teal">Our Heritage</div>
       <h2 class="dus-h2">Built on a legacy of trust. Focused on utility infrastructure.</h2>
-      <p class="body-copy">Dudley Utility Services is built on the strength of Dudley Land Company: decades of trusted land services, now with an exclusive focus on transmission, distribution, substation, telecom, and water infrastructure clients.</p>
+      <p class="body-copy">Dudley Utility Services is built on the strength of 45+ years of Dudley Land Company: decades of trusted land services, now with an exclusive focus on transmission, distribution, substation, telecom, and water infrastructure clients.</p>
       <div class="heritage-rows">
-        <div class="dus-stat dus-stat--light">
-          <div class="value">45<span class="unit">+</span></div>
-          <div class="label">Years</div>
-        </div>
         <div class="dus-card"><div class="k"><svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>Focus</div><div class="v">Utility land only: transmission, distribution, substations, fiber optics, and water.</div></div>
         <div class="dus-card"><div class="k"><svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>Approach</div><div class="v">Regimented, controlled, and human: precise work delivered by people, not robots.</div></div>
         <div class="dus-card"><div class="k"><svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Reach</div><div class="v">Coast to coast, operating within each state's requirements wherever your project runs.</div></div>
@@ -615,9 +604,9 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 
     <section class="clients pad">
       <div class="client-cols">
-        <div><div class="cat">Investor-Owned Utilities</div><div class="names">American Electric Power &middot; Duke Energy &middot; Xcel Energy &middot; Entergy &middot; Southern Company &middot; PPL Corporation</div></div>
-        <div><div class="cat">Public Power &amp; Municipal</div><div class="names">Tennessee Valley Authority &middot; CPS Energy &middot; Lower Colorado River Authority</div></div>
-        <div><div class="cat">EPC &amp; Engineering Partners</div><div class="names">Burns &amp; McDonnell &middot; Black &amp; Veatch &middot; Sargent &amp; Lundy &middot; HDR &middot; WSP</div></div>
+        <div><div class="cat">Investor-Owned Utilities</div><ul class="names"><li>American Electric Power</li><li>Duke Energy</li><li>Xcel Energy</li><li>Entergy</li><li>Southern Company</li><li>PPL Corporation</li></ul></div>
+        <div><div class="cat">Public Power &amp; Municipal</div><ul class="names"><li>Tennessee Valley Authority</li><li>CPS Energy</li><li>Lower Colorado River Authority</li></ul></div>
+        <div><div class="cat">EPC &amp; Engineering Partners</div><ul class="names"><li>Burns &amp; McDonnell</li><li>Black &amp; Veatch</li><li>Sargent &amp; Lundy</li><li>HDR</li><li>WSP</li></ul></div>
       </div>
     </section>
 
