@@ -238,28 +238,35 @@ html, body {
   background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
 }
 
-/* Card — white, hairline border, optional green top bar */
+/* Card — white, hairline border, corner ticks */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0; box-shadow: var(--shadow-sm);
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
 .dus-ticks::before, .dus-ticks::after,
 .dus-ticks > .tick-b::before, .dus-ticks > .tick-b::after {
-  content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+  content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 1;
   background-repeat: no-repeat; background-size: 14px 14px;
 }
 .dus-ticks::before { top: 0; left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(circle at 0 0, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle at 0 0, black 30%, transparent 80%); }
 .dus-ticks::after { top: 0; right: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 .5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(circle at 100% 0, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle at 100% 0, black 30%, transparent 80%); }
 .dus-ticks > .tick-b::before { bottom: 0; left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(circle at 0 100%, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle at 0 100%, black 30%, transparent 80%); }
 .dus-ticks > .tick-b::after { bottom: 0; right: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(circle at 100% 100%, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle at 100% 100%, black 30%, transparent 80%); }
 
 /* Footer band — document/deck footer */
 .dus-band {
@@ -370,7 +377,7 @@ body.print-mode .map-legend .legend-label { color: var(--ink-700) !important; }
 
 /* ---- Page 3: Clients + footer — teal gradient, full bleed ---- */
 body.print-mode .clients { background: var(--field-teal) !important; padding: .28in .55in 0; border-radius: 0; flex-grow: 1; }
-body.print-mode .client-cols .cat { color: var(--white) !important; border-bottom-color: var(--green-400) !important; }
+body.print-mode .client-cols .cat { color: var(--white) !important; }
 body.print-mode .client-cols .names { color: var(--on-dark-2) !important; }
 body.print-mode .client-cols .names li::before { background: var(--green-400) !important; }
 body.print-mode .clients + .pagefoot { background: var(--field-teal) !important; color: var(--on-dark-2) !important; border-top: none !important; }
@@ -419,23 +426,27 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .heritage .body-copy { margin-top: .12in; }
 .heritage-rows { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .16in; margin-top: .22in; }
 .heritage-rows .dus-card { padding: .22in .24in; }
-.heritage-icon { width: 28px; height: 28px; display: block; margin-bottom: 8pt; }
+.heritage-icon { width: 28px; height: 28px; display: block; margin-bottom: 8pt; fill: none; stroke: url(#dg); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .heritage-rows .k { font-size: 9.5pt; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-700); margin-bottom: 5pt; }
 .heritage-rows .v { font-size: 9.8pt; line-height: 1.48; color: var(--ink-800); }
 .values-band { position: relative; margin-top: .34in; padding: .34in .55in .38in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; }
 .values-band .dus-eyebrow { margin-bottom: .18in; }
 .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .26in .5in; }
-.values-grid .name { font-size: 11.5pt; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--white); padding-bottom: 7pt; border-bottom: 2.5px solid var(--green-500); margin-bottom: 8pt; }
+.values-grid .name { font-size: 11.5pt; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--white); margin-bottom: 8pt; }
 .values-grid .line { font-size: 10pt; line-height: 1.5; color: var(--on-dark-2); }
 
 /* ---- page 2: what we deliver · kudu ---- */
 .deliver { padding-top: .5in; }
 .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .16in; margin-top: .24in; }
 .svc-card { padding: .2in .24in; }
-.svc-card .name { display: flex; align-items: center; gap: 6px; font-size: 10.5pt; font-weight: 900; color: var(--teal-700); padding-bottom: 5pt; margin-bottom: 6pt; border-bottom: 2px solid var(--green-500); }
+.svc-card .name { display: flex; align-items: center; gap: 6px; font-size: 10.5pt; font-weight: 900; color: var(--teal-700); margin-bottom: 6pt; }
 .svc-card .desc { font-size: 9.5pt; line-height: 1.5; color: var(--ink-700); }
-.svc-icon { width: 16px; height: 16px; flex-shrink: 0; stroke: var(--teal-500); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.kudu-band { position: relative; margin-top: .34in; padding: .36in .55in .4in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; }
+.svc-icon { width: 16px; height: 16px; flex-shrink: 0; stroke: url(#dg); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.kudu-band { position: relative; margin-top: .34in; padding: .36in .55in .4in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.soq-route { position: absolute; left: 0; right: 0; pointer-events: none; line-height: 0; opacity: .6; }
+.soq-route svg { width: 100%; height: auto; display: block; }
+.kudu-band .soq-route { bottom: .12in; }
+.closing-band .soq-route { top: 50%; transform: translateY(-50%); }
 .kudu-band .dus-h2 { color: var(--white); font-size: 14.5pt; margin-top: 5pt; max-width: 5.6in; }
 .kudu-copy { margin-top: .14in; font-size: 9.8pt; line-height: 1.55; color: var(--on-dark-2); max-width: 6.9in; }
 .kudu-list { margin-top: .22in; display: grid; grid-template-columns: 1fr 1fr; gap: 9pt .3in; }
@@ -455,14 +466,14 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .stat-grid .dus-stat .value { font-size: 22pt; }
 .stat-grid .dus-stat .value.small { font-size: 17pt; line-height: 1.1; }
 .stat-grid .dus-stat .label { font-size: 7.5pt; line-height: 1.4; }
-.map-wrap { position: relative; margin-top: .16in; background: rgba(255,255,255,.06); border: 1px solid var(--hairline-dark); border-radius: var(--r-md); padding: .14in; }
+.map-wrap { position: relative; margin-top: .16in; background: rgba(255,255,255,.06); border: 1px solid var(--hairline-dark); border-radius: 0; padding: .14in; }
 .map-wrap img { width: 100%; height: 1.7in; object-fit: contain; display: block; }
 .map-legend { position: absolute; bottom: .18in; right: .22in; display: flex; align-items: center; gap: 5px; }
 .map-legend .legend-swatch { width: 10px; height: 10px; background: var(--green-500); border-radius: 1px; flex-shrink: 0; }
 .map-legend .legend-label { font-family: var(--font); font-size: 7pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.7); }
 .clients { padding: .28in .55in 0; }
 .client-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .2in; margin-top: .14in; }
-.client-cols .cat { font-size: 8.5pt; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--teal-500); padding-bottom: 5pt; border-bottom: 2px solid var(--green-500); margin-bottom: 7pt; }
+.client-cols .cat { font-size: 8.5pt; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--teal-500); margin-bottom: 7pt; }
 .client-cols .names { font-size: 9.3pt; line-height: 1.6; color: var(--ink-700); list-style: none; padding: 0; margin: 0; }
 .client-cols .names li { padding-left: 14px; position: relative; }
 .client-cols .names li::before { content: ""; position: absolute; left: 0; top: .45em; width: 6px; height: 6px; background: var(--green-500); }
@@ -479,13 +490,23 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .contact-card .line { font-size: 9.8pt; line-height: 1.6; color: var(--ink-700); }
 .offices { margin-top: .26in; text-align: center; }
 .offices .cities { margin-top: 6pt; font-size: 10.5pt; font-weight: 700; letter-spacing: .06em; color: var(--teal-700); }
-.closing-band { position: relative; margin-top: .34in; padding: .5in .55in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: space-between; }
+.closing-band { position: relative; margin-top: .34in; padding: .5in .55in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
 .closing-band .dus-display { font-size: 21pt; color: var(--white); max-width: 6.4in; }
 .closing-foot { display: flex; align-items: center; justify-content: space-between; }
 .closing-foot .dus-logo { height: .32in; }
   </style>
 </head>
 <body>
+
+  <!-- Shared SVG gradient for outlined icons -->
+  <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+    <defs>
+      <linearGradient id="dg" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#015270"/>
+        <stop offset="100%" stop-color="#41BE48"/>
+      </linearGradient>
+    </defs>
+  </svg>
 
   <!-- ==================== PAGE 1 — COVER · HERITAGE · VALUES ==================== -->
   <main class="page">
@@ -504,18 +525,21 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
       <h2 class="dus-h2">Built on a legacy of trust. Focused on utility infrastructure.</h2>
       <p class="body-copy">Dudley Utility Services is built on the strength of 45+ years of Dudley Land Company: decades of trusted land services, now with an exclusive focus on transmission, distribution, substation, telecom, and water infrastructure clients.</p>
       <div class="heritage-rows">
-        <div class="dus-card dus-card--accent">
-          <svg class="heritage-icon" viewBox="0 0 24 24" fill="url(#hg)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hg" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="#fff"/><line x1="12" y1="2" x2="12" y2="6" stroke="#fff" stroke-width="2"/><line x1="12" y1="18" x2="12" y2="22" stroke="#fff" stroke-width="2"/><line x1="2" y1="12" x2="6" y2="12" stroke="#fff" stroke-width="2"/><line x1="18" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="2"/></svg>
+        <div class="dus-card dus-ticks">
+          <span class="tick-b"></span>
+          <svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
           <div class="k">Focus</div>
           <div class="v">Utility land only: transmission, distribution, substations, fiber optics, and water.</div>
         </div>
-        <div class="dus-card dus-card--accent">
-          <svg class="heritage-icon" viewBox="0 0 24 24" fill="url(#hg)" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88" fill="#fff"/></svg>
+        <div class="dus-card dus-ticks">
+          <span class="tick-b"></span>
+          <svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>
           <div class="k">Approach</div>
           <div class="v">Regimented, controlled, and human: precise work delivered by people, not robots.</div>
         </div>
-        <div class="dus-card dus-card--accent">
-          <svg class="heritage-icon" viewBox="0 0 24 24" fill="url(#hg)" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="1.5"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="#fff" stroke-width="1.5" fill="none"/></svg>
+        <div class="dus-card dus-ticks">
+          <span class="tick-b"></span>
+          <svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           <div class="k">Reach</div>
           <div class="v">Coast to coast, operating within each state's requirements wherever your project runs.</div>
         </div>
@@ -539,27 +563,27 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
       <div class="dus-eyebrow dus-eyebrow--teal">What We Deliver</div>
       <h2 class="dus-h2">Strategic land solutions across the utility project lifecycle.</h2>
       <div class="svc-grid">
-        <div class="dus-card svc-card">
+        <div class="dus-card dus-ticks svc-card"><span class="tick-b"></span>
           <div class="name"><svg class="svc-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Routing &amp; Siting</div>
           <p class="desc">Route selection and due diligence, with the estimate built parcel by parcel on per-acre valuation.</p>
         </div>
-        <div class="dus-card svc-card">
+        <div class="dus-card dus-ticks svc-card"><span class="tick-b"></span>
           <div class="name"><svg class="svc-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Public Relations &amp; Community Outreach</div>
           <p class="desc">We knock doors, meet landowner associations, and attend open houses and council meetings.</p>
         </div>
-        <div class="dus-card svc-card">
+        <div class="dus-card dus-ticks svc-card"><span class="tick-b"></span>
           <div class="name"><svg class="svc-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Title Research</div>
           <p class="desc">Surface and mineral ownership cured before offers go out, so documents name the current owner.</p>
         </div>
-        <div class="dus-card svc-card">
+        <div class="dus-card dus-ticks svc-card"><span class="tick-b"></span>
           <div class="name"><svg class="svc-icon" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>Survey Support &amp; Easement Acquisition</div>
           <p class="desc">Survey permission and rights of entry, then easements and fee acquisitions closed on good-faith offers.</p>
         </div>
-        <div class="dus-card svc-card">
+        <div class="dus-card dus-ticks svc-card"><span class="tick-b"></span>
           <div class="name"><svg class="svc-icon" viewBox="0 0 24 24"><path d="M2 18h20"/><path d="M5 18v-2a7 7 0 0 1 14 0v2"/><path d="M12 5v5"/></svg>Construction</div>
           <p class="desc">Notice before crews cross, gates and damages managed, and a point of contact who always answers.</p>
         </div>
-        <div class="dus-card svc-card">
+        <div class="dus-card dus-ticks svc-card"><span class="tick-b"></span>
           <div class="name"><svg class="svc-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>Operations</div>
           <p class="desc">Landowner support long after energization: land records, encroachments, and vegetation managed.</p>
         </div>
@@ -567,6 +591,7 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
     </section>
 
     <section class="kudu-band dus-field-teal dus-grid-dark dus-horizon">
+      <div class="soq-route dus-route" aria-hidden="true"><svg viewBox="0 0 1200 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="rw-center" d="M-40.0 64.0 L180.0 64.0 L330.0 26.0 L640.0 26.0 L820.0 72.0 L1240.0 44.0" stroke-dasharray="26 6 3 6"/><g class="rw-tick"><line x1="-4.0" y1="58.5" x2="-4.0" y2="69.5"/><line x1="68.0" y1="58.5" x2="68.0" y2="69.5"/><line x1="140.0" y1="58.5" x2="140.0" y2="69.5"/><line x1="209.7" y1="50.8" x2="212.4" y2="61.5"/><line x1="279.5" y1="33.1" x2="282.2" y2="43.8"/><line x1="423.3" y1="20.5" x2="423.3" y2="31.5"/><line x1="495.3" y1="20.5" x2="495.3" y2="31.5"/><line x1="567.3" y1="20.5" x2="567.3" y2="31.5"/><line x1="710.4" y1="38.3" x2="707.7" y2="49.0"/><line x1="780.2" y1="56.1" x2="777.4" y2="66.8"/><line x1="920.9" y1="59.8" x2="921.6" y2="70.7"/><line x1="992.7" y1="55.0" x2="993.5" y2="65.9"/><line x1="1064.6" y1="50.2" x2="1065.3" y2="61.2"/><line x1="1136.4" y1="45.4" x2="1137.1" y2="56.4"/><line x1="1208.2" y1="40.6" x2="1209.0" y2="51.6"/></g><g class="rw-mon"><rect x="174.5" y="58.5" width="11" height="11"/><rect x="324.5" y="20.5" width="11" height="11"/><rect x="634.5" y="20.5" width="11" height="11"/><rect x="814.5" y="66.5" width="11" height="11"/></g><g class="rw-dot"><circle cx="180" cy="64" r="1.9"/><circle cx="330" cy="26" r="1.9"/><circle cx="640" cy="26" r="1.9"/><circle cx="820" cy="72" r="1.9"/></g></svg></div>
       <div class="dus-eyebrow dus-eyebrow--dark">Our Technology &middot; Kudu</div>
       <h2 class="dus-h2">Project intelligence and visibility for risk management.</h2>
       <p class="kudu-copy">Kudu is the land records, project management, and GIS platform behind every DUS project, connecting parcel data, milestones, documentation, and reporting in one system. Status moves when work happens, so if a challenge surfaces on the right-of-way, there's still time to manage it, and reporting reaches you the way you want it.</p>
@@ -586,12 +611,12 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
       <h2 class="dus-h2">Two long careers in utility land, and a blank sheet of paper.</h2>
       <p class="section-lede">The next evolution of the service: a new approach, balanced with legacy.</p>
       <div class="bio-grid">
-        <div class="dus-card dus-card--accent bio-card">
+        <div class="dus-card dus-ticks bio-card"><span class="tick-b"></span>
           <div class="who">Garrett Gill</div>
           <div class="title">Executive Vice President, Utilities</div>
           <p class="bio">Garrett has spent 25+ years leading utility land programs nationwide, with executive responsibility for large portfolios of electric transmission and distribution infrastructure projects.</p>
         </div>
-        <div class="dus-card dus-card--accent bio-card">
+        <div class="dus-card dus-ticks bio-card"><span class="tick-b"></span>
           <div class="who">Savannah Cano</div>
           <div class="title">Regional Director, Utilities</div>
           <p class="bio">Savannah brings 10+ years driving the management and delivery of large-scale electric transmission, distribution, and fiber infrastructure projects across the country.</p>
@@ -648,12 +673,12 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
       <div class="dus-eyebrow dus-eyebrow--teal">Contact Us</div>
       <h2 class="dus-h2">Let's talk about your next utility project.</h2>
       <div class="contact-grid">
-        <div class="dus-card contact-card">
+        <div class="dus-card dus-ticks contact-card"><span class="tick-b"></span>
           <div class="who">Garrett Gill</div>
           <div class="title">Executive Vice President, Utilities</div>
           <div class="line">832-888-7238<br>GarrettGill@dudley-utility.com</div>
         </div>
-        <div class="dus-card contact-card">
+        <div class="dus-card dus-ticks contact-card"><span class="tick-b"></span>
           <div class="who">Savannah Cano</div>
           <div class="title">Regional Director, Utilities</div>
           <div class="line">620-357-1212<br>SavannahCano@dudley-utility.com</div>
@@ -666,6 +691,7 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
     </section>
 
     <section class="closing-band dus-field-teal dus-grid-dark dus-horizon">
+      <div class="soq-route dus-route" aria-hidden="true"><svg viewBox="0 0 1200 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="rw-center" d="M-40.0 64.0 L180.0 64.0 L330.0 26.0 L640.0 26.0 L820.0 72.0 L1240.0 44.0" stroke-dasharray="26 6 3 6"/><g class="rw-tick"><line x1="-4.0" y1="58.5" x2="-4.0" y2="69.5"/><line x1="68.0" y1="58.5" x2="68.0" y2="69.5"/><line x1="140.0" y1="58.5" x2="140.0" y2="69.5"/><line x1="209.7" y1="50.8" x2="212.4" y2="61.5"/><line x1="279.5" y1="33.1" x2="282.2" y2="43.8"/><line x1="423.3" y1="20.5" x2="423.3" y2="31.5"/><line x1="495.3" y1="20.5" x2="495.3" y2="31.5"/><line x1="567.3" y1="20.5" x2="567.3" y2="31.5"/><line x1="710.4" y1="38.3" x2="707.7" y2="49.0"/><line x1="780.2" y1="56.1" x2="777.4" y2="66.8"/><line x1="920.9" y1="59.8" x2="921.6" y2="70.7"/><line x1="992.7" y1="55.0" x2="993.5" y2="65.9"/><line x1="1064.6" y1="50.2" x2="1065.3" y2="61.2"/><line x1="1136.4" y1="45.4" x2="1137.1" y2="56.4"/><line x1="1208.2" y1="40.6" x2="1209.0" y2="51.6"/></g><g class="rw-mon"><rect x="174.5" y="58.5" width="11" height="11"/><rect x="324.5" y="20.5" width="11" height="11"/><rect x="634.5" y="20.5" width="11" height="11"/><rect x="814.5" y="66.5" width="11" height="11"/></g><g class="rw-dot"><circle cx="180" cy="64" r="1.9"/><circle cx="330" cy="26" r="1.9"/><circle cx="640" cy="26" r="1.9"/><circle cx="820" cy="72" r="1.9"/></g></svg></div>
       <div class="dus-display">You supply the specificity.<br>We supply the confidence of execution.</div>
       <div class="closing-foot">
         <img class="dus-logo" src="data:image/png;base64,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" alt="Dudley Utility Services">
