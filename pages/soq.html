@@ -418,9 +418,9 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
 .heritage { padding-top: .42in; }
 .heritage .body-copy { margin-top: .12in; }
 .heritage-rows { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .16in; margin-top: .22in; }
-.heritage-rows .dus-card { padding: .2in .22in; border-top: 4px solid var(--green-500); }
-.heritage-rows .k { display: flex; align-items: center; gap: 5px; font-size: 9.5pt; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-700); margin-bottom: 5pt; }
-.heritage-icon { width: 14px; height: 14px; flex-shrink: 0; stroke: var(--teal-500); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.heritage-rows .dus-card { padding: .22in .24in; }
+.heritage-icon { width: 28px; height: 28px; display: block; margin-bottom: 8pt; }
+.heritage-rows .k { font-size: 9.5pt; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-700); margin-bottom: 5pt; }
 .heritage-rows .v { font-size: 9.8pt; line-height: 1.48; color: var(--ink-800); }
 .values-band { position: relative; margin-top: .34in; padding: .34in .55in .38in; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; }
 .values-band .dus-eyebrow { margin-bottom: .18in; }
@@ -504,9 +504,21 @@ h2.dus-h2 { font-size: 19pt; color: var(--teal-700); margin-top: 6pt; }
       <h2 class="dus-h2">Built on a legacy of trust. Focused on utility infrastructure.</h2>
       <p class="body-copy">Dudley Utility Services is built on the strength of 45+ years of Dudley Land Company: decades of trusted land services, now with an exclusive focus on transmission, distribution, substation, telecom, and water infrastructure clients.</p>
       <div class="heritage-rows">
-        <div class="dus-card"><div class="k"><svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>Focus</div><div class="v">Utility land only: transmission, distribution, substations, fiber optics, and water.</div></div>
-        <div class="dus-card"><div class="k"><svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>Approach</div><div class="v">Regimented, controlled, and human: precise work delivered by people, not robots.</div></div>
-        <div class="dus-card"><div class="k"><svg class="heritage-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Reach</div><div class="v">Coast to coast, operating within each state's requirements wherever your project runs.</div></div>
+        <div class="dus-card dus-card--accent">
+          <svg class="heritage-icon" viewBox="0 0 24 24" fill="url(#hg)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hg" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="#fff"/><line x1="12" y1="2" x2="12" y2="6" stroke="#fff" stroke-width="2"/><line x1="12" y1="18" x2="12" y2="22" stroke="#fff" stroke-width="2"/><line x1="2" y1="12" x2="6" y2="12" stroke="#fff" stroke-width="2"/><line x1="18" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="2"/></svg>
+          <div class="k">Focus</div>
+          <div class="v">Utility land only: transmission, distribution, substations, fiber optics, and water.</div>
+        </div>
+        <div class="dus-card dus-card--accent">
+          <svg class="heritage-icon" viewBox="0 0 24 24" fill="url(#hg)" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88" fill="#fff"/></svg>
+          <div class="k">Approach</div>
+          <div class="v">Regimented, controlled, and human: precise work delivered by people, not robots.</div>
+        </div>
+        <div class="dus-card dus-card--accent">
+          <svg class="heritage-icon" viewBox="0 0 24 24" fill="url(#hg)" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="1.5"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="#fff" stroke-width="1.5" fill="none"/></svg>
+          <div class="k">Reach</div>
+          <div class="v">Coast to coast, operating within each state's requirements wherever your project runs.</div>
+        </div>
       </div>
     </section>
 
