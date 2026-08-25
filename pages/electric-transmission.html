@@ -368,6 +368,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .move p { font-size: 16px; line-height: 1.62; color: var(--text); }
 
 /* ---------- Credibility strip (inside "Who runs the work") ---------- */
+.credstrip--2 { grid-template-columns: repeat(2, 1fr) !important; }
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
   background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
@@ -674,9 +675,6 @@ p, li { text-wrap: pretty; }
       <div>
         <p class="askfirst reveal">A realistic estimate starts with understanding what drives the effort.</p>
         <p class="story">Our estimates account for parcel count, ownership complexity, market conditions, and acquisition requirements, then align staffing and schedule to the work.</p>
-        <div class="standard">
-          <p>In budget and on schedule is our work standard.</p>
-        </div>
       </div>
       <div class="pricing-card pad" style="background:var(--neutral-100); border:1px solid var(--neutral-200);">
         <!-- Plat-map illustration -->
@@ -854,21 +852,16 @@ p, li { text-wrap: pretty; }
     <h2 class="dus-h1 sec-title on-dark reveal">Experienced leadership, backed by proven resources</h2>
     <p class="sec-lede on-dark reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
 
-    <div class="credstrip">
+    <div class="credstrip credstrip--2">
       <div class="cred">
         <div class="lead">Leadership brings</div>
         <div class="value">35+</div>
-        <div class="label">Combined years in utility land</div>
+        <div class="label">Combined years</div>
       </div>
       <div class="cred">
-        <div class="lead">Voltages executed</div>
+        <div class="lead">Voltage experience</div>
         <div class="value">HV+EHV</div>
         <div class="label">69 kV to 765 kV</div>
-      </div>
-      <div class="cred">
-        <div class="lead">Built on</div>
-        <div class="value">45+</div>
-        <div class="label">Years of Dudley Land Company</div>
       </div>
     </div>
 
@@ -887,10 +880,6 @@ p, li { text-wrap: pretty; }
       </div>
     </div>
 
-    <div class="usp">
-      <div class="dus-micro" style="margin-bottom: 14px;">What that adds up to</div>
-      <p class="usp-line">The institutional knowledge of your right-of-way stays on your right-of-way.</p>
-    </div>
   </div>
 </section>
 
@@ -900,7 +889,6 @@ p, li { text-wrap: pretty; }
     <div class="cov-head">
       <div class="dus-eyebrow dus-eyebrow--teal reveal">Coverage</div>
       <h2 class="dus-h1 sec-title reveal">Wherever your project takes you, we can be there</h2>
-      <p class="sec-lede reveal">We operate within each state's requirements and staff from a nationwide network of land professionals.</p>
     </div>
 
     <!-- Map swapped 8/17 (Savannah, via Jenny): the project-experience map came off.

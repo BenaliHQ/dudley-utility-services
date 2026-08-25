@@ -280,7 +280,7 @@ html, body {
 .dus-btn--ghost   { background: transparent; color: var(--teal-500); box-shadow: inset 0 0 0 1.5px var(--teal-500); }
 
 /* ==========================================================================
-   WATER & WASTEWATER INDUSTRY PAGE — web layout.
+   ELECTRIC TRANSMISSION INDUSTRY PAGE — web layout.
    Every color, type weight, surface, and component below comes from
    dus-core.css. No new hues, no new fonts, no restyling.
 
@@ -351,19 +351,13 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
   font-size: 15.5px; line-height: 1.65; color: var(--text); }
 .note strong { color: var(--teal-500); }
 
-/* ---------- Pull panel (the pricing example) ---------- */
-.pull { margin-top: 38px; padding: 44px 46px; background: var(--white);
-  border: 1px solid var(--neutral-200); position: relative;
-  display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
-.pull > .tick-b { position: absolute; inset: 0; pointer-events: none; }
-.pull p.dus-body { font-size: 17px; }
-.pull-punchwrap { padding-left: 44px; border-left: 1px solid var(--neutral-200); }
-.pull-lead { margin-bottom: 14px; }
-.pull-punch { position: relative; padding-left: 22px;
-  font-weight: 900; letter-spacing: -0.02em; line-height: 1.16;
-  font-size: clamp(23px, 2.9vw, 33px); color: var(--teal-500); }
-.pull-punch::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
-  width: 5px; background: var(--green-500); }
+/* ---------- Section divider ---------- */
+.sec-divider { border-bottom: 1px solid var(--neutral-200); }
+
+/* ---------- Pricing split (two-column with illustration) ---------- */
+.pricing-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
+.pricing-illust { width: 100%; height: auto; display: block; }
+.pricing-card.pad { padding: 20px; }
 
 /* ---------- The four moves ---------- */
 .moves { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 42px; margin-top: 42px; }
@@ -374,12 +368,8 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .move p { font-size: 16px; line-height: 1.62; color: var(--text); }
 
 /* ---------- Credibility strip (inside "Who runs the work") ---------- */
+.credstrip--2 { grid-template-columns: repeat(2, 1fr) !important; }
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
-}
-.credstrip--2 { grid-template-columns: repeat(2, 1fr); }
-.cred-head { grid-column: 1 / -1; font-size: 21px; font-weight: 900; letter-spacing: -0.01em;
-  color: var(--teal-500); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--neutral-200); }
-.credstrip { display: grid; gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
   background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
 .cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
@@ -411,19 +401,12 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cov-col--a { left: 12.35%; top: 42.7%; }
 .cov-col--b { left: 37.35%; top: 42.7%; }
 .cov-col--c { left: 62.35%; top: 42.7%; }
-.cov-col::before { content: ""; position: absolute; left: -8%; top: -18%; height: 118%;
-  width: 1px; background: var(--neutral-300); }
-.cov-col--a::before { display: none; }
 .cov-icon { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
-  width: clamp(44px, 5.4vw, 66px); height: clamp(44px, 5.4vw, 66px); border-radius: 50%;
+  width: clamp(44px, 5.4vw, 66px); height: clamp(44px, 5.4vw, 66px); border-radius: var(--r-md);
   display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; }
 .cov-icon svg { width: 54%; height: 54%; display: block; }
 .cov-col h3 { font-size: clamp(14px, 1.55vw, 19px); font-weight: 900; letter-spacing: .05em;
-  text-transform: uppercase; line-height: 1.15; margin: 0; white-space: nowrap; }
-.cov-rule { position: relative; height: 1px; background: var(--neutral-300);
-  margin: 12px auto 14px; width: 82%; }
-.cov-rule::after { content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 5px;
-  border-radius: 50%; transform: translate(-50%, -50%); background: currentColor; }
+  text-transform: uppercase; line-height: 1.15; margin: 0 0 12px; white-space: nowrap; }
 .cov-col p { font-size: clamp(13px, 1.35vw, 16px); line-height: 1.5; color: var(--text);
   margin: 0 auto; max-width: 84%; }
 .cov-col--a { color: var(--teal-500); }
@@ -524,8 +507,7 @@ p, li { text-wrap: pretty; }
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
   .grid-2, .grid-3, .moves, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
-  .pull { gap: 30px; padding: 34px 28px; }
-  .pull-punchwrap { padding-left: 0; border-left: none; padding-top: 26px; border-top: 1px solid var(--neutral-200); }
+  .pricing-split { grid-template-columns: 1fr; }
   .credstrip { gap: 30px; padding: 30px 28px; }
   .sec { padding: 58px 0; }
   .hero { padding: 48px 0 64px; }
@@ -539,7 +521,6 @@ p, li { text-wrap: pretty; }
   .cov-col { position: static; width: auto; text-align: center; }
   .cov-col h3 { white-space: normal; }
   .cov-col p { max-width: 100%; }
-  .cov-col::before { display: none; }
   .cov-icon { position: static; transform: none; margin: 0 auto 14px; }
   .cov-map { max-width: 620px; margin: 0 auto; }
   .lo-grid { grid-template-columns: 1fr; }
@@ -592,7 +573,7 @@ p, li { text-wrap: pretty; }
 
 /* ---------- Landowner split ---------- */
 .lo-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.lo-photo { width: 100%; height: auto; display: block; object-fit: cover; border-radius: var(--r-md); }
+.lo-photo { width: 100%; height: auto; display: block; object-fit: cover; border-radius: 0; }
 
 </style>
 </head>
@@ -683,8 +664,6 @@ p, li { text-wrap: pretty; }
         <p>Clear answers on why the work is happening, where it stands, and what comes next, from the first notice until the ground is restored.</p>
       </div>
     </div>
-
-
   </div>
 </section>
 
@@ -692,7 +671,7 @@ p, li { text-wrap: pretty; }
 <!-- Source: Onboarding #5 (8/21). Jenny proposed the mirror model and Garrett
      confirmed it: large mains behave like transmission, local service behaves
      like distribution. -->
-<section id="work" class="sec">
+<section id="work" class="sec sec-divider">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">The work</div>
     <h2 class="dus-h1 sec-title reveal">Two scales of water work, one standard</h2>
@@ -711,14 +690,66 @@ p, li { text-wrap: pretty; }
 </section>
 
 <!-- ================== 03 · WHAT PRICES THE WORK ====================== -->
-<section id="pricing" class="sec sec-alt">
+<section id="pricing" class="sec">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Sticking to your cost and schedule</div>
     <h2 class="dus-h1 sec-title reveal">Built around the work</h2>
-    <p class="askfirst reveal">A realistic estimate starts with understanding what drives the effort.</p>
-    <p class="story">Our estimates account for parcel count, ownership complexity, market conditions, and acquisition requirements, then align staffing and schedule to the work.</p>
-    <div class="standard">
-      <p>In budget and on schedule is our work standard.</p>
+    <div class="pricing-split">
+      <div>
+        <p class="askfirst reveal">A realistic estimate starts with understanding what drives the effort.</p>
+        <p class="story">Our estimates account for parcel count, ownership complexity, market conditions, and acquisition requirements, then align staffing and schedule to the work.</p>
+      </div>
+      <div class="pricing-card pad" style="background:var(--neutral-100); border:1px solid var(--neutral-200);">
+        <!-- Plat-map illustration -->
+        <svg class="pricing-illust" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Survey grid -->
+          <g stroke="#015270" stroke-opacity=".07" stroke-width="1">
+            <line x1="44" y1="0" x2="44" y2="320"/><line x1="88" y1="0" x2="88" y2="320"/>
+            <line x1="132" y1="0" x2="132" y2="320"/><line x1="176" y1="0" x2="176" y2="320"/>
+            <line x1="220" y1="0" x2="220" y2="320"/><line x1="264" y1="0" x2="264" y2="320"/>
+            <line x1="308" y1="0" x2="308" y2="320"/><line x1="352" y1="0" x2="352" y2="320"/>
+            <line x1="0" y1="44" x2="400" y2="44"/><line x1="0" y1="88" x2="400" y2="88"/>
+            <line x1="0" y1="132" x2="400" y2="132"/><line x1="0" y1="176" x2="400" y2="176"/>
+            <line x1="0" y1="220" x2="400" y2="220"/><line x1="0" y1="264" x2="400" y2="264"/>
+          </g>
+          <!-- Section lines -->
+          <g stroke="#015270" stroke-opacity=".14" stroke-width="1">
+            <line x1="176" y1="0" x2="176" y2="320"/><line x1="352" y1="0" x2="352" y2="320"/>
+            <line x1="0" y1="176" x2="400" y2="176"/>
+          </g>
+          <!-- Parcel outlines -->
+          <g stroke="#015270" stroke-opacity=".18" stroke-width="1.2" fill="none">
+            <rect x="52" y="56" width="116" height="108" rx="1"/>
+            <rect x="180" y="56" width="100" height="108" rx="1"/>
+            <rect x="292" y="56" width="96" height="108" rx="1"/>
+            <rect x="52" y="184" width="148" height="92" rx="1"/>
+            <rect x="212" y="184" width="176" height="92" rx="1"/>
+          </g>
+          <!-- Route corridor -->
+          <rect x="60" y="148" width="280" height="24" fill="#41BE48" fill-opacity=".06" rx="2"/>
+          <line x1="60" y1="148" x2="340" y2="148" stroke="#41BE48" stroke-opacity=".3" stroke-width="1" stroke-dasharray="6 4"/>
+          <line x1="60" y1="172" x2="340" y2="172" stroke="#41BE48" stroke-opacity=".3" stroke-width="1" stroke-dasharray="6 4"/>
+          <!-- Centerline -->
+          <line x1="60" y1="160" x2="340" y2="160" stroke="#41BE48" stroke-width="2" stroke-opacity=".85"/>
+          <!-- Station ticks -->
+          <g stroke="#41BE48" stroke-opacity=".45" stroke-width="1.4">
+            <line x1="110" y1="150" x2="110" y2="170"/><line x1="160" y1="150" x2="160" y2="170"/>
+            <line x1="210" y1="150" x2="210" y2="170"/><line x1="260" y1="150" x2="260" y2="170"/>
+            <line x1="310" y1="150" x2="310" y2="170"/>
+          </g>
+          <!-- PI monuments -->
+          <g stroke="#41BE48" stroke-width="1.6" fill="none">
+            <rect x="106" y="156" width="8" height="8"/><rect x="256" y="156" width="8" height="8"/>
+          </g>
+          <g fill="#41BE48"><circle cx="110" cy="160" r="2"/><circle cx="260" cy="160" r="2"/></g>
+          <!-- Labels -->
+          <text x="110" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL A</text>
+          <text x="230" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL B</text>
+          <text x="340" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL C</text>
+          <text x="126" y="292" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">TRACT 1</text>
+          <text x="300" y="292" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">TRACT 2</text>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
@@ -727,7 +758,7 @@ p, li { text-wrap: pretty; }
 <!-- Source: Onboarding #5 (8/21). Garrett endorsed the angle and named the
      service: "we call it routing feasibility." The engineering constraint is
      his: less turns the better, a 90 restricts flow. -->
-<section id="routing" class="sec">
+<section id="routing" class="sec sec-divider">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Routing feasibility</div>
     <h2 class="dus-h1 sec-title reveal">Bring us in before the route is final</h2>
@@ -767,9 +798,8 @@ p, li { text-wrap: pretty; }
   </div>
 </section>
 
-
-<!-- ======================== 04b · WHAT WE DO ======================= -->
-<section id="services" class="sec">
+<!-- ======================== 04b · WHAT WE DO ======================== -->
+<section id="services" class="sec sec-divider">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">What we do</div>
     <h2 class="dus-h1 sec-title reveal">Land services across the project lifecycle</h2>
@@ -852,27 +882,22 @@ p, li { text-wrap: pretty; }
   </section>
 
 <!-- ===================== 06 · WHO RUNS THE WORK ===================== -->
-<section id="people" class="sec sec-alt">
+<section id="people" class="sec-dark field-teal-close dus-grid-dark">
   <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">Who represents you</div>
-    <h2 class="dus-h1 sec-title reveal">Experienced leadership, backed by proven resources</h2>
-    <p class="sec-lede reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
+    <div class="dus-eyebrow dus-eyebrow--dark reveal">Who represents you</div>
+    <h2 class="dus-h1 sec-title on-dark reveal">Experienced leadership, backed by proven resources</h2>
+    <p class="sec-lede on-dark reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
 
-    <div class="credstrip">
+    <div class="credstrip credstrip--2">
       <div class="cred">
         <div class="lead">Leadership brings</div>
         <div class="value">35+</div>
-        <div class="label">Combined years in utility land</div>
+        <div class="label">Combined years</div>
       </div>
       <div class="cred">
         <div class="lead">Built on</div>
         <div class="value">45+</div>
         <div class="label">Years of Dudley Land Company</div>
-      </div>
-      <div class="cred">
-        <div class="lead">Coverage</div>
-        <div class="value">Lower 48</div>
-        <div class="label">Operating within each state's requirements</div>
       </div>
     </div>
 
@@ -882,7 +907,7 @@ p, li { text-wrap: pretty; }
         <p>We recruit land professionals through the network Dudley Land Company has developed across 45+ years of energy-land work.</p>
       </div>
       <div class="dus-card pad">
-        <h3 class="dus-h3">Familiar with<br>the project area</h3>
+        <h3 class="dus-h3">Familiar with the project area</h3>
         <p>We place land professionals who know the area, understand regional expectations, and can speak credibly with the landowners along your route.</p>
       </div>
       <div class="dus-card pad">
@@ -891,10 +916,6 @@ p, li { text-wrap: pretty; }
       </div>
     </div>
 
-    <div class="usp">
-      <div class="dus-micro" style="margin-bottom: 14px;">What that adds up to</div>
-      <p class="usp-line">The same standard on a 48-inch main and a service-line relocation.</p>
-    </div>
   </div>
 </section>
 
@@ -904,7 +925,6 @@ p, li { text-wrap: pretty; }
     <div class="cov-head">
       <div class="dus-eyebrow dus-eyebrow--teal reveal">Coverage</div>
       <h2 class="dus-h1 sec-title reveal">Wherever your project takes you, we can be there</h2>
-      <p class="sec-lede reveal">We operate within each state's requirements and staff from a nationwide network of land professionals.</p>
     </div>
 
     <!-- Map swapped 8/17 (Savannah, via Jenny): the project-experience map came off.
@@ -1009,19 +1029,16 @@ p, li { text-wrap: pretty; }
         <div class="cov-col cov-col--a">
           <span class="cov-icon"><svg aria-hidden="true"><use href="#cov-icon-globe"/></svg></span>
           <h3>National reach</h3>
-          <div class="cov-rule"></div>
           <p>Experienced land professionals across key utility markets</p>
         </div>
         <div class="cov-col cov-col--b">
           <span class="cov-icon"><svg aria-hidden="true"><use href="#cov-icon-pin"/></svg></span>
           <h3>Local knowledge</h3>
-          <div class="cov-rule"></div>
           <p>Teams selected for regional experience and market familiarity</p>
         </div>
         <div class="cov-col cov-col--c">
           <span class="cov-icon"><svg aria-hidden="true"><use href="#cov-icon-team"/></svg></span>
           <h3>Scalable resources</h3>
-          <div class="cov-rule"></div>
           <p>Staffing built around the size, schedule, and complexity of your project</p>
         </div>
       </div>
@@ -1126,7 +1143,7 @@ p, li { text-wrap: pretty; }
   </div>
 </section>
 
-<!-- ======================= 09b · LET'S CONNECT ===================== -->
+<!-- ========================== 10 · CLOSE ============================ -->
 <section id="close" class="close field-teal-close dus-grid-dark sec-dark">
   <div class="wrap">
     <div class="close-grid">
@@ -1139,7 +1156,7 @@ p, li { text-wrap: pretty; }
           <a class="dus-btn dus-btn--light" href="#">Meet With Dudley</a>
         </div>
       </div>
-      <!-- TODO: replace href="#" with the overview PDF (SOQ leave-behind) once built. -->
+      <!-- TODO: replace href="#" with the transmission overview PDF (SOQ leave-behind) once built. -->
       <div class="onepager">
         <div class="dus-micro">Built on Experience. Focused on Execution.</div>
         <h3 class="dus-h3">Download our overview</h3>
