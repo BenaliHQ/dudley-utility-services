@@ -4,19 +4,23 @@
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026), the client working sessions of August 7 and 14, 2026 (Garrett Gill and Savannah Cano), and the client's own SOQ draft (received August 14). Evidence inventory: the vault's fiber evidence note, 2026-08-19.
 
-**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** The source material on fiber is thinner than on the electric lines of business; this pillar states what's sourced, holds the rest, and lists the gaps in § What this pillar still needs rather than filling them.
+**Status: draft, refreshed 2026-08-24. Not yet client-reviewed.** The source material on fiber is thinner than on the electric lines of business; this pillar states what's sourced, holds the rest, and lists the gaps in § What this pillar still needs rather than filling them.
+
+> **Banned-term sweep, 2026-08-24: "corridor" is gone.** Seven instances survived in this file, six weeks after the client banned the word. All are now right-of-way, or rail line where the reference is to the physical line Garrett described. Re-run the sweep against `voice.md` § Never before anything derived from this file ships.
+
+**What 8/21 added:** standalone fiber work is becoming more common, driven by **AI data centres** — *"there's going to be fiber optic lines being run, so there's going to be a big move there."* And the absence pattern got sharper: **routing and siting is rarely in scope** (the client already knows the route and typically spools along existing right-of-way), and **construction support usually is not either** — Savannah, from her own fiber project: *"they really don't want construction support."* Those two absences are the clearest service-level differentiators fiber has.
 
 ---
 
 ## The position, in one line and one paragraph
 
-**One line:** Dudley Utility Services creates certainty for fiber optics and broadband builds: rights secured along the corridors that already exist, by a team built to stay for the life of a multi-year route. *(Proposed. Built on the shape of Garrett's settled transmission sketch and his own fiber stories from 7/21 and 7/30. Needs the client's read.)*
+**One line:** Dudley Utility Services creates certainty for fiber optics and broadband builds: rights secured along the right-of-way that already exists, by a team built to stay for the life of a multi-year route. *(Proposed. Built on the shape of Garrett's settled transmission sketch and his own fiber stories from 7/21 and 7/30. Needs the client's read.)*
 
-**One paragraph:** Dudley Utility Services secures land rights for fiber optics and broadband builds. Fiber runs long, and it runs along what's already there: transmission lines, rail, road, other people's right-of-way, which makes the land work a route-length succession of owners, operators, and agreements rather than a handful of large easements. A long route is also a long commitment. Leadership has run a 700-mile fiber build along a rail corridor that took four years, so we staff these builds with land professionals who are cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network, and many of them came up working fiber because fiber ties right into transmission. The client isn't always a utility, and that changes nothing about the work: telecom builders, developers, and infrastructure companies hire the same discipline. What the client gets is certainty: a route that keeps moving, secured by a team that's still there at the end of it.
+**One paragraph:** Dudley Utility Services secures land rights for fiber optics and broadband builds. Fiber runs long, and it runs along what's already there: transmission lines, rail, road, other people's right-of-way, which makes the land work a route-length succession of owners, operators, and agreements rather than a handful of large easements. A long route is also a long commitment. Leadership has run a 700-mile fiber build along a rail line that took four years, so we staff these builds with land professionals who are cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network, and many of them came up working fiber because fiber ties right into transmission. The client isn't always a utility, and that changes nothing about the work: telecom builders, developers, and infrastructure companies hire the same discipline. What the client gets is certainty: a route that keeps moving, secured by a team that's still there at the end of it.
 
 ## What we believe
 
-**Fiber follows the infrastructure that's already there.** Fiber routes tie into transmission lines and run along existing corridors; leadership's 700-mile build ran the length of a rail line. The land work is securing rights along ground someone else already uses, owner by owner and operator by operator, for the whole length of the route. *(Garrett, 7/30: fiber "usually tie[s] right into a transmission line"; Garrett, 7/21, the rail-corridor build. The fuller texture of fiber acquisition, crossings, franchise agreements, attachments, is not yet in our source material and doesn't get invented; see § What this pillar still needs.)*
+**Fiber follows the infrastructure that's already there.** Fiber routes tie into transmission lines and run along existing right-of-way; leadership's 700-mile build ran the length of a rail line. The land work is securing rights along ground someone else already uses, owner by owner and operator by operator, for the whole length of the route. *(Garrett, 7/30: fiber "usually tie[s] right into a transmission line"; Garrett, 7/21, the rail-line build. The fuller texture of fiber acquisition, crossings, franchise agreements, attachments, is not yet in our source material and doesn't get invented; see § What this pillar still needs.)*
 
 **The client isn't always a utility.** Leadership's biggest fiber build existed "just to get fiber optic to the businesses." Telecom builders, developers, and infrastructure companies hire the same land work utilities do, and DUS serves them with the same discipline. *(Garrett, 7/21; the client-may-not-be-a-utility rule is his, 8/14, and lives in voice.md.)*
 
@@ -26,7 +30,7 @@ Source: DUS positioning engagement, Demandcast, August 2026. Built from client i
 
 ## What we do
 
-DUS secures land rights for fiber optics and broadband builds: route-length rights acquisition along existing corridors, survey permission, title to the client's requirement, easement and agreement negotiation, construction liaison, closeout. Land scope only. Surface rights only. The land representatives on fiber work largely came up through utility land work, because the two run together on the ground. *(Garrett, 7/30; Brent, same session: "a very similar, transferable skill set." A fiber-specific phase walk with the client's own texture is still owed; the general phase discipline inherits from the transmission pillar until then.)*
+DUS secures land rights for fiber optics and broadband builds: route-length rights acquisition along existing right-of-way, survey permission, title to the client's requirement, easement and agreement negotiation, construction liaison, closeout. Land scope only. Surface rights only. The land representatives on fiber work largely came up through utility land work, because the two run together on the ground. *(Garrett, 7/30; Brent, same session: "a very similar, transferable skill set." A fiber-specific phase walk with the client's own texture is still owed; the general phase discipline inherits from the transmission pillar until then.)*
 
 How the work removes uncertainty:
 
@@ -41,7 +45,7 @@ How the work removes uncertainty:
 
 **A staffing engine for route-length builds.** Staffing a multi-year, multi-state route is a capacity question, and DUS answers it structurally: recruited through Dudley Land Company's 45-year network, run on the same infrastructure, compensated to stay. *(Inherited machinery; the multi-year route shape is leadership's own experience, 7/21 and 8/14.)*
 
-**Leadership that's finished these builds.** A 700-mile fiber build along a rail corridor, run over four years, and a long-haul route between major metros are in the leadership record. The route lengths in play here aren't theoretical to the people running the work. *(Garrett, 7/21; Savannah, 8/14. Leadership experience, attributed as such, never implied to be DUS track record. Anonymization level of both stories is Jenny's call before public use.)*
+**Leadership that's finished these builds.** A 700-mile fiber build along a rail line, run over four years, and a long-haul route between major metros are in the leadership record. The route lengths in play here aren't theoretical to the people running the work. *(Garrett, 7/21; Savannah, 8/14. Leadership experience, attributed as such, never implied to be DUS track record. Anonymization level of both stories is Jenny's call before public use.)*
 
 **Privately owned, controlling its own pace.** On a four-year build, continuity of ownership is part of what the client is buying. *(Inherited, Brent's formulation, 7/30.)*
 
@@ -64,7 +68,7 @@ To match it, a competitor would have to rebuild a compensation structure, cross-
 
 ## Proof material for downstream copy
 
-- **Usable now, anonymized:** the 700-mile rail-corridor build over four years (leadership experience, location generalized); a long-haul fiber route between major metros (leadership experience, endpoints generalized); fiber tying into transmission as the reason the bench transfers; the 10,000+ blended miles figure (client's own writing).
+- **Usable now, anonymized:** the 700-mile rail-line build over four years (leadership experience, location generalized); a long-haul fiber route between major metros (leadership experience, endpoints generalized); fiber tying into transmission as the reason the bench transfers; the 10,000+ blended miles figure (client's own writing).
 - **Off-limits, standing:** route and location names (the specific states and endpoints stay off public surfaces pending Jenny's anonymization call); every client and project name.
 
 ## What this pillar still needs

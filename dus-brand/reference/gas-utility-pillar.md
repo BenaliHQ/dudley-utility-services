@@ -4,7 +4,9 @@
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026), the client working sessions of August 7 and 14, 2026 (Garrett Gill and Savannah Cano), and the RFP and statement-of-work audit (which includes one gas utility statement of work). Evidence inventory: the vault's water-and-gas evidence note, 2026-08-19.
 
-**Status: draft for Jenny's review, 2026-08-19. Not yet client-reviewed.** Garrett committed on 8/7 to send his own written explanation of gas utility versus gas pipeline; it hasn't arrived, and it's the most important input this pillar is still owed. Gaps in § What this pillar still needs.
+**Status: draft, refreshed 2026-08-24. Not yet client-reviewed.** Garrett committed on 8/7 to send his own written explanation of gas utility versus gas pipeline; it hasn't arrived, it was not reached on 8/21 (the session ran out of clock on gas), and it is now folded into the per-service write-up he and Savannah committed to on 8/21. It remains the most important input this pillar is owed.
+
+> **Gas is now the thinnest of the five pillars.** Water was, until the 21 August session gave it real mechanics. Gas got no dive of its own: what 8/21 contributed is that **water mirrors gas** — Savannah: *"I feel like water is going to be similar to gas,"* Garrett: *"you're exactly right… you'll be able to almost mirror gas. There'll be some nuance differences in language, but not much"* — which makes the water pillar the best available proxy for gas mechanics until his write-up lands. Treat every detail borrowed that way as unconfirmed. Also new: the pain points are universal across services (*"the same concerns are going to lie there. Project resistance, landowner communication, the ability to execute easements, making sure that we have the right land owners"*), and subdivision-scale gas work is **local-driven**.
 
 ---
 
@@ -71,7 +73,7 @@ To match it, a competitor would have to stand alongside an oil-and-gas land comp
 ## What this pillar still needs
 
 - **Garrett's gas blurb.** He typed one on his own initiative on 8/7 and committed to send it. It's the anchor input. Ask Friday.
-- **The gas buyer, by title,** and whether it's the same right-of-way organization as electric at the majors or a separate gas land group.
+- ~~**The gas buyer** — whether it's the same right-of-way organization as electric at the majors or a separate gas land group.~~ **Answered 2026-08-24 from the 7 July session.** It is a **separate organisation with its own master service agreement**: at a large client, transmission, distribution, fiber and gas are separate departments with separate decision-makers, *"because they operate in their own capacity,"* sometimes with separate billing. So "one standard across the house" and "a different buyer" are both true, and the copy must not collapse them. Individual titles still vary by client. What remains unasked is the specific title of the person who decides on the gas side.
 - **Gas proof** in writing: miles, projects, or client count on the gas side.
 - **The safety question,** which lands harder on gas than anywhere else. What's documentable, from operations.
 - **Whether the SOQ's taxonomy signals anything.** The client's own SOQ cover omits gas (intentional targeting, Jenny's 8/17 ruling). Confirm gas keeps its full industry page and pillar weight on the website.
