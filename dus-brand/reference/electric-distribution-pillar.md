@@ -86,11 +86,11 @@ Refreshed 2026-08-24.
 
 - ~~Whether nimbleness leads.~~ **Ruled 8/24: it does not.** The customer-doorstep belief leads; nimbleness is the second beat. Reasoning on the belief itself.
 - ~~The distribution buyer, by title.~~ Answered structurally by the 7 July session: at a large client, transmission, distribution, fiber and gas are **separate departments with separate decision-makers and separate master service agreements**, *"because they operate in their own capacity."* So the distribution buyer is its own organisation, not the transmission right-of-way group. Individual titles still vary by client, which is why the copy stays broad.
+- ~~A ruling on "programmatic."~~ **Ruled 8/24: project and program are interchangeable.** Use whichever reads better; see `voice.md`. Garrett's *programmatic work* can be used as-is.
 - ~~The client's distribution differentiator brainstorm.~~ **Asked on 8/21 and effectively declined.** Garrett answered the question by reducing the service's importance rather than differentiating it. Do not re-ask as an open discovery question; if it matters for social, it becomes a narrow, specific ask rather than an open one.
 
 **Still open:**
 
-- **A ruling on "programmatic."** Garrett's own term for the buying model collides with the write-project-never-program voice rule. Jenny's call, and now it lands on the transmission surfaces since the distribution material folds in there. The distinction that may resolve it: *programmatic work* names how the client buys; *project* is what DUS is hired for.
 - **Where distribution weaves into the transmission material.** Garrett and Savannah owe a proposal, walked through on a later call. Committed 8/21.
 - **Storm response.** Whether emergency mobilization is an offer DUS wants to state. Lower priority now that the undergrounding wave has passed, but still unasked.
 
