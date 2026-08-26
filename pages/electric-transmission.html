@@ -43,8 +43,8 @@
   --ink-900: #101417;
   --ink-800: #2B2B2B;    /* Dudley dark neutral — primary text */
   --ink-700: #444444;
-  --ink-600: #6E6E6E;
-  --ink-500: #949494;
+  --ink-600: #636363;
+  --ink-500: #717171;
   --ink-400: #BEBEBE;
   --neutral-300: #D6D6D6;
   --neutral-200: #EBEBEB; /* Dudley light neutral */
@@ -58,8 +58,8 @@
   --text-2: var(--ink-600);
   --text-3: var(--ink-500);
   --on-dark: rgba(255,255,255,0.94);
-  --on-dark-2: rgba(255,255,255,0.72);
-  --on-dark-3: rgba(255,255,255,0.64);
+  --on-dark-2: rgba(255,255,255,0.82);
+  --on-dark-3: rgba(255,255,255,0.74);
   --hairline-dark: rgba(255,255,255,0.16);
   --hairline: var(--neutral-200);
 
@@ -203,9 +203,6 @@ html, body {
 }
 .dus-micro--dark { color: var(--on-dark-3); }
 
-/* Accent rule — green emphasis line */
-.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
-
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
@@ -235,12 +232,11 @@ html, body {
   background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
 }
 
-/* Card — white, hairline border, optional green top bar */
+/* Card — white, hairline border, corner ticks */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0; box-shadow: var(--shadow-sm);
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
@@ -261,7 +257,6 @@ html, body {
 /* Footer band — document/deck footer */
 .dus-band {
   background: var(--ink-950); color: var(--on-dark-2);
-  border-top: 4px solid var(--green-500);
 }
 
 /* Buttons (web/interactive contexts) */
@@ -300,22 +295,22 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 /* Lifted teal fields — perceptibly teal across the whole surface */
 .field-teal-hero {
   background: var(--glow-green),
-    linear-gradient(142deg, var(--teal-400) 0%, var(--teal-500) 38%, var(--teal-700) 100%);
+    linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%);
   color: var(--on-dark);
 }
 .field-teal-close {
   background: var(--glow-green),
-    linear-gradient(142deg, var(--teal-500) 0%, var(--teal-600) 45%, var(--teal-800) 100%);
+    linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%);
   color: var(--on-dark);
 }
 
 /* ---------- Hero ---------- */
 .hero { padding: 68px 0 88px; overflow: hidden; }
-.hero .dus-logo { height: 34px; margin-bottom: 52px; }
+.hero .dus-logo { height: 48px; margin-bottom: 52px; }
 .hero-kicker { margin-bottom: 20px; }
-.hero h1 { font-size: clamp(46px, 8vw, 96px); color: var(--white); margin-bottom: 28px; }
+.hero h1 { font-size: clamp(40px, 6.5vw, 80px); color: var(--white); margin-bottom: 28px; }
 .hero-lede { font-size: 19.5px; line-height: 1.55; color: var(--on-dark); max-width: 700px; }
-.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--green-500); }
+.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--hairline-dark); }
 .chiplabel { margin-bottom: 16px; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chips .dus-pill { padding: 8px 17px; font-size: 12px; letter-spacing: .13em; }
@@ -326,7 +321,8 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .toc { display: flex; gap: 30px; overflow-x: auto; }
 .toc a { white-space: nowrap; text-decoration: none; color: var(--text-2);
   font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  padding: 14px 0; border-bottom: 2px solid transparent; }
+  padding: 14px 0; border-bottom: 2px solid transparent;
+  transition: color 200ms ease, border-bottom-color 200ms ease; }
 .toc a:hover { color: var(--teal-500); border-bottom-color: var(--green-500); }
 
 /* ---------- Sections ---------- */
@@ -347,31 +343,50 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .dus-card p { font-size: 15.5px; line-height: 1.62; color: var(--text); }
 
 .note { margin-top: 30px; padding: 22px 26px; background: var(--white);
-  border: 1px solid var(--neutral-200); border-left: 4px solid var(--green-500);
+  border: 1px solid var(--neutral-200); border-radius: 0;
   font-size: 15.5px; line-height: 1.65; color: var(--text); }
 .note strong { color: var(--teal-500); }
 
 /* ---------- Section divider ---------- */
 .sec-divider { border-bottom: 1px solid var(--neutral-200); }
 
-/* ---------- Pricing split (two-column with illustration) ---------- */
-.pricing-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
-.pricing-illust { width: 100%; height: auto; display: block; }
-.pricing-card.pad { padding: 20px; }
+/* ---------- Service phase groups ---------- */
+.svc-phase { margin-top: 36px; }
+.sec-lede + .svc-phase { margin-top: 44px; }
+.svc-phase > .dus-micro { margin-bottom: 14px; }
+.svc-phase .dus-card .dus-micro { margin-bottom: 8px; }
 
-/* ---------- The four moves ---------- */
-.moves { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 42px; margin-top: 42px; }
-.move { padding-top: 20px; border-top: 3px solid var(--teal-500); }
-.move .mnum { font-size: 11px; font-weight: 700; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--green-600); margin-bottom: 10px; }
-.move h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 12px; }
-.move p { font-size: 16px; line-height: 1.62; color: var(--text); }
+/* ---------- Pricing split (two-column with illustration) ---------- */
+.pricing-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; margin-top: 0; }
+.pricing-illust { width: 100%; height: auto; display: block; }
+.pricing-card.pad { padding: 16px; margin-top: 14px; }
+
+/* ---------- How We Work — numbered grid ---------- */
+.how-cascade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 44px; }
+.how-step {
+  position: relative; padding: 28px 28px 24px;
+  background: var(--white); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 0; box-shadow: 0 2px 16px rgba(0,0,0,.18);
+}
+.how-num {
+  position: absolute; right: 14px; top: -4px;
+  font-size: 96px; font-weight: 900; line-height: 1;
+  color: var(--teal-200); opacity: .1;
+  pointer-events: none; user-select: none;
+}
+.how-step .mnum {
+  font-size: 11px; font-weight: 700; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--green-500); margin-bottom: 8px;
+  position: relative; z-index: 1;
+}
+.how-step h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 10px; position: relative; z-index: 1; }
+.how-step p { font-size: 16px; line-height: 1.62; color: var(--text); position: relative; z-index: 1; }
 
 /* ---------- Credibility strip (inside "Who runs the work") ---------- */
-.credstrip--2 { grid-template-columns: repeat(2, 1fr) !important; }
+.credstrip.credstrip--2 { grid-template-columns: repeat(2, 1fr); }
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
-  background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
+  background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; }
 .cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
   text-transform: uppercase; color: var(--text-3); }
 .cred .value { font-weight: 900; letter-spacing: -0.035em; line-height: .9;
@@ -380,12 +395,10 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cred .label { font-size: 13px; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--text-2); line-height: 1.4; }
 
-.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); }
-.usp-line { position: relative; padding-left: 22px;
+.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; }
+.usp-line {
   font-weight: 900; letter-spacing: -0.02em; line-height: 1.22;
   font-size: clamp(19px, 2.3vw, 27px); color: var(--teal-500); }
-.usp-line::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
-  width: 5px; background: var(--green-500); }
 
 /* ---------- Coverage ---------- */
 .cov-head { max-width: 780px; }
@@ -410,7 +423,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cov-col p { font-size: clamp(13px, 1.35vw, 16px); line-height: 1.5; color: var(--text);
   margin: 0 auto; max-width: 84%; }
 .cov-col--a { color: var(--teal-500); }
-.cov-col--b { color: var(--green-700); }
+.cov-col--b { color: var(--green-500); }
 .cov-col--c { color: var(--teal-400); }
 .cov-col--a .cov-icon { background: var(--teal-500); }
 .cov-col--b .cov-icon { background: var(--green-500); }
@@ -418,11 +431,12 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cov-col h3 { color: currentColor; }
 
 /* ---------- For landowners ---------- */
-.lo-commitments { margin-top: 44px; padding-top: 34px; border-top: 1px solid var(--neutral-300); }
-.lo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 42px; }
-.lo { padding-left: 20px; border-left: 3px solid var(--green-500); }
-.lo h3 { font-size: 19px; color: var(--teal-500); margin-bottom: 10px; }
-.lo p { font-size: 16px; line-height: 1.62; color: var(--text); }
+.lo-commitments { margin-top: 44px; }
+.lo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.lo-card { padding: 26px 24px; background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; box-shadow: var(--shadow-sm); }
+.lo-card h3 { font-size: 19px; color: var(--teal-500); margin-bottom: 10px; }
+.lo-card p { font-size: 15.5px; line-height: 1.62; color: var(--text); }
+.lo-icon { width: 40px; height: 40px; margin-bottom: 14px; display: block; }
 
 /* ---------- FAQ ---------- */
 .faq { margin-top: 40px; border-top: 1px solid var(--neutral-300); }
@@ -432,7 +446,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::marker { content: ""; }
 .faq .qnum { flex: 0 0 auto; font-size: 13px; font-weight: 700; letter-spacing: .18em;
-  color: var(--green-600); font-variant-numeric: lining-nums tabular-nums; }
+  color: var(--green-500); font-variant-numeric: lining-nums tabular-nums; }
 .faq .qtext { flex: 1; font-weight: 900; letter-spacing: -0.015em; line-height: 1.25;
   font-size: clamp(18px, 2.1vw, 23px); color: var(--teal-500); }
 .faq .sign { flex: 0 0 auto; position: relative; width: 15px; height: 15px; }
@@ -442,7 +456,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .faq .sign::after { top: 0; bottom: 0; left: 7px; width: 2px; }
 .faq details[open] .sign::after { opacity: 0; transform: scaleY(0); }
 .faq .ans { padding: 0 0 30px 51px; max-width: 840px;
-  font-size: 16.5px; line-height: 1.68; color: var(--text); }
+  font-size: 16.5px; line-height: 1.68; color: var(--text);
+  animation: faq-in 300ms cubic-bezier(0.4,0,0.2,1); }
+@keyframes faq-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 .faq .ans p + p { margin-top: 14px; }
 .faq .who { display: inline-block; margin-bottom: 12px; font-size: 11px; font-weight: 700;
   letter-spacing: .2em; text-transform: uppercase; color: var(--text-3); }
@@ -454,13 +470,13 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .close p { font-size: 17px; line-height: 1.6; color: var(--on-dark); max-width: 560px; }
 .close .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 .onepager {
-  position: relative; padding: 48px 52px; border: none; border-radius: var(--r-lg);
+  position: relative; padding: 48px 52px; border: none; border-radius: 0;
   background: linear-gradient(115deg, var(--teal-500) 0%, var(--teal-400) 40%, var(--green-600) 80%, var(--green-500) 100%);
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 .onepager::after {
   content: ""; position: absolute; inset: 2.5px;
-  border-radius: calc(var(--r-lg) - 2.5px); background: var(--white);
+  border-radius: 0; background: var(--white);
 }
 .onepager > * { position: relative; z-index: 1; }
 .onepager .dus-micro { color: var(--text-3); }
@@ -469,28 +485,42 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .onepager .dus-btn { margin-top: 26px; box-shadow: none; }
 .onepager .dus-btn:hover { box-shadow: 0 4px 16px rgba(65,190,72,0.25); }
 
-.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--green-500);
+.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--hairline-dark);
   display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
-.footlogo { height: 26px; }
+.footlogo { height: 40px; }
 .foottext { font-size: 12.5px; line-height: 1.7; letter-spacing: .04em; color: var(--on-dark-2); text-align: right; }
 
 /* ---------- Kudu card icons ---------- */
 .kudu-icon { width: 48px; height: 48px; margin-bottom: 18px; display: block; }
+.people-icon { width: 44px; height: 44px; margin-bottom: 14px; display: block; }
 
-/* ---------- Round-5 additions ---------- */
+/* Credstrip on dark surfaces */
+.sec-dark .credstrip {
+  background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1);
+  margin: 36px 0 32px;
+}
+.sec-dark .cred .lead { color: rgba(255,255,255,.6); font-size: 13px; }
+.sec-dark .cred .value { color: var(--white); font-size: clamp(48px, 7vw, 82px); }
+.sec-dark .cred .label { color: rgba(255,255,255,.7); font-size: 15px; }
+.sec-dark .credstrip.dus-ticks::before,
+.sec-dark .credstrip.dus-ticks::after,
+.sec-dark .credstrip > .tick-b::before,
+.sec-dark .credstrip > .tick-b::after { filter: brightness(6); opacity: .2; }
+
+/* ---------- Typography refinements ---------- */
 h1, h2, h3, .sec-title { text-wrap: balance; }
 p, li { text-wrap: pretty; }
-.askfirst { font-size: 19px; font-weight: 700; color: var(--teal-700); line-height: 1.5; max-width: 720px; margin-bottom: 18px; }
+.askfirst { font-size: 19px; font-weight: 700; color: var(--teal-700); line-height: 1.5; max-width: 720px; margin-bottom: 14px; }
 .record-head { margin-top: 78px; margin-bottom: 22px; }
 .lo-fair { margin-top: 14px; }
 
-/* ---------- Round-4 additions ---------- */
+/* ---------- Community members band ---------- */
 .loband { padding: 60px 0; }
 .loband .sec-title { margin-bottom: 14px; }
 .lo-line { font-size: 18px; line-height: 1.6; color: var(--text); max-width: 800px; }
 .lo-line strong { color: var(--teal-500); }
 
-/* ---------- Round-3 additions ---------- */
+/* ---------- Content helpers ---------- */
 .story { font-size: 17px; line-height: 1.66; color: var(--text); max-width: 720px; }
 .standard { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hairline); }
 .standard p { font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; color: var(--teal-500); line-height: 1.3; max-width: 720px; }
@@ -501,12 +531,13 @@ p, li { text-wrap: pretty; }
 .kudu-mark { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); height: 400px; width: auto; opacity: .08; pointer-events: none; z-index: 0; }
 .record { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 34px; margin-top: 6px; }
 .rec { position: relative; padding-left: 30px; font-size: 16px; line-height: 1.55; color: var(--text); }
-.rec::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--green-600); font-weight: 900; }
+.rec::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--green-500); font-weight: 900; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
-  .grid-2, .grid-3, .moves, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
+  .how-cascade { grid-template-columns: 1fr; }
   .pricing-split { grid-template-columns: 1fr; }
   .credstrip { gap: 30px; padding: 30px 28px; }
   .sec { padding: 58px 0; }
@@ -523,13 +554,15 @@ p, li { text-wrap: pretty; }
   .cov-col p { max-width: 100%; }
   .cov-icon { position: static; transform: none; margin: 0 auto 14px; }
   .cov-map { max-width: 620px; margin: 0 auto; }
-  .lo-grid { grid-template-columns: 1fr; }
+  .lo-grid { grid-template-columns: 1fr; gap: 14px; }
+  .svc-phase { margin-top: 28px; }
+  .sec-lede + .svc-phase { margin-top: 36px; }
   .site-nav { padding: 0 24px; }
   .site-nav-inner { height: 64px; }
   .site-nav-links { display: none; }
   .nav-burger { display: block; }
-  .toc { gap: 20px; }
-  .toc a { font-size: 11px; padding: 16px 0; }
+  .toc { gap: 14px; }
+  .toc a { font-size: 11px; padding: 16px 6px; }
 }
 @media (max-width: 600px) {
   .cov-cols { grid-template-columns: 1fr; gap: 26px; }
@@ -560,6 +593,17 @@ p, li { text-wrap: pretty; }
 .nav-burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: all 200ms ease; }
 
+/* ---------- Focus visible ---------- */
+:focus-visible {
+  outline: 2px solid var(--teal-400);
+  outline-offset: 3px;
+}
+.sec-dark :focus-visible,
+.field-teal-hero :focus-visible,
+.field-teal-close :focus-visible {
+  outline-color: var(--green-400);
+}
+
 /* ---------- TOC active state ---------- */
 .toc a.active { color: var(--green-500); border-bottom-color: var(--green-500); }
 
@@ -570,6 +614,16 @@ p, li { text-wrap: pretty; }
 .reveal-d2 { transition-delay: 0.16s; }
 .reveal-d3 { transition-delay: 0.24s; }
 .reveal-d4 { transition-delay: 0.32s; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
+  .dus-btn { transition: none; }
+  .faq .sign::before, .faq .sign::after { transition: none; }
+  .faq .ans { animation: none; }
+  .toc a { transition: none; }
+  .nav-dropdown-toggle svg { transition: none; }
+}
 
 /* ---------- Landowner split ---------- */
 .lo-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -598,7 +652,7 @@ p, li { text-wrap: pretty; }
       </div>
       <a href="#">About</a>
       <a href="#">Contact</a>
-      <a class="nav-cta" href="#">Meet With Dudley</a>
+      <a class="nav-cta" href="#close">Meet With Dudley</a>
     </div>
     <button class="nav-burger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -611,7 +665,7 @@ p, li { text-wrap: pretty; }
   <div class="wrap">
     <img class="dus-logo" src="data:image/png;base64,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" alt="Dudley Utility Services">
     <div class="dus-micro dus-micro--dark hero-kicker">Industries &middot; Electric transmission</div>
-    <h1 class="dus-display">BUILT ON EXPERIENCE.<br>FOCUSED ON<br>EXECUTION.</h1>
+    <h1 class="dus-display">BUILT ON EXPERIENCE.<br>FOCUSED ON EXECUTION.</h1>
     <p class="hero-lede">Experience sets the foundation. Execution delivers the result. We put proven people, disciplined processes, and accountable leadership behind every project to keep it moving from planning through closeout.</p>
     <div class="chipwrap">
       <div class="dus-micro dus-micro--dark chiplabel">Project types</div>
@@ -654,13 +708,15 @@ p, li { text-wrap: pretty; }
     <h2 class="dus-h1 sec-title reveal">We carry your standards into every conversation</h2>
     <p class="askfirst reveal">Our land professionals represent your project with professionalism, protecting your reputation and building trusted relationships with landowners and communities along the way.</p>
     <div class="grid-2" style="margin-top: 34px;">
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <h3 class="dus-h3">What you can expect from us</h3>
         <p>We anticipate risk, communicate early, and maintain the visibility you need to keep your project on schedule and within budget.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <h3 class="dus-h3">What your communities experience</h3>
         <p>We listen, communicate with transparency, and treat everyone with respect, protecting your reputation and earning trust.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
@@ -670,61 +726,58 @@ p, li { text-wrap: pretty; }
 <section id="pricing" class="sec">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Sticking to your cost and schedule</div>
-    <h2 class="dus-h1 sec-title reveal">Built around the work</h2>
     <div class="pricing-split">
       <div>
+        <h2 class="dus-h1 sec-title reveal">Built around the work</h2>
         <p class="askfirst reveal">A realistic estimate starts with understanding what drives the effort.</p>
         <p class="story">Our estimates account for parcel count, ownership complexity, market conditions, and acquisition requirements, then align staffing and schedule to the work.</p>
       </div>
       <div class="pricing-card pad" style="background:var(--neutral-100); border:1px solid var(--neutral-200);">
-        <!-- Plat-map illustration -->
-        <svg class="pricing-illust" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Survey grid -->
-          <g stroke="#015270" stroke-opacity=".07" stroke-width="1">
-            <line x1="44" y1="0" x2="44" y2="320"/><line x1="88" y1="0" x2="88" y2="320"/>
-            <line x1="132" y1="0" x2="132" y2="320"/><line x1="176" y1="0" x2="176" y2="320"/>
-            <line x1="220" y1="0" x2="220" y2="320"/><line x1="264" y1="0" x2="264" y2="320"/>
-            <line x1="308" y1="0" x2="308" y2="320"/><line x1="352" y1="0" x2="352" y2="320"/>
-            <line x1="0" y1="44" x2="400" y2="44"/><line x1="0" y1="88" x2="400" y2="88"/>
-            <line x1="0" y1="132" x2="400" y2="132"/><line x1="0" y1="176" x2="400" y2="176"/>
-            <line x1="0" y1="220" x2="400" y2="220"/><line x1="0" y1="264" x2="400" y2="264"/>
+        <!-- Estimate build-up illustration: stacked cost factors driving a total -->
+        <svg class="pricing-illust" viewBox="0 0 380 248" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Survey grid background -->
+          <g stroke="#015270" stroke-opacity=".04" stroke-width="1">
+            <line x1="44" y1="0" x2="44" y2="248"/><line x1="88" y1="0" x2="88" y2="248"/>
+            <line x1="132" y1="0" x2="132" y2="248"/><line x1="176" y1="0" x2="176" y2="248"/>
+            <line x1="220" y1="0" x2="220" y2="248"/><line x1="264" y1="0" x2="264" y2="248"/>
+            <line x1="308" y1="0" x2="308" y2="248"/><line x1="352" y1="0" x2="352" y2="248"/>
+            <line x1="0" y1="44" x2="380" y2="44"/><line x1="0" y1="88" x2="380" y2="88"/>
+            <line x1="0" y1="132" x2="380" y2="132"/><line x1="0" y1="176" x2="380" y2="176"/>
+            <line x1="0" y1="220" x2="380" y2="220"/>
           </g>
-          <!-- Section lines -->
-          <g stroke="#015270" stroke-opacity=".14" stroke-width="1">
-            <line x1="176" y1="0" x2="176" y2="320"/><line x1="352" y1="0" x2="352" y2="320"/>
-            <line x1="0" y1="176" x2="400" y2="176"/>
+          <!-- Checklist rows — each factor verified, no relative sizing -->
+          <g font-family="Lato, sans-serif">
+            <text x="34" y="24" fill="#015270" fill-opacity=".4" font-size="9" font-weight="700" letter-spacing=".18em">ESTIMATE FACTORS</text>
+            <line x1="34" y1="33" x2="346" y2="33" stroke="#015270" stroke-opacity=".1" stroke-width="1"/>
+            <!-- Row 1 -->
+            <rect x="34" y="44" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="53" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,63 53,67 57,57" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="67" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Parcel count</text>
+            <!-- Row 2 -->
+            <rect x="34" y="86" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="95" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,105 53,109 57,99" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="109" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Ownership complexity</text>
+            <!-- Row 3 -->
+            <rect x="34" y="128" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="137" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,147 53,151 57,141" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="151" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Market conditions</text>
+            <!-- Row 4 -->
+            <rect x="34" y="170" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="179" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,189 53,193 57,183" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="193" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Acquisition requirements</text>
           </g>
-          <!-- Parcel outlines -->
-          <g stroke="#015270" stroke-opacity=".18" stroke-width="1.2" fill="none">
-            <rect x="52" y="56" width="116" height="108" rx="1"/>
-            <rect x="180" y="56" width="100" height="108" rx="1"/>
-            <rect x="292" y="56" width="96" height="108" rx="1"/>
-            <rect x="52" y="184" width="148" height="92" rx="1"/>
-            <rect x="212" y="184" width="176" height="92" rx="1"/>
+          <!-- Divider -->
+          <line x1="34" y1="220" x2="346" y2="220" stroke="#015270" stroke-opacity=".15" stroke-width="1.5"/>
+          <!-- Total row with survey monument -->
+          <g font-family="Lato, sans-serif">
+            <rect x="44" y="229" width="18" height="18" stroke="#41BE48" stroke-width="1.5" fill="none"/>
+            <circle cx="53" cy="238" r="2.5" fill="#41BE48"/>
+            <text x="74" y="243" fill="#015270" font-size="13" font-weight="900" letter-spacing="-.02em">Staffing + schedule</text>
           </g>
-          <!-- Route corridor -->
-          <rect x="60" y="148" width="280" height="24" fill="#41BE48" fill-opacity=".06" rx="2"/>
-          <line x1="60" y1="148" x2="340" y2="148" stroke="#41BE48" stroke-opacity=".3" stroke-width="1" stroke-dasharray="6 4"/>
-          <line x1="60" y1="172" x2="340" y2="172" stroke="#41BE48" stroke-opacity=".3" stroke-width="1" stroke-dasharray="6 4"/>
-          <!-- Centerline -->
-          <line x1="60" y1="160" x2="340" y2="160" stroke="#41BE48" stroke-width="2" stroke-opacity=".85"/>
-          <!-- Station ticks -->
-          <g stroke="#41BE48" stroke-opacity=".45" stroke-width="1.4">
-            <line x1="110" y1="150" x2="110" y2="170"/><line x1="160" y1="150" x2="160" y2="170"/>
-            <line x1="210" y1="150" x2="210" y2="170"/><line x1="260" y1="150" x2="260" y2="170"/>
-            <line x1="310" y1="150" x2="310" y2="170"/>
-          </g>
-          <!-- PI monuments -->
-          <g stroke="#41BE48" stroke-width="1.6" fill="none">
-            <rect x="106" y="156" width="8" height="8"/><rect x="256" y="156" width="8" height="8"/>
-          </g>
-          <g fill="#41BE48"><circle cx="110" cy="160" r="2"/><circle cx="260" cy="160" r="2"/></g>
-          <!-- Labels -->
-          <text x="110" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL A</text>
-          <text x="230" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL B</text>
-          <text x="340" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL C</text>
-          <text x="126" y="292" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">TRACT 1</text>
-          <text x="300" y="292" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">TRACT 2</text>
         </svg>
       </div>
     </div>
@@ -732,31 +785,39 @@ p, li { text-wrap: pretty; }
 </section>
 
 <!-- ============== 04 · HOW THE RIGHT-OF-WAY GETS SECURED ============= -->
-<section id="how" class="sec sec-alt">
+<section id="how" class="sec sec-dark field-teal-close dus-grid-dark">
   <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">How we work</div>
-    <h2 class="dus-h1 sec-title reveal">Disciplined execution from day one</h2>
-    <p class="sec-lede reveal">We establish the plan early, communicate continuously, and maintain accountability at the parcel level throughout the project.</p>
-    <div class="moves">
-      <div class="move reveal reveal-d1">
+    <div class="dus-eyebrow dus-eyebrow--dark reveal">How we work</div>
+    <h2 class="dus-h1 sec-title on-dark reveal">Disciplined execution from day one</h2>
+    <p class="sec-lede on-dark reveal">We establish the plan early, communicate continuously, and maintain accountability at the parcel level throughout the project.</p>
+    <div class="how-cascade">
+      <div class="how-step dus-ticks reveal reveal-d1">
+        <div class="how-num">01</div>
         <div class="mnum">Start prepared</div>
         <h3 class="dus-h2">Do the work before the work</h3>
         <p>We validate ownership, project requirements, documents, and acquisition strategy before landowner engagement begins.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d2">
+      <div class="how-step dus-ticks reveal reveal-d2">
+        <div class="how-num">02</div>
         <div class="mnum">Communicate early</div>
         <h3 class="dus-h2">No surprises</h3>
         <p>We keep clients informed, landowners engaged, and risks visible so decisions can be made before schedule is affected.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d3">
+      <div class="how-step dus-ticks reveal reveal-d3">
+        <div class="how-num">03</div>
         <div class="mnum">Stay accountable</div>
         <h3 class="dus-h2">Every parcel has a path</h3>
         <p>We maintain clear ownership of each parcel, its current status, next action, and what is needed to move it forward.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d4">
+      <div class="how-step dus-ticks reveal reveal-d4">
+        <div class="how-num">04</div>
         <div class="mnum">Finish strong</div>
         <h3 class="dus-h2">Stay engaged through completion</h3>
         <p>We maintain continuity through construction, restoration, damage resolution, and closeout, so acquisition commitments hold.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
@@ -768,46 +829,72 @@ p, li { text-wrap: pretty; }
     <div class="dus-eyebrow dus-eyebrow--teal reveal">What we do</div>
     <h2 class="dus-h1 sec-title reveal">Land services across the project lifecycle</h2>
     <p class="sec-lede reveal">From early project development through construction and closeout, we provide the land expertise and field resources required to move utility projects forward.</p>
-    <div class="grid-2" style="margin-top: 44px;">
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Project management and administration</div>
-        <h3 class="dus-h3">Maintain control</h3>
-        <p>Project controls, risk management, staffing, cost and schedule tracking, reporting, and client coordination.</p>
+    <!-- Phase 1: Planning & preparation -->
+    <div class="svc-phase">
+      <div class="dus-micro">Phase 1 &middot; Planning &amp; preparation</div>
+      <div class="grid-2">
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Project management and administration</div>
+          <h3 class="dus-h3">Maintain control</h3>
+          <p>Project controls, risk management, staffing, cost and schedule tracking, reporting, and client coordination.</p>
+          <span class="tick-b"></span>
+        </div>
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Routing and siting</div>
+          <h3 class="dus-h3">Establish the path</h3>
+          <p>Route support, feasibility, parcel identification, due diligence, site evaluation, and acquisition planning.</p>
+          <span class="tick-b"></span>
+        </div>
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Title and ownership</div>
+          <h3 class="dus-h3">Know the property</h3>
+          <p>Title research, ownership verification, curative support, and documentation needed to establish clear ownership.</p>
+          <span class="tick-b"></span>
+        </div>
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Survey and field support</div>
+          <h3 class="dus-h3">Prepare for acquisition</h3>
+          <p>Survey coordination, landowner notifications, access support, staking, and field liaison services.</p>
+          <span class="tick-b"></span>
+        </div>
       </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Routing and siting</div>
-        <h3 class="dus-h3">Establish the path</h3>
-        <p>Route support, feasibility, parcel identification, due diligence, site evaluation, and acquisition planning.</p>
+    </div>
+
+    <!-- Phase 2: Acquisition -->
+    <div class="svc-phase">
+      <div class="dus-micro">Phase 2 &middot; Acquisition</div>
+      <div class="grid-2">
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Right of way acquisition</div>
+          <h3 class="dus-h3">Secure the rights</h3>
+          <p>Landowner engagement, easement and fee acquisition, temporary rights, access, and acquisition support.</p>
+          <span class="tick-b"></span>
+        </div>
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Non-environmental permitting</div>
+          <h3 class="dus-h3">Coordinate requirements</h3>
+          <p>Road, railroad, utility, municipal, and third-party permits and approvals.</p>
+          <span class="tick-b"></span>
+        </div>
       </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Title and ownership</div>
-        <h3 class="dus-h3">Know the property</h3>
-        <p>Title research, ownership verification, curative support, and documentation needed to establish clear ownership.</p>
-      </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Survey and field support</div>
-        <h3 class="dus-h3">Prepare for acquisition</h3>
-        <p>Survey coordination, landowner notifications, access support, staking, and field liaison services.</p>
-      </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Right of way acquisition</div>
-        <h3 class="dus-h3">Secure the rights</h3>
-        <p>Landowner engagement, easement and fee acquisition, temporary rights, access, and acquisition support.</p>
-      </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Non-environmental permitting</div>
-        <h3 class="dus-h3">Coordinate requirements</h3>
-        <p>Road, railroad, utility, municipal, and third-party permits and approvals.</p>
-      </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Construction support</div>
-        <h3 class="dus-h3">Keep the work moving</h3>
-        <p>Landowner coordination, access management, damage resolution, restoration, and field support.</p>
-      </div>
-      <div class="dus-card pad">
-        <div class="dus-micro" style="margin-bottom: 8px;">Project closeout</div>
-        <h3 class="dus-h3">Finish with clarity</h3>
-        <p>Project records, financial reconciliation, client turnover, and lessons learned.</p>
+    </div>
+
+    <!-- Phase 3: Construction & closeout -->
+    <div class="svc-phase">
+      <div class="dus-micro">Phase 3 &middot; Construction &amp; closeout</div>
+      <div class="grid-2">
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Construction support</div>
+          <h3 class="dus-h3">Keep the work moving</h3>
+          <p>Landowner coordination, access management, damage resolution, restoration, and field support.</p>
+          <span class="tick-b"></span>
+        </div>
+        <div class="dus-card dus-ticks pad">
+          <div class="dus-micro">Project closeout</div>
+          <h3 class="dus-h3">Finish with clarity</h3>
+          <p>Project records, financial reconciliation, client turnover, and lessons learned.</p>
+          <span class="tick-b"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -821,38 +908,46 @@ p, li { text-wrap: pretty; }
     <p class="sec-lede reveal">Kudu is Dudley's proprietary land management platform, giving your team a current, organized view of every parcel from kickoff through closeout.</p>
     <div class="dus-micro" style="margin-top: 44px; margin-bottom: 16px;">You get</div>
     <div class="grid-2" style="margin-top: 14px;">
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg2)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: mac-line (monitor) — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="2" y="3" width="20" height="14" rx="1" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round"/><line x1="7" y1="21" x2="17" y2="21" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Real-time project visibility</h3>
         <p>Current parcel activity, acquisition status, and key risks, maintained as the work occurs, for a reliable view of progress.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg1)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM16 20V4H4V19C4 19.5523 4.44772 20 5 20H16ZM6 7H14V9H6V7ZM6 11H14V13H6V11ZM6 15H11V17H6V15Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: book-open-line — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2V3z" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7V3z" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3 class="dus-h3">Current project record: one source of truth</h3>
         <p>Ownership, tract data, deed references, acreage, and acquisition status, maintained in one working record.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg3)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 5L9 2L15 5L21.303 2.2987C21.5569 2.18992 21.8508 2.30749 21.9596 2.56131C21.9862 2.62355 22 2.69056 22 2.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V5ZM16 19.3955L20 17.6812V5.03308L16 6.74736V19.3955ZM14 19.2639V6.73607L10 4.73607V17.2639L14 19.2639ZM8 17.2526V4.60451L4 6.31879V18.9669L8 17.2526Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: map-2-line — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><polygon points="1,6 1,22 8,18 16,22 23,18 23,2 16,6 8,2" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="2" x2="8" y2="18" stroke="url(#dg3)" stroke-width="1.2"/><line x1="16" y1="6" x2="16" y2="22" stroke="url(#dg3)" stroke-width="1.2"/></svg>
         <h3 class="dus-h3">Project mapping: see progress and risk</h3>
         <p>Current acquisition status, project progress, and identified risks presented visually for faster review and decision making.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg4)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M3 10H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10ZM9 12V14H15V12H9ZM2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V8H2V4Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: archive-line — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="2" y="3" width="20" height="5" rx="1" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="12" x2="14" y2="12" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Document control: keep the record complete</h3>
         <p>Title, survey, acquisition, field, and supporting project documents organized by parcel and maintained through project closeout.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
   </section>
 
 <!-- ===================== 06 · WHO RUNS THE WORK ===================== -->
-<section id="people" class="sec-dark field-teal-close dus-grid-dark">
+<section id="people" class="sec sec-dark field-teal-close dus-grid-dark">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--dark reveal">Who represents you</div>
     <h2 class="dus-h1 sec-title on-dark reveal">Experienced leadership, backed by proven resources</h2>
     <p class="sec-lede on-dark reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
 
-    <div class="credstrip credstrip--2">
+    <div class="credstrip credstrip--2 dus-ticks">
       <div class="cred">
         <div class="lead">Leadership brings</div>
         <div class="value">35+</div>
@@ -863,20 +958,27 @@ p, li { text-wrap: pretty; }
         <div class="value">HV+EHV</div>
         <div class="label">69 kV to 765 kV</div>
       </div>
+      <span class="tick-b"></span>
     </div>
 
     <div class="grid-3">
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
+        <svg class="people-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pg1" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="url(#pg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="url(#pg1)" stroke-width="1.2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="url(#pg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3 class="dus-h3">Recruited through Dudley's network</h3>
         <p>We recruit land professionals through the network Dudley Land Company has developed across 45+ years of energy-land work.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
+        <svg class="people-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pg2" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="url(#pg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="url(#pg2)" stroke-width="1.2"/></svg>
         <h3 class="dus-h3">Familiar with the project area</h3>
         <p>We place land professionals who know the area, understand regional expectations, and can speak credibly with the landowners along your route.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
+        <svg class="people-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pg3" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#pg3)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="url(#pg3)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3 class="dus-h3">Privately owned and responsive</h3>
         <p>We control our pace, invest in our people, and keep decision-makers close enough to respond when your project needs action.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
 
@@ -1026,21 +1128,29 @@ p, li { text-wrap: pretty; }
     <div class="lo-commitments reveal">
       <div class="dus-micro" style="margin-bottom: 18px;">What that looks like</div>
       <div class="lo-grid">
-        <div class="lo reveal reveal-d1">
+        <div class="lo-card dus-ticks reveal reveal-d1">
+          <svg class="lo-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg1" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="url(#lg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14,2 14,8 20,8" stroke="url(#lg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="13" x2="16" y2="13" stroke="url(#lg1)" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="17" x2="13" y2="17" stroke="url(#lg1)" stroke-width="1.2" stroke-linecap="round"/></svg>
           <h3>Written before it's signed</h3>
           <p>Every landowner gets a written offer, a plain description of the rights, and a drawing of the line on their property.</p>
+          <span class="tick-b"></span>
         </div>
-        <div class="lo reveal reveal-d2">
+        <div class="lo-card dus-ticks reveal reveal-d2">
+          <svg class="lo-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg2" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="4" y="3" width="10" height="18" rx="2" stroke="url(#lg2)" stroke-width="1.2"/><line x1="7" y1="18" x2="11" y2="18" stroke="url(#lg2)" stroke-width="1.2" stroke-linecap="round"/><path d="M17 8a5 5 0 0 1 0 8" stroke="url(#lg2)" stroke-width="1.2" stroke-linecap="round" fill="none"/><path d="M20 5.5a9 9 0 0 1 0 13" stroke="url(#lg2)" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg>
           <h3>Notice before crews cross</h3>
           <p>You hear from us before any work happens on or near your property, and you always have a point of contact who answers.</p>
+          <span class="tick-b"></span>
         </div>
-        <div class="lo reveal reveal-d3">
+        <div class="lo-card dus-ticks reveal reveal-d3">
+          <svg class="lo-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg3" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="url(#lg3)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke="url(#lg3)" stroke-width="1.2"/></svg>
           <h3>A land professional who knows your area</h3>
           <p>We place people who understand regional expectations and can speak credibly with the landowners along the route.</p>
+          <span class="tick-b"></span>
         </div>
-        <div class="lo reveal reveal-d4">
+        <div class="lo-card dus-ticks reveal reveal-d4">
+          <svg class="lo-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lg4" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><line x1="12" y1="4" x2="12" y2="21" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/><line x1="4" y1="6" x2="20" y2="6" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="6" x2="3.5" y2="13" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="6" x2="8.5" y2="13" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/><path d="M3.5 13Q6 16 8.5 13" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round" fill="none"/><line x1="19" y1="6" x2="15.5" y2="13" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/><line x1="19" y1="6" x2="20.5" y2="13" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/><path d="M15.5 13Q18 16 20.5 13" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round" fill="none"/><line x1="9" y1="21" x2="15" y2="21" stroke="url(#lg4)" stroke-width="1.2" stroke-linecap="round"/></svg>
           <h3>Fair compensation, clearly explained</h3>
           <p>Our offer is built from a market study and per-acre valuation. We explain how we got there.</p>
+          <span class="tick-b"></span>
         </div>
       </div>
     </div>
@@ -1117,7 +1227,7 @@ p, li { text-wrap: pretty; }
         <p>Whether you have a question, want to learn more about our capabilities, or simply want to get to know our team, we're ready to connect.</p>
         <div class="actions">
           <!-- TODO: point at the site's Meet With Dudley form once the site shell exists. -->
-          <a class="dus-btn dus-btn--light" href="#">Meet With Dudley</a>
+          <a class="dus-btn dus-btn--light" href="mailto:info@dudley-utility.com">Meet With Dudley</a>
         </div>
       </div>
       <!-- TODO: replace href="#" with the transmission overview PDF (SOQ leave-behind) once built. -->

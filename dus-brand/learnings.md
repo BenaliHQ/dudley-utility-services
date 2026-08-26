@@ -40,6 +40,8 @@ This means:
 - Source: Remix Icon (remixicon.com), always use "-line" suffix variants
 - Apply DUS gradient (teal→green, left to right) as stroke color via SVG `<linearGradient>`
 - Never use filled icons, never use flat single-color icons
+- Use simple geometric SVG elements (rect, line, polygon, path) — NOT compound fill-variant paths with stroke applied. Compound paths create double-lined outlines. Single-line only.
+- Stroke weight: `stroke-width="1.2"` for a thin, refined line. `1.5` is too heavy.
 
 ## Visual Balance (Established 2026-08-25)
 
