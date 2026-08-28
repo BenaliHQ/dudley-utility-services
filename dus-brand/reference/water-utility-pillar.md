@@ -1,6 +1,6 @@
-# DUS Water Utility Pillar: Canonical Positioning Reference
+# DUS Water and Wastewater Pillar: Canonical Positioning Reference
 
-**This file is the single source of truth for how DUS talks about water utility.** Every downstream piece on this topic derives from this foundation instead of re-arguing the position. When the position changes, it changes here and nowhere else. `voice.md` governs the register throughout. It inherits its shape from `electric-transmission-pillar.md`, the reference implementation.
+**This file is the single source of truth for how DUS talks about water and wastewater.** Every downstream piece on this topic derives from this foundation instead of re-arguing the position. When the position changes, it changes here and nowhere else. `voice.md` governs the register throughout. It inherits its shape from `electric-transmission-pillar.md`, the reference implementation.
 
 Source: DUS positioning engagement, Demandcast, August 2026. Built from client interviews with Garrett Gill and Brent Broussard (July 21 and 30, 2026) and the client working sessions of August 7, 14 and **21**, 2026 (Garrett Gill and Savannah Cano). Evidence inventory: the vault's water-and-gas evidence note (2026-08-19) and the **DUS Reference Library** in Drive (`Dudley/DUS/Reference Library`), which holds all seven onboarding sessions.
 
@@ -24,9 +24,9 @@ Source: DUS positioning engagement, Demandcast, August 2026. Built from client i
 
 ## The position, in one line and one paragraph
 
-**One line:** Dudley Utility Services creates certainty for water infrastructure projects: land rights secured along the route with utility discipline, whoever's building it. *(Proposed. Built on the shape of Garrett's settled transmission sketch and the water evidence in hand. Needs the client's read more than any other service's line does.)*
+**One line:** Dudley Utility Services creates certainty for water and wastewater infrastructure projects: land rights secured along the route with utility discipline, whoever's building it. *(Proposed. Built on the shape of Garrett's settled transmission sketch and the water evidence in hand. Needs the client's read more than any other service's line does.)*
 
-**One paragraph:** Dudley Utility Services secures land rights for water utility projects. Water is its own industry at Dudley, deliberately kept separate from gas, and its work runs the full range: waterline projects that stretch hundreds of miles, and relocations and local work that move at the pace of a customer-driven system. The client isn't always a utility. Municipalities, districts, and the infrastructure companies building for them hire the same land work, and they get the same discipline: title to the requirement up front, written offers with a drawing of the work, agents who know the area, files complete at closeout. The team is cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network. What the client gets is certainty: a route secured, a community treated well along it, and a record that proves both.
+**One paragraph:** Dudley Utility Services secures land rights for water and wastewater projects. Water is its own industry at Dudley, deliberately kept separate from gas, and its work runs the full range: waterline projects that stretch hundreds of miles, and relocations and local work that move at the pace of a customer-driven system. The client isn't always a utility. Municipalities, districts, and the infrastructure companies building for them hire the same land work, and they get the same discipline: title to the requirement up front, written offers with a drawing of the work, agents who know the area, files complete at closeout. The team is cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network. What the client gets is certainty: a route secured, a community treated well along it, and a record that proves both.
 
 ## What we believe
 
@@ -56,6 +56,8 @@ How the work removes uncertainty:
 **A staffing engine for whoever's building.** Utility, municipality, district, or developer: staffing draws on Dudley Land Company's 45-year recruiting network and the same infrastructure behind it, anywhere in the lower 48. *(Inherited machinery; the whoever's-building frame per Garrett, 8/14.)*
 
 **Utility discipline, brought to the water side.** Full compliance posture, estimate and document discipline, reporting that reflects the file. Water clients get the standard the electric majors score, whether or not they'd have required it. *(Inherited; stated as what DUS brings, never as what the field lacks.)*
+
+**In before the route is fixed.** Clients normally finish routing and siting and then hire the land people. Garrett calls that a mistake and wants DUS in early enough to flag what the land will not give: *"you need to really get us involved so we can share with you some of these red flags."* This is the one water differentiator that is water-specific rather than inherited machinery, and it is the client's own, not ours. *(Garrett, 8/21, endorsed as page content in the same breath. Promoted from the gap list 2026-08-28 — it had been recorded as answered without being folded in.)*
 
 **Privately owned, controlling its own pace.** Continuity of ownership, reachable decision-makers, investment in the people who do the work. *(Inherited, Brent's formulation, 7/30.)*
 

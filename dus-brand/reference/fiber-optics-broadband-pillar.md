@@ -14,7 +14,7 @@ Source: DUS positioning engagement, Demandcast, August 2026. Built from client i
 
 ## The position, in one line and one paragraph
 
-**One line:** Dudley Utility Services creates certainty for fiber optics and broadband builds: rights secured along the right-of-way that already exists, by a team built to stay for the life of a multi-year route. *(Proposed. Built on the shape of Garrett's settled transmission sketch and his own fiber stories from 7/21 and 7/30. Needs the client's read.)*
+**One line:** Dudley Utility Services creates certainty for fiber optics and broadband builds: rights secured along the right-of-way that already exists, on a route whose record stays current for as long as the build takes. *(Proposed. Built on the shape of Garrett's settled transmission sketch and his own fiber stories from 7/21 and 7/30. Needs the client's read.)*
 
 **One paragraph:** Dudley Utility Services secures land rights for fiber optics and broadband builds. Fiber runs long, and it runs along what's already there: transmission lines, rail, road, other people's right-of-way, which makes the land work a route-length succession of owners, operators, and agreements rather than a handful of large easements. A long route is also a long commitment. Leadership has run a 700-mile fiber build along a rail line that took four years, so we staff these builds with land professionals who are cross-trained, compensated to stay, and recruited through Dudley Land Company's 45-year network, and many of them came up working fiber because fiber ties right into transmission. The client isn't always a utility, and that changes nothing about the work: telecom builders, developers, and infrastructure companies hire the same discipline. What the client gets is certainty: a route that keeps moving, secured by a team that's still there at the end of it.
 
@@ -51,7 +51,7 @@ How the work removes uncertainty:
 
 ## Our unique selling proposition
 
-**DUS delivers certainty through endurance: fiber and broadband routes staffed by cross-trained land professionals who already work where fiber runs, recruited through Dudley Land Company's 45-year network, and compensated to stay for the life of a multi-year build.**
+**DUS delivers certainty through endurance: fiber and broadband routes staffed by cross-trained land professionals who already work where fiber runs, recruited through Dudley Land Company's 45-year network and compensated to stay with the company, with the route's record kept current in Kudu for however long the build runs.**
 
 To match it, a competitor would have to rebuild a compensation structure, cross-train a utility bench into fiber, and stand up a recruiting network that took four and a half decades to build.
 
