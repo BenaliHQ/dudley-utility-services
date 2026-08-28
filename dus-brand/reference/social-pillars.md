@@ -6,7 +6,12 @@
 
 **The voice model (settled by Jenny, 2026-08-06).** Every piece of content gets written once from the company's voice and once more as the exact same piece tailored to Garrett's voice. A Savannah version joins the same pattern once her voice is established; the 8/7 and 8/21 tapes gave her real material (her own arc, the BD and client-growth remit, her water and storm-hardening explanations), so that may come sooner than planned.
 
-**Where the content comes from.** The Drive reference library at `Dudley/DUS/Reference Library` (five docs, ~15,000 words, every claim confidence-marked). Write from the library, never from the raw tapes. The pre-2026 messaging material is archived at `Dudley/DUS/_Archive — Pre-2026` and is banned as a source.
+**Where the content comes from.** The Drive reference library at `Dudley/DUS/Reference Library` (five docs, ~15,000 words, every claim confidence-marked). Write from the library, never from the raw tapes or from vault meeting notes. The pre-2026 messaging material is archived at `Dudley/DUS/_Archive — Pre-2026` and is banned as a source.
+
+> [!warning] The library is the authority on proof, and this file defers to it
+> `DUS Proof, Claims, and Confidentiality` sorts every proof point into green, amber and red. **Pillar 4 was reconciled against it on 2026-08-28 and three entries were wrong** — the association story was filed as unpublishable when it's green, the $2M figure was treated as cleared when only the behaviour is, and a green retention data point was missing entirely. The cause was writing from vault meeting notes instead of the library. Before any proof claim ships from this file, re-read that document.
+>
+> **What this library does not have:** a story bank, a take bank, or voice anchors. It carries capabilities, buyer intelligence and proof, which serve website and positioning work well and leave social short of the raw material posts run on. That gap is why pillar 4 stays thin, and closing it means a `content-ingest` run against a DUS subject roster — the skill has never been pointed at this client.
 
 ## Standing rules that govern every post
 
@@ -113,13 +118,24 @@ That makes one method post reusable across five services with a genuine per-serv
 > **Status 2026-08-28: still owed.** They committed on 8/7 to inventorying hurdle stories and per-service specifics (Savannah holds the note), and named real figures on the call. Neither the stories nor the figures have arrived in writing. It's the standing ask on the Onboarding #6 agenda. Nothing below publishes until the verified figures land.
 
 **Example post angles:**
-1. The estimate that held: the two nine-mile lines told as an outcome, and the budget that didn't move.
-2. The $2M give-back: the change-order give-back that came back as new work. *(Hold lifted 8/28. Confirmed in Garrett's own words on the 7/30 tape during the 8/24 backfill. Publishable, anonymized.)*
-3. Reserved: the first DUS program closeout, told as a case study when it exists.
-4. Reserved: an on-schedule energization with the land work never on the critical path.
-5. Publishable now, from the client's own SOQ: **10,000+ miles** of transmission, distribution and fiber projects, **40+ utility and public power clients**, and **HV and EHV work from 69 kV to 765 kV**. *(Revised 8/28. These are in the client's writing, so they clear the gate the figures below still fail. Voltage floor note: 69 kV on transmission surfaces per 8/21; 34.5 kV stays the low end on the SOQ only, because it also covers distribution and fiber.)*
-6. Still incoming, publish only once verified in writing: roughly 7,000 miles of transmission right-of-way negotiated, under 2% condemnation, staffing surges.
-7. Still incoming, same gate: the community association negotiation, 212 of 216 signed, one friendly condemnation over a title discrepancy. The strongest certainty story in the bank. Write it without resistance-group framing (Garrett's own caveat), and per the standing rule condemnation appears mid-story, never in the lead.
+
+*Proof status below is reconciled against `DUS Proof, Claims, and Confidentiality` in the Drive reference library (2026-08-28). That document is the authority on what can ship; this list defers to it.*
+
+1. **GREEN — the community association negotiation.** Garrett offered the publishable shape himself: an opposition group on one of our projects, navigated to agreement. **Publish the shape, not a count.** He gave the denominator twice and it moved (212 of 215 on 21 July, 212 of 216 on 7 August), so either confirm the number with him or write it without one. Per the standing rule, condemnation appears mid-story, never in the lead. *(Corrected 8/28: previously filed here as unpublishable and quoting a disputed count. It's publishable today.)*
+2. **GREEN — retention on a program of projects.** On his largest prior utility program, 312 people worked one client's program with under 1% attrition, rotating between projects rather than off the account. Publishable unnamed, **framed as leadership's prior-program experience, never as a DUS record.** *(Added 8/28. Flag for Jenny: this sits close to the no-staffing-continuity line. It's a retention statistic about a past program rather than a promise about a client's build, which is why the library marks it green, but it wants a ruling before it ships.)*
+3. **GREEN — the voltage range.** HV and EHV, 69 kV to 765 kV on transmission surfaces. Savannah's note is the reason it matters: 765 is the gate question, the first thing a client asks, used as a proxy for familiarity. The SOQ keeps 34.5 kV as its floor because it also covers distribution and fiber; never mix the two on one surface.
+4. **GREEN as behaviour — the change-order give-back.** The story of giving money back and having it return as new work is publishable. **The $2M figure is not**, until Garrett signs off: it's his story and it involves a client's capital. Write the behaviour, leave the number out. *(Corrected 8/28: the earlier version put the figure in the headline and called the whole thing cleared. The 8/24 backfill confirmed he told the story; it did not clear the number.)*
+5. **GREEN — the estimate that held.** The two nine-mile lines told as an outcome, and the budget that didn't move.
+6. **AMBER — the miles-and-condemnation line.** Roughly 7,000 miles of right-of-way negotiated with under 2% condemnation. Garrett and Savannah workshopped it live on 8/7 as illustration rather than as a record, and neither figure has been verified since. **It also collides with the SOQ's 10,000+ miles and 40+ utility and public power clients** — 7,000 appears to be leadership's personal experience and 10,000+ the company's blended total. Never put them in the same sentence without resolving which is which. Sign-off needed on both.
+7. **AMBER — the scalability story.** A prior organisation grown from 125 to 1,300 people in three years, and a sole-sourced ten-year contract near $100 million requiring 150 people on the ground in 45 days. Strong evidence, belongs to a prior employer, so it frames as leadership experience and needs his sign-off.
+8. Reserved: the first DUS program closeout, told as a case study when it exists.
+9. Reserved: an on-schedule energization with the land work never on the critical path.
+
+**RED — never publish, recorded so a writer recognises them and stops:**
+
+- **Competitors.** Never name one, never characterise one, never build a contrast that depends on one. The privately-owned framing is the publishable form of the entire competitor argument.
+- **Live opportunities.** The Colorado water opportunity and its dollar figure, the Florida meeting, and any pipeline conversation in progress. They explain sequencing decisions in the vault; they never reach a surface.
+- **"Clients cannot accept entertainment."** Truer of policy than practice. The publishable version is that the work earns the business.
 
 ---
 
