@@ -15,7 +15,7 @@ files in ./templates/ — keep this file in the package folder.
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
-   DUDLEY UTILITY SERVICES — CORE DESIGN SYSTEM  v2.0
+   DUDLEY UTILITY SERVICES — CORE DESIGN SYSTEM  v3.0
    Refined by Benali from the Dudley Land Company brand guidelines.
    This block is inlined verbatim into every DUS template. Do not restyle.
    Concept: "The route and the grid" — plat-map survey grids, a green
@@ -205,9 +205,6 @@ html, body {
 }
 .dus-micro--dark { color: var(--on-dark-3); }
 
-/* Accent rule — green emphasis line */
-.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
-
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
@@ -237,12 +234,11 @@ html, body {
   background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
 }
 
-/* Card — white, hairline border, optional green top bar */
+/* Card — white, hairline border, squared with corner ticks */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0; box-shadow: var(--shadow-sm);
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
@@ -262,7 +258,7 @@ html, body {
 
 /* Footer band — document/deck footer */
 .dus-band {
-  background: var(--ink-950); color: var(--on-dark-2);
+  background: var(--glow-green), var(--field-teal); color: var(--on-dark-2);
   border-top: 4px solid var(--green-500);
 }
 
@@ -308,6 +304,8 @@ body { background: var(--white); }
 }
 .nav-links a:hover { color: var(--teal-500); }
 .nav-links a:hover::after { right: 0; }
+.nav-links a.is-active { color: var(--teal-500); }
+.nav-links a.is-active::after { right: 0; }
 
 /* ---------- cover ---------- */
 .cover { height: 88vh; min-height: 620px; max-height: 940px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
@@ -332,13 +330,13 @@ section[id] { scroll-margin-top: 92px; }
 
 /* ---------- logo ---------- */
 .logo-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.logo-panel { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--neutral-200); }
-.logo-stage { height: 300px; display: flex; align-items: center; justify-content: center; position: relative; }
+.logo-panel { border-radius: 0; overflow: hidden; border: 1px solid var(--neutral-200); }
+.logo-stage { height: 300px; display: flex; align-items: center; justify-content: center; position: relative; padding: 48px; }
 .logo-stage.on-light { background: var(--neutral-100); }
-.logo-stage img { height: 88px; position: relative; z-index: 1; }
+.logo-stage img { height: 72px; max-width: 100%; object-fit: contain; position: relative; z-index: 1; }
 .logo-panel .panel-cap { padding: 18px 24px; display: flex; justify-content: space-between; align-items: baseline; background: var(--white); border-top: 1px solid var(--neutral-200); }
 .clearspace { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.clearspace-demo { border: 1px solid var(--neutral-200); border-radius: var(--r-lg); background: var(--neutral-100); height: 240px; display: flex; align-items: center; justify-content: center; }
+.clearspace-demo { border: 1px solid var(--neutral-200); border-radius: 0; background: var(--neutral-100); height: 240px; display: flex; align-items: center; justify-content: center; }
 .clearbox { border: 1.5px dashed var(--teal-300); padding: 44px 52px; position: relative; }
 .clearbox img { height: 62px; display: block; }
 .clearbox .cap { position: absolute; top: -22px; left: 0; color: var(--teal-400); letter-spacing: .14em; }
@@ -346,7 +344,7 @@ section[id] { scroll-margin-top: 92px; }
 .logo-rules li { list-style: none; display: flex; gap: 14px; font-size: 15.5px; line-height: 1.5; color: var(--ink-700); }
 .logo-rules li::before { content: ""; flex: 0 0 auto; width: 9px; height: 9px; margin-top: 7px; background: var(--green-500); }
 .donts { margin-top: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.dont { border: 1px solid var(--neutral-200); border-radius: var(--r-lg); overflow: hidden; }
+.dont { border: 1px solid var(--neutral-200); border-radius: 0; overflow: hidden; }
 .dont-stage { height: 130px; background: var(--neutral-100); display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .dont-stage img { height: 40px; }
 .dont-stage .stretch { transform: scaleX(1.55); }
@@ -360,24 +358,26 @@ section[id] { scroll-margin-top: 92px; }
 
 /* ---------- color ---------- */
 .color-hero { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.swatch { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--neutral-200); }
+.swatch { border-radius: 0; overflow: hidden; border: 1px solid var(--neutral-200); }
 .swatch .chip { height: 150px; position: relative; }
 .swatch .chip.bordered { border-bottom: 1px solid var(--neutral-200); }
 .swatch .meta { padding: 16px 20px 18px; background: var(--white); }
 .swatch .name { font-size: 16px; font-weight: 900; color: var(--ink-800); }
 .swatch .hex { margin-top: 2px; font-size: 12px; font-weight: 700; letter-spacing: .1em; color: var(--ink-500); }
+.swatch .var-name { margin-top: 4px; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; color: var(--teal-400); }
 .swatch .use { margin-top: 8px; font-size: 13.5px; line-height: 1.45; color: var(--text-2); }
 .ramps { margin-top: 24px; display: flex; flex-direction: column; gap: 28px; }
 .ramp-label { margin-bottom: 10px; }
-.ramp { display: flex; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--neutral-200); }
+.ramp { display: flex; border-radius: 0; overflow: hidden; border: 1px solid var(--neutral-200); }
 .ramp .step { flex: 1; height: 64px; position: relative; }
 .ramp-keys { display: flex; margin-top: 8px; }
 .ramp-keys span { flex: 1; font-size: 10.5px; font-weight: 700; letter-spacing: .06em; color: var(--ink-500); text-align: center; }
 .prop { margin-top: 56px; }
-.prop-bar { display: flex; height: 64px; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-top: 14px; }
+.prop-bar { display: flex; height: 64px; border-radius: 0; overflow: hidden; border: 1px solid var(--neutral-200); margin-top: 14px; }
 .prop-bar div { display: flex; align-items: center; padding-left: 18px; font-size: 11.5px; font-weight: 700; letter-spacing: .12em; }
 .prop-rules { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.rule-chip { border-left: 3px solid var(--green-500); padding: 4px 0 4px 18px; font-size: 15px; line-height: 1.5; color: var(--ink-700); }
+.rule-chip { display: flex; align-items: flex-start; gap: 14px; padding: 4px 0; font-size: 15px; line-height: 1.5; color: var(--ink-700); }
+.rule-chip::before { content: ""; flex: 0 0 auto; width: 9px; height: 9px; margin-top: 7px; background: var(--green-500); }
 
 /* ---------- type ---------- */
 .spec { border-top: 1px solid var(--neutral-200); }
@@ -397,7 +397,7 @@ section[id] { scroll-margin-top: 92px; }
 
 /* ---------- motifs ---------- */
 .motifs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.motif { border: 1px solid var(--neutral-200); border-radius: var(--r-lg); overflow: hidden; }
+.motif { border: 1px solid var(--neutral-200); border-radius: 0; overflow: hidden; }
 .motif-stage { height: 280px; position: relative; overflow: hidden; }
 .motif-cap { padding: 18px 24px 20px; background: var(--white); border-top: 1px solid var(--neutral-200); }
 .motif-cap .cap { color: var(--teal-500); }
@@ -406,11 +406,13 @@ section[id] { scroll-margin-top: 92px; }
 .mock-doc { position: absolute; inset: 28px 15%; background: var(--white); border: 1px solid var(--neutral-200); border-radius: var(--r-sm); box-shadow: var(--shadow-md); padding: 26px 30px; }
 .mock-line { height: 8px; background: var(--neutral-200); border-radius: 2px; margin-top: 10px; }
 .mock-line.w60 { width: 60%; } .mock-line.w85 { width: 85%; } .mock-line.w72 { width: 72%; }
-.mock-rule { width: 44px; height: 3px; background: var(--green-500); margin: 14px 0 4px; }
+.mock-eyebrow { display: flex; align-items: center; gap: 6px; margin: 14px 0 4px; }
+.mock-eyebrow::before { content: ""; width: 8px; height: 8px; background: var(--green-500); flex: 0 0 auto; }
+.mock-eyebrow::after { content: ""; width: 36px; height: 6px; background: var(--neutral-200); border-radius: 2px; }
 
 /* ---------- components ---------- */
 .comp-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.comp-panel { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--neutral-200); padding: 44px; display: flex; flex-direction: column; gap: 34px; }
+.comp-panel { border-radius: 0; overflow: hidden; border: 1px solid var(--neutral-200); padding: 44px; display: flex; flex-direction: column; gap: 34px; }
 .comp-panel.light { background: var(--white); }
 .comp-group .cap { display: block; margin-bottom: 14px; }
 .comp-panel.dark .comp-group .cap { color: var(--on-dark-3); }
@@ -431,7 +433,7 @@ section[id] { scroll-margin-top: 92px; }
 .tpl-grid { display: grid; gap: 24px; }
 .tpl-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .tpl-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-.tpl-card { border: 1px solid var(--neutral-200); border-radius: var(--r-lg); overflow: hidden; background: var(--white); transition: box-shadow 180ms cubic-bezier(.4,0,.2,1), transform 180ms cubic-bezier(.4,0,.2,1); }
+.tpl-card { border: 1px solid var(--neutral-200); border-radius: 0; overflow: hidden; background: var(--white); transition: box-shadow 180ms cubic-bezier(.4,0,.2,1), transform 180ms cubic-bezier(.4,0,.2,1); }
 .tpl-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 .tpl-frame { position: relative; overflow: hidden; background: var(--neutral-100); border-bottom: 1px solid var(--neutral-200); }
 .tpl-frame iframe { border: 0; transform-origin: top left; pointer-events: none; display: block; }
@@ -445,12 +447,12 @@ section[id] { scroll-margin-top: 92px; }
 .tpl-meta .open::after { content: " \2192"; }
 
 /* ---------- voice ---------- */
-.voice-quote { border-radius: var(--r-lg); overflow: hidden; padding: 72px 72px 80px; position: relative; }
+.voice-quote { border-radius: 0; overflow: hidden; padding: 72px 72px 80px; position: relative; }
 .voice-quote .qmark { color: var(--green-500); font-size: 110px; font-weight: 900; line-height: .6; display: block; }
 .voice-quote blockquote { margin-top: 30px; font-size: 42px; font-weight: 900; letter-spacing: -.018em; line-height: 1.16; color: var(--white); max-width: 21ch; position: relative; z-index: 1; }
 .voice-quote .attr { margin-top: 26px; }
 .voice-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.voice-card { border: 1px solid var(--neutral-200); border-radius: var(--r-lg); padding: 24px 26px; background: var(--white); }
+.voice-card { border: 1px solid var(--neutral-200); border-radius: 0; padding: 24px 26px; background: var(--white); }
 .voice-card .do, .voice-card .not { display: flex; gap: 12px; font-size: 15px; line-height: 1.5; }
 .voice-card .do { color: var(--ink-800); font-weight: 700; }
 .voice-card .do::before { content: ""; flex: 0 0 auto; width: 9px; height: 9px; margin-top: 7px; background: var(--green-500); }
@@ -464,13 +466,88 @@ section[id] { scroll-margin-top: 92px; }
 .foot .tag { margin-top: 20px; font-size: 15px; color: var(--on-dark-2); }
 .foot .dus-micro--dark { text-align: right; line-height: 2; }
 
+/* ---------- mobile nav ---------- */
+.nav-toggle { display: none; }
+
+.nav-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(320px, 85vw); z-index: 100;
+  background: var(--glow-green), var(--field-teal);
+  transform: translateX(100%);
+  transition: transform 280ms cubic-bezier(.4,0,.2,1);
+  display: flex; flex-direction: column;
+  padding: 0;
+}
+.nav-drawer.is-open { transform: translateX(0); }
+
+.nav-drawer-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; height: 68px; flex-shrink: 0;
+  border-bottom: 1px solid var(--hairline-dark);
+}
+.nav-drawer-head .dus-logo { height: 32px; width: auto; object-fit: contain; display: block; }
+
+.nav-drawer-close {
+  appearance: none; border: none; background: none; cursor: pointer;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-drawer-close svg { width: 20px; height: 20px; }
+
+.nav-drawer-links {
+  display: flex; flex-direction: column;
+  padding: 20px 0; flex: 1; overflow-y: auto;
+}
+.nav-drawer-links a {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 28px;
+  font-size: 14px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--on-dark-2); text-decoration: none;
+  transition: color 120ms, background 120ms;
+}
+.nav-drawer-links a::before {
+  content: ""; width: 8px; height: 8px; background: var(--green-500);
+  flex: 0 0 auto; opacity: 0;
+  transition: opacity 120ms;
+}
+.nav-drawer-links a:hover,
+.nav-drawer-links a:active {
+  color: var(--white);
+  background: rgba(255,255,255,.06);
+}
+.nav-drawer-links a:hover::before,
+.nav-drawer-links a:active::before,
+.nav-drawer-links a.is-active::before { opacity: 1; }
+.nav-drawer-links a.is-active { color: var(--white); }
+
+.nav-scrim {
+  position: fixed; inset: 0; z-index: 99;
+  background: rgba(6,9,11,.6);
+  opacity: 0; pointer-events: none;
+  transition: opacity 280ms cubic-bezier(.4,0,.2,1);
+}
+.nav-scrim.is-open { opacity: 1; pointer-events: auto; }
+
 @media (max-width: 980px) {
   .wrap { padding: 0 28px; }
   .nav-links { display: none; }
+  .nav-toggle {
+    display: flex; align-items: center; justify-content: center;
+    appearance: none; border: none; background: none; cursor: pointer;
+    width: 44px; height: 44px; margin-right: -10px;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
   .logo-panels, .clearspace, .comp-panels, .motifs, .tpl-grid.cols-3, .tpl-grid.cols-2, .color-hero, .prop-rules, .voice-grid, .donts { grid-template-columns: 1fr; }
   .spec-row { grid-template-columns: 1fr; gap: 16px; }
   .t-display { font-size: 52px; } .t-h1 { font-size: 40px; }
   .cover h1 { max-width: none; }
+  .voice-quote { padding: 48px 28px 56px; }
+  .voice-quote blockquote { font-size: 28px; }
+  .section { padding: 80px 0 0; }
+  .section + .section { margin-top: 80px; }
+  .section-head { margin-bottom: 40px; }
+  .section-head h2 { font-size: 36px; }
+  .foot { margin-top: 80px; }
 }
 </style>
 </head>
@@ -482,7 +559,7 @@ section[id] { scroll-margin-top: 92px; }
   <div class="cover-inner">
     <img class="dus-logo" src="assets/dus-logo-white.png" alt="Dudley Utility Services">
     <div class="cover-copy">
-      <span class="dus-eyebrow dus-eyebrow--dark">Brand &amp; Design System &middot; V2.0</span>
+      <span class="dus-eyebrow dus-eyebrow--dark">Brand &amp; Design System &middot; V3.0</span>
       <h1 class="dus-display">The route and the grid</h1>
       <p class="cover-sub">Every DUS asset is a corridor drawn across land: survey-grid precision, one green right-of-way line, squared structure, teal depth. This book is the source of truth for how that looks.</p>
     </div>
@@ -496,12 +573,28 @@ section[id] { scroll-margin-top: 92px; }
 <!-- ================= NAV ================= -->
 <nav class="nav">
   <div class="wrap nav-inner">
-    <img class="dus-logo" src="assets/dus-logo.png" alt="Dudley Utility Services">
     <div class="nav-links">
       <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
     </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+      <svg viewBox="0 0 22 22" fill="none" stroke="var(--ink-700)" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
+    </button>
   </div>
 </nav>
+
+<!-- mobile drawer -->
+<div class="nav-scrim" id="nav-scrim"></div>
+<aside class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+  <div class="nav-drawer-head">
+    <img class="dus-logo" src="assets/dus-logo-white.png" alt="Dudley Utility Services">
+    <button class="nav-drawer-close" aria-label="Close menu">
+      <svg viewBox="0 0 20 20" fill="none" stroke="var(--on-dark-2)" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+    </button>
+  </div>
+  <div class="nav-drawer-links">
+    <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
+  </div>
+</aside>
 
 <main class="wrap">
 
@@ -553,10 +646,10 @@ section[id] { scroll-margin-top: 92px; }
     </div>
 
     <div class="color-hero">
-      <div class="swatch"><div class="chip" style="background:var(--teal-500)"></div><div class="meta"><div class="name">DUS Teal</div><div class="hex">#015270</div><p class="use">The primary. Fields, headlines on white, table headers, links.</p></div></div>
-      <div class="swatch"><div class="chip" style="background:var(--green-500)"></div><div class="meta"><div class="name">Dudley Green</div><div class="hex">#41BE48</div><p class="use">The accent. Checks, rules, markers, the route line. Never a fill.</p></div></div>
-      <div class="swatch"><div class="chip" style="background:var(--ink-800)"></div><div class="meta"><div class="name">Ink</div><div class="hex">#2B2B2B</div><p class="use">Primary text. Deep grounds use the field gradients, not flat black.</p></div></div>
-      <div class="swatch"><div class="chip bordered" style="background:var(--white)"></div><div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div><p class="use">The default ground. Whitespace is a brand asset.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--teal-500)"></div><div class="meta"><div class="name">DUS Teal</div><div class="hex">#015270</div><div class="var-name">--teal-500</div><p class="use">The primary. Fields, headlines on white, table headers, links.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--green-500)"></div><div class="meta"><div class="name">Dudley Green</div><div class="hex">#41BE48</div><div class="var-name">--green-500</div><p class="use">The accent. Checks, rules, markers, the route line. Never a fill.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:var(--ink-800)"></div><div class="meta"><div class="name">Ink</div><div class="hex">#2B2B2B</div><div class="var-name">--ink-800</div><p class="use">Primary text. Deep grounds use the field gradients, not flat black.</p></div></div>
+      <div class="swatch"><div class="chip bordered" style="background:var(--white)"></div><div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div><div class="var-name">--white</div><p class="use">The default ground. Whitespace is a brand asset.</p></div></div>
     </div>
 
     <div class="ramps">
@@ -668,7 +761,7 @@ section[id] { scroll-margin-top: 92px; }
         <div class="motif-stage" style="background:var(--neutral-100)">
           <div class="mock-doc dus-ticks"><span class="tick-b"></span>
             <span class="dus-micro">Service Overview</span>
-            <div class="mock-rule"></div>
+            <div class="mock-eyebrow"></div>
             <div class="mock-line w85"></div><div class="mock-line w72"></div><div class="mock-line w60"></div>
           </div>
         </div>
@@ -709,8 +802,8 @@ section[id] { scroll-margin-top: 92px; }
         <div class="comp-group"><span class="cap">Buttons</span>
           <div class="comp-row"><a class="dus-btn dus-btn--primary" href="#components">Primary</a><a class="dus-btn dus-btn--accent" href="#components">Accent</a><a class="dus-btn dus-btn--ghost" href="#components">Ghost</a></div>
         </div>
-        <div class="comp-group"><span class="cap">Card with accent bar</span>
-          <div class="dus-card dus-card--accent comp-card-demo"><span class="dus-micro">Why it matters</span><p>White surface, hairline border, small radius. The green bar is reserved for the card that matters most.</p></div>
+        <div class="comp-group"><span class="cap">Card with corner ticks</span>
+          <div class="dus-card dus-ticks comp-card-demo"><span class="tick-b"></span><span class="dus-micro">Why it matters</span><p>White surface, hairline border, squared corners. The plat-sheet corner ticks are the brand's distinctive card treatment.</p></div>
         </div>
       </div>
     </div>
@@ -722,8 +815,8 @@ section[id] { scroll-margin-top: 92px; }
       <!-- Quote -->
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Quote</span>
-        <blockquote style="border-left: 4px solid var(--green-500); padding-left: 24px; margin: 0;">
-          <p style="font-size: 20px; color: var(--ink-800); font-style: italic; margin-bottom: 16px; line-height: 1.5;">"They didn't just clear the route. They cleared every title issue we'd been fighting for two years."</p>
+        <blockquote style="margin: 0; padding: 0;">
+          <p style="font-size: 20px; color: var(--ink-800); font-style: italic; margin-bottom: 16px; line-height: 1.5;"><span style="color: var(--green-500); font-weight: 900;">&ldquo;</span>They didn't just clear the route. They cleared every title issue we'd been fighting for two years.&rdquo;</p>
           <footer style="display: flex; flex-direction: column; gap: 2px;">
             <strong style="font-size: 15px; font-weight: 700; color: var(--teal-500);">Sarah Mitchell</strong>
             <span style="font-size: 13px; color: var(--ink-600);">VP of Transmission, [Client Name]</span>
@@ -737,8 +830,7 @@ section[id] { scroll-margin-top: 92px; }
         <div style="display: flex; flex-direction: column; gap: 4px;">
           <strong style="font-size: 17px; font-weight: 900; color: var(--teal-500);">Mike Dudley</strong>
           <span style="font-size: 14px; font-weight: 700; color: var(--ink-600); letter-spacing: 0.04em;">President</span>
-          <div style="width: 32px; height: 3px; background: var(--green-500); margin: 6px 0;"></div>
-          <span style="font-size: 14px; color: var(--ink-600);">(555) 123-4567</span>
+          <span style="font-size: 14px; color: var(--ink-600); margin-top: 8px;">(555) 123-4567</span>
           <span style="font-size: 14px; color: var(--ink-600);">mike@dudley-utility.com</span>
         </div>
       </div>
@@ -747,19 +839,13 @@ section[id] { scroll-margin-top: 92px; }
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Service row</span>
         <div style="display: flex; flex-direction: column; gap: 24px;">
-          <div style="display: flex; gap: 16px; align-items: flex-start;">
-            <div style="width: 4px; min-height: 44px; background: var(--green-500); border-radius: 2px; flex-shrink: 0;"></div>
-            <div>
-              <h4 style="font-size: 16px; font-weight: 700; color: var(--teal-500); margin-bottom: 4px;">Right-of-Way Acquisition</h4>
-              <p style="font-size: 15px; color: var(--ink-600); line-height: 1.6; margin: 0;">Full-scope easement negotiation and landowner coordination from first contact through recording.</p>
-            </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--teal-500); margin-bottom: 4px;">Right-of-Way Acquisition</h4>
+            <p style="font-size: 15px; color: var(--ink-600); line-height: 1.6; margin: 0;">Full-scope easement negotiation and landowner coordination from first contact through recording.</p>
           </div>
-          <div style="display: flex; gap: 16px; align-items: flex-start;">
-            <div style="width: 4px; min-height: 44px; background: var(--green-500); border-radius: 2px; flex-shrink: 0;"></div>
-            <div>
-              <h4 style="font-size: 16px; font-weight: 700; color: var(--teal-500); margin-bottom: 4px;">Title Clearance</h4>
-              <p style="font-size: 15px; color: var(--ink-600); line-height: 1.6; margin: 0;">Courthouse research, chain-of-title verification, and curative work across every county on the route.</p>
-            </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--teal-500); margin-bottom: 4px;">Title Clearance</h4>
+            <p style="font-size: 15px; color: var(--ink-600); line-height: 1.6; margin: 0;">Courthouse research, chain-of-title verification, and curative work across every county on the route.</p>
           </div>
         </div>
       </div>
@@ -768,7 +854,7 @@ section[id] { scroll-margin-top: 92px; }
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Phase timeline</span>
         <div style="display: flex; gap: 0; align-items: stretch;">
-          <div style="flex: 1; padding: 24px; border: 1px solid var(--neutral-200); border-radius: 10px 0 0 10px;">
+          <div style="flex: 1; padding: 24px; border: 1px solid var(--neutral-200);">
             <span style="font-size: 36px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.03em;">01</span>
             <h4 style="font-size: 15px; font-weight: 700; color: var(--ink-800); margin-top: 8px;">Route Study</h4>
             <p style="font-size: 13px; color: var(--ink-600); margin-top: 4px; line-height: 1.5;">Desktop analysis, constraint mapping.</p>
@@ -783,7 +869,7 @@ section[id] { scroll-margin-top: 92px; }
             <h4 style="font-size: 15px; font-weight: 700; color: var(--ink-800); margin-top: 8px;">Acquisition</h4>
             <p style="font-size: 13px; color: var(--ink-600); margin-top: 4px; line-height: 1.5;">Easement negotiation, execution.</p>
           </div>
-          <div style="flex: 1; padding: 24px; border: 1px solid var(--neutral-200); border-left: none; border-radius: 0 10px 10px 0;">
+          <div style="flex: 1; padding: 24px; border: 1px solid var(--neutral-200); border-left: none;">
             <span style="font-size: 36px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.03em;">04</span>
             <h4 style="font-size: 15px; font-weight: 700; color: var(--ink-800); margin-top: 8px;">Close &amp; Record</h4>
             <p style="font-size: 13px; color: var(--ink-600); margin-top: 4px; line-height: 1.5;">Curative, recording, handoff.</p>
@@ -794,7 +880,7 @@ section[id] { scroll-margin-top: 92px; }
       <!-- Table -->
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Table</span>
-        <table style="width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--neutral-200); font-size: 14px;">
+        <table style="width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--neutral-200); font-size: 14px;">
           <thead>
             <tr style="background: var(--teal-500); color: var(--white);">
               <th style="padding: 14px 20px; text-align: left; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;">Phase</th>
@@ -837,7 +923,7 @@ section[id] { scroll-margin-top: 92px; }
         </div>
         <div>
           <span class="cap" style="margin-bottom: 16px; display: block;">Photo slot</span>
-          <div style="width: 100%; aspect-ratio: 16/9; background: var(--teal-050); border: 2px dashed var(--neutral-200); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+          <div style="width: 100%; aspect-ratio: 16/9; background: var(--teal-050); border: 2px dashed var(--neutral-200); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--ink-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
             <span style="font-size: 12px; font-weight: 700; color: var(--ink-500); letter-spacing: 0.06em; text-transform: uppercase;">Supply photo</span>
           </div>
@@ -847,7 +933,8 @@ section[id] { scroll-margin-top: 92px; }
       <!-- CTA block -->
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">CTA block</span>
-        <div class="dus-card" style="padding: 32px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+        <div class="dus-card dus-ticks" style="padding: 32px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+          <span class="tick-b"></span>
           <span class="dus-eyebrow dus-eyebrow--teal">Next Step</span>
           <h3 style="font-size: 24px; font-weight: 900; color: var(--ink-800); letter-spacing: -0.018em;">Ready to scope your corridor?</h3>
           <p style="color: var(--ink-600); max-width: 480px; line-height: 1.6;">Call Mike directly to walk through your project requirements. We'll have a preliminary scope back to you within the week.</p>
@@ -871,12 +958,10 @@ section[id] { scroll-margin-top: 92px; }
             <span style="font-size: 56px; font-weight: 900; color: var(--teal-500); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">45+<span style="color: var(--green-500);"> years</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-600);">Energy-land expertise</span>
           </div>
-          <div style="width: 2.5px; align-self: stretch; background: var(--green-500); border-radius: 2px;"></div>
           <div style="flex: 1; padding: 24px 32px;">
             <span style="font-size: 56px; font-weight: 900; color: var(--teal-500); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">340<span style="color: var(--green-500);"> mi</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-600);">Corridor cleared</span>
           </div>
-          <div style="width: 2.5px; align-self: stretch; background: var(--green-500); border-radius: 2px;"></div>
           <div style="flex: 1; padding: 24px 32px;">
             <span style="font-size: 56px; font-weight: 900; color: var(--teal-500); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">98<span style="color: var(--green-500);">%</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-600);">On-time delivery</span>
@@ -885,24 +970,21 @@ section[id] { scroll-margin-top: 92px; }
       </div>
 
       <!-- Stat row (dark) -->
-      <div style="margin-bottom: 48px; border-radius: 10px; overflow: hidden;">
+      <div style="margin-bottom: 48px; overflow: hidden;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Stat row &middot; dark</span>
-        <div style="display: flex; align-items: flex-start; gap: 0; background: var(--field-teal); padding: 12px 0; border-radius: 10px;">
+        <div style="display: flex; align-items: flex-start; gap: 0; background: var(--field-teal); padding: 12px 0;">
           <div style="flex: 1; padding: 24px 32px;">
             <span style="font-size: 56px; font-weight: 900; color: var(--white); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">45+<span style="color: var(--green-500);"> years</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Energy-land expertise</span>
           </div>
-          <div style="width: 2.5px; align-self: stretch; background: var(--green-500); border-radius: 2px;"></div>
           <div style="flex: 1; padding: 24px 32px;">
             <span style="font-size: 56px; font-weight: 900; color: var(--white); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">340<span style="color: var(--green-500);"> mi</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Corridor cleared</span>
           </div>
-          <div style="width: 2.5px; align-self: stretch; background: var(--green-500); border-radius: 2px;"></div>
           <div style="flex: 1; padding: 24px 32px;">
             <span style="font-size: 56px; font-weight: 900; color: var(--white); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">98<span style="color: var(--green-500);">%</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.72);">On-time delivery</span>
           </div>
-          <div style="width: 2.5px; align-self: stretch; background: var(--green-500); border-radius: 2px;"></div>
           <div style="flex: 1; padding: 24px 32px;">
             <span style="font-size: 56px; font-weight: 900; color: var(--white); line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums;">12<span style="color: var(--green-500);"> states</span></span>
             <span style="display: block; margin-top: 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Active operations</span>
@@ -913,7 +995,7 @@ section[id] { scroll-margin-top: 92px; }
       <!-- Step grid (light 2x2) -->
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Step grid &middot; 2&times;2</span>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--neutral-200); border: 1px solid var(--neutral-200); border-radius: 10px; overflow: hidden;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--neutral-200); border: 1px solid var(--neutral-200); overflow: hidden;">
           <div style="background: var(--white); padding: 32px;">
             <span style="font-size: 40px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.03em;">01</span>
             <h4 style="font-size: 16px; font-weight: 700; color: var(--ink-800); margin-top: 12px;">Route Study</h4>
@@ -940,7 +1022,7 @@ section[id] { scroll-margin-top: 92px; }
       <!-- Accordion row -->
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Accordion row</span>
-        <div style="border: 1px solid var(--neutral-200); border-radius: 10px; overflow: hidden;">
+        <div style="border: 1px solid var(--neutral-200); overflow: hidden;">
           <div style="border-bottom: 1px solid var(--neutral-200);">
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 24px;">
               <div style="display: flex; align-items: center; gap: 16px;">
@@ -979,7 +1061,7 @@ section[id] { scroll-margin-top: 92px; }
         <span class="cap" style="margin-bottom: 16px; display: block;">Team grid</span>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-            <div style="width: 80px; height: 80px; border-radius: 999px; background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 80px; height: 80px; border-radius: var(--r-md); background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px; font-weight: 700; color: var(--teal-500);">MD</span>
             </div>
             <div>
@@ -988,7 +1070,7 @@ section[id] { scroll-margin-top: 92px; }
             </div>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-            <div style="width: 80px; height: 80px; border-radius: 999px; background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 80px; height: 80px; border-radius: var(--r-md); background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px; font-weight: 700; color: var(--teal-500);">JR</span>
             </div>
             <div>
@@ -997,7 +1079,7 @@ section[id] { scroll-margin-top: 92px; }
             </div>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-            <div style="width: 80px; height: 80px; border-radius: 999px; background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 80px; height: 80px; border-radius: var(--r-md); background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px; font-weight: 700; color: var(--teal-500);">TW</span>
             </div>
             <div>
@@ -1012,32 +1094,32 @@ section[id] { scroll-margin-top: 92px; }
       <div style="margin-bottom: 48px;">
         <span class="cap" style="margin-bottom: 16px; display: block;">Metric grid</span>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
-          <div style="background: var(--neutral-100); border-radius: 10px; padding: 24px;">
+          <div style="background: var(--neutral-100); padding: 24px;">
             <span style="font-size: 32px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums;">2,400+</span>
             <p style="font-size: 13px; font-weight: 700; color: var(--ink-800); margin: 8px 0 0; letter-spacing: 0.06em; text-transform: uppercase;">Parcels acquired</p>
             <p style="font-size: 12px; color: var(--ink-600); margin: 4px 0 0;">Across 12 states since 2019</p>
           </div>
-          <div style="background: var(--neutral-100); border-radius: 10px; padding: 24px;">
+          <div style="background: var(--neutral-100); padding: 24px;">
             <span style="font-size: 32px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums;">340<span style="color: var(--green-500);"> mi</span></span>
             <p style="font-size: 13px; font-weight: 700; color: var(--ink-800); margin: 8px 0 0; letter-spacing: 0.06em; text-transform: uppercase;">Corridor cleared</p>
             <p style="font-size: 12px; color: var(--ink-600); margin: 4px 0 0;">Transmission and pipeline ROW</p>
           </div>
-          <div style="background: var(--neutral-100); border-radius: 10px; padding: 24px;">
+          <div style="background: var(--neutral-100); padding: 24px;">
             <span style="font-size: 32px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums;">98<span style="color: var(--green-500);">%</span></span>
             <p style="font-size: 13px; font-weight: 700; color: var(--ink-800); margin: 8px 0 0; letter-spacing: 0.06em; text-transform: uppercase;">On-time delivery</p>
             <p style="font-size: 12px; color: var(--ink-600); margin: 4px 0 0;">5-year rolling average</p>
           </div>
-          <div style="background: var(--neutral-100); border-radius: 10px; padding: 24px;">
+          <div style="background: var(--neutral-100); padding: 24px;">
             <span style="font-size: 32px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums;">45+</span>
             <p style="font-size: 13px; font-weight: 700; color: var(--ink-800); margin: 8px 0 0; letter-spacing: 0.06em; text-transform: uppercase;">Years of experience</p>
             <p style="font-size: 12px; color: var(--ink-600); margin: 4px 0 0;">Energy-land services</p>
           </div>
-          <div style="background: var(--neutral-100); border-radius: 10px; padding: 24px;">
+          <div style="background: var(--neutral-100); padding: 24px;">
             <span style="font-size: 32px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums;">$2.1<span style="color: var(--green-500);">B</span></span>
             <p style="font-size: 13px; font-weight: 700; color: var(--ink-800); margin: 8px 0 0; letter-spacing: 0.06em; text-transform: uppercase;">Project value managed</p>
             <p style="font-size: 12px; color: var(--ink-600); margin: 4px 0 0;">Lifetime portfolio</p>
           </div>
-          <div style="background: var(--neutral-100); border-radius: 10px; padding: 24px;">
+          <div style="background: var(--neutral-100); padding: 24px;">
             <span style="font-size: 32px; font-weight: 900; color: var(--teal-500); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums tabular-nums;">14</span>
             <p style="font-size: 13px; font-weight: 700; color: var(--ink-800); margin: 8px 0 0; letter-spacing: 0.06em; text-transform: uppercase;">Active projects</p>
             <p style="font-size: 12px; color: var(--ink-600); margin: 4px 0 0;">Current engagement count</p>
@@ -1145,7 +1227,7 @@ section[id] { scroll-margin-top: 92px; }
       <p class="lede">Landmen can spot corporate BS a mile away. Short sentences, real numbers, partners not vendors.</p>
     </div>
 
-    <div class="voice-quote dus-field-ink dus-grid-dark dus-horizon">
+    <div class="voice-quote dus-field-teal dus-grid-dark dus-horizon">
       <span class="qmark">&ldquo;</span>
       <blockquote>We're not trying to be the loudest voice in the room. We're trying to be the most trusted.</blockquote>
       <div class="attr dus-micro dus-micro--dark">Dudley brand guidelines</div>
@@ -1178,6 +1260,7 @@ section[id] { scroll-margin-top: 92px; }
 
 <script>
 (function () {
+  /* template iframe scaling */
   function fit() {
     document.querySelectorAll('.tpl-frame').forEach(function (w) {
       var f = w.querySelector('iframe');
@@ -1191,6 +1274,61 @@ section[id] { scroll-margin-top: 92px; }
   window.addEventListener('load', fit);
   window.addEventListener('resize', fit);
   fit();
+
+  /* mobile nav drawer */
+  var toggle = document.querySelector('.nav-toggle');
+  var drawer = document.getElementById('nav-drawer');
+  var scrim  = document.getElementById('nav-scrim');
+  var closer = document.querySelector('.nav-drawer-close');
+
+  function openDrawer() {
+    drawer.classList.add('is-open');
+    scrim.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('is-open');
+    scrim.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function () {
+    drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+  });
+  closer.addEventListener('click', closeDrawer);
+  scrim.addEventListener('click', closeDrawer);
+
+  drawer.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeDrawer);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
+  });
+
+  /* scroll-spy — highlight active section in both nav bars */
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var drawerLinks = document.querySelectorAll('.nav-drawer-links a');
+
+  function setActive(id) {
+    navLinks.forEach(function (a) {
+      a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+    });
+    drawerLinks.forEach(function (a) {
+      a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+
+  sections.forEach(function (s) { observer.observe(s); });
 })();
 </script>
 </body>
