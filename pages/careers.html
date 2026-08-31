@@ -586,8 +586,8 @@ p, li { text-wrap: pretty; }
 /* Apply row — the per-section apply affordance (Garrett: a way to jump to
    applying after every section). Structural hairline, not a card. */
 .applyrow {
-  margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--neutral-200);
-  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--neutral-200);
+  display: flex; align-items: center; justify-content: center;
 }
 .applyrow span { font-size: 15px; color: var(--text-2); font-weight: 700; }
 .sec-dark .applyrow { border-top-color: var(--hairline-dark); }
@@ -598,6 +598,11 @@ p, li { text-wrap: pretty; }
 .headline-options ul { list-style: none; margin: 12px 0 0; padding: 0; }
 .headline-options li { font-size: 15px; line-height: 1.9; color: var(--on-dark-2); }
 .headline-options li strong { color: var(--on-dark); }
+
+.benefit-grid .dus-h3 { margin-bottom: 0; text-align: center; }
+.benefit-grid .dus-card { display: flex; align-items: center; justify-content: center; min-height: 96px; }
+.resume-callout { margin-top: 30px; padding: 30px 26px; border: 1px solid var(--neutral-200); text-align: center; }
+.resume-callout p { font-size: 17px; font-weight: 700; color: var(--text); margin: 0 0 16px; }
 
 /* Two-pane job board (NVIDIA-pattern: list left, full posting right,
    no page change). */
@@ -665,16 +670,6 @@ p, li { text-wrap: pretty; }
     <div class="dus-micro dus-micro--dark hero-kicker">Careers &middot; Dudley Utility Services</div>
     <h1 class="dus-display">EXPERIENCE SOMETHING<br>DIFFERENT</h1>
     <p class="hero-lede">You'll spend a third of your life at work. You deserve to spend it somewhere that respects your ideas, sends you home for the moments that matter, and invests in the career you're building.</p>
-    <div class="chipwrap">
-      <div class="dus-micro dus-micro--dark chiplabel">We hire across</div>
-      <div class="chips">
-        <span class="dus-pill">Electric transmission</span>
-        <span class="dus-pill">Electric distribution</span>
-        <span class="dus-pill">Fiber optics &amp; broadband</span>
-        <span class="dus-pill">Gas utility</span>
-        <span class="dus-pill">Water utility</span>
-      </div>
-    </div>
     <div class="actions">
       <a class="dus-btn dus-btn--primary" href="#positions">See open positions</a>
     </div>
@@ -711,18 +706,18 @@ p, li { text-wrap: pretty; }
     <div class="grid-3" style="margin-top: 34px;">
       <div class="dus-card dus-ticks pad reveal reveal-d1"><span class="tick-b"></span>
         <h3 class="dus-h3">Privately owned</h3>
-        <p>Dudley has been privately owned since 1980. The people who set the direction work down the hall, decisions get made for the long run, and nobody outside the company sets the pace.</p>
+        <p>Dudley has been privately owned since 1980. Decisions get made inside the company, for the long run.</p>
       </div>
       <div class="dus-card dus-ticks pad reveal reveal-d2"><span class="tick-b"></span>
-        <h3 class="dus-h3">A culture that's lived</h3>
-        <p>Dudley Land Company built this culture over 45+ years, and we run on it: empowered leadership, trust, and integrity, embodied at every level of the company no matter the position.</p>
+        <h3 class="dus-h3">Built over 45+ years</h3>
+        <p>Dudley has spent 45+ years empowering leaders, earning trust at every position, and building integrity into the work.</p>
       </div>
       <div class="dus-card dus-ticks pad reveal reveal-d3"><span class="tick-b"></span>
         <h3 class="dus-h3">Careers built deliberately</h3>
-        <p>People join Dudley as students and graduates and stay long enough to lead it. We map what a new land professional needs exposure to and pair you with people who've done the work.</p>
+        <p>People have joined Dudley as students and recent grads and stayed long enough to become the leaders running it today.</p>
       </div>
     </div>
-    <div class="applyrow reveal"><span>Ready when you are.</span><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
+    <div class="applyrow reveal"><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
   </div>
 </section>
 
@@ -731,59 +726,57 @@ p, li { text-wrap: pretty; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Benefits</div>
     <h2 class="dus-h1 sec-title reveal">What comes with the job</h2>
-    <p class="askfirst reveal">We keep this list short and real. Ask us anything about it in the first conversation and you'll get a straight answer.</p>
-    <div class="grid-3" style="margin-top: 34px;">
+    <div class="grid-3 benefit-grid" style="margin-top: 34px;">
       <div class="dus-card dus-ticks pad reveal reveal-d1"><span class="tick-b"></span>
         <h3 class="dus-h3">Medical, dental, and vision</h3>
-        <p>Every employee can enroll in medical, dental, and vision coverage. We'll put the plan details in front of you early, so you can weigh the whole offer before you decide anything.</p>
       </div>
       <div class="dus-card dus-ticks pad reveal reveal-d2"><span class="tick-b"></span>
         <h3 class="dus-h3">Paid major holidays</h3>
-        <p>We pay the major holidays because that time belongs to your family, and we plan the work so you can actually be there for it. The people you'd work for plan their own holidays the same way.</p>
       </div>
       <div class="dus-card dus-ticks pad reveal reveal-d3"><span class="tick-b"></span>
         <h3 class="dus-h3">401k</h3>
-        <p>Your 401k is the same plan the rest of Dudley uses, from the newest right-of-way agent to the longest-tenured land manager. Everyone in the company builds retirement on the same terms.</p>
       </div>
     </div>
-    <div class="applyrow reveal"><span>Ready when you are.</span><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
+    <div class="applyrow reveal"><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
   </div>
 </section>
 
 <!-- ======================= 03 · OPEN POSITIONS ======================= -->
 <section id="positions" class="sec sec-divider">
   <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">Open positions</div>
-    <h2 class="dus-h1 sec-title reveal">Where we're hiring</h2>
-    <p class="askfirst reveal">Scan the list, read the full posting without losing your place, and apply the moment you're ready.</p>
+    <div class="dus-eyebrow dus-eyebrow--teal reveal">Join us</div>
+    <h2 class="dus-h1 sec-title reveal">Open positions</h2>
     <p class="dus-micro samplenote reveal">Sample postings shown for layout review &middot; final job descriptions come from Dudley HR</p>
     <div class="board reveal">
       <div class="board-list" id="jobList" role="tablist" aria-label="Open positions"></div>
       <div class="board-detail" id="jobDetail"></div>
     </div>
-    <p class="board-foot reveal">If the right role isn't listed, <a href="mailto:garrettgill@dudley-utility.com,SavannahCano@dudley-utility.com?subject=Resume%20%E2%80%94%20Dudley%20Utility%20Services">send us your resume</a> with a note about the work you want to do.</p>
+    <div class="resume-callout reveal">
+      <p>If the right role isn't listed, we still want to hear from you.</p>
+      <a class="dus-btn dus-btn--accent" href="mailto:garrettgill@dudley-utility.com,SavannahCano@dudley-utility.com?subject=Resume%20%E2%80%94%20Dudley%20Utility%20Services">Send your resume</a>
+    </div>
   </div>
 </section>
 
 <!-- ===================== 04 · COMPANY HIGHLIGHTS ===================== -->
-<section id="highlights" class="sec sec-dark field-teal-close dus-grid-dark">
+<section id="highlights" class="sec sec-alt">
   <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--dark reveal">Company highlights</div>
-    <h2 class="dus-h1 sec-title on-dark reveal">See it for yourself</h2>
-    <p class="sec-lede on-dark reveal">Culture claims are easy to make. Ours gets discussed in public, on the record, by the people who run the company, so you can listen in before you ever apply.</p>
+    <div class="dus-eyebrow dus-eyebrow--teal reveal">Company highlights</div>
+    <h2 class="dus-h1 sec-title reveal">See it for yourself</h2>
+    <p class="sec-lede reveal">Culture claims are easy to make. Ours gets discussed in public, on the record, by the people who run the company, so you can listen in before you ever apply.</p>
     <div class="grid-2" style="margin-top: 40px;">
       <div class="dus-card dus-ticks pad reveal reveal-d1"><span class="tick-b"></span>
         <h3 class="dus-h3">The Land Department podcast</h3>
-        <p>Brent Broussard, our president, hosts a running conversation with the leaders of Dudley's land business: how people get trained, how the year gets planned, and where the work is headed. It's unscripted, and it's the clearest window into how this company thinks.</p>
+        <p>Brent Broussard, our president, talks through how Dudley actually runs with the leaders of our land business: training, planning, and where the work is headed.</p>
         <a class="dus-btn dus-btn--ghost" style="margin-top: 22px;" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
       </div>
       <div class="dus-card dus-ticks pad reveal reveal-d2"><span class="tick-b"></span>
         <h3 class="dus-h3">How we build new land professionals</h3>
-        <p>On a recent round table, our leadership walked through Dudley's mentor program: roughly 100 checkpoints a new land professional needs exposure to, about 20 field mentors chosen and paid for the job, and a six-month program that pairs every trainee with a mentor responsible for them day in and day out.</p>
+        <p>Our leadership walked through Dudley's mentor program on a recent round table: paid field mentors, a six-month structure, and a mentor assigned to every trainee.</p>
         <a class="dus-btn dus-btn--ghost" style="margin-top: 22px;" href="https://youtu.be/92O_n9zpVTM" target="_blank" rel="noopener">Hear the round table</a>
       </div>
     </div>
-    <div class="applyrow reveal"><span>Ready when you are.</span><a class="dus-btn dus-btn--light" href="#positions">See open positions</a></div>
+    <div class="applyrow reveal"><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
   </div>
 </section>
 
@@ -792,18 +785,17 @@ p, li { text-wrap: pretty; }
   <div class="wrap">
     <div class="close-grid">
       <div>
-        <div class="dus-eyebrow dus-eyebrow--dark reveal">Get started here</div>
+        <div class="dus-eyebrow dus-eyebrow--dark reveal">Experience it for yourself</div>
         <h2 class="dus-h1 reveal">Introduce yourself</h2>
-        <p>Pick an opening above, or send your resume with a note about the work you want to do and where you want your career to go.</p>
+        <p>Apply to one of our postings, or send your resume with a note about the work you want to do and where you want your career to go.</p>
         <div class="actions">
-          <a class="dus-btn dus-btn--primary" href="#positions">See open positions</a>
-          <a class="dus-btn dus-btn--light" href="mailto:garrettgill@dudley-utility.com,SavannahCano@dudley-utility.com?subject=Resume%20%E2%80%94%20Dudley%20Utility%20Services">Send your resume</a>
+          <a class="dus-btn dus-btn--primary" href="mailto:garrettgill@dudley-utility.com,SavannahCano@dudley-utility.com?subject=Resume%20%E2%80%94%20Dudley%20Utility%20Services">Send your resume</a>
         </div>
       </div>
       <div class="onepager">
         <div class="dus-micro">From the Dudley core values</div>
-        <h3 class="dus-h3">"We smile and laugh."</h3>
-        <p>It sits in our core values word for word, next to accountability, urgency, and honesty. We take the work seriously, and we enjoy the people we do it with.</p>
+        <h3 class="dus-h3">"We embrace personal and professional growth."</h3>
+        <p>That line is in Dudley's core values word for word. The mentor program and the leaders who came up through Dudley's own training are what it looks like in practice.</p>
       </div>
     </div>
 
