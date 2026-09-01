@@ -1,0 +1,14 @@
+# LAUNCH VERSION — rename to robots.txt at DNS cutover.
+User-agent: *
+Disallow: /brand
+Disallow: /pages/soq
+Disallow: /pages/brand-voice
+Disallow: /pages/social-pillars
+Disallow: /pages/electric-transmission-v2
+Disallow: /pages/electric-transmission-pillar
+Disallow: /pages/electric-distribution-pillar
+Disallow: /pages/fiber-optics-broadband-pillar
+Disallow: /pages/gas-utility-pillar
+Disallow: /pages/water-utility-pillar
+
+Sitemap: https://dudley-utility.com/sitemap.xml
