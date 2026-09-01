@@ -59,12 +59,12 @@
     },
     {
       "source": "/contact",
-      "destination": "/#close",
+      "destination": "/pages/meet-with-dudley",
       "permanent": true
     },
     {
       "source": "/meet-with-dudley",
-      "destination": "/#close",
+      "destination": "/pages/meet-with-dudley",
       "permanent": true
     }
   ],
