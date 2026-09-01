@@ -3,8 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dudley Utility Services — Careers</title>
-<meta name="description" content="Careers at Dudley Utility Services: right-of-way and land careers backed by 45+ years of Dudley culture, real benefits, and deliberate training.">
+<title>Careers at Dudley Utility Services — Right-of-Way, Title &amp; Land Jobs</title>
+<meta name="description" content="Join Dudley Utility Services: right-of-way agent, title agent, land manager, and project coordinator careers backed by 45+ years of Dudley culture.">
+<link rel="canonical" href="https://dudley-utility-services.vercel.app/pages/careers">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Careers at Dudley Utility Services">
+<meta property="og:description" content="Right-of-way, title, and land careers backed by 45+ years of Dudley culture, real benefits, and deliberate training.">
+<meta property="og:url" content="https://dudley-utility-services.vercel.app/pages/careers">
+<meta property="og:site_name" content="Dudley Utility Services">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Careers at Dudley Utility Services">
+<meta name="twitter:description" content="Right-of-way, title, and land careers backed by 45+ years of Dudley culture.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -203,8 +217,7 @@ html, body {
 }
 .dus-micro--dark { color: var(--on-dark-3); }
 
-/* Accent rule — green emphasis line */
-.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
+/* Accent rule — REMOVED per brand learning 2026-08-25: no decorative bars */
 
 /* ==========================================================================
    COMPONENTS
@@ -235,12 +248,11 @@ html, body {
   background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
 }
 
-/* Card — white, hairline border, optional green top bar */
+/* Card — white, hairline border, squared per brand V3.0 */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0; box-shadow: var(--shadow-sm);
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
@@ -311,7 +323,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 68px 0 88px; overflow: hidden; }
-.hero .dus-logo { height: 34px; margin-bottom: 52px; }
+.hero .dus-logo { height: 48px; margin-bottom: 52px; }
 .hero-kicker { margin-bottom: 20px; }
 .hero h1 { font-size: clamp(46px, 8vw, 96px); color: var(--white); margin-bottom: 28px; }
 .hero-lede { font-size: 19.5px; line-height: 1.55; color: var(--on-dark); max-width: 700px; }
@@ -346,8 +358,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .dus-card h3 { color: var(--teal-500); margin-bottom: 12px; font-size: 20px; }
 .dus-card p { font-size: 15.5px; line-height: 1.62; color: var(--text); }
 
+/* .note — REMOVED accent bar per brand learning 2026-08-25 */
 .note { margin-top: 30px; padding: 22px 26px; background: var(--white);
-  border: 1px solid var(--neutral-200); border-left: 4px solid var(--green-500);
+  border: 1px solid var(--neutral-200);
   font-size: 15.5px; line-height: 1.65; color: var(--text); }
 .note strong { color: var(--teal-500); }
 
@@ -371,7 +384,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .credstrip--2 { grid-template-columns: repeat(2, 1fr) !important; }
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
-  background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
+  background: var(--white); border: 1px solid var(--neutral-200); }
 .cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
   text-transform: uppercase; color: var(--text-3); }
 .cred .value { font-weight: 900; letter-spacing: -0.035em; line-height: .9;
@@ -381,11 +394,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
   text-transform: uppercase; color: var(--text-2); line-height: 1.4; }
 
 .usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); }
-.usp-line { position: relative; padding-left: 22px;
+.usp-line {
   font-weight: 900; letter-spacing: -0.02em; line-height: 1.22;
   font-size: clamp(19px, 2.3vw, 27px); color: var(--teal-500); }
-.usp-line::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
-  width: 5px; background: var(--green-500); }
 
 /* ---------- Coverage ---------- */
 .cov-head { max-width: 780px; }
@@ -420,7 +431,8 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 /* ---------- For landowners ---------- */
 .lo-commitments { margin-top: 44px; padding-top: 34px; border-top: 1px solid var(--neutral-300); }
 .lo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 42px; }
-.lo { padding-left: 20px; border-left: 3px solid var(--green-500); }
+/* .lo — REMOVED accent bar per brand learning 2026-08-25 */
+.lo { padding-left: 0; border-left: none; }
 .lo h3 { font-size: 19px; color: var(--teal-500); margin-bottom: 10px; }
 .lo p { font-size: 16px; line-height: 1.62; color: var(--text); }
 
@@ -511,6 +523,7 @@ p, li { text-wrap: pretty; }
   .credstrip { gap: 30px; padding: 30px 28px; }
   .sec { padding: 58px 0; }
   .hero { padding: 48px 0 64px; }
+  .hero h1 { font-size: clamp(36px, 7vw, 72px); }
   .close { padding: 60px 0 52px; }
   .faq .ans { padding-left: 0; }
   .foottext { text-align: left; }
@@ -530,11 +543,36 @@ p, li { text-wrap: pretty; }
   .nav-burger { display: block; }
   .toc { gap: 20px; }
   .toc a { font-size: 11px; padding: 16px 0; }
+  .benefit-cards { grid-template-columns: 1fr; }
+  .benefit-card { padding: 28px 22px; }
+  .culture-block { padding: 28px 24px; }
+  .awards-row { grid-template-columns: repeat(2, 1fr); }
+  .resume-callout { padding: 26px 22px; }
 }
 @media (max-width: 600px) {
+  .wrap { padding: 0 20px; }
+  .hero { padding: 36px 0 52px; }
+  .hero h1 { font-size: clamp(28px, 8vw, 42px); word-break: break-word; }
+  .hero h1 br { display: none; }
+  .hero-lede { font-size: 17px; }
+  .hero .dus-logo { height: 40px; margin-bottom: 36px; }
+  .sec { padding: 44px 0; }
+  .sec-title { font-size: clamp(24px, 6vw, 34px); }
+  .toc { gap: 14px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc a { font-size: 10px; padding: 14px 0; }
+  .awards-row { grid-template-columns: 1fr; }
+  .board { margin-top: 24px; }
+  .board-list { max-height: none; }
+  .board-detail { padding: 22px 18px; }
+  .job-item { padding: 16px 18px; min-height: 44px; }
+  .job-item .jtitle { font-size: 16px; }
+  .close-single h2 { font-size: clamp(24px, 6vw, 34px); }
+  .close-single p { font-size: 17px; }
   .cov-cols { grid-template-columns: 1fr; gap: 26px; }
   .cov-col p { max-width: 34ch; margin: 0 auto; }
   .lo-split { gap: 24px; }
+  .askfirst { font-size: 16px; }
 }
 
 /* ---------- Site nav ---------- */
@@ -580,7 +618,7 @@ p, li { text-wrap: pretty; }
    CAREERS PAGE — additions. Brand guide V3.0 compliance: squared corners
    on all cards (r-0 + plat ticks), no accent bars anywhere.
    ========================================================================== */
-.sec .dus-card, .sec-alt .dus-card, .sec-dark .dus-card { border-radius: 0; }
+/* Card radius override removed — base .dus-card is now border-radius: 0 */
 .hero .actions { margin-top: 34px; }
 
 /* Apply row — the per-section apply affordance (Garrett: a way to jump to
@@ -596,17 +634,26 @@ p, li { text-wrap: pretty; }
 
 .sec-lede, .askfirst { text-wrap: balance; }
 
-/* Culture block — the NVIDIA-Life-model closing beat of Life at DUS:
-   one claim, then hand the reader to real people. */
-.culture-block { max-width: 720px; margin: 52px auto 0; text-align: center; }
-.culture-block p { font-size: 19px; line-height: 1.68; color: var(--text); }
+/* Culture block — closing beat of Life at DUS */
+.culture-block { max-width: 720px; margin: 52px auto 0; padding: 34px 38px;
+  background: var(--neutral-100); border: 1px solid var(--neutral-200); text-align: center; }
+.culture-block p { font-size: 18px; line-height: 1.68; color: var(--text); }
 .culture-block a { display: inline-block; margin-top: 14px; font-size: 16px; font-weight: 700; color: var(--teal-500); }
 .culture-block a:hover { color: var(--green-600); }
 
-.benefit-grid .dus-h3 { margin-bottom: 0; text-align: center; }
-.benefit-grid .dus-card { display: flex; align-items: center; justify-content: center; min-height: 96px; }
-.benefit-list { list-style: none; margin: 38px auto 0; padding: 0; text-align: center; display: flex; flex-direction: column; gap: 22px; }
-.benefit-list li { font-size: 26px; font-weight: 900; letter-spacing: -0.01em; color: var(--teal-500); line-height: 1.2; }
+/* Benefits — 3-column card grid with teal stat markers */
+.benefit-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px; }
+.benefit-card { background: var(--white); border: 1px solid var(--neutral-200);
+  padding: 32px 26px; text-align: center; position: relative; }
+.benefit-card .dus-ticks { pointer-events: none; }
+.benefit-icon { width: 48px; height: 48px; margin: 0 auto 18px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--teal-050); color: var(--teal-500); }
+.benefit-icon svg { width: 24px; height: 24px; }
+.benefit-card h3 { font-size: 20px; font-weight: 900; letter-spacing: -0.01em;
+  color: var(--teal-500); margin-bottom: 8px; line-height: 1.2; }
+.benefit-card p { font-size: 15px; line-height: 1.6; color: var(--text-2); }
+@media (max-width: 600px) { .benefit-cards { grid-template-columns: 1fr; } }
 .award { text-align: center; }
 .award .dus-micro { margin-bottom: 8px; }
 .award .dus-h3 { margin-bottom: 6px; }
@@ -642,10 +689,77 @@ p, li { text-wrap: pretty; }
 .samplenote { margin-top: 14px; }
 @media (max-width: 900px) {
   .board { grid-template-columns: 1fr; }
-  .board-list { border-right: none; border-bottom: 1px solid var(--neutral-200); max-height: 320px; }
+  .board-list { border-right: none; border-bottom: 1px solid var(--neutral-200); max-height: none; overflow-y: visible; }
   .board-detail { padding: 26px 22px; }
 }
 </style>
+
+<!-- Structured Data: JobPosting (Google for Jobs) -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Right-of-Way Agent",
+    "description": "Represent utility projects with community members along the route: meeting with them on their own ground, presenting written offers, negotiating easements, and keeping every commitment on the record.",
+    "datePosted": "2026-09-01",
+    "employmentType": "FULL_TIME",
+    "jobLocationType": null,
+    "jobLocation": [
+      {"@type": "Place", "address": {"@type": "PostalAddress", "addressRegion": "TX", "addressCountry": "US"}},
+      {"@type": "Place", "address": {"@type": "PostalAddress", "addressRegion": "OK", "addressCountry": "US"}},
+      {"@type": "Place", "address": {"@type": "PostalAddress", "addressRegion": "NM", "addressCountry": "US"}}
+    ],
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "Dudley Utility Services",
+      "sameAs": "https://dudley-utility.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Title Agent",
+    "description": "Run title at the courthouse and online: chains of title, ownership reports, and curative work that holds up when the project depends on it.",
+    "datePosted": "2026-09-01",
+    "employmentType": "FULL_TIME",
+    "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressRegion": "OK", "addressCountry": "US"}},
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "Dudley Utility Services",
+      "sameAs": "https://dudley-utility.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Land Manager",
+    "description": "Run the land effort on utility projects: staffing to parcel count, keeping every file current and complete, and being the person the client calls first.",
+    "datePosted": "2026-09-01",
+    "employmentType": "FULL_TIME",
+    "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressRegion": "TX", "addressCountry": "US"}},
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "Dudley Utility Services",
+      "sameAs": "https://dudley-utility.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Project Coordinator",
+    "description": "Keep the project record current and complete: parcel files, status reports, and documentation that makes construction handoff and closeout clean.",
+    "datePosted": "2026-09-01",
+    "employmentType": "FULL_TIME",
+    "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressRegion": "TX", "addressCountry": "US"}},
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "Dudley Utility Services",
+      "sameAs": "https://dudley-utility.com"
+    }
+  }
+]
+</script>
 </head>
 <body>
 <!-- ========================= SITE NAV ============================= -->
@@ -731,11 +845,23 @@ p, li { text-wrap: pretty; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Benefits</div>
     <h2 class="dus-h1 sec-title reveal">We invest in you</h2>
-    <ul class="benefit-list reveal">
-      <li>Medical, dental, and vision</li>
-      <li>Paid major holidays</li>
-      <li>401k</li>
-    </ul>
+    <div class="benefit-cards reveal">
+      <div class="benefit-card dus-ticks"><span class="tick-b"></span>
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Medical, dental &amp; vision</h3>
+        <p>Full coverage for you and your family — health, dental, and vision plans from day one.</p>
+      </div>
+      <div class="benefit-card dus-ticks"><span class="tick-b"></span>
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Paid major holidays</h3>
+        <p>Time off on the days that matter — so you can be present for what's important outside of work.</p>
+      </div>
+      <div class="benefit-card dus-ticks"><span class="tick-b"></span>
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>401(k)</h3>
+        <p>Start building for the future with a retirement plan that grows alongside your career.</p>
+      </div>
+    </div>
     <div class="applyrow reveal"><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
   </div>
 </section>
@@ -749,7 +875,7 @@ p, li { text-wrap: pretty; }
       <div class="board-list" id="jobList" role="tablist" aria-label="Open positions"></div>
       <div class="board-detail" id="jobDetail"></div>
     </div>
-    <div class="resume-callout reveal">
+    <div class="resume-callout dus-ticks reveal"><span class="tick-b"></span>
       <p>If working with us feels like the right fit but you don't see a role that matches your experience, send us your resume.</p>
       <a class="dus-btn dus-btn--accent" href="mailto:garrettgill@dudley-utility.com,SavannahCano@dudley-utility.com?subject=Resume%20%E2%80%94%20Dudley%20Utility%20Services">Send your resume</a>
     </div>
