@@ -658,6 +658,7 @@ p, li { text-wrap: pretty; }
 .mwd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 24px; }
 .mwd-field { display: flex; flex-direction: column; gap: 8px; }
 .mwd-field--full { grid-column: 1 / -1; }
+.mwd-field label .req { color: var(--green-600); font-size: 13px; }
 .mwd-field label { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-700); }
 .mwd-field input, .mwd-field textarea { font-family: var(--font); font-size: 16px; color: var(--text);
   padding: 13px 14px; border: 1px solid var(--neutral-300); border-radius: var(--r-sm); background: var(--white); }
@@ -720,33 +721,32 @@ p, li { text-wrap: pretty; }
       <form id="mwd-form" novalidate>
         <div class="mwd-grid">
           <div class="mwd-field">
-            <label for="mwd-first">First name</label>
+            <label for="mwd-first">First name <span class="req" aria-hidden="true">*</span></label>
             <input id="mwd-first" name="first_name" type="text" autocomplete="given-name" required>
           </div>
           <div class="mwd-field">
-            <label for="mwd-last">Last name</label>
+            <label for="mwd-last">Last name <span class="req" aria-hidden="true">*</span></label>
             <input id="mwd-last" name="last_name" type="text" autocomplete="family-name" required>
           </div>
           <div class="mwd-field">
-            <label for="mwd-email">Email</label>
+            <label for="mwd-email">Email <span class="req" aria-hidden="true">*</span></label>
             <input id="mwd-email" name="email" type="email" autocomplete="email" required>
           </div>
           <div class="mwd-field">
-            <label for="mwd-phone">Phone number</label>
+            <label for="mwd-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
             <input id="mwd-phone" name="phone" type="tel" autocomplete="tel" required>
           </div>
           <div class="mwd-field mwd-field--full">
-            <label for="mwd-company">Company name</label>
+            <label for="mwd-company">Company name <span class="req" aria-hidden="true">*</span></label>
             <input id="mwd-company" name="company" type="text" autocomplete="organization" required>
           </div>
           <div class="mwd-field mwd-field--full">
-            <label for="mwd-message">Tell us about your project</label>
+            <label for="mwd-message">Tell us about your project <span class="req" aria-hidden="true">*</span></label>
             <textarea id="mwd-message" name="message" required></textarea>
           </div>
         </div>
         <div class="mwd-actions">
           <button class="dus-btn dus-btn--primary" type="submit">Start the conversation</button>
-          <span class="mwd-note">All fields are required.</span>
         </div>
       </form>
     </div>
