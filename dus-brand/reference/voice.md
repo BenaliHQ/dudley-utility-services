@@ -101,7 +101,7 @@ Run all three on any copy before it ships.
 
 1. **Logo swap.** Put a competitor's name on the sentence. If it still works, it's a slogan. Cut it or replace it.
 2. **Certainty.** Does the reader come away understanding how DUS removes uncertainty on their project? Explaining the industry in general doesn't count. The subject is always how we work, not how the work works.
-3. **Mechanism.** Every claim carries the how. "We reduce risk" is a claim. "We convert blanket easements to defined right-of-way before survey" is a mechanism.
+3. **Mechanism.** Every claim carries the how. "We reduce risk" is a claim. "We keep every parcel's file complete and ready for whatever path it takes" is a mechanism. (This example previously used the blanket-easement conversion line; see § Never for why it moved.)
 
 ## Mechanics
 
@@ -133,6 +133,7 @@ Run all three on any copy before it ships.
 - **Never use oil and gas vocabulary.** No upstream, midstream, minerals, or leases in that sense.
 - **Never use unverified figures.** Dollar amounts of past work, change-order comparisons, market-share claims.
 - **Never turn a client's contract requirement into a DUS promise.** The RFP and statement-of-work library describes what utilities require of their vendors. Those deadlines, thresholds, and service levels are obligations imposed on us, and the numbers belong to the client's contract. Use that material to understand the work. Never lift a figure out of it and publish it as a Dudley standard.
+- **Hold "convert blanket easements to defined right-of-way" until Savannah settles it.** She has questions about that specific framing and cautions against language that precise (via Jenny, 8/31, during the homepage review; the phrase was pulled from the homepage water card the same day). Don't reach for it in client-facing copy until the client confirms the wording. Known remaining uses to clean on next touch: the mechanism example copied into `dus-brand/SKILL.md`, `PROJECT-INSTRUCTIONS.md`, and `reference/design-source-brief.md`, and a pillar-1 angle in the social pillars.
 - **Never use category filler.** Banned: best-in-industry, turnkey, world-class, cutting-edge, revolutionary, seamless, industry-leading, scaled to fit your needs, one-stop shop, leverage.
 
 ## Approved standing claims
