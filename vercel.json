@@ -15,6 +15,15 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
+    },
+    {
+      "source": "/(brand|pages/soq|pages/brand-voice|pages/social-pillars|pages/electric-transmission-v2|pages/electric-transmission-pillar|pages/electric-distribution-pillar|pages/fiber-optics-broadband-pillar|pages/gas-utility-pillar|pages/water-utility-pillar)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -22,6 +31,47 @@
       "source": "/pages/electric-transmission-garrett",
       "destination": "/pages/electric-transmission",
       "permanent": true
+    },
+    {
+      "source": "/electrical-infrastructure",
+      "destination": "/pages/electric-transmission",
+      "permanent": true
+    },
+    {
+      "source": "/pipeline-infrastructure",
+      "destination": "/pages/water-and-wastewater",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#what",
+      "permanent": true
+    },
+    {
+      "source": "/why-dus",
+      "destination": "/#why",
+      "permanent": true
+    },
+    {
+      "source": "/team",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/meet-with-dudley",
+      "permanent": true
+    },
+    {
+      "source": "/meet-with-dudley",
+      "destination": "/pages/meet-with-dudley",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/pages/home"
     }
   ]
 }
