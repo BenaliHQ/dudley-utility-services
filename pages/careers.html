@@ -57,8 +57,8 @@
   --ink-900: #101417;
   --ink-800: #2B2B2B;    /* Dudley dark neutral — primary text */
   --ink-700: #444444;
-  --ink-600: #6E6E6E;
-  --ink-500: #949494;
+  --ink-600: #636363;
+  --ink-500: #717171;
   --ink-400: #BEBEBE;
   --neutral-300: #D6D6D6;
   --neutral-200: #EBEBEB; /* Dudley light neutral */
@@ -72,8 +72,8 @@
   --text-2: var(--ink-600);
   --text-3: var(--ink-500);
   --on-dark: rgba(255,255,255,0.94);
-  --on-dark-2: rgba(255,255,255,0.72);
-  --on-dark-3: rgba(255,255,255,0.64);
+  --on-dark-2: rgba(255,255,255,0.82);
+  --on-dark-3: rgba(255,255,255,0.74);
   --hairline-dark: rgba(255,255,255,0.16);
   --hairline: var(--neutral-200);
 
@@ -312,12 +312,12 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 /* Lifted teal fields — perceptibly teal across the whole surface */
 .field-teal-hero {
   background: var(--glow-green),
-    linear-gradient(142deg, var(--teal-400) 0%, var(--teal-500) 38%, var(--teal-700) 100%);
+    linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%);
   color: var(--on-dark);
 }
 .field-teal-close {
   background: var(--glow-green),
-    linear-gradient(142deg, var(--teal-500) 0%, var(--teal-600) 45%, var(--teal-800) 100%);
+    linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%);
   color: var(--on-dark);
 }
 
@@ -327,7 +327,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .hero-kicker { margin-bottom: 20px; }
 .hero h1 { font-size: clamp(46px, 8vw, 96px); color: var(--white); margin-bottom: 28px; }
 .hero-lede { font-size: 19.5px; line-height: 1.55; color: var(--on-dark); max-width: 700px; }
-.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--green-500); }
+.chipwrap { margin-top: 46px; padding-top: 28px; border-top: 1px solid var(--hairline-dark); }
 .chiplabel { margin-bottom: 16px; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chips .dus-pill { padding: 8px 17px; font-size: 12px; letter-spacing: .13em; }
@@ -357,9 +357,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .pad { padding: 30px 28px; }
 .dus-card h3 { color: var(--teal-500); margin-bottom: 12px; font-size: 20px; }
 .dus-card p { font-size: 15.5px; line-height: 1.62; color: var(--text); }
-.highlight-cta { background: var(--glow-green), var(--field-teal); border-color: transparent; box-shadow: 0 4px 14px rgba(3,34,48,0.22), 0 1px 3px rgba(3,34,48,0.12); overflow: hidden; }
-.highlight-cta h3 { color: var(--white); }
-.highlight-cta p { color: var(--on-dark-2); }
+.highlight-cta { background: var(--white); border-color: var(--neutral-200); box-shadow: var(--shadow-sm); overflow: hidden; }
+.highlight-cta h3 { color: var(--teal-500); }
+.highlight-cta p { color: var(--text); }
 .cta-card-img { display: block; max-width: 260px; height: auto; border-radius: 4px; margin: 0 auto 20px; }
 .cta-card-img--square { aspect-ratio: 1/1; object-fit: cover; object-position: center top; }
 .cta-card-body { padding: 28px 28px 30px; text-align: center; }
@@ -473,13 +473,13 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .close p { font-size: 17px; line-height: 1.6; color: var(--on-dark); max-width: 560px; }
 .close .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 .onepager {
-  position: relative; padding: 48px 52px; border: none; border-radius: var(--r-lg);
+  position: relative; padding: 48px 52px; border: none; border-radius: 0;
   background: linear-gradient(115deg, var(--teal-500) 0%, var(--teal-400) 40%, var(--green-600) 80%, var(--green-500) 100%);
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 .onepager::after {
   content: ""; position: absolute; inset: 2.5px;
-  border-radius: calc(var(--r-lg) - 2.5px); background: var(--white);
+  border-radius: 0; background: var(--white);
 }
 .onepager > * { position: relative; z-index: 1; }
 .onepager .dus-micro { color: var(--text-3); }
@@ -488,9 +488,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .onepager .dus-btn { margin-top: 26px; box-shadow: none; }
 .onepager .dus-btn:hover { box-shadow: 0 4px 16px rgba(65,190,72,0.25); }
 
-.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--green-500);
+.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--hairline-dark);
   display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
-.footlogo { height: 26px; }
+.footlogo { height: 40px; }
 .foottext { font-size: 12.5px; line-height: 1.7; letter-spacing: .04em; color: var(--on-dark-2); text-align: right; }
 
 /* ---------- Kudu card icons ---------- */
@@ -643,7 +643,7 @@ p, li { text-wrap: pretty; }
 
 /* Culture block — branded moment closing Life at DUS */
 .culture-block { margin: 52px 0 0; padding: 48px 42px;
-  background: var(--glow-green), var(--field-teal); text-align: center; position: relative; }
+  background: var(--glow-green), linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%); text-align: center; position: relative; }
 .culture-block p { font-size: 19px; line-height: 1.68; color: var(--on-dark); font-weight: 700; letter-spacing: -0.01em; max-width: 680px; margin: 0 auto; }
 .culture-block .culture-cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 14px 26px; border: none; border-radius: 6px; background: var(--green-500); color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 700; letter-spacing: 0.02em; cursor: pointer; text-decoration: none; transition: filter 200ms ease, transform 200ms ease, box-shadow 200ms ease; }
 .culture-block .culture-cta:hover { filter: brightness(0.92); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(65,190,72,0.3); }
@@ -671,7 +671,7 @@ p, li { text-wrap: pretty; }
 .award-sub { font-size: 14px; color: var(--text-2); }
 .close-single { max-width: 640px; }
 .close-single p { margin-top: 6px; }
-.resume-callout { margin-top: 30px; padding: 40px 34px; background: var(--glow-green), var(--field-teal); border: none; text-align: center; position: relative; }
+.resume-callout { margin-top: 30px; padding: 40px 34px; background: var(--glow-green), linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%); border: none; text-align: center; position: relative; }
 .resume-callout p { font-size: 18px; font-weight: 700; color: var(--on-dark); margin: 0 0 20px; line-height: 1.5; }
 
 /* Two-pane job board (NVIDIA-pattern: list left, full posting right,
@@ -853,7 +853,7 @@ p, li { text-wrap: pretty; }
 </section>
 
 <!-- ========================== 02 · BENEFITS ========================== -->
-<section id="benefits" class="sec sec-dark dus-field-teal dus-grid-dark">
+<section id="benefits" class="sec sec-dark field-teal-close dus-grid-dark">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--dark reveal">Benefits</div>
     <h2 class="dus-h1 sec-title on-dark reveal">We invest in you</h2>
@@ -929,7 +929,7 @@ p, li { text-wrap: pretty; }
           <img class="cta-card-img" src="assets/land-department-cover.jpg" alt="The Land Department podcast cover" loading="lazy">
           <h3 class="dus-h3">The Land Department podcast</h3>
           <p>Brent Broussard, our president, talks training, planning, and where the work is headed with leaders from across the land business, at Dudley and beyond.</p>
-          <a class="dus-btn dus-btn--light" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
+          <a class="dus-btn dus-btn--ghost" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
         </div>
       </div>
       <div class="dus-card dus-ticks highlight-cta reveal reveal-d2"><span class="tick-b"></span>
@@ -937,7 +937,7 @@ p, li { text-wrap: pretty; }
           <img class="cta-card-img cta-card-img--square" src="assets/bench-building.jpg" alt="Dudley team working together in the office" loading="lazy">
           <h3 class="dus-h3">Building the bench the industry needs</h3>
           <p>Our industry has more work than people. On a recent round table, our leadership lays out Dudley's answer: bring the next generation in and train them responsibly.</p>
-          <a class="dus-btn dus-btn--light" href="https://youtu.be/92O_n9zpVTM" target="_blank" rel="noopener">Hear the round table</a>
+          <a class="dus-btn dus-btn--ghost" href="https://youtu.be/92O_n9zpVTM" target="_blank" rel="noopener">Hear the round table</a>
         </div>
       </div>
     </div>
