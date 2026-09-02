@@ -8,6 +8,7 @@ EXPORT: see README-FOR-DUS.md ("Exporting").
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dudley Utility Services — Electric Transmission Overview</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -206,7 +207,6 @@ html, body {
 .dus-micro--dark { color: var(--on-dark-3); }
 
 /* Accent rule — green emphasis line */
-.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
 
 /* ==========================================================================
    COMPONENTS
@@ -240,9 +240,8 @@ html, body {
 /* Card — white, hairline border, optional green top bar */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0;
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
