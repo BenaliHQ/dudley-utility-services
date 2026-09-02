@@ -210,7 +210,6 @@ html, body {
 .dus-micro--dark { color: var(--on-dark-3); }
 
 /* Accent rule — green emphasis line */
-.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
 
 /* ==========================================================================
    COMPONENTS
@@ -241,12 +240,11 @@ html, body {
   background-size: 68% 68%; background-position: center; background-repeat: no-repeat;
 }
 
-/* Card — white, hairline border, optional green top bar */
+/* Card — white, hairline border, straight corners */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0; box-shadow: var(--shadow-sm);
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
@@ -263,12 +261,6 @@ html, body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
 .dus-ticks > .tick-b::after { bottom: 0; right: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 13.5h14M13.5 0v14' stroke='%23015270' stroke-opacity='.5'/%3E%3C/svg%3E"); }
-
-/* Footer band — document/deck footer */
-.dus-band {
-  background: var(--ink-950); color: var(--on-dark-2);
-  border-top: 4px solid var(--green-500);
-}
 
 /* Buttons (web/interactive contexts) */
 .dus-btn {
@@ -303,15 +295,10 @@ body { background: var(--white); }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
 img.dus-logo { display: block; width: auto; object-fit: contain; }
 
-/* Lifted teal fields — perceptibly teal across the whole surface */
-.field-teal-hero {
+/* Lifted teal fields — horizontal sweep, perceptibly teal across the whole surface */
+.field-teal-hero, .field-teal-close {
   background: var(--glow-green),
-    linear-gradient(142deg, var(--teal-400) 0%, var(--teal-500) 38%, var(--teal-700) 100%);
-  color: var(--on-dark);
-}
-.field-teal-close {
-  background: var(--glow-green),
-    linear-gradient(142deg, var(--teal-500) 0%, var(--teal-600) 45%, var(--teal-800) 100%);
+    linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%);
   color: var(--on-dark);
 }
 
@@ -365,19 +352,32 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .pricing-illust { width: 100%; height: auto; display: block; }
 .pricing-card.pad { padding: 20px; }
 
-/* ---------- The four moves ---------- */
-.moves { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 42px; margin-top: 42px; }
-.move { padding-top: 20px; border-top: 3px solid var(--teal-500); }
-.move .mnum { font-size: 11px; font-weight: 700; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--green-600); margin-bottom: 10px; }
-.move h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 12px; }
-.move p { font-size: 16px; line-height: 1.62; color: var(--text); }
+/* ---------- How we work cascade ---------- */
+.how-cascade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 44px; }
+.how-step {
+  position: relative; padding: 28px 28px 24px;
+  background: var(--white); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 0; box-shadow: 0 2px 16px rgba(0,0,0,.18);
+}
+.how-num {
+  position: absolute; right: 14px; top: -4px;
+  font-size: 96px; font-weight: 900; line-height: 1;
+  color: var(--teal-200); opacity: .1;
+  pointer-events: none; user-select: none;
+}
+.how-step .mnum {
+  font-size: 11px; font-weight: 700; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--green-500); margin-bottom: 8px;
+  position: relative; z-index: 1;
+}
+.how-step h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 10px; position: relative; z-index: 1; }
+.how-step p { font-size: 16px; line-height: 1.62; color: var(--text); position: relative; z-index: 1; }
 
 /* ---------- Credibility strip (inside "Who runs the work") ---------- */
 .credstrip--2 { grid-template-columns: repeat(2, 1fr) !important; }
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
-  background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
+  background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; }
 .cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
   text-transform: uppercase; color: var(--text-3); }
 .cred .value { font-weight: 900; letter-spacing: -0.035em; line-height: .9;
@@ -386,7 +386,20 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cred .label { font-size: 13px; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--text-2); line-height: 1.4; }
 
-.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); }
+/* Credstrip on dark surfaces */
+.sec-dark .credstrip {
+  background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1);
+  margin: 36px 0 32px;
+}
+.sec-dark .cred .lead { color: rgba(255,255,255,.6); font-size: 13px; }
+.sec-dark .cred .value { color: var(--white); font-size: clamp(48px, 7vw, 82px); }
+.sec-dark .cred .label { color: rgba(255,255,255,.7); font-size: 15px; }
+.sec-dark .credstrip.dus-ticks::before,
+.sec-dark .credstrip.dus-ticks::after,
+.sec-dark .credstrip > .tick-b::before,
+.sec-dark .credstrip > .tick-b::after { filter: brightness(6); opacity: .2; }
+
+.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; }
 .usp-line { position: relative; padding-left: 22px;
   font-weight: 900; letter-spacing: -0.02em; line-height: 1.22;
   font-size: clamp(19px, 2.3vw, 27px); color: var(--teal-500); }
@@ -460,13 +473,13 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .close p { font-size: 17px; line-height: 1.6; color: var(--on-dark); max-width: 560px; }
 .close .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 .onepager {
-  position: relative; padding: 48px 52px; border: none; border-radius: var(--r-lg);
+  position: relative; padding: 48px 52px; border: none; border-radius: 0;
   background: linear-gradient(115deg, var(--teal-500) 0%, var(--teal-400) 40%, var(--green-600) 80%, var(--green-500) 100%);
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 .onepager::after {
   content: ""; position: absolute; inset: 2.5px;
-  border-radius: calc(var(--r-lg) - 2.5px); background: var(--white);
+  border-radius: 0; background: var(--white);
 }
 .onepager > * { position: relative; z-index: 1; }
 .onepager .dus-micro { color: var(--text-3); }
@@ -475,9 +488,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .onepager .dus-btn { margin-top: 26px; box-shadow: none; }
 .onepager .dus-btn:hover { box-shadow: 0 4px 16px rgba(65,190,72,0.25); }
 
-.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--green-500);
+.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--hairline-dark);
   display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
-.footlogo { height: 26px; }
+.footlogo { height: 40px; }
 .foottext { font-size: 12.5px; line-height: 1.7; letter-spacing: .04em; color: var(--on-dark-2); text-align: right; }
 
 /* ---------- Kudu card icons ---------- */
@@ -512,7 +525,7 @@ p, li { text-wrap: pretty; }
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
-  .grid-2, .grid-3, .moves, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .how-cascade, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
   .pricing-split { grid-template-columns: 1fr; }
   .credstrip { gap: 30px; padding: 30px 28px; }
   .sec { padding: 58px 0; }
@@ -702,10 +715,26 @@ p, li { text-wrap: pretty; }
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">The work</div>
     <h2 class="dus-h1 sec-title reveal">You already know your route.<br>The land work is what's left.</h2>
-    <p class="story">A fiber route means agreements with owner after owner, operator after operator, for the full length of the line. We keep them all moving so no single parcel stalls the build.</p>
-    <div class="dus-card pad" style="margin-top: 34px; max-width: 720px;">
+    <p class="sec-lede reveal">A fiber route means agreements with owner after owner, operator after operator, for the full length of the line. We keep them all moving so no single parcel stalls the build.</p>
+
+    <div class="credstrip credstrip--2 dus-ticks" style="margin-top: 44px;">
+      <div class="cred">
+        <div class="lead">Leadership build record</div>
+        <div class="value">700<span style="color: var(--green-500);">mi</span></div>
+        <div class="label">Rail-line fiber build</div>
+      </div>
+      <div class="cred">
+        <div class="lead">Project duration</div>
+        <div class="value">4<span style="color: var(--green-500);"> yr</span></div>
+        <div class="label">Continuous delivery</div>
+      </div>
+      <span class="tick-b"></span>
+    </div>
+
+    <div class="dus-card dus-ticks pad" style="margin-top: 28px;">
       <h3 class="dus-h3">A team that already works fiber</h3>
       <p>Our leadership has run a 700-mile fiber build along a rail line over four years, so there's no learning curve on the ground your route crosses.</p>
+      <span class="tick-b"></span>
     </div>
   </div>
 </section>
@@ -714,60 +743,58 @@ p, li { text-wrap: pretty; }
 <section id="pricing" class="sec">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Sticking to your cost and schedule</div>
-    <h2 class="dus-h1 sec-title reveal">Built around the build</h2>
     <div class="pricing-split">
       <div>
-            <p class="story">Our estimates are based on complexity: parcel count, ownership, market conditions, and acquisition requirements. Staffing and schedule align to what the work demands.</p>
+        <h2 class="dus-h1 sec-title reveal">Built around the build</h2>
+        <p class="askfirst reveal">A realistic estimate starts with understanding what drives the effort.</p>
+        <p class="story">Our estimates are based on complexity: parcel count, ownership, market conditions, and acquisition requirements. Staffing and schedule align to what the work demands.</p>
       </div>
       <div class="pricing-card pad" style="background:var(--neutral-100); border:1px solid var(--neutral-200);">
-        <!-- Plat-map illustration -->
-        <svg class="pricing-illust" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Survey grid -->
-          <g stroke="#015270" stroke-opacity=".07" stroke-width="1">
-            <line x1="44" y1="0" x2="44" y2="320"/><line x1="88" y1="0" x2="88" y2="320"/>
-            <line x1="132" y1="0" x2="132" y2="320"/><line x1="176" y1="0" x2="176" y2="320"/>
-            <line x1="220" y1="0" x2="220" y2="320"/><line x1="264" y1="0" x2="264" y2="320"/>
-            <line x1="308" y1="0" x2="308" y2="320"/><line x1="352" y1="0" x2="352" y2="320"/>
-            <line x1="0" y1="44" x2="400" y2="44"/><line x1="0" y1="88" x2="400" y2="88"/>
-            <line x1="0" y1="132" x2="400" y2="132"/><line x1="0" y1="176" x2="400" y2="176"/>
-            <line x1="0" y1="220" x2="400" y2="220"/><line x1="0" y1="264" x2="400" y2="264"/>
+        <!-- Estimate build-up illustration: stacked cost factors driving a total -->
+        <svg class="pricing-illust" viewBox="0 0 380 248" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Survey grid background -->
+          <g stroke="#015270" stroke-opacity=".04" stroke-width="1">
+            <line x1="44" y1="0" x2="44" y2="248"/><line x1="88" y1="0" x2="88" y2="248"/>
+            <line x1="132" y1="0" x2="132" y2="248"/><line x1="176" y1="0" x2="176" y2="248"/>
+            <line x1="220" y1="0" x2="220" y2="248"/><line x1="264" y1="0" x2="264" y2="248"/>
+            <line x1="308" y1="0" x2="308" y2="248"/><line x1="352" y1="0" x2="352" y2="248"/>
+            <line x1="0" y1="44" x2="380" y2="44"/><line x1="0" y1="88" x2="380" y2="88"/>
+            <line x1="0" y1="132" x2="380" y2="132"/><line x1="0" y1="176" x2="380" y2="176"/>
+            <line x1="0" y1="220" x2="380" y2="220"/>
           </g>
-          <!-- Section lines -->
-          <g stroke="#015270" stroke-opacity=".14" stroke-width="1">
-            <line x1="176" y1="0" x2="176" y2="320"/><line x1="352" y1="0" x2="352" y2="320"/>
-            <line x1="0" y1="176" x2="400" y2="176"/>
+          <!-- Checklist rows — each factor verified, no relative sizing -->
+          <g font-family="Lato, sans-serif">
+            <text x="34" y="24" fill="#015270" fill-opacity=".4" font-size="9" font-weight="700" letter-spacing=".18em">ESTIMATE FACTORS</text>
+            <line x1="34" y1="33" x2="346" y2="33" stroke="#015270" stroke-opacity=".1" stroke-width="1"/>
+            <!-- Row 1 -->
+            <rect x="34" y="44" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="53" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,63 53,67 57,57" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="67" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Parcel count</text>
+            <!-- Row 2 -->
+            <rect x="34" y="86" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="95" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,105 53,109 57,99" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="109" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Ownership complexity</text>
+            <!-- Row 3 -->
+            <rect x="34" y="128" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="137" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,147 53,151 57,141" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="151" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Market conditions</text>
+            <!-- Row 4 -->
+            <rect x="34" y="170" width="312" height="36" fill="#015270" fill-opacity=".025" stroke="#015270" stroke-opacity=".06" stroke-width="1"/>
+            <rect x="44" y="179" width="18" height="18" stroke="#41BE48" stroke-opacity=".5" stroke-width="1.2" fill="none"/>
+            <polyline points="49,189 53,193 57,183" stroke="#41BE48" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="74" y="193" fill="#015270" fill-opacity=".6" font-size="12" font-weight="700">Acquisition requirements</text>
           </g>
-          <!-- Parcel outlines -->
-          <g stroke="#015270" stroke-opacity=".18" stroke-width="1.2" fill="none">
-            <rect x="52" y="56" width="116" height="108" rx="1"/>
-            <rect x="180" y="56" width="100" height="108" rx="1"/>
-            <rect x="292" y="56" width="96" height="108" rx="1"/>
-            <rect x="52" y="184" width="148" height="92" rx="1"/>
-            <rect x="212" y="184" width="176" height="92" rx="1"/>
+          <!-- Divider -->
+          <line x1="34" y1="220" x2="346" y2="220" stroke="#015270" stroke-opacity=".15" stroke-width="1.5"/>
+          <!-- Total row with survey monument -->
+          <g font-family="Lato, sans-serif">
+            <rect x="44" y="229" width="18" height="18" stroke="#41BE48" stroke-width="1.5" fill="none"/>
+            <circle cx="53" cy="238" r="2.5" fill="#41BE48"/>
+            <text x="74" y="243" fill="#015270" font-size="13" font-weight="900" letter-spacing="-.02em">Staffing + schedule</text>
           </g>
-          <!-- Route corridor -->
-          <rect x="60" y="148" width="280" height="24" fill="#41BE48" fill-opacity=".06" rx="2"/>
-          <line x1="60" y1="148" x2="340" y2="148" stroke="#41BE48" stroke-opacity=".3" stroke-width="1" stroke-dasharray="6 4"/>
-          <line x1="60" y1="172" x2="340" y2="172" stroke="#41BE48" stroke-opacity=".3" stroke-width="1" stroke-dasharray="6 4"/>
-          <!-- Centerline -->
-          <line x1="60" y1="160" x2="340" y2="160" stroke="#41BE48" stroke-width="2" stroke-opacity=".85"/>
-          <!-- Station ticks -->
-          <g stroke="#41BE48" stroke-opacity=".45" stroke-width="1.4">
-            <line x1="110" y1="150" x2="110" y2="170"/><line x1="160" y1="150" x2="160" y2="170"/>
-            <line x1="210" y1="150" x2="210" y2="170"/><line x1="260" y1="150" x2="260" y2="170"/>
-            <line x1="310" y1="150" x2="310" y2="170"/>
-          </g>
-          <!-- PI monuments -->
-          <g stroke="#41BE48" stroke-width="1.6" fill="none">
-            <rect x="106" y="156" width="8" height="8"/><rect x="256" y="156" width="8" height="8"/>
-          </g>
-          <g fill="#41BE48"><circle cx="110" cy="160" r="2"/><circle cx="260" cy="160" r="2"/></g>
-          <!-- Labels -->
-          <text x="110" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL A</text>
-          <text x="230" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL B</text>
-          <text x="340" y="45" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">PARCEL C</text>
-          <text x="126" y="292" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">TRACT 1</text>
-          <text x="300" y="292" fill="#015270" fill-opacity=".3" font-size="9" font-weight="700" letter-spacing=".2em" text-anchor="middle" font-family="Lato, sans-serif">TRACT 2</text>
         </svg>
       </div>
     </div>
@@ -775,31 +802,39 @@ p, li { text-wrap: pretty; }
 </section>
 
 <!-- ============== 04 · HOW THE RIGHT-OF-WAY GETS SECURED ============= -->
-<section id="how" class="sec sec-alt">
+<section id="how" class="sec sec-dark field-teal-close dus-grid-dark">
   <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">How we work</div>
-    <h2 class="dus-h1 sec-title reveal">Disciplined execution from day one</h2>
-    <p class="sec-lede reveal">We establish the plan early, communicate continuously, and maintain accountability at the parcel level, mile after mile, for the life of the build.</p>
-    <div class="moves">
-      <div class="move reveal reveal-d1">
+    <div class="dus-eyebrow dus-eyebrow--dark reveal">How we work</div>
+    <h2 class="dus-h1 sec-title on-dark reveal">Disciplined execution from day one</h2>
+    <p class="sec-lede on-dark reveal">We establish the plan early, communicate continuously, and maintain accountability at the parcel level, mile after mile, for the life of the build.</p>
+    <div class="how-cascade">
+      <div class="how-step dus-ticks reveal reveal-d1">
+        <div class="how-num">01</div>
         <div class="mnum">Start prepared</div>
         <h3 class="dus-h2">Do the work before the work</h3>
         <p>We validate ownership, project requirements, documents, and acquisition strategy before community engagement begins.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d2">
+      <div class="how-step dus-ticks reveal reveal-d2">
+        <div class="how-num">02</div>
         <div class="mnum">Communicate early</div>
         <h3 class="dus-h2">No surprises</h3>
         <p>We keep clients informed, community members engaged, and risks visible so decisions can be made before schedule is affected.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d3">
+      <div class="how-step dus-ticks reveal reveal-d3">
+        <div class="how-num">03</div>
         <div class="mnum">Stay accountable</div>
         <h3 class="dus-h2">Every parcel has a path</h3>
         <p>We maintain clear ownership of each parcel, its current status, next action, and what is needed to move it forward.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d4">
+      <div class="how-step dus-ticks reveal reveal-d4">
+        <div class="how-num">04</div>
         <div class="mnum">Finish strong</div>
         <h3 class="dus-h2">Stay engaged through completion</h3>
         <p>We maintain continuity through construction, restoration, damage resolution, and closeout, so acquisition commitments hold.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
@@ -866,25 +901,33 @@ p, li { text-wrap: pretty; }
     <p class="sec-lede reveal">Kudu is Dudley's proprietary land management platform, giving your team a current, organized view of every parcel across every mile of a multi-year build.</p>
     <div class="dus-micro" style="margin-top: 44px; margin-bottom: 16px;">You get</div>
     <div class="grid-2" style="margin-top: 14px;">
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg2)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: mac-line (monitor) — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="2" y="3" width="20" height="14" rx="1" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round"/><line x1="7" y1="21" x2="17" y2="21" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Real-time project visibility</h3>
         <p>Current parcel activity, acquisition status, and key risks, maintained as the work occurs, for a reliable view of progress.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg1)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM16 20V4H4V19C4 19.5523 4.44772 20 5 20H16ZM6 7H14V9H6V7ZM6 11H14V13H6V11ZM6 15H11V17H6V15Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: book-open-line — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2V3z" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7V3z" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3 class="dus-h3">Current project record: one source of truth</h3>
         <p>Ownership, tract data, deed references, and acquisition status, in one record for the life of the build.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg3)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 5L9 2L15 5L21.303 2.2987C21.5569 2.18992 21.8508 2.30749 21.9596 2.56131C21.9862 2.62355 22 2.69056 22 2.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V5ZM16 19.3955L20 17.6812V5.03308L16 6.74736V19.3955ZM14 19.2639V6.73607L10 4.73607V17.2639L14 19.2639ZM8 17.2526V4.60451L4 6.31879V18.9669L8 17.2526Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: map-2-line — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><polygon points="1,6 1,22 8,18 16,22 23,18 23,2 16,6 8,2" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="2" x2="8" y2="18" stroke="url(#dg3)" stroke-width="1.2"/><line x1="16" y1="6" x2="16" y2="22" stroke="url(#dg3)" stroke-width="1.2"/></svg>
         <h3 class="dus-h3">Project mapping: see progress and risk</h3>
         <p>Current acquisition status, project progress, and identified risks presented visually for faster review and decision making.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg4)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M3 10H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10ZM9 12V14H15V12H9ZM2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V8H2V4Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <!-- Remix: archive-line — outlined, gradient stroke -->
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="2" y="3" width="20" height="5" rx="1" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="12" x2="14" y2="12" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Document control: keep the record complete</h3>
         <p>Title, survey, acquisition, field, and supporting project documents organized by parcel and maintained through project closeout.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
@@ -897,7 +940,7 @@ p, li { text-wrap: pretty; }
     <h2 class="dus-h1 sec-title on-dark reveal">Experienced leadership, backed by proven resources</h2>
     <p class="sec-lede on-dark reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
 
-    <div class="credstrip credstrip--2">
+    <div class="credstrip credstrip--2 dus-ticks">
       <div class="cred">
         <div class="lead">Leadership brings</div>
         <div class="value">35+</div>
@@ -908,6 +951,7 @@ p, li { text-wrap: pretty; }
         <div class="value">10,000+</div>
         <div class="label">Miles of transmission, distribution, and fiber</div>
       </div>
+      <span class="tick-b"></span>
     </div>
 
     <div class="grid-3">
