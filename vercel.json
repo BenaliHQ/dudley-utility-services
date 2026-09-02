@@ -54,7 +54,7 @@
     },
     {
       "source": "/team",
-      "destination": "/",
+      "destination": "/pages/team",
       "permanent": true
     },
     {
