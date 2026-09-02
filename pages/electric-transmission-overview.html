@@ -317,9 +317,22 @@ body.print-body { margin: 0; padding: 40px; display: flex; flex-direction: colum
 .section { margin-top: .28in; }
 .howlist li b { font-weight: 900; color: var(--teal-700); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .3in; margin-top: .14in; }
-.contact-grid .name { font-weight: 900; font-size: 12pt; color: var(--teal-700); }
-.contact-grid .role { font-size: 9.5pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-600); margin: 2pt 0 4pt; }
-.contact-grid .line { font-size: 10.5pt; color: var(--ink-800); }
+.contact-cards .name, .contact-grid .name { font-weight: 900; font-size: 12pt; color: var(--teal-700); }
+.contact-cards .role, .contact-grid .role { font-size: 9.5pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-600); margin: 2pt 0 4pt; }
+.contact-cards .line, .contact-grid .line { font-size: 10.5pt; color: var(--ink-800); }
+.howgrid { display: grid; grid-template-columns: 1fr 1fr; column-gap: .34in; row-gap: 10pt; margin-top: .14in; font-size: 10.5pt; line-height: 1.4; }
+.route-strip { margin: .32in 0 0; }
+.kudu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .14in; margin-top: .18in; }
+.kudu-card { border: 1px solid var(--neutral-200); border-radius: 0; padding: .15in .18in; }
+.kudu-card .kt { font-weight: 900; font-size: 11pt; color: var(--teal-700); margin-bottom: 4pt; }
+.kudu-card .kl { font-size: 10pt; line-height: 1.4; color: var(--ink-700); }
+.dark-band { padding: .24in .3in .3in; margin-top: .28in; }
+.dark-band .bt { font-weight: 900; font-size: 13.5pt; color: var(--on-dark); margin-bottom: 5pt; }
+.dark-band p { font-size: 10.5pt; line-height: 1.5; color: var(--on-dark-2); }
+.contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: .14in; margin-top: .16in; }
+.contact-card { border: 1px solid var(--neutral-200); border-radius: 0; padding: .16in .2in; }
+.contact-cards .line { font-size: 10pt; }
+
 </style>
 </head>
 <body class="print-body">
@@ -351,13 +364,31 @@ body.print-body { margin: 0; padding: 40px; display: flex; flex-direction: colum
       </section>
       <section class="section">
         <div class="dus-eyebrow dus-eyebrow--teal">HOW WE WORK</div>
-        <ul class="dus-check howlist" style="margin-top: .14in; row-gap: 8pt; font-size: 11pt;">
-          <li><span><b>Start prepared:</b> ownership, project requirements, documents, and acquisition strategy validated up front.</span></li>
-          <li><span><b>No surprises:</b> clients informed, community members engaged, and risks visible before schedule is affected.</span></li>
-          <li><span><b>Every parcel has a path:</b> clear ownership of each parcel, its status, and the next action to move it.</span></li>
-          <li><span><b>Engaged through completion:</b> construction, restoration, damage resolution, and closeout.</span></li>
+        <ul class="dus-check howgrid">
+          <li><span><b>Start prepared:</b> ownership, requirements, documents, and strategy validated up front.</span></li>
+          <li><span><b>No surprises:</b> clients informed, communities engaged, risks visible early.</span></li>
+          <li><span><b>Every parcel has a path:</b> status and next action, always current.</span></li>
+          <li><span><b>Engaged through completion:</b> construction, restoration, closeout.</span></li>
         </ul>
       </section>
+      <div class="dus-route rw-on-light route-strip" aria-hidden="true">
+        <svg viewBox="0 0 1200 96" xmlns="http://www.w3.org/2000/svg">
+          <g class="rw-tick">
+            <line x1="100" y1="40" x2="100" y2="56"/><line x1="300" y1="40" x2="300" y2="56"/>
+            <line x1="500" y1="40" x2="500" y2="56"/><line x1="700" y1="40" x2="700" y2="56"/>
+            <line x1="900" y1="40" x2="900" y2="56"/><line x1="1100" y1="40" x2="1100" y2="56"/>
+          </g>
+          <line class="rw-center" x1="0" y1="48" x2="1200" y2="48" fill="none" stroke-dasharray="26 8 3 8"/>
+          <g class="rw-mon">
+            <rect x="192" y="40" width="16" height="16"/>
+            <rect x="592" y="40" width="16" height="16"/>
+            <rect x="992" y="40" width="16" height="16"/>
+          </g>
+          <g class="rw-dot">
+            <circle cx="200" cy="48" r="2.5"/><circle cx="600" cy="48" r="2.5"/><circle cx="1000" cy="48" r="2.5"/>
+          </g>
+        </svg>
+      </div>
       <section class="stat-row">
         <div class="dus-card stat-card dus-stat dus-stat--light"><div class="value">35+</div><div class="label">Years of combined utility land leadership</div></div>
         <div class="dus-card stat-card dus-stat dus-stat--light"><div class="value">34.5&ndash;765</div><div class="label">kV executed by our leadership</div></div>
@@ -381,31 +412,31 @@ body.print-body { margin: 0; padding: 40px; display: flex; flex-direction: colum
       
       <section class="section" style="margin-top: 0;">
         <div class="dus-eyebrow dus-eyebrow--teal">KUDU &middot; YOUR PROJECT RECORD</div>
+        <p class="body" style="font-weight: 900; font-size: 13pt; color: var(--teal-700); margin-top: .12in;">Real-time project intelligence. Better decisions. Lower risk.</p>
         <p class="body">Kudu is Dudley&rsquo;s proprietary land management platform, giving your team a current, organized view of every parcel from kickoff through closeout.</p>
-        <ul class="dus-check services">
-          <li>Real-time project visibility</li>
-          <li>One source of truth for the record</li>
-          <li>Mapping that shows progress and risk</li>
-          <li>Document control through closeout</li>
-        </ul>
+        <div class="kudu-grid">
+          <div class="kudu-card"><div class="kt">Real-time visibility</div><div class="kl">Parcel activity, acquisition status, and key risks as the work occurs.</div></div>
+          <div class="kudu-card"><div class="kt">One source of truth</div><div class="kl">Ownership, tract data, deed references, and acreage in one record.</div></div>
+          <div class="kudu-card"><div class="kt">Progress, mapped</div><div class="kl">Acquisition status and risk presented visually for faster review.</div></div>
+          <div class="kudu-card"><div class="kt">Document control</div><div class="kl">Title, survey, and field documents complete through closeout.</div></div>
+        </div>
       </section>
-      <section class="section">
-        <div class="dus-eyebrow dus-eyebrow--teal">ELECTRIC DISTRIBUTION</div>
-        <p class="body">If we&rsquo;re partnering on transmission, we can cover your distribution too: the same functions on one agreement and one reporting standard, staffed to the volume as work orders land.</p>
-      </section>
-      
+      <div class="dark-band dus-field-teal dus-grid-dark dus-horizon">
+        <div class="bt">The distribution work that follows</div>
+        <p>If we&rsquo;re partnering on transmission, we can cover your distribution too: the same functions on one agreement and one reporting standard, staffed to the volume as work orders land.</p>
+      </div>
       <section class="section">
         <div class="dus-eyebrow dus-eyebrow--teal">START THE CONVERSATION</div>
-        <div class="contact-grid">
-          <div>
+        <div class="contact-cards">
+          <div class="contact-card">
             <div class="name">Garrett Gill</div>
             <div class="role">Executive Vice President, Utilities</div>
-            <div class="line">832-888-7238 &middot; GarrettGill@dudley-utility.com</div>
+            <div class="line">832-888-7238<br>GarrettGill@dudley-utility.com</div>
           </div>
-          <div>
+          <div class="contact-card">
             <div class="name">Savannah Cano</div>
             <div class="role">Regional Director, Utilities</div>
-            <div class="line">620-357-1212 &middot; SavannahCano@dudley-utility.com</div>
+            <div class="line">620-357-1212<br>SavannahCano@dudley-utility.com</div>
           </div>
         </div>
       </section>
