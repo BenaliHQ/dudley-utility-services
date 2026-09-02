@@ -655,6 +655,9 @@ p, li { text-wrap: pretty; }
 .credstrip--4 .cred .value { font-size: clamp(30px, 3.6vw, 52px); }
 .sec-dark .credstrip--4 .cred .value { font-size: clamp(30px, 3.6vw, 52px); }
 .sec-dark .credstrip--4 .cred .label { font-size: 13px; }
+.timeline5 { grid-template-columns: repeat(5, 1fr); }
+.timeline5 .cred .value { font-size: clamp(24px, 2.9vw, 42px); }
+@media (max-width: 900px) { .timeline5 { grid-template-columns: repeat(2, 1fr); } }
 .why-grid { margin-top: 36px; }
 /* What-we-do: ruled two-column list (Reese's V3 square-marker chips), not cards */
 .svc-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; margin-top: 36px; counter-reset: svc; }
@@ -731,6 +734,29 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
      past; present-tense DUS copy says land professionals. -->
 <section id="history" class="sec">
   <div class="wrap">
+    <div class="credstrip timeline5 dus-ticks reveal" style="margin-bottom: 44px;">
+      <div class="cred">
+        <div class="value">1974</div>
+        <div class="label">Tom Dudley enters<br>the land business</div>
+      </div>
+      <div class="cred">
+        <div class="value">1980</div>
+        <div class="label">Dudley Land<br>Company founded</div>
+      </div>
+      <div class="cred">
+        <div class="value">Late '80s</div>
+        <div class="label">Land records<br>go digital</div>
+      </div>
+      <div class="cred">
+        <div class="value">2000s</div>
+        <div class="label">Expansion through<br>the shale era</div>
+      </div>
+      <div class="cred">
+        <div class="value">2025</div>
+        <div class="label">Company of<br>the Year</div>
+      </div>
+      <span class="tick-b"></span>
+    </div>
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Our history</div>
     <h2 class="dus-h1 sec-title reveal">It started in a courthouse</h2>
     <p class="story reveal">Tom Dudley entered the land business in 1974, at age 24. He spent his early years running courthouse to courthouse across Oklahoma, Kansas, and Texas, pulling deed books and interpreting records. By 1980 he'd struck out on his own.</p>
@@ -740,14 +766,11 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
     <p class="story reveal" style="margin-top: 16px;">Today the company runs under its next generation of leadership. The Houston Association of Professional Landmen named Dudley Land Company its 2025 Company of the Year, and the American Association of Professional Landmen named our president, Brent Broussard, its 2026 Face of the Industry. Brent also hosts The Land Department, a podcast sharing the state of land and energy as we see it: challenges and solutions across the industry, tactics for producing the best work, and stories from experts in the field.</p>
     <p class="story reveal" style="margin-top: 16px;">Dudley Utility Services applies the same people, systems, and standards to utility infrastructure.</p>
 
-    <div class="credstrip credstrip--4 dus-ticks" style="margin-top: 48px;">
-      <div class="cred">
-        <div class="value">1974</div>
         <div class="label">Tom Dudley enters<br>the land business</div>
       </div>
       <div class="cred">
         <div class="value">1980</div>
-        <div class="label">Dudley Land Company<br>founded</div>
+        <div class="label">Dudley Land<br>Company founded</div>
       </div>
       <div class="cred">
         <div class="value">Late '80s</div>
