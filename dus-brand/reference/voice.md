@@ -26,7 +26,7 @@ What the client is actually buying: **confidence that the right-of-way will be s
 
 **The claim: creating certainty through strategic land solutions.** Easements are negotiated one owner at a time, and a single holdout can stall a project. The utility is buying confidence, not paperwork.
 
-**Mission and claim are different things.** "Delivering energy through land" is Dudley Land Company's mission statement, and it is **retired for DUS: not to be used on any DUS surface unless this rule is changed** (Jenny, 2026-08-17). It stays DLC's line, unchanged, on DLC's own surfaces. "Creating certainty through strategic land solutions" is what DUS sells, and it works as a display line where a surface calls for the positioning statement: the client set it on the SOQ cover, and Jenny approved the usage (2026-08-17). Never set it with a trademark symbol; the phrase isn't trademarked.
+**Mission and claim are different things.** "Delivering energy through land" is Dudley Land Company's mission statement, and it is **retired for DUS: not to be used on any DUS surface unless this rule is changed** (Jenny, 2026-08-17). It stays DLC's line, unchanged, on DLC's own surfaces. "Creating certainty through strategic land solutions" is what DUS sells, and it remains the internal positioning claim. **As a display line it is retired (Jenny, 2026-09-02): the one-liner for marketing materials going forward is "Built on experience. Focused on execution."** History: the client set the certainty line on the SOQ cover and Jenny approved that usage 2026-08-17; existing client-approved artifacts (the SOQ) keep it, new material doesn't. Never set either line with a trademark symbol; the phrases aren't trademarked.
 
 **What backs the claim up:**
 
