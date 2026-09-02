@@ -209,9 +209,6 @@ html, body {
 }
 .dus-micro--dark { color: var(--on-dark-3); }
 
-/* Accent rule — green emphasis line */
-.dus-rule { border: none; width: 64px; height: 4px; background: var(--green-500); }
-
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
@@ -244,9 +241,8 @@ html, body {
 /* Card — white, hairline border, optional green top bar */
 .dus-card {
   background: var(--white); border: 1px solid var(--neutral-200);
-  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+  border-radius: 0; box-shadow: var(--shadow-sm);
 }
-.dus-card--accent { border-top: 4px solid var(--green-500); }
 
 /* Corner ticks — plat-sheet frame corners on light print surfaces */
 .dus-ticks { position: relative; }
@@ -267,7 +263,6 @@ html, body {
 /* Footer band — document/deck footer */
 .dus-band {
   background: var(--ink-950); color: var(--on-dark-2);
-  border-top: 4px solid var(--green-500);
 }
 
 /* Buttons (web/interactive contexts) */
@@ -353,7 +348,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .dus-card p { font-size: 15.5px; line-height: 1.62; color: var(--text); }
 
 .note { margin-top: 30px; padding: 22px 26px; background: var(--white);
-  border: 1px solid var(--neutral-200); border-left: 4px solid var(--green-500);
+  border: 1px solid var(--neutral-200); border-radius: 0;
   font-size: 15.5px; line-height: 1.65; color: var(--text); }
 .note strong { color: var(--teal-500); }
 
@@ -365,19 +360,32 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .pricing-illust { width: 100%; height: auto; display: block; }
 .pricing-card.pad { padding: 20px; }
 
-/* ---------- The four moves ---------- */
-.moves { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 42px; margin-top: 42px; }
-.move { padding-top: 20px; border-top: 3px solid var(--teal-500); }
-.move .mnum { font-size: 11px; font-weight: 700; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--green-600); margin-bottom: 10px; }
-.move h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 12px; }
-.move p { font-size: 16px; line-height: 1.62; color: var(--text); }
+/* ---------- How We Work — numbered grid ---------- */
+.how-cascade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 44px; }
+.how-step {
+  position: relative; padding: 28px 28px 24px;
+  background: var(--white); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 0; box-shadow: 0 2px 16px rgba(0,0,0,.18);
+}
+.how-num {
+  position: absolute; right: 14px; top: -4px;
+  font-size: 96px; font-weight: 900; line-height: 1;
+  color: var(--teal-200); opacity: .1;
+  pointer-events: none; user-select: none;
+}
+.how-step .mnum {
+  font-size: 11px; font-weight: 700; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--green-500); margin-bottom: 8px;
+  position: relative; z-index: 1;
+}
+.how-step h3 { font-size: 22px; color: var(--teal-500); margin-bottom: 10px; position: relative; z-index: 1; }
+.how-step p { font-size: 16px; line-height: 1.62; color: var(--text); position: relative; z-index: 1; }
 
 /* ---------- Credibility strip (inside "Who runs the work") ---------- */
 .credstrip--2 { grid-template-columns: repeat(2, 1fr) !important; }
 .credstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
   margin: 40px 0 42px; padding: 34px 36px;
-  background: var(--white); border: 1px solid var(--neutral-200); border-top: 4px solid var(--green-500); }
+  background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; }
 .cred .lead { font-size: 11px; font-weight: 700; letter-spacing: .2em;
   text-transform: uppercase; color: var(--text-3); }
 .cred .value { font-weight: 900; letter-spacing: -0.035em; line-height: .9;
@@ -386,12 +394,10 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .cred .label { font-size: 13px; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--text-2); line-height: 1.4; }
 
-.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); }
-.usp-line { position: relative; padding-left: 22px;
+.usp { margin-top: 40px; padding: 34px 38px; background: var(--white); border: 1px solid var(--neutral-200); border-radius: 0; }
+.usp-line {
   font-weight: 900; letter-spacing: -0.02em; line-height: 1.22;
   font-size: clamp(19px, 2.3vw, 27px); color: var(--teal-500); }
-.usp-line::before { content: ""; position: absolute; left: 0; top: .12em; bottom: .12em;
-  width: 5px; background: var(--green-500); }
 
 /* ---------- Coverage ---------- */
 .cov-head { max-width: 780px; }
@@ -438,7 +444,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::marker { content: ""; }
 .faq .qnum { flex: 0 0 auto; font-size: 13px; font-weight: 700; letter-spacing: .18em;
-  color: var(--green-600); font-variant-numeric: lining-nums tabular-nums; }
+  color: var(--green-500); font-variant-numeric: lining-nums tabular-nums; }
 .faq .qtext { flex: 1; font-weight: 900; letter-spacing: -0.015em; line-height: 1.25;
   font-size: clamp(18px, 2.1vw, 23px); color: var(--teal-500); }
 .faq .sign { flex: 0 0 auto; position: relative; width: 15px; height: 15px; }
@@ -460,33 +466,50 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .close p { font-size: 17px; line-height: 1.6; color: var(--on-dark); max-width: 560px; }
 .close .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 .onepager {
-  position: relative; padding: 48px 52px; border: none; border-radius: var(--r-lg);
+  position: relative; padding: 48px 52px; border: none; border-radius: 0;
   background: linear-gradient(115deg, var(--teal-500) 0%, var(--teal-400) 40%, var(--green-600) 80%, var(--green-500) 100%);
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 .onepager::after {
   content: ""; position: absolute; inset: 2.5px;
-  border-radius: calc(var(--r-lg) - 2.5px); background: var(--white);
+  border-radius: 0; background: var(--white);
 }
 .onepager > * { position: relative; z-index: 1; }
 .onepager .dus-micro { color: var(--text-3); }
-.onepager h3 { font-size: clamp(24px, 2.8vw, 32px); font-weight: 900; color: var(--teal-500); margin: 16px 0 18px; letter-spacing: -0.02em; line-height: 1.15; }
+.onepager h3 { font-size: clamp(24px, 2.8vw, 32px); font-weight: 900; margin: 16px 0 18px; letter-spacing: -0.02em; line-height: 1.15;
+  background: linear-gradient(to right, var(--teal-500), var(--green-500));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--teal-500); }
 .onepager p { font-size: 17px; line-height: 1.65; color: var(--text); }
 .onepager .dus-btn { margin-top: 26px; box-shadow: none; }
 .onepager .dus-btn:hover { box-shadow: 0 4px 16px rgba(65,190,72,0.25); }
 
-.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--green-500);
+.foot { margin-top: 74px; padding-top: 34px; border-top: 1px solid var(--hairline-dark);
   display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
-.footlogo { height: 26px; }
+.footlogo { height: 40px; }
 .foottext { font-size: 12.5px; line-height: 1.7; letter-spacing: .04em; color: var(--on-dark-2); text-align: right; }
 
 /* ---------- Kudu card icons ---------- */
 .kudu-icon { width: 48px; height: 48px; margin-bottom: 18px; display: block; }
 
+.people-icon { width: 44px; height: 44px; margin-bottom: 14px; display: block; }
+
+/* Credstrip on dark surfaces */
+.sec-dark .credstrip {
+  background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1);
+  margin: 36px 0 32px;
+}
+.sec-dark .cred .lead { color: rgba(255,255,255,.6); font-size: 13px; }
+.sec-dark .cred .value { color: var(--white); font-size: clamp(48px, 7vw, 82px); }
+.sec-dark .cred .label { color: rgba(255,255,255,.7); font-size: 15px; }
+.sec-dark .credstrip.dus-ticks::before,
+.sec-dark .credstrip.dus-ticks::after,
+.sec-dark .credstrip > .tick-b::before,
+.sec-dark .credstrip > .tick-b::after { filter: brightness(6); opacity: .2; }
+
 /* ---------- Round-5 additions ---------- */
 h1, h2, h3, .sec-title { text-wrap: balance; }
 p, li { text-wrap: pretty; }
-.askfirst { font-size: 19px; font-weight: 700; color: var(--teal-700); line-height: 1.5; max-width: 720px; margin-bottom: 18px; }
+.askfirst { font-size: 19px; font-weight: 700; color: var(--teal-700); line-height: 1.5; max-width: 720px; margin-bottom: 14px; }
 .record-head { margin-top: 78px; margin-bottom: 22px; }
 .lo-fair { margin-top: 14px; }
 
@@ -512,7 +535,8 @@ p, li { text-wrap: pretty; }
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
-  .grid-2, .grid-3, .moves, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .credstrip, .record, .close-grid { grid-template-columns: 1fr; }
+  .how-cascade { grid-template-columns: 1fr; }
   .pricing-split { grid-template-columns: 1fr; }
   .credstrip { gap: 30px; padding: 30px 28px; }
   .sec { padding: 58px 0; }
@@ -791,31 +815,39 @@ p, li { text-wrap: pretty; }
 </section>
 
 <!-- ============== 04 · HOW THE RIGHT-OF-WAY GETS SECURED ============= -->
-<section id="how" class="sec sec-alt">
+<section id="how" class="sec sec-dark field-teal-close dus-grid-dark">
   <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">How we work</div>
-    <h2 class="dus-h1 sec-title reveal">Disciplined execution from day one</h2>
-    <p class="sec-lede reveal">We establish the plan early, communicate continuously, and maintain accountability at the parcel level, from routing feasibility through restoration.</p>
-    <div class="moves">
-      <div class="move reveal reveal-d1">
+    <div class="dus-eyebrow dus-eyebrow--dark reveal">How we work</div>
+    <h2 class="dus-h1 sec-title on-dark reveal">Disciplined execution from day one</h2>
+    <p class="sec-lede on-dark reveal">We establish the plan early, communicate continuously, and maintain accountability at the parcel level, from routing feasibility through restoration.</p>
+    <div class="how-cascade">
+      <div class="how-step dus-ticks reveal reveal-d1">
+        <div class="how-num">01</div>
         <div class="mnum">Start prepared</div>
         <h3 class="dus-h2">Do the work before the work</h3>
         <p>We validate ownership, project requirements, documents, and acquisition strategy before community engagement begins.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d2">
+      <div class="how-step dus-ticks reveal reveal-d2">
+        <div class="how-num">02</div>
         <div class="mnum">Communicate early</div>
         <h3 class="dus-h2">No surprises</h3>
         <p>We keep clients informed, community members engaged, and risks visible so decisions can be made before schedule is affected.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d3">
+      <div class="how-step dus-ticks reveal reveal-d3">
+        <div class="how-num">03</div>
         <div class="mnum">Stay accountable</div>
         <h3 class="dus-h2">Every parcel has a path</h3>
         <p>We maintain clear ownership of each parcel, its current status, next action, and what is needed to move it forward.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="move reveal reveal-d4">
+      <div class="how-step dus-ticks reveal reveal-d4">
+        <div class="how-num">04</div>
         <div class="mnum">Finish strong</div>
         <h3 class="dus-h2">Stay engaged through completion</h3>
         <p>We stay through construction, restoration, damage resolution, and closeout, so every commitment made during acquisition holds.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
@@ -828,45 +860,53 @@ p, li { text-wrap: pretty; }
     <h2 class="dus-h1 sec-title reveal">Land services across the project lifecycle</h2>
     <p class="sec-lede reveal">From early project development through construction and closeout, we provide the land expertise and field resources required to move utility projects forward.</p>
     <div class="grid-2" style="margin-top: 44px;">
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Project management and administration</div>
         <h3 class="dus-h3">Maintain control</h3>
         <p>Project controls, risk management, staffing, cost and schedule tracking, reporting, and client coordination.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Routing and siting</div>
         <h3 class="dus-h3">Establish the path</h3>
         <p>Route support, feasibility, parcel identification, due diligence, site evaluation, and acquisition planning.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Title and ownership</div>
         <h3 class="dus-h3">Know the property</h3>
         <p>Title research, ownership verification, curative support, and documentation needed to establish clear ownership.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Survey and field support</div>
         <h3 class="dus-h3">Prepare for acquisition</h3>
         <p>Survey coordination, landowner notifications, access support, staking, and field liaison services.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Right of way acquisition</div>
         <h3 class="dus-h3">Secure the rights</h3>
         <p>Landowner engagement, easement and fee acquisition, temporary rights, access, and acquisition support.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Non-environmental permitting</div>
         <h3 class="dus-h3">Coordinate requirements</h3>
         <p>Road, railroad, utility, municipal, and third-party permits and approvals.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Construction support</div>
         <h3 class="dus-h3">Keep the work moving</h3>
         <p>Landowner coordination, access management, damage resolution, restoration, and field support.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card pad">
+      <div class="dus-card dus-ticks pad">
         <div class="dus-micro" style="margin-bottom: 8px;">Project closeout</div>
         <h3 class="dus-h3">Finish with clarity</h3>
         <p>Project records, financial reconciliation, client turnover, and lessons learned.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   
@@ -882,25 +922,29 @@ p, li { text-wrap: pretty; }
     <p class="sec-lede reveal">Kudu is Dudley's proprietary land management platform, giving your team a current view of every parcel, from kickoff through restoration and closeout.</p>
     <div class="dus-micro" style="margin-top: 44px; margin-bottom: 16px;">You get</div>
     <div class="grid-2" style="margin-top: 14px;">
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg2)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M4 16H20V5H4V16ZM13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="2" y="3" width="20" height="14" rx="1" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round"/><line x1="7" y1="21" x2="17" y2="21" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Real-time project visibility</h3>
         <p>Current parcel activity, acquisition status, and key risks, maintained as the work occurs, for a clear view of your progress.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg1)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM16 20V4H4V19C4 19.5523 4.44772 20 5 20H16ZM6 7H14V9H6V7ZM6 11H14V13H6V11ZM6 15H11V17H6V15Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg2" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M20 22H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v17" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="7" x2="15" y2="7" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="11" x2="15" y2="11" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Current project record: one source of truth</h3>
         <p>Ownership, tract data, deed references, acreage, and acquisition status, maintained in one working record.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg3)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M2 5L9 2L15 5L21.303 2.2987C21.5569 2.18992 21.8508 2.30749 21.9596 2.56131C21.9862 2.62355 22 2.69056 22 2.75827V19L15 22L9 19L2.69696 21.7013C2.44314 21.8101 2.14921 21.6925 2.04043 21.4387C2.01375 21.3765 2 21.3094 2 21.2417V5ZM16 19.3955L20 17.6812V5.03308L16 6.74736V19.3955ZM14 19.2639V6.73607L10 4.73607V17.2639L14 19.2639ZM8 17.2526V4.60451L4 6.31879V18.9669L8 17.2526Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg3" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4Z" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="2" x2="8" y2="18" stroke="url(#dg3)" stroke-width="1.2"/><line x1="16" y1="6" x2="16" y2="22" stroke="url(#dg3)" stroke-width="1.2"/></svg>
         <h3 class="dus-h3">Project mapping: see progress and risk</h3>
         <p>Current acquisition status, project progress, and identified risks presented visually for faster review and decision making.</p>
+        <span class="tick-b"></span>
       </div>
-      <div class="dus-card dus-card--accent pad">
-        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="url(#dg4)" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><path d="M3 10H21V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V10ZM9 12V14H15V12H9ZM2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V8H2V4Z"/></svg>
+      <div class="dus-card dus-ticks pad">
+        <svg class="kudu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="dg4" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#015270"/><stop offset="100%" stop-color="#41BE48"/></linearGradient></defs><rect x="2" y="3" width="20" height="5" rx="1" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="12" x2="14" y2="12" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round"/></svg>
         <h3 class="dus-h3">Document control: keep the record complete</h3>
         <p>Title, survey, acquisition, and field documents organized by parcel, maintained through restoration and closeout.</p>
+        <span class="tick-b"></span>
       </div>
     </div>
   </div>
@@ -913,7 +957,7 @@ p, li { text-wrap: pretty; }
     <h2 class="dus-h1 sec-title on-dark reveal">Experienced leadership, backed by proven resources</h2>
     <p class="sec-lede on-dark reveal">We bring experienced utility land professionals together with the depth and resources of a company built on more than 45 years in land services.</p>
 
-    <div class="credstrip credstrip--2">
+    <div class="credstrip credstrip--2 dus-ticks">
       <div class="cred">
         <div class="lead">Leadership brings</div>
         <div class="value">35+</div>
@@ -924,6 +968,7 @@ p, li { text-wrap: pretty; }
         <div class="value">45+</div>
         <div class="label">Years of Dudley Land Company</div>
       </div>
+      <span class="tick-b"></span>
     </div>
 
     <div class="grid-3">
