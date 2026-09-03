@@ -547,6 +547,9 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .sec-dark .cred .lead { color: rgba(255,255,255,.6); font-size: 13px; }
 .sec-dark .cred .value { color: var(--white); font-size: clamp(48px, 7vw, 82px); }
 .sec-dark .cred .label { color: rgba(255,255,255,.7); font-size: 15px; }
+.cred .value .qual { font-size: .34em; font-weight: 800; letter-spacing: -0.01em; margin-right: .12em; }
+.cred .value .unit { font-size: .52em; letter-spacing: -0.02em; }
+#heritage .dus-micro { text-transform: none; }
 .sec-dark .credstrip.dus-ticks::before,
 .sec-dark .credstrip.dus-ticks::after,
 .sec-dark .credstrip > .tick-b::before,
@@ -729,8 +732,7 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
           </div>
         </div>
       </div>
-      <a href="/pages/team">Team</a>
-      <a href="/pages/careers">Careers</a>
+            <a href="/pages/careers">Join Us</a>
       <a class="dus-btn dus-btn--accent" href="/pages/meet-with-dudley">Meet With Dudley</a>
     </div>
     <button class="nav-burger" aria-label="Menu" aria-expanded="false">
@@ -743,9 +745,8 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 <!-- ============================ 01 · HERO ============================ -->
 <header class="hero field-teal-hero dus-grid-dark">
   <div class="wrap">
-    <div class="dus-micro dus-micro--dark hero-kicker">Utility land services &middot; Nationwide</div>
-    <h1 class="dus-display">BUILT ON EXPERIENCE.<br>FOCUSED ON EXECUTION.</h1>
-    <p class="hero-lede">We secure land rights anywhere you're building, from routing and siting through construction support.</p>
+        <h1 class="dus-display">BUILT ON EXPERIENCE.<br>FOCUSED ON EXECUTION.</h1>
+    <p class="hero-lede">Experience establishes the foundation, but certainty is earned through execution. By combining experienced professionals, disciplined processes, and accountable leadership, we keep projects moving forward with confidence from planning through closeout.</p>
     <div class="actions">
       <a class="dus-btn dus-btn--light" href="/pages/meet-with-dudley">Meet With Dudley</a>
     </div>
@@ -764,9 +765,43 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 
 <main>
 
+<!-- ======================== 04 · OUR HERITAGE ======================== -->
+<!-- Lede adapted from the SOQ heritage paragraph; "exclusive focus" clause
+     cut and headline reworked per Jenny 8/31 (nothing reads as new). -->
+<section id="heritage" class="sec">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal reveal">Our Foundation</div>
+    <h2 class="dus-h1 sec-title reveal">More than 45 years of experience. Built for what’s next.</h2>
+    <p class="sec-lede reveal">Dudley Utility Services was created to bring dedicated utility expertise to the market while building on the strength of Dudley Land Company. The same ownership, proven operating principles, disciplined execution, and commitment to quality that clients have trusted for more than 45 years provide the certainty behind every project&nbsp;we&nbsp;deliver.</p>
+    <!-- Tiles carry history + recognition, not page recap (Jenny 8/31).
+         Sources: Dudley Master Doc 09.2025 (via the history-page source
+         bullets, GREEN items) and Julie Landers' 8/31 email (awards). -->
+    <div class="grid-3 sec-content">
+      <div class="dus-card dus-ticks pad">
+        <div class="dus-micro">1980</div>
+        <h3 class="dus-h3">The Beginning</h3>
+        <p>Dudley Land Company was founded by Tom Dudley with a commitment to integrity, strong client relationships, and exceptional service&mdash;principles that continue to guide every Dudley company today.</p>
+        <span class="tick-b"></span>
+      </div>
+      <div class="dus-card dus-ticks pad">
+        <div class="dus-micro">1980s</div>
+        <h3 class="dus-h3">Leading Through Innovation</h3>
+        <p>Long before digital transformation became standard, Dudley pioneered computerized land records and database management, demonstrating a culture that embraces innovation while improving project delivery.</p>
+        <span class="tick-b"></span>
+      </div>
+      <div class="dus-card dus-ticks pad">
+        <div class="dus-micro">2025</div>
+        <h3 class="dus-h3">Recognized for Excellence</h3>
+        <p>In its 45th year, Dudley Land Company was recognized as Company of the Year by the Houston Association of Professional Landmen, reflecting decades of trusted performance, leadership, and service to the industry.</p>
+        <span class="tick-b"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= 02 · WHAT WE DO =========================== -->
 <!-- Copy source: SOQ "What We Deliver" (approved 8/17), reused verbatim. -->
-<section id="what" class="sec">
+<section id="what" class="sec sec-alt">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">What we do</div>
     <h2 class="dus-h1 sec-title reveal">Strategic land solutions across the utility project lifecycle</h2>
@@ -812,78 +847,6 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
   </div>
 </section>
 
-<!-- ======================== 03 · INDUSTRIES ========================== -->
-<section id="industries" class="sec sec-alt">
-  <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">Industries</div>
-    <h2 class="dus-h1 sec-title reveal">The industries we serve</h2>
-    <p class="sec-lede reveal">Whichever industry your project is in, you get experienced land professionals, proven systems, and disciplined execution.</p>
-    <div class="grid-2 sec-content">
-      <a class="dus-card dus-ticks pad ind-card" href="/pages/electric-transmission">
-        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg1" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M22 4L10 22h8l-2 14L30 18h-8l2-14z" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3 class="dus-h3">Electric transmission &amp; distribution</h3>
-        <p>We secure critical land rights, navigate stakeholder relationships, and protect the path from development through construction. We also handle electric distribution.</p>
-        <span class="golink">Explore the work &rarr;</span>
-        <span class="tick-b"></span>
-      </a>
-      <a class="dus-card dus-ticks pad ind-card" href="/pages/water-and-wastewater">
-        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg2" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M20 6c-4 6-10 13-10 19a10 10 0 0020 0c0-6-6-13-10-19z" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 28a4 4 0 004-4" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <h3 class="dus-h3">Water &amp; wastewater</h3>
-        <p>We research title, secure your right-of-way, and negotiate the access your contractors need, maintaining your reputation with the communities along the route.</p>
-        <span class="golink">Explore the work &rarr;</span>
-        <span class="tick-b"></span>
-      </a>
-      <a class="dus-card dus-ticks pad ind-card" href="/pages/fiber-optics-broadband">
-        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg3" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><circle cx="20" cy="30" r="2" stroke="url(#dg3)" stroke-width="1.2"/><path d="M14 26a8 8 0 0112 0" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round"/><path d="M9 21a15 15 0 0122 0" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round"/><path d="M5 16a21 21 0 0130 0" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <h3 class="dus-h3">Fiber optics &amp; broadband</h3>
-        <p>We secure the rights along your fiber route and keep the record current for as long as the build takes, however many parcels and jurisdictions the route crosses.</p>
-        <span class="golink">Explore the work &rarr;</span>
-        <span class="tick-b"></span>
-      </a>
-      <!-- Gas page is not built yet; Jenny is creating a lean version or
-           pulling this card before launch (her call, 8/31). -->
-      <a class="dus-card dus-ticks pad ind-card" href="/pages/gas-utility">
-        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg4" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M20 6c0 0-10 10-10 20a10 10 0 0020 0c0-4-2-8-4-11 0 0-2 3-6 3s-2-6 0-12z" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3 class="dus-h3">Gas utility</h3>
-        <p>We secure every right your gas utility work needs, and we coordinate the permits, notifications, and access that keep the work moving on schedule.</p>
-        <span class="golink">Explore the work &rarr;</span>
-        <span class="tick-b"></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ======================== 04 · OUR HERITAGE ======================== -->
-<!-- Lede adapted from the SOQ heritage paragraph; "exclusive focus" clause
-     cut and headline reworked per Jenny 8/31 (nothing reads as new). -->
-<section id="heritage" class="sec">
-  <div class="wrap">
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">Our heritage</div>
-    <h2 class="dus-h1 sec-title reveal">Still innovating after four decades in energy land</h2>
-    <p class="sec-lede reveal">Dudley Utility Services is built on the strength of Dudley Land Company, with the same experienced ownership, the same proven systems, and the same quality standards&nbsp;behind&nbsp;every&nbsp;route.</p>
-    <!-- Tiles carry history + recognition, not page recap (Jenny 8/31).
-         Sources: Dudley Master Doc 09.2025 (via the history-page source
-         bullets, GREEN items) and Julie Landers' 8/31 email (awards). -->
-    <div class="grid-3 sec-content">
-      <div class="dus-card dus-ticks pad">
-        <div class="dus-micro">Founded 1980</div>
-        <p>Dudley Land Company began as a one-man operation, with Tom Dudley carrying fieldwork, accounting, and client relationships himself.</p>
-        <span class="tick-b"></span>
-      </div>
-      <div class="dus-card dus-ticks pad">
-        <div class="dus-micro">Innovating since the 1980s</div>
-        <p>Dudley pioneered automation and database management in the land business, running lease records digitally by the late 1980s.</p>
-        <span class="tick-b"></span>
-      </div>
-      <div class="dus-card dus-ticks pad">
-        <div class="dus-micro">Recognized in 2025</div>
-        <p>The Houston Association of Professional Landmen named Dudley Land Company its Company of the Year, in the company's 45th year.</p>
-        <span class="tick-b"></span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ========================= 05 · WHY DUS ============================ -->
 <!-- Copy source: SOQ "Why Clients Choose Us" + "National Footprint"
      (approved 8/17), reused verbatim; Kudu card condensed from the SOQ
@@ -900,8 +863,8 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
         <div class="label">Years combined<br>leadership</div>
       </div>
       <div class="cred">
-        <div class="value">34.5&ndash;765</div>
-        <div class="label">kV, executed by<br>our leadership</div>
+        <div class="value"><span class="qual">Up to</span>765<span class="unit">kV</span></div>
+        <div class="label">Distribution, HV &amp; EHV,<br>executed by our leadership</div>
       </div>
       <div class="cred">
         <div class="value">10,000+</div>
@@ -920,7 +883,7 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
         <span class="tick-b"></span>
       </div>
       <div class="dus-card dus-ticks pad">
-        <p>Parcel files built to hold up, so one holdout doesn't move your in-service date.</p>
+        <p>Organized execution and proactive risk management to protect the schedule.</p>
         <span class="tick-b"></span>
       </div>
       <div class="dus-card dus-ticks pad">
@@ -928,15 +891,15 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
         <span class="tick-b"></span>
       </div>
       <div class="dus-card dus-ticks pad">
-        <p>Estimates built from the parcel count and held: in budget and on schedule.</p>
+        <p>Accurate estimates built on parcel complexity, ownership, and project requirements.</p>
         <span class="tick-b"></span>
       </div>
       <div class="dus-card dus-ticks pad">
-        <p>Continuity through construction: the landowner always has a point of contact who answers.</p>
+        <p>Continuity through construction: consistent landowner communication through every phase of the project.</p>
         <span class="tick-b"></span>
       </div>
       <div class="dus-card dus-ticks pad">
-        <p>Kudu, our land management platform, keeps every parcel current as the work happens.</p>
+        <p>Real-time project intelligence through our KUDU land management platform.</p>
         <span class="tick-b"></span>
       </div>
     </div>
@@ -944,6 +907,7 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
     <div class="reveal" style="margin-top: 40px;"><a class="dus-btn dus-btn--light" href="/pages/meet-with-dudley">Meet With Dudley</a></div>
   </div>
 </section>
+
 <!-- ======================= 05b · COVERAGE BAND ======================= -->
 <section id="coverage" class="sec sec-divider">
   <div class="wrap">
@@ -1071,7 +1035,6 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
   </div>
 </section>
 
-
 <!-- ==================== 06 · COMMUNITY MEMBERS ======================= -->
 <!-- Speaks to community members directly, start to finish (Jenny 8/31). -->
 <section id="community" class="loband sec sec-divider">
@@ -1099,6 +1062,47 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
       <p class="sec-lede reveal">Work can take roughly a third of your life, and you deserve to spend that time where your ideas, family, and growth matter.</p>
       <a class="dus-btn dus-btn--primary" href="/pages/careers">Build a career at Dudley</a>
       <span class="tick-b"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 03 · INDUSTRIES ========================== -->
+<section id="industries" class="sec sec-alt">
+  <div class="wrap">
+    <div class="dus-eyebrow dus-eyebrow--teal reveal">Industries</div>
+    <h2 class="dus-h1 sec-title reveal">The industries we serve</h2>
+    <p class="sec-lede reveal">Whichever industry your project is in, you get experienced land professionals, proven systems, and disciplined execution.</p>
+    <div class="grid-2 sec-content">
+      <a class="dus-card dus-ticks pad ind-card" href="/pages/electric-transmission">
+        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg1" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M22 4L10 22h8l-2 14L30 18h-8l2-14z" stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 class="dus-h3">Electric transmission &amp; distribution</h3>
+        <p>We secure critical land rights, navigate stakeholder relationships, and protect the path from development through construction. We also handle electric distribution.</p>
+        <span class="golink">Explore the work &rarr;</span>
+        <span class="tick-b"></span>
+      </a>
+      <a class="dus-card dus-ticks pad ind-card" href="/pages/water-and-wastewater">
+        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg2" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M20 6c-4 6-10 13-10 19a10 10 0 0020 0c0-6-6-13-10-19z" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 28a4 4 0 004-4" stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <h3 class="dus-h3">Water &amp; wastewater</h3>
+        <p>We research title, secure your right-of-way, and negotiate the access your contractors need, maintaining your reputation with the communities along the route.</p>
+        <span class="golink">Explore the work &rarr;</span>
+        <span class="tick-b"></span>
+      </a>
+      <a class="dus-card dus-ticks pad ind-card" href="/pages/fiber-optics-broadband">
+        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg3" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><circle cx="20" cy="30" r="2" stroke="url(#dg3)" stroke-width="1.2"/><path d="M14 26a8 8 0 0112 0" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round"/><path d="M9 21a15 15 0 0122 0" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round"/><path d="M5 16a21 21 0 0130 0" stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <h3 class="dus-h3">Fiber optics &amp; broadband</h3>
+        <p>We secure the rights along your fiber route and keep the record current for as long as the build takes, however many parcels and jurisdictions the route crosses.</p>
+        <span class="golink">Explore the work &rarr;</span>
+        <span class="tick-b"></span>
+      </a>
+      <!-- Gas page is not built yet; Jenny is creating a lean version or
+           pulling this card before launch (her call, 8/31). -->
+      <a class="dus-card dus-ticks pad ind-card" href="/pages/gas-utility">
+        <svg class="ind-icon" viewBox="0 0 40 40" fill="none"><defs><linearGradient id="dg4" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M20 6c0 0-10 10-10 20a10 10 0 0020 0c0-4-2-8-4-11 0 0-2 3-6 3s-2-6 0-12z" stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 class="dus-h3">Gas utility</h3>
+        <p>We secure every right your gas utility work needs, and we coordinate the permits, notifications, and access that keep the work moving on schedule.</p>
+        <span class="golink">Explore the work &rarr;</span>
+        <span class="tick-b"></span>
+      </a>
     </div>
   </div>
 </section>
