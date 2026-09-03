@@ -1,6 +1,6 @@
 ---
 name: dus-brand
-description: Generate flawlessly on-brand graphics and documents for Dudley Utility Services (DUS) — social posts, LinkedIn banners, carousels, presentation decks, one-pagers, letterhead, and proposals. Use whenever creating ANY visual or document asset for DUS or Dudley Utility. Contains locked HTML templates, the DUS design system, and brand voice rules.
+description: The complete DUS brand system. Use on ANY task that touches DUS — design, code, copy, site edits, asset creation, page updates, maintenance. Not just new assets. If the work carries the DUS name, this skill loads first.
 ---
 
 # Dudley Utility Services — Brand System
@@ -9,7 +9,17 @@ You are producing brand assets for **Dudley Utility Services (DUS)**, the utilit
 
 **The golden rule: you are an editor, not a designer.** The design decisions are already made and locked in the templates. Your job is to pick the right template, swap the content, and keep everything else exactly as it is.
 
-## Workflow — every request, no exceptions
+## Workflow — every DUS task, no exceptions
+
+### Step 0 — Load context (runs on every task, even "quick" ones)
+
+1. **Read `learnings.md`** — corrections and rules from past builds. Non-negotiable.
+2. **Open `index.html` (the brand guide) in your browser or read it** — this is the visual source of truth. It renders every foundation (colors, type, spacing, surfaces, icons, grid, corner ticks) and every component as they actually look. When you're unsure how something should look, the brand guide settles it. Reference it for: color usage and proportions, typography scale and weights, surface treatments (field gradients, survey grid, horizon rule), component patterns (cards, stats, heroes, footers), icon style, corner tick treatment, and spacing rhythm.
+3. **Read `dus-core.css`** if the task touches any CSS or HTML structure.
+
+Skip to the task if it's code maintenance, SEO, form swaps, or other non-visual work. For asset creation, continue:
+
+### Steps 1–5 — Asset creation workflow
 
 1. **Pick the template** from the table below. Read the template file top to bottom.
 2. **Copy it whole.** Reproduce the entire file — full CSS, fonts link, embedded logos — as a new HTML file (or artifact). Never rebuild from memory, never write DUS HTML from scratch.
@@ -35,6 +45,37 @@ You are producing brand assets for **Dudley Utility Services (DUS)**, the utilit
 Something that fits none of these (e.g., email header, event badge, report cover): start from the closest template above, keep its surface treatment (field gradient + survey grid + horizon rule OR white + light grid), its type classes, and its logo usage, and only change the canvas dimensions. Say explicitly in your reply that this is an adapted format.
 
 For carousels and decks: duplicate the appropriate slide/page section for more slides; delete unused masters. Update the `01 / N` counters.
+
+## Spacing system
+
+A 4px-base scale. Use these tokens for **all** margin, padding, and gap values. Never write a raw pixel value.
+
+| Token | px | Use |
+|---|---|---|
+| `--sp-1` | 4 | Micro: icon nudge, inline offset |
+| `--sp-2` | 8 | Tight: stat value→label, tight list gap |
+| `--sp-3` | 12 | Compact: list item gap, small card inner |
+| `--sp-4` | 16 | Small: eyebrow→heading, heading→body, card content gaps |
+| `--sp-5` | 20 | Standard: paragraph spacing, form field gap |
+| `--sp-6` | 24 | Medium: card padding, component gaps, grid gap |
+| `--sp-8` | 32 | Large: between content groups, body→CTA |
+| `--sp-10` | 40 | Generous: subsection breaks |
+| `--sp-12` | 48 | Container: horizontal wrap padding |
+| `--sp-16` | 64 | Section-head to content block |
+| `--sp-20` | 80 | Section: vertical section padding |
+
+**Text-flow presets** (semantic aliases in CSS):
+- `--text-eyebrow-to-heading`: 16px (`--sp-4`)
+- `--text-heading-to-body`: 16px (`--sp-4`)
+- `--text-body-to-cta`: 32px (`--sp-8`)
+- `--text-paragraph-gap`: 20px (`--sp-5`)
+- `--text-section-gap`: 64px (`--sp-16`) — section-head margin-bottom
+
+**Rules:**
+- Always use the token, never raw pixels. `var(--sp-6)` not `24px`.
+- Stay on the scale. No 18px, 22px, 26px, 30px, 36px, 44px, or 58px.
+- Text flow spacing is locked: eyebrow→heading and heading→body are `--sp-4`, body→CTA is `--sp-8`.
+- Section rhythm: `--sp-20` (80px) between sections, `--sp-16` (64px) from section heading to content, `--sp-12` (48px) for container horizontal padding.
 
 ## Hard rules (violating any one of these breaks the brand)
 
@@ -93,7 +134,8 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 
 ## Reference files
 
-- `learnings.md` — **corrections and rules from past builds. Read this before every DUS design task** to avoid repeating fixed mistakes.
+- `index.html` — **the brand guide. The visual source of truth.** Open it in a browser to see every foundation and component rendered as they actually look. Reference it whenever you need to verify how a color, surface, component, type style, icon, or layout should appear. Read it at the start of every DUS task (Step 0).
+- `learnings.md` — **corrections and rules from past builds. Read this before every DUS task** to avoid repeating fixed mistakes.
 - `dus-core.css` — the design system source (already inlined in every template).
 - `reference/voice.md` — **the canonical voice and messaging reference. Read it before writing DUS copy.**
 - `reference/electric-transmission-pillar.md` — **the settled electric transmission positioning. Read it before writing anything on that topic.**
@@ -102,5 +144,4 @@ Always verify the export: correct page count, dark backgrounds actually dark, gr
 - **Anything from 2023 is retired.** The old DUS messaging material predates Garrett Gill and Savannah Cano and points at a direction the company is not going. It is archived at `Dudley/DUS/_Archive — Pre-2026 (stale, do not use)` and must never be mined, cited, or written from, not even with a caveat. Operator instruction, 2026-08-24.
 - `reference/brand-rules.md` — expanded visual rules and rationale.
 - `reference/design-source-brief.md` — **the DUS domain source material. Read it before making any visual asset that needs a concrete detail** (imagery, iconography, diagrams, data displays, industry-specific work). It carries the objects, dimensions, numbers, roles, and field realities that are specific to utility land services, harvested from the client's own onboarding calls. The system in this skill decides how things look; that file supplies what they're about, so an asset lands specific instead of generic.
-- `index.html` — the brand book; open it to see every foundation and component.
 - `assets/` — logo PNGs and their base64 for reuse.

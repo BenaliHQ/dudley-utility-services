@@ -459,6 +459,37 @@ section[id] { scroll-margin-top: 92px; }
 .voice-card .not { margin-top: 12px; color: var(--ink-500); }
 .voice-card .not::before { content: "\2715"; flex: 0 0 auto; color: var(--ink-400); font-size: 13px; margin-top: 2px; }
 
+/* ---------- spacing ---------- */
+.sp-scale { display: flex; flex-direction: column; gap: 0; }
+.sp-row { display: grid; grid-template-columns: 120px 80px 1fr; align-items: center; gap: 24px; padding: 14px 0; border-bottom: 1px solid var(--neutral-200); }
+.sp-row:last-child { border-bottom: none; }
+.sp-token { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; font-size: 13px; font-weight: 600; color: var(--teal-500); }
+.sp-px { font-size: 13px; font-weight: 700; color: var(--ink-600); letter-spacing: .06em; }
+.sp-bar { height: 10px; background: linear-gradient(90deg, var(--teal-500), var(--green-500)); border-radius: 0; }
+.sp-use { font-size: 13px; color: var(--text-2); line-height: 1.4; margin-top: 2px; }
+
+.sp-flow { margin-top: 48px; }
+.sp-flow-title { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-500); margin-bottom: 24px; }
+.sp-flow-demo { border: 1px solid var(--neutral-200); border-radius: 0; overflow: hidden; }
+.sp-flow-render { padding: 48px; background: var(--white); }
+.sp-flow-render .demo-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal-500); display: inline-flex; align-items: center; gap: 10px; }
+.sp-flow-render .demo-eyebrow::before { content: ""; width: 12px; height: 12px; background: var(--green-500); flex: 0 0 auto; }
+.sp-flow-render .demo-heading { font-size: 36px; font-weight: 900; letter-spacing: -.018em; line-height: 1.12; color: var(--ink-800); }
+.sp-flow-render .demo-body { font-size: 17px; line-height: 1.6; color: var(--text-2); max-width: 52ch; }
+.sp-flow-render .demo-cta { display: inline-flex; padding: 14px 26px; background: var(--green-500); color: var(--white); font-size: 15px; font-weight: 700; border-radius: 6px; letter-spacing: .02em; }
+.sp-flow-annotation { display: flex; align-items: center; gap: 8px; }
+.sp-flow-annotation .sp-line { flex: 0 0 1px; width: 1px; background: var(--green-500); }
+.sp-flow-annotation .sp-label { font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 11px; color: var(--green-500); white-space: nowrap; font-weight: 600; }
+.sp-flow-cap { padding: 18px 24px; border-top: 1px solid var(--neutral-200); background: var(--neutral-100); }
+.sp-flow-cap p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+
+.sp-rules { margin-top: 48px; }
+.sp-rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.sp-rule-card { border: 1px solid var(--neutral-200); border-radius: 0; padding: 24px 28px; }
+.sp-rule-card .rule-title { font-size: 15px; font-weight: 900; color: var(--ink-800); margin-bottom: 8px; }
+.sp-rule-card p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+.sp-rule-card code { font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 12px; background: var(--neutral-100); padding: 2px 6px; color: var(--teal-500); }
+
 /* ---------- footer ---------- */
 .foot { margin-top: 150px; padding: 64px 0 56px; }
 .foot-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; }
@@ -574,7 +605,7 @@ section[id] { scroll-margin-top: 92px; }
 <nav class="nav">
   <div class="wrap nav-inner">
     <div class="nav-links">
-      <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
+      <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
     </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
       <svg viewBox="0 0 22 22" fill="none" stroke="var(--ink-700)" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
@@ -592,7 +623,7 @@ section[id] { scroll-margin-top: 92px; }
     </button>
   </div>
   <div class="nav-drawer-links">
-    <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
+    <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
   </div>
 </aside>
 
@@ -732,6 +763,125 @@ section[id] { scroll-margin-top: 92px; }
       </div>
     </div>
     <p class="type-note">The DUDLEY wordmark is not set in Lato and is never reproduced with type. See the logo rules above.</p>
+  </section>
+
+  <!-- ================= SPACING ================= -->
+  <section class="section" id="spacing">
+    <div class="section-head">
+      <span class="dus-eyebrow dus-eyebrow--teal">Spacing</span>
+      <h2 class="dus-h1">Every gap is a decision.</h2>
+      <p class="lede">A 4px-base scale with 11 steps. Use the tokens for all margin, padding, and gap values. No magic numbers, no ad-hoc tweaking.</p>
+    </div>
+
+    <!-- Scale -->
+    <div class="sp-scale">
+      <div class="sp-row">
+        <span class="sp-token">--sp-1</span>
+        <span class="sp-px">4 px</span>
+        <div><div class="sp-bar" style="width: 4px;"></div><div class="sp-use">Micro: icon nudge, inline offset</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-2</span>
+        <span class="sp-px">8 px</span>
+        <div><div class="sp-bar" style="width: 8px;"></div><div class="sp-use">Tight: stat value-to-label, tight list gap</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-3</span>
+        <span class="sp-px">12 px</span>
+        <div><div class="sp-bar" style="width: 12px;"></div><div class="sp-use">Compact: list item gap, small card inner</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-4</span>
+        <span class="sp-px">16 px</span>
+        <div><div class="sp-bar" style="width: 16px;"></div><div class="sp-use">Small: eyebrow-to-heading, heading-to-body, card content gaps</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-5</span>
+        <span class="sp-px">20 px</span>
+        <div><div class="sp-bar" style="width: 20px;"></div><div class="sp-use">Standard: paragraph spacing, form field gap</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-6</span>
+        <span class="sp-px">24 px</span>
+        <div><div class="sp-bar" style="width: 24px;"></div><div class="sp-use">Medium: card padding, component gaps, grid gap</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-8</span>
+        <span class="sp-px">32 px</span>
+        <div><div class="sp-bar" style="width: 32px;"></div><div class="sp-use">Large: between content groups, body-to-CTA</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-10</span>
+        <span class="sp-px">40 px</span>
+        <div><div class="sp-bar" style="width: 40px;"></div><div class="sp-use">Generous: subsection breaks</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-12</span>
+        <span class="sp-px">48 px</span>
+        <div><div class="sp-bar" style="width: 48px;"></div><div class="sp-use">Container: horizontal wrap padding</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-16</span>
+        <span class="sp-px">64 px</span>
+        <div><div class="sp-bar" style="width: 64px;"></div><div class="sp-use">Section-head to content block</div></div>
+      </div>
+      <div class="sp-row">
+        <span class="sp-token">--sp-20</span>
+        <span class="sp-px">80 px</span>
+        <div><div class="sp-bar" style="width: 80px;"></div><div class="sp-use">Section: vertical section padding (top/bottom)</div></div>
+      </div>
+    </div>
+
+    <!-- Text flow demo -->
+    <div class="sp-flow">
+      <div class="sp-flow-title">Text-flow presets</div>
+      <div class="sp-flow-demo">
+        <div class="sp-flow-render">
+          <div class="demo-eyebrow">Transmission &amp; Right-of-Way</div>
+          <div style="display:flex;align-items:center;gap:8px;margin:2px 0;">
+            <div style="width:1px;height:16px;background:var(--green-500);"></div>
+            <span class="sp-label" style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:11px;color:var(--green-500);font-weight:600;">--sp-4 &middot; 16px</span>
+          </div>
+          <div class="demo-heading">Know your costs before the first boot hits the ground.</div>
+          <div style="display:flex;align-items:center;gap:8px;margin:2px 0;">
+            <div style="width:1px;height:16px;background:var(--green-500);"></div>
+            <span style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:11px;color:var(--green-500);font-weight:600;">--sp-4 &middot; 16px</span>
+          </div>
+          <div class="demo-body">We price by the parcel, not by the hour. You see the full scope, the full cost, and the full timeline before you commit.</div>
+          <div style="display:flex;align-items:center;gap:8px;margin:2px 0;">
+            <div style="width:1px;height:32px;background:var(--green-500);"></div>
+            <span style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:11px;color:var(--green-500);font-weight:600;">--sp-8 &middot; 32px</span>
+          </div>
+          <div class="demo-cta">Get a scope estimate</div>
+        </div>
+        <div class="sp-flow-cap">
+          <p>Eyebrow &rarr; Heading: <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-200);padding:2px 6px;color:var(--teal-500);">--text-eyebrow-to-heading</code> (16px) &nbsp;&middot;&nbsp; Heading &rarr; Body: <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-200);padding:2px 6px;color:var(--teal-500);">--text-heading-to-body</code> (16px) &nbsp;&middot;&nbsp; Body &rarr; CTA: <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-200);padding:2px 6px;color:var(--teal-500);">--text-body-to-cta</code> (32px)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rules -->
+    <div class="sp-rules">
+      <div class="sp-flow-title">Rules</div>
+      <div class="sp-rules-grid">
+        <div class="sp-rule-card">
+          <div class="rule-title">Always use the token</div>
+          <p>Never write a raw pixel value for spacing. Use <code>var(--sp-6)</code>, not <code>24px</code>. This keeps the system adjustable and consistent.</p>
+        </div>
+        <div class="sp-rule-card">
+          <div class="rule-title">Text flow is locked</div>
+          <p>Eyebrow-to-heading and heading-to-body are always <code>--sp-4</code> (16px). Body-to-CTA is always <code>--sp-8</code> (32px). No exceptions.</p>
+        </div>
+        <div class="sp-rule-card">
+          <div class="rule-title">Stay on the scale</div>
+          <p>If you need a value between steps, pick the nearer step. No 18px, 22px, 26px, 30px, 36px, 44px, or 58px. Those are the old chaos.</p>
+        </div>
+        <div class="sp-rule-card">
+          <div class="rule-title">Section rhythm</div>
+          <p><code>--sp-20</code> (80px) between sections. <code>--sp-16</code> (64px) from section heading to content. <code>--sp-12</code> (48px) for container horizontal padding.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ================= MOTIFS ================= -->
