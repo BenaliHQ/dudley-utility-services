@@ -87,6 +87,11 @@ files in ./templates/ — keep this file in the package folder.
   --shadow-sm: 0 1px 2px rgba(3,34,48,0.07), 0 1px 3px rgba(3,34,48,0.08);
   --shadow-md: 0 4px 14px rgba(3,34,48,0.10), 0 2px 4px rgba(3,34,48,0.06);
   --shadow-lg: 0 16px 40px rgba(3,34,48,0.16), 0 4px 10px rgba(3,34,48,0.07);
+
+  /* ---- Icon sizes: on the 4px grid ---- */
+  --icon-sm:  24px;   /* inline, nav, tight contexts */
+  --icon-md:  40px;   /* card feature icons, content icons */
+  --icon-lg:  48px;   /* prominent feature icons, Kudu cards */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -204,6 +209,39 @@ html, body {
   text-transform: uppercase; color: var(--text-3);
 }
 .dus-micro--dark { color: var(--on-dark-3); }
+
+/* ==========================================================================
+   ICON SYSTEM — Remix Icon outlines with DUS gradient stroke.
+   ========================================================================== */
+
+.dus-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+.dus-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.dus-icon--sm { width: var(--icon-sm); height: var(--icon-sm); }
+.dus-icon--md { width: var(--icon-md); height: var(--icon-md); }
+.dus-icon--lg { width: var(--icon-lg); height: var(--icon-lg); }
+
+/* Badge variant: icon inside a solid-color squared container.
+   Used in coverage map compositions. White stroke, no gradient. */
+.dus-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-md);
+}
+.dus-icon-badge svg { width: 54%; height: 54%; display: block; }
+.dus-icon-badge--teal  { background: var(--teal-500); }
+.dus-icon-badge--green { background: var(--green-500); }
+.dus-icon-badge--sky   { background: var(--teal-400); }
 
 /* ==========================================================================
    COMPONENTS
@@ -459,6 +497,12 @@ section[id] { scroll-margin-top: 92px; }
 .voice-card .not { margin-top: 12px; color: var(--ink-500); }
 .voice-card .not::before { content: "\2715"; flex: 0 0 auto; color: var(--ink-400); font-size: 13px; margin-top: 2px; }
 
+/* ---------- components subnav ---------- */
+.comp-subnav { display: flex; gap: 0; margin-bottom: 48px; border: 1px solid var(--neutral-200); overflow: hidden; }
+.comp-subnav-link { flex: 1; padding: 14px 20px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-600); text-decoration: none; text-align: center; border-right: 1px solid var(--neutral-200); transition: background 150ms, color 150ms; }
+.comp-subnav-link:last-child { border-right: none; }
+.comp-subnav-link:hover { background: var(--neutral-100); color: var(--teal-500); }
+
 /* ---------- spacing ---------- */
 .sp-scale { display: flex; flex-direction: column; gap: 0; }
 .sp-row { display: grid; grid-template-columns: 120px 80px 1fr; align-items: center; gap: 24px; padding: 14px 0; border-bottom: 1px solid var(--neutral-200); }
@@ -489,6 +533,82 @@ section[id] { scroll-margin-top: 92px; }
 .sp-rule-card .rule-title { font-size: 15px; font-weight: 900; color: var(--ink-800); margin-bottom: 8px; }
 .sp-rule-card p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
 .sp-rule-card code { font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 12px; background: var(--neutral-100); padding: 2px 6px; color: var(--teal-500); }
+
+/* ---------- icons section ---------- */
+.icon-size-scale { display: flex; align-items: flex-end; gap: 48px; margin-top: 32px; }
+.icon-size-item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.icon-size-label { font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 11px; color: var(--green-500); font-weight: 600; white-space: nowrap; }
+
+.icon-gradient-block { margin-top: 48px; }
+.icon-gradient-code {
+  border: 1px solid var(--neutral-200); border-radius: 0; overflow: hidden; margin-top: 24px;
+}
+.icon-gradient-code pre {
+  padding: 24px 28px; background: var(--ink-900); color: rgba(255,255,255,0.88);
+  font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 13px; line-height: 1.7;
+  overflow-x: auto; margin: 0;
+}
+.icon-gradient-code .hl-tag { color: #7EC0D6; }
+.icon-gradient-code .hl-attr { color: #67CC6C; }
+.icon-gradient-code .hl-val { color: #E4F7E5; }
+
+.icon-catalog { margin-top: 48px; }
+.icon-catalog-group { margin-top: 24px; }
+.icon-catalog-group-title { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-500); margin-bottom: 16px; }
+.icon-catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+.icon-catalog-cell {
+  border: 1px solid var(--neutral-200); border-radius: 0; padding: 20px 12px 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  background: var(--white);
+}
+.icon-catalog-cell svg { display: block; }
+.icon-catalog-cell .icon-name { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--text-2); text-align: center; line-height: 1.3; }
+
+.icon-usage { margin-top: 48px; }
+.icon-usage-code {
+  border: 1px solid var(--neutral-200); border-radius: 0; overflow: hidden; margin-top: 24px;
+}
+.icon-usage-code pre {
+  padding: 24px 28px; background: var(--ink-900); color: rgba(255,255,255,0.88);
+  font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 13px; line-height: 1.7;
+  overflow-x: auto; margin: 0;
+}
+.icon-usage-code .hl-comment { color: var(--ink-500); }
+.icon-usage-code .hl-tag { color: #7EC0D6; }
+.icon-usage-code .hl-attr { color: #67CC6C; }
+.icon-usage-code .hl-val { color: #E4F7E5; }
+
+/* ---------- accessibility ---------- */
+.skip-link {
+  position: absolute; top: -100px; left: 16px; z-index: 200;
+  padding: 12px 20px; background: var(--teal-500); color: var(--white);
+  font-size: 14px; font-weight: 700; text-decoration: none;
+  transition: top 150ms;
+}
+.skip-link:focus { top: 12px; }
+:focus-visible {
+  outline: 2px solid var(--teal-400);
+  outline-offset: 2px;
+}
+a:focus-visible, button:focus-visible { outline: 2px solid var(--teal-400); outline-offset: 2px; }
+.comp-subnav-link:focus-visible, .nav-links a:focus-visible, .nav-drawer-links a:focus-visible {
+  outline: 2px solid var(--teal-400); outline-offset: -2px;
+}
+
+/* ---------- click-to-copy tokens ---------- */
+.copyable {
+  cursor: pointer;
+  position: relative;
+  transition: background 120ms;
+}
+.copyable:hover { background: var(--teal-050); }
+.copy-toast {
+  position: absolute; top: -28px; left: 50%; transform: translateX(-50%);
+  padding: 4px 10px; background: var(--teal-500); color: var(--white);
+  font-size: 11px; font-weight: 700; letter-spacing: .04em; white-space: nowrap;
+  pointer-events: none; opacity: 0; transition: opacity 200ms;
+}
+.copy-toast.is-visible { opacity: 1; }
 
 /* ---------- footer ---------- */
 .foot { margin-top: 150px; padding: 64px 0 56px; }
@@ -569,6 +689,8 @@ section[id] { scroll-margin-top: 92px; }
   }
   .nav-toggle svg { width: 22px; height: 22px; }
   .logo-panels, .clearspace, .comp-panels, .motifs, .tpl-grid.cols-3, .tpl-grid.cols-2, .color-hero, .prop-rules, .voice-grid, .donts { grid-template-columns: 1fr; }
+  .icon-catalog-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .icon-size-scale { gap: 32px; }
   .spec-row { grid-template-columns: 1fr; gap: 16px; }
   .t-display { font-size: 52px; } .t-h1 { font-size: 40px; }
   .cover h1 { max-width: none; }
@@ -583,6 +705,7 @@ section[id] { scroll-margin-top: 92px; }
 </style>
 </head>
 <body>
+<a href="#logo" class="skip-link">Skip to content</a>
 
 <!-- ================= COVER ================= -->
 <header class="cover dus-field-teal dus-grid-dark dus-horizon">
@@ -597,7 +720,7 @@ section[id] { scroll-margin-top: 92px; }
   </div>
   <div class="cover-meta">
     <span class="dus-micro dus-micro--dark">Dudley Utility Services &middot; Brand System</span>
-    <span class="dus-micro dus-micro--dark">Maintained with the Benali team &middot; July 2026</span>
+    <span class="dus-micro dus-micro--dark">Maintained with the Benali team &middot; September 2026</span>
   </div>
 </header>
 
@@ -605,7 +728,7 @@ section[id] { scroll-margin-top: 92px; }
 <nav class="nav">
   <div class="wrap nav-inner">
     <div class="nav-links">
-      <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
+      <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#icons">Icons</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
     </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
       <svg viewBox="0 0 22 22" fill="none" stroke="var(--ink-700)" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
@@ -623,14 +746,14 @@ section[id] { scroll-margin-top: 92px; }
     </button>
   </div>
   <div class="nav-drawer-links">
-    <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
+    <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#icons">Icons</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#voice">Voice</a>
   </div>
 </aside>
 
 <main class="wrap">
 
   <!-- ================= LOGO ================= -->
-  <section class="section" id="logo">
+  <section class="section" id="logo" aria-label="Logo">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Logo</span>
       <h2 class="dus-h1">The wordmark is artwork.</h2>
@@ -669,7 +792,7 @@ section[id] { scroll-margin-top: 92px; }
   </section>
 
   <!-- ================= COLOR ================= -->
-  <section class="section" id="color">
+  <section class="section" id="color" aria-label="Color">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Color</span>
       <h2 class="dus-h1">Teal leads. Green earns its place.</h2>
@@ -725,7 +848,7 @@ section[id] { scroll-margin-top: 92px; }
   </section>
 
   <!-- ================= TYPE ================= -->
-  <section class="section" id="type">
+  <section class="section" id="type" aria-label="Typography">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Typography</span>
       <h2 class="dus-h1">Lato. Three weights. No exceptions.</h2>
@@ -766,7 +889,7 @@ section[id] { scroll-margin-top: 92px; }
   </section>
 
   <!-- ================= SPACING ================= -->
-  <section class="section" id="spacing">
+  <section class="section" id="spacing" aria-label="Spacing">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Spacing</span>
       <h2 class="dus-h1">Every gap is a decision.</h2>
@@ -884,8 +1007,274 @@ section[id] { scroll-margin-top: 92px; }
     </div>
   </section>
 
+  <!-- ================= ICONS ================= -->
+  <section class="section" id="icons" aria-label="Icons">
+
+    <!-- Shared gradient definitions for all catalog icons -->
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+      <defs>
+        <linearGradient id="dus-grad" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/>
+        </linearGradient>
+        <linearGradient id="dus-grad-40" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="section-head">
+      <span class="dus-eyebrow dus-eyebrow--teal">Icons</span>
+      <h2 class="dus-h1">Outlined, gradient-stroked, surveyor-precise.</h2>
+      <p class="lede">Every icon is a Remix Icon outline with the DUS teal-to-green gradient as its stroke. Three sizes on the 4px grid. Squared containers only.</p>
+    </div>
+
+    <!-- Rules -->
+    <div class="sp-rules" style="margin-top:0">
+      <div class="sp-flow-title">Rules</div>
+      <div class="sp-rules-grid">
+        <div class="sp-rule-card">
+          <div class="rule-title">Source and style</div>
+          <p>Remix Icon (<code>remixicon.com</code>), always the <code>-line</code> suffix variant. Outlined only, never filled or solid.</p>
+        </div>
+        <div class="sp-rule-card">
+          <div class="rule-title">Stroke</div>
+          <p><code>stroke-width="1.2"</code> with <code>stroke-linecap="round"</code> and <code>stroke-linejoin="round"</code>. Simple geometric paths, no fills.</p>
+        </div>
+        <div class="sp-rule-card">
+          <div class="rule-title">Color</div>
+          <p>DUS gradient teal-to-green via SVG <code>&lt;linearGradient&gt;</code>, horizontal left to right. Never flat single-color icons.</p>
+        </div>
+        <div class="sp-rule-card">
+          <div class="rule-title">Containers</div>
+          <p>Squared with <code>--r-md</code> (6px). Never circles, never <code>border-radius: 50%</code>. Coverage badges use solid teal or green backgrounds with white stroke.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Size scale -->
+    <div class="sp-flow" style="margin-top:48px">
+      <div class="sp-flow-title">Size scale</div>
+      <div class="icon-size-scale">
+        <div class="icon-size-item">
+          <div class="dus-icon dus-icon--sm">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 4v16M5 4h10l-2.5 3.5L15 11H5" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="icon-size-label sp-token">--icon-sm</span>
+          <span class="icon-size-label" style="color:var(--text-3);font-weight:400">24px</span>
+        </div>
+        <div class="icon-size-item">
+          <div class="dus-icon dus-icon--md">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 4v16M5 4h10l-2.5 3.5L15 11H5" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="icon-size-label sp-token">--icon-md</span>
+          <span class="icon-size-label" style="color:var(--text-3);font-weight:400">40px</span>
+        </div>
+        <div class="icon-size-item">
+          <div class="dus-icon dus-icon--lg">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 4v16M5 4h10l-2.5 3.5L15 11H5" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="icon-size-label sp-token">--icon-lg</span>
+          <span class="icon-size-label" style="color:var(--text-3);font-weight:400">48px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gradient definition -->
+    <div class="icon-gradient-block">
+      <div class="sp-flow-title">Canonical gradient definition</div>
+      <p style="font-size:14px;color:var(--text-2);line-height:1.5;margin-bottom:16px">Place this <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-100);padding:2px 6px;color:var(--teal-500)">&lt;defs&gt;</code> block once per page. All icons reference these gradients via <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-100);padding:2px 6px;color:var(--teal-500)">url(#dus-grad)</code>.</p>
+      <div class="icon-gradient-code">
+        <pre><span class="hl-tag">&lt;svg</span> <span class="hl-attr">width=</span><span class="hl-val">"0"</span> <span class="hl-attr">height=</span><span class="hl-val">"0"</span> <span class="hl-attr">aria-hidden=</span><span class="hl-val">"true"</span> <span class="hl-attr">style=</span><span class="hl-val">"position:absolute"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;defs&gt;</span>
+    <span class="hl-tag">&lt;linearGradient</span> <span class="hl-attr">id=</span><span class="hl-val">"dus-grad"</span>
+      <span class="hl-attr">x1=</span><span class="hl-val">"0"</span> <span class="hl-attr">y1=</span><span class="hl-val">"12"</span> <span class="hl-attr">x2=</span><span class="hl-val">"24"</span> <span class="hl-attr">y2=</span><span class="hl-val">"12"</span>
+      <span class="hl-attr">gradientUnits=</span><span class="hl-val">"userSpaceOnUse"</span><span class="hl-tag">&gt;</span>
+      <span class="hl-tag">&lt;stop</span> <span class="hl-attr">stop-color=</span><span class="hl-val">"#015270"</span><span class="hl-tag">/&gt;</span>
+      <span class="hl-tag">&lt;stop</span> <span class="hl-attr">offset=</span><span class="hl-val">"1"</span> <span class="hl-attr">stop-color=</span><span class="hl-val">"#41BE48"</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;/linearGradient&gt;</span>
+    <span class="hl-tag">&lt;linearGradient</span> <span class="hl-attr">id=</span><span class="hl-val">"dus-grad-40"</span>
+      <span class="hl-attr">x1=</span><span class="hl-val">"0"</span> <span class="hl-attr">y1=</span><span class="hl-val">"20"</span> <span class="hl-attr">x2=</span><span class="hl-val">"40"</span> <span class="hl-attr">y2=</span><span class="hl-val">"20"</span>
+      <span class="hl-attr">gradientUnits=</span><span class="hl-val">"userSpaceOnUse"</span><span class="hl-tag">&gt;</span>
+      <span class="hl-tag">&lt;stop</span> <span class="hl-attr">stop-color=</span><span class="hl-val">"#015270"</span><span class="hl-tag">/&gt;</span>
+      <span class="hl-tag">&lt;stop</span> <span class="hl-attr">offset=</span><span class="hl-val">"1"</span> <span class="hl-attr">stop-color=</span><span class="hl-val">"#41BE48"</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;/linearGradient&gt;</span>
+  <span class="hl-tag">&lt;/defs&gt;</span>
+<span class="hl-tag">&lt;/svg&gt;</span></pre>
+      </div>
+    </div>
+
+    <!-- Icon catalog -->
+    <div class="icon-catalog">
+      <div class="sp-flow-title">Approved icons</div>
+
+      <!-- Industry -->
+      <div class="icon-catalog-group">
+        <div class="icon-catalog-group-title">Industry</div>
+        <div class="icon-catalog-grid">
+          <div class="icon-catalog-cell">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M22 4L10 22h8l-2 14L30 18h-8l2-14z" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Lightning &middot; electric</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6c-4 6-10 13-10 19a10 10 0 0020 0c0-6-6-13-10-19z" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 28a4 4 0 004-4" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Water drop &middot; water</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="30" r="2" stroke="url(#dus-grad-40)" stroke-width="1.2"/><path d="M14 26a8 8 0 0112 0" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round"/><path d="M9 21a15 15 0 0122 0" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round"/><path d="M5 16a21 21 0 0130 0" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Broadcast &middot; fiber</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6c0 0-10 10-10 20a10 10 0 0020 0c0-4-2-8-4-11 0 0-2 3-6 3s-2-6 0-12z" stroke="url(#dus-grad-40)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Flame &middot; gas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kudu features -->
+      <div class="icon-catalog-group">
+        <div class="icon-catalog-group-title">Kudu Features</div>
+        <div class="icon-catalog-grid">
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="1" stroke="url(#dus-grad)" stroke-width="1.2"/><line x1="12" y1="17" x2="12" y2="21" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="7" y1="21" x2="17" y2="21" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Monitor &middot; visibility</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2V3z" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7V3z" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Book &middot; record</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="1,6 1,22 8,18 16,22 23,18 23,2 16,6 8,2" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linejoin="round"/><line x1="8" y1="2" x2="8" y2="18" stroke="url(#dus-grad)" stroke-width="1.2"/><line x1="16" y1="6" x2="16" y2="22" stroke="url(#dus-grad)" stroke-width="1.2"/></svg>
+            <span class="icon-name">Map &middot; progress</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="5" rx="1" stroke="url(#dus-grad)" stroke-width="1.2"/><path d="M3 8v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linejoin="round"/><line x1="10" y1="12" x2="14" y2="12" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Archive &middot; documents</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- People -->
+      <div class="icon-catalog-group">
+        <div class="icon-catalog-group-title">People</div>
+        <div class="icon-catalog-grid">
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="url(#dus-grad)" stroke-width="1.2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Users &middot; team</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="url(#dus-grad)" stroke-width="1.2"/></svg>
+            <span class="icon-name">Pin &middot; location</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span class="icon-name">Shield &middot; trust</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Landowners -->
+      <div class="icon-catalog-group">
+        <div class="icon-catalog-group-title">Landowners</div>
+        <div class="icon-catalog-grid">
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linejoin="round"/><polyline points="14,2 14,8 20,8" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="8" y1="13" x2="16" y2="13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="17" x2="13" y2="17" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Document &middot; easement</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="10" height="18" rx="2" stroke="url(#dus-grad)" stroke-width="1.2"/><line x1="7" y1="18" x2="11" y2="18" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><path d="M17 8a5 5 0 0 1 0 8" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><path d="M20 5.5a9 9 0 0 1 0 13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Phone &middot; notice</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke="url(#dus-grad)" stroke-width="1.2"/></svg>
+            <span class="icon-name">User &middot; agent</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="12" y1="4" x2="12" y2="21" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="4" y1="6" x2="20" y2="6" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="6" x2="3.5" y2="13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="6" x2="8.5" y2="13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><path d="M3.5 13Q6 16 8.5 13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="19" y1="6" x2="15.5" y2="13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="19" y1="6" x2="20.5" y2="13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><path d="M15.5 13Q18 16 20.5 13" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/><line x1="9" y1="21" x2="15" y2="21" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="icon-name">Balance &middot; compensation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coverage (white on badge) -->
+      <div class="icon-catalog-group">
+        <div class="icon-catalog-group-title">Coverage (white on badge)</div>
+        <div class="icon-catalog-grid">
+          <div class="icon-catalog-cell">
+            <div class="dus-icon-badge dus-icon-badge--teal" style="width:48px;height:48px">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/><path d="M3 12h18" stroke="#fff" stroke-width="1.6"/><path d="M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9s1.3-6.4 3.9-9Z" stroke="#fff" stroke-width="1.6"/><path d="M5 6.4c2 1.2 4.4 1.8 7 1.8s5-.6 7-1.8" stroke="#fff" stroke-width="1.6"/><path d="M5 17.6c2-1.2 4.4-1.8 7-1.8s5 .6 7 1.8" stroke="#fff" stroke-width="1.6"/></svg>
+            </div>
+            <span class="icon-name">Globe &middot; reach</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <div class="dus-icon-badge dus-icon-badge--green" style="width:48px;height:48px">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21.5c4.2-4.9 6.3-8.5 6.3-11.1a6.3 6.3 0 0 0-12.6 0c0 2.6 2.1 6.2 6.3 11.1Z" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="10.1" r="2.4" fill="#fff" stroke="none"/></svg>
+            </div>
+            <span class="icon-name">Pin &middot; local</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <div class="dus-icon-badge dus-icon-badge--sky" style="width:48px;height:48px">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.6" r="3" stroke="#fff" stroke-width="1.6"/><path d="M6.8 18.4a5.4 5.4 0 0 1 10.4 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="4.7" cy="10.4" r="2.3" stroke="#fff" stroke-width="1.6"/><path d="M1.6 17.6a3.9 3.9 0 0 1 3.6-3.3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="19.3" cy="10.4" r="2.3" stroke="#fff" stroke-width="1.6"/><path d="M22.4 17.6a3.9 3.9 0 0 0-3.6-3.3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <span class="icon-name">Team &middot; scalable</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Heritage -->
+      <div class="icon-catalog-group">
+        <div class="icon-catalog-group-title">Heritage</div>
+        <div class="icon-catalog-grid">
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 4v16M5 4h10l-2.5 3.5L15 11H5" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Flag &middot; founding</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v11H3zM8 20h8M12 16v4" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Monitor &middot; digital</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 9-9M15 7h6v6" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Chart &middot; growth</span>
+          </div>
+          <div class="icon-catalog-cell">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z" stroke="url(#dus-grad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="icon-name">Trophy &middot; award</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Usage pattern -->
+    <div class="icon-usage">
+      <div class="sp-flow-title">Usage pattern</div>
+      <p style="font-size:14px;color:var(--text-2);line-height:1.5;margin-bottom:16px">Two steps: define the gradient once per page, then use the <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-100);padding:2px 6px;color:var(--teal-500)">.dus-icon</code> class with SVGs that reference <code style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;background:var(--neutral-100);padding:2px 6px;color:var(--teal-500)">url(#dus-grad)</code>.</p>
+      <div class="icon-usage-code">
+        <pre><span class="hl-comment">&lt;!-- Step 1: gradient defs (once per page) --&gt;</span>
+<span class="hl-tag">&lt;svg</span> <span class="hl-attr">width=</span><span class="hl-val">"0"</span> <span class="hl-attr">height=</span><span class="hl-val">"0"</span> <span class="hl-attr">aria-hidden=</span><span class="hl-val">"true"</span> <span class="hl-attr">style=</span><span class="hl-val">"position:absolute"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;defs&gt;</span>
+    <span class="hl-tag">&lt;linearGradient</span> <span class="hl-attr">id=</span><span class="hl-val">"dus-grad"</span> <span class="hl-attr">x1=</span><span class="hl-val">"0"</span> <span class="hl-attr">y1=</span><span class="hl-val">"12"</span> <span class="hl-attr">x2=</span><span class="hl-val">"24"</span> <span class="hl-attr">y2=</span><span class="hl-val">"12"</span>
+      <span class="hl-attr">gradientUnits=</span><span class="hl-val">"userSpaceOnUse"</span><span class="hl-tag">&gt;</span>
+      <span class="hl-tag">&lt;stop</span> <span class="hl-attr">stop-color=</span><span class="hl-val">"#015270"</span><span class="hl-tag">/&gt;</span>
+      <span class="hl-tag">&lt;stop</span> <span class="hl-attr">offset=</span><span class="hl-val">"1"</span> <span class="hl-attr">stop-color=</span><span class="hl-val">"#41BE48"</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;/linearGradient&gt;</span>
+  <span class="hl-tag">&lt;/defs&gt;</span>
+<span class="hl-tag">&lt;/svg&gt;</span>
+
+<span class="hl-comment">&lt;!-- Step 2: use in a card --&gt;</span>
+<span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"dus-icon dus-icon--md"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;svg</span> <span class="hl-attr">viewBox=</span><span class="hl-val">"0 0 24 24"</span> <span class="hl-attr">fill=</span><span class="hl-val">"none"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;path</span> <span class="hl-attr">d=</span><span class="hl-val">"..."</span> <span class="hl-attr">stroke=</span><span class="hl-val">"url(#dus-grad)"</span>
+      <span class="hl-attr">stroke-width=</span><span class="hl-val">"1.2"</span> <span class="hl-attr">stroke-linecap=</span><span class="hl-val">"round"</span>
+      <span class="hl-attr">stroke-linejoin=</span><span class="hl-val">"round"</span><span class="hl-tag">/&gt;</span>
+  <span class="hl-tag">&lt;/svg&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span></pre>
+      </div>
+    </div>
+
+  </section>
+
   <!-- ================= MOTIFS ================= -->
-  <section class="section" id="motifs">
+  <section class="section" id="motifs" aria-label="Motifs">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Motifs</span>
       <h2 class="dus-h1">Four moves make it DUS.</h2>
@@ -921,14 +1310,20 @@ section[id] { scroll-margin-top: 92px; }
   </section>
 
   <!-- ================= COMPONENTS ================= -->
-  <section class="section" id="components">
+  <section class="section" id="components" aria-label="Components">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Components</span>
       <h2 class="dus-h1">24 reusable parts, staged where they live.</h2>
       <p class="lede">Dark-surface components stay on dark. Light-surface components stay on light. Each file is self-contained HTML with an AI-readable comment header.</p>
     </div>
 
-    <div class="comp-panels">
+    <div class="comp-subnav">
+      <a href="#comp-panels" class="comp-subnav-link">Panels</a>
+      <a href="#comp-compositions" class="comp-subnav-link">Compositions (9)</a>
+      <a href="#comp-inspiration" class="comp-subnav-link">Inspiration (5)</a>
+    </div>
+
+    <div id="comp-panels" class="comp-panels">
       <div class="comp-panel dark dus-field-teal dus-grid-dark dus-horizon">
         <div class="comp-group"><span class="cap">Pill &middot; dark surfaces only</span>
           <div class="comp-row"><span class="dus-pill">Field Guide</span><span class="dus-pill">Key Services</span></div>
@@ -959,7 +1354,7 @@ section[id] { scroll-margin-top: 92px; }
     </div>
 
     <!-- ===== COMPOSITIONS (9) — visual showcase ===== -->
-    <div style="margin-top: 80px;">
+    <div id="comp-compositions" style="margin-top: 80px; scroll-margin-top: 92px;">
       <span class="cap" style="color: var(--teal-500); font-size: 14px; display: block; margin-bottom: 32px;">Compositions (9)</span>
 
       <!-- Quote -->
@@ -980,7 +1375,7 @@ section[id] { scroll-margin-top: 92px; }
         <div style="display: flex; flex-direction: column; gap: 4px;">
           <strong style="font-size: 17px; font-weight: 900; color: var(--teal-500);">Mike Dudley</strong>
           <span style="font-size: 14px; font-weight: 700; color: var(--ink-600); letter-spacing: 0.04em;">President</span>
-          <span style="font-size: 14px; color: var(--ink-600); margin-top: 8px;">(555) 123-4567</span>
+          <span style="font-size: 14px; color: var(--ink-600); margin-top: 8px;">555-123-4567</span>
           <span style="font-size: 14px; color: var(--ink-600);">mike@dudley-utility.com</span>
         </div>
       </div>
@@ -1089,7 +1484,7 @@ section[id] { scroll-margin-top: 92px; }
           <h3 style="font-size: 24px; font-weight: 900; color: var(--ink-800); letter-spacing: -0.018em;">Ready to scope your corridor?</h3>
           <p style="color: var(--ink-600); max-width: 480px; line-height: 1.6;">Call Mike directly to walk through your project requirements. We'll have a preliminary scope back to you within the week.</p>
           <div style="display: flex; gap: 12px; align-items: center; margin-top: 8px;">
-            <a class="dus-btn dus-btn--primary" href="#components">Call (555) 123-4567</a>
+            <a class="dus-btn dus-btn--primary" href="#components">Call 555-123-4567</a>
             <a class="dus-btn dus-btn--ghost" href="#components">Email Mike</a>
           </div>
         </div>
@@ -1097,7 +1492,7 @@ section[id] { scroll-margin-top: 92px; }
     </div>
 
     <!-- ===== INSPIRATION-DRIVEN (5) — visual showcase ===== -->
-    <div style="margin-top: 80px;">
+    <div id="comp-inspiration" style="margin-top: 80px; scroll-margin-top: 92px;">
       <span class="cap" style="color: var(--teal-500); font-size: 14px; display: block; margin-bottom: 32px;">Inspiration-driven (5)</span>
 
       <!-- Stat row (light) -->
@@ -1211,7 +1606,7 @@ section[id] { scroll-margin-top: 92px; }
         <span class="cap" style="margin-bottom: 16px; display: block;">Team grid</span>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-            <div style="width: 80px; height: 80px; border-radius: var(--r-md); background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 80px; height: 80px; border-radius: 0; background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px; font-weight: 700; color: var(--teal-500);">MD</span>
             </div>
             <div>
@@ -1220,7 +1615,7 @@ section[id] { scroll-margin-top: 92px; }
             </div>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-            <div style="width: 80px; height: 80px; border-radius: var(--r-md); background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 80px; height: 80px; border-radius: 0; background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px; font-weight: 700; color: var(--teal-500);">JR</span>
             </div>
             <div>
@@ -1229,7 +1624,7 @@ section[id] { scroll-margin-top: 92px; }
             </div>
           </div>
           <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-            <div style="width: 80px; height: 80px; border-radius: var(--r-md); background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 80px; height: 80px; border-radius: 0; background: var(--teal-050); border: 2px solid var(--neutral-200); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px; font-weight: 700; color: var(--teal-500);">TW</span>
             </div>
             <div>
@@ -1281,7 +1676,7 @@ section[id] { scroll-margin-top: 92px; }
   </section>
 
   <!-- ================= TEMPLATES ================= -->
-  <section class="section" id="templates">
+  <section class="section" id="templates" aria-label="Templates">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Templates</span>
       <h2 class="dus-h1">Start from a template. Always.</h2>
@@ -1293,15 +1688,15 @@ section[id] { scroll-margin-top: 92px; }
       <span class="cap">Social</span>
       <div class="tpl-grid cols-3">
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1080" data-h="1080" src="templates/social-square.html" title="Social square preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1080" data-h="1080" src="templates/social-square.html" title="Social square preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Social square</span><span class="dims">1080 &times; 1080</span></div><p class="use">Service posts, announcements, everyday LinkedIn graphics.</p><a class="open" href="templates/social-square.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1080" data-h="1350" src="templates/social-stat.html" title="Social stat preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1080" data-h="1350" src="templates/social-stat.html" title="Social stat preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Stat post</span><span class="dims">1080 &times; 1350</span></div><p class="use">One number, one point. Proof over promises.</p><a class="open" href="templates/social-stat.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1080" data-h="1350" src="templates/carousel.html#only-1" title="Carousel preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1080" data-h="1350" src="templates/carousel.html#only-1" title="Carousel preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Carousel</span><span class="dims">3 &times; 1080 &times; 1350</span></div><p class="use">Cover, content, and CTA slides for field guides and sequences.</p><a class="open" href="templates/carousel.html">Open template</a></div>
         </div>
       </div>
@@ -1311,11 +1706,11 @@ section[id] { scroll-margin-top: 92px; }
       <span class="cap">LinkedIn covers</span>
       <div class="tpl-grid cols-2">
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1584" data-h="396" src="templates/linkedin-banner-company.html" title="Company banner preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1584" data-h="396" src="templates/linkedin-banner-company.html" title="Company banner preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Company banner</span><span class="dims">1584 &times; 396</span></div><p class="use">The company page cover: statement, services, proof.</p><a class="open" href="templates/linkedin-banner-company.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1584" data-h="396" src="templates/linkedin-banner-personal.html" title="Personal banner preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1584" data-h="396" src="templates/linkedin-banner-personal.html" title="Personal banner preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Personal banner</span><span class="dims">1584 &times; 396</span></div><p class="use">Employee profile cover with the avatar zone kept clear.</p><a class="open" href="templates/linkedin-banner-personal.html">Open template</a></div>
         </div>
       </div>
@@ -1325,11 +1720,11 @@ section[id] { scroll-margin-top: 92px; }
       <span class="cap">Presentation</span>
       <div class="tpl-grid cols-2">
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1920" data-h="1080" src="templates/presentation-deck.html#only-1" title="Deck preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1920" data-h="1080" src="templates/presentation-deck.html#only-1" title="Deck preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Presentation deck</span><span class="dims">7 masters &middot; 1920 &times; 1080</span></div><p class="use">Title, agenda, divider, content, stats, quote, and closing masters. Duplicate what you need, delete the rest.</p><a class="open" href="templates/presentation-deck.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1920" data-h="1080" src="templates/presentation-deck.html#only-5" title="Deck stats preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1920" data-h="1080" src="templates/presentation-deck.html#only-5" title="Deck stats preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Deck &middot; stats master</span><span class="dims">1920 &times; 1080</span></div><p class="use">The proof-point slide. Two standing claims plus your project number.</p><a class="open" href="templates/presentation-deck.html">Open template</a></div>
         </div>
       </div>
@@ -1339,15 +1734,15 @@ section[id] { scroll-margin-top: 92px; }
       <span class="cap">Documents &middot; US Letter</span>
       <div class="tpl-grid cols-3">
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="896" data-h="1136" src="templates/one-pager.html" title="One-pager preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="896" data-h="1136" src="templates/one-pager.html" title="One-pager preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">One-pager</span><span class="dims">Letter</span></div><p class="use">Service overview, handout, leave-behind PDF.</p><a class="open" href="templates/one-pager.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="896" data-h="1136" src="templates/letterhead.html" title="Letterhead preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="896" data-h="1136" src="templates/letterhead.html" title="Letterhead preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Letterhead</span><span class="dims">Letter</span></div><p class="use">Letters, memos, formal correspondence.</p><a class="open" href="templates/letterhead.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="896" data-h="1136" src="templates/proposal.html" title="Proposal preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="896" data-h="1136" src="templates/proposal.html" title="Proposal preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Proposal</span><span class="dims">4 &times; Letter</span></div><p class="use">Cover, approach, scope &amp; pricing, terms &amp; signatures.</p><a class="open" href="templates/proposal.html">Open template</a></div>
         </div>
       </div>
@@ -1357,11 +1752,11 @@ section[id] { scroll-margin-top: 92px; }
       <span class="cap">Collateral &middot; Business Card</span>
       <div class="tpl-grid cols-2">
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1050" data-h="600" src="templates/business-card.html#only-1" title="Business card front preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1050" data-h="600" src="templates/business-card.html#only-1" title="Business card front preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Business card &middot; front</span><span class="dims">1050 &times; 600</span></div><p class="use">Split panel: teal gradient with logo, white panel with name, title, contact details.</p><a class="open" href="templates/business-card.html">Open template</a></div>
         </div>
         <div class="tpl-card">
-          <div class="tpl-frame"><iframe data-w="1050" data-h="600" src="templates/business-card.html#only-2" title="Business card back preview"></iframe></div>
+          <div class="tpl-frame"><iframe tabindex="-1" data-w="1050" data-h="600" src="templates/business-card.html#only-2" title="Business card back preview"></iframe></div>
           <div class="tpl-meta"><div class="row"><span class="name">Business card &middot; back</span><span class="dims">1050 &times; 600</span></div><p class="use">Logo and five services on teal-to-green gradient.</p><a class="open" href="templates/business-card.html">Open template</a></div>
         </div>
       </div>
@@ -1370,7 +1765,7 @@ section[id] { scroll-margin-top: 92px; }
   </section>
 
   <!-- ================= VOICE ================= -->
-  <section class="section" id="voice">
+  <section class="section" id="voice" aria-label="Voice">
     <div class="section-head">
       <span class="dus-eyebrow dus-eyebrow--teal">Voice</span>
       <h2 class="dus-h1">Plain, confident, zero hype.</h2>
@@ -1403,7 +1798,7 @@ section[id] { scroll-margin-top: 92px; }
     </div>
     <div class="dus-micro dus-micro--dark">
       Source of truth: Dudley Land Company brand guidelines + this system<br>
-      Templates &amp; usage: see README-FOR-DUS.md &middot; V3.0 &middot; August 2026
+      Templates &amp; usage: see README-FOR-DUS.md &middot; V3.0 &middot; September 2026
     </div>
   </div>
 </footer>
@@ -1479,6 +1874,35 @@ section[id] { scroll-margin-top: 92px; }
   }, { rootMargin: '-25% 0px -65% 0px' });
 
   sections.forEach(function (s) { observer.observe(s); });
+
+  /* click-to-copy on tokens */
+  document.querySelectorAll('.var-name, .hex, .sp-token').forEach(function (el) {
+    el.classList.add('copyable');
+    el.title = 'Click to copy';
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('click', copyToken);
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copyToken.call(el); }
+    });
+  });
+
+  function copyToken() {
+    var el = this;
+    var text = el.textContent.trim();
+    navigator.clipboard.writeText(text).then(function () {
+      var toast = document.createElement('span');
+      toast.className = 'copy-toast';
+      toast.textContent = 'Copied';
+      el.style.position = 'relative';
+      el.appendChild(toast);
+      requestAnimationFrame(function () { toast.classList.add('is-visible'); });
+      setTimeout(function () {
+        toast.classList.remove('is-visible');
+        setTimeout(function () { toast.remove(); }, 200);
+      }, 900);
+    });
+  }
 })();
 </script>
 </body>

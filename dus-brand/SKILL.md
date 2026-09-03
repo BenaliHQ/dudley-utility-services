@@ -77,6 +77,88 @@ A 4px-base scale. Use these tokens for **all** margin, padding, and gap values. 
 - Text flow spacing is locked: eyebrow→heading and heading→body are `--sp-4`, body→CTA is `--sp-8`.
 - Section rhythm: `--sp-20` (80px) between sections, `--sp-16` (64px) from section heading to content, `--sp-12` (48px) for container horizontal padding.
 
+## Icon system
+
+Every icon is a Remix Icon outline with the DUS teal-to-green gradient as its stroke. Three sizes on the 4px grid, squared containers only.
+
+### Size tokens
+
+| Token | px | Use |
+|---|---|---|
+| `--icon-sm` | 24 | Inline, nav, tight contexts |
+| `--icon-md` | 40 | Card feature icons, content icons |
+| `--icon-lg` | 48 | Prominent feature icons, Kudu cards |
+
+### Rules
+
+- **Source:** Remix Icon (remixicon.com), always the `-line` suffix variant. Outlined only, never filled or solid.
+- **Stroke:** `stroke-width="1.2"`, `stroke-linecap="round"`, `stroke-linejoin="round"`. No fills.
+- **Color:** DUS gradient teal→green via SVG `<linearGradient>`, horizontal left to right. Never flat single-color.
+- **Containers:** Squared `--r-md` (6px). Never circles, never `border-radius: 50%`. Coverage badges use solid teal or green bg with white stroke.
+
+### Canonical gradient `<defs>` block (copy once per page)
+
+```html
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <linearGradient id="dus-grad" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/>
+    </linearGradient>
+    <linearGradient id="dus-grad-40" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/>
+    </linearGradient>
+  </defs>
+</svg>
+```
+
+Use `dus-grad` for 24×24 viewBox icons, `dus-grad-40` for 40×40 viewBox icons.
+
+### Approved icon catalog
+
+| Icon | Remix name | viewBox | Context |
+|---|---|---|---|
+| Lightning | flashlight-line | 40×40 | Electric transmission/distribution |
+| Water drop | drop-line | 40×40 | Water & wastewater |
+| Broadcast | wifi-line | 40×40 | Fiber optics & broadband |
+| Flame | fire-line | 40×40 | Gas utility |
+| Monitor | mac-line | 24×24 | Kudu: real-time visibility |
+| Book | book-open-line | 24×24 | Kudu: project record |
+| Map | map-2-line | 24×24 | Kudu: project mapping |
+| Archive | archive-line | 24×24 | Kudu: document control |
+| Users | group-line | 24×24 | People: recruited teams |
+| Pin | map-pin-line | 24×24 | People: local knowledge |
+| Shield | shield-check-line | 24×24 | People: private ownership |
+| Document | file-text-line | 24×24 | Landowners: easement docs |
+| Phone | smartphone-line | 24×24 | Landowners: advance notice |
+| User | user-line | 24×24 | Landowners: local agent |
+| Balance | scales-line | 24×24 | Landowners: fair compensation |
+| Flag | flag-line | 24×24 | Heritage: 1980 founding |
+| Monitor | computer-line | 24×24 | Heritage: digital era |
+| Chart | line-chart-line | 24×24 | Heritage: shale expansion |
+| Trophy | trophy-line | 24×24 | Heritage: Company of the Year |
+
+### Coverage badge variant
+
+Coverage map icons use white stroke on a solid background, not the gradient. Wrap in `.dus-icon-badge` with a color modifier:
+
+```html
+<div class="dus-icon-badge dus-icon-badge--teal" style="width:48px;height:48px">
+  <svg viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/>
+    <!-- ... -->
+  </svg>
+</div>
+```
+
+Colors: `--teal` (teal-500), `--green` (green-500), `--sky` (teal-400).
+
+### Utility classes
+
+- `.dus-icon` — block element, default `--icon-md` (40px)
+- `.dus-icon--sm` / `--md` / `--lg` — size modifiers
+- `.dus-icon-badge` — solid-color squared container, inner SVG at 54%
+- `.dus-icon-badge--teal` / `--green` / `--sky` — badge color modifiers
+
 ## Hard rules (violating any one of these breaks the brand)
 
 1. **Colors are locked.** DUS Teal `#015270` (primary), Dudley Green `#41BE48` (accent only), the neutral ramp, white. Never introduce any other hue. Green is seasoning: if it covers more than ~8% of a composition, cut some.
