@@ -665,6 +665,18 @@ p, li { text-wrap: pretty; }
 @media (max-width: 900px) { .timeline5 { grid-template-columns: repeat(2, 1fr); } }
 .dus-standard-line { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--green-500);
   font-size: 21px; font-weight: 700; line-height: 1.45; color: var(--teal-700); max-width: 720px; }
+
+/* ---------- History — typographic peak, narrative rhythm ---------- */
+#history { padding: 96px 0; }
+#history .sec-title { font-size: clamp(40px, 5.5vw, 64px); margin-bottom: 32px; }
+#history .credstrip { margin-top: 48px; margin-bottom: 0; }
+.history-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 36px; margin-top: 16px; }
+.history-pair .story { margin-top: 0; max-width: none; }
+@media (max-width: 900px) {
+  #history { padding: 66px 0; }
+  .history-pair { grid-template-columns: 1fr; }
+}
+
 .why-grid { margin-top: 36px; }
 /* What-we-do: ruled two-column list (Reese's V3 square-marker chips), not cards */
 .svc-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; margin-top: 36px; counter-reset: svc; }
@@ -741,7 +753,16 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
      past; present-tense DUS copy says land professionals. -->
 <section id="history" class="sec">
   <div class="wrap">
-    <div class="credstrip timeline5 dus-ticks reveal" style="margin-bottom: 44px;">
+    <div class="dus-eyebrow dus-eyebrow--teal reveal">Our history</div>
+    <h2 class="dus-display sec-title reveal">It started in a courthouse</h2>
+    <p class="story reveal">Tom Dudley entered the land business in 1974, at age 24. He spent his early years running courthouse to courthouse across Oklahoma, Kansas, and Texas, pulling deed books and interpreting records. By 1980 he'd struck out on his own.</p>
+    <div class="history-pair">
+      <p class="story reveal">He built the company's reputation on respect for people and consistent innovation. He secured lines of credit so his landmen were paid every two weeks. When downturns emptied the field, he went back into it himself and rebuilt more than once.</p>
+      <p class="story reveal">Dudley pioneered automation and database management in the land business in the late 1980s. Tom hauled early Compaq &ldquo;suitcase&rdquo; computers through airports and set them up in front of clients to prove lease and land records could run digitally.</p>
+    </div>
+    <p class="story reveal" style="margin-top: 16px;">Nearly twenty years in, Tom brought on a partner who shared his values, and the company expanded. Its early digital edge made it a leader as shale and horizontal drilling reshaped the industry in the 2000s.</p>
+    <p class="story reveal" style="margin-top: 16px;">Today the company runs under its next generation of leadership. The Houston Association of Professional Landmen named Dudley Land Company its 2025 Company of the Year, and the American Association of Professional Landmen named our president, Brent Broussard, its 2026 Face of the Industry. Brent also hosts The Land Department, a podcast sharing the state of land and energy as we see it: challenges and solutions across the industry, tactics for producing the best work, and stories from experts in the field.</p>
+    <div class="credstrip timeline5 dus-ticks reveal">
       <div class="cred">
         <div class="value">1974</div>
         <div class="label">Tom Dudley enters<br>the land business</div>
@@ -764,15 +785,8 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
       </div>
       <span class="tick-b"></span>
     </div>
-    <div class="dus-eyebrow dus-eyebrow--teal reveal">Our history</div>
-    <h2 class="dus-h1 sec-title reveal">It started in a courthouse</h2>
-    <p class="story reveal">Tom Dudley entered the land business in 1974, at age 24. He spent his early years running courthouse to courthouse across Oklahoma, Kansas, and Texas, pulling deed books and interpreting records. By 1980 he'd struck out on his own.</p>
-    <p class="story reveal" style="margin-top: 16px;">He built the company's reputation on respect for people and consistent innovation. He secured lines of credit so his landmen were paid every two weeks. When downturns emptied the field, he went back into it himself and rebuilt more than once.</p>
-    <p class="story reveal" style="margin-top: 16px;">Dudley pioneered automation and database management in the land business in the late 1980s. Tom hauled early Compaq &ldquo;suitcase&rdquo; computers through airports and set them up in front of clients to prove lease and land records could run digitally.</p>
-    <p class="story reveal" style="margin-top: 16px;">Nearly twenty years in, Tom brought on a partner who shared his values, and the company expanded. Its early digital edge made it a leader as shale and horizontal drilling reshaped the industry in the 2000s.</p>
-    <p class="story reveal" style="margin-top: 16px;">Today the company runs under its next generation of leadership. The Houston Association of Professional Landmen named Dudley Land Company its 2025 Company of the Year, and the American Association of Professional Landmen named our president, Brent Broussard, its 2026 Face of the Industry. Brent also hosts The Land Department, a podcast sharing the state of land and energy as we see it: challenges and solutions across the industry, tactics for producing the best work, and stories from experts in the field.</p>
     <p class="dus-standard-line reveal">Dudley Utility Services applies the same people, systems, and standards to utility infrastructure.</p>
-  
+
   </div>
 </section>
 
