@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
 <title>Meet With Dudley — Dudley Utility Services</title>
 <meta name="description" content="Tell us about your utility project and we'll come back with how we'd approach it. Land and right-of-way services for electric, water, gas, and fiber infrastructure.">
 <meta property="og:title" content="Meet With Dudley — Dudley Utility Services">
@@ -11,6 +11,7 @@
 <meta property="og:image" content="https://dudley-utility-services.vercel.app/og/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://dudley-utility-services.vercel.app/pages/meet-with-dudley">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -719,45 +720,19 @@ p, li { text-wrap: pretty; }
 
 <main>
 <!-- ========================= FORM =================================== -->
-<!-- V1 submit builds a prefilled email to info@dudley-utility.com.
-     The action swaps to a HubSpot embed or an api/ function once Reese
-     settles form handling; fields and required-ness are the spec
-     (Jenny, 9/1): first name, last name, email, phone, company,
-     message, all required. -->
 <section class="mwd-form-sec sec-alt">
   <div class="wrap">
     <div class="mwd-card">
-      <form id="mwd-form" novalidate>
-        <div class="mwd-grid">
-          <div class="mwd-field">
-            <label for="mwd-first">First name <span class="req" aria-hidden="true">*</span></label>
-            <input id="mwd-first" name="first_name" type="text" autocomplete="given-name" required>
-          </div>
-          <div class="mwd-field">
-            <label for="mwd-last">Last name <span class="req" aria-hidden="true">*</span></label>
-            <input id="mwd-last" name="last_name" type="text" autocomplete="family-name" required>
-          </div>
-          <div class="mwd-field">
-            <label for="mwd-email">Email <span class="req" aria-hidden="true">*</span></label>
-            <input id="mwd-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="mwd-field">
-            <label for="mwd-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
-            <input id="mwd-phone" name="phone" type="tel" autocomplete="tel" required>
-          </div>
-          <div class="mwd-field mwd-field--full">
-            <label for="mwd-company">Company name <span class="req" aria-hidden="true">*</span></label>
-            <input id="mwd-company" name="company" type="text" autocomplete="organization" required>
-          </div>
-          <div class="mwd-field mwd-field--full">
-            <label for="mwd-message">Tell us about your project <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="mwd-message" name="message" required></textarea>
-          </div>
-        </div>
-        <div class="mwd-actions">
-          <button class="dus-btn dus-btn--primary" type="submit">Start the conversation</button>
-        </div>
-      </form>
+      <div id="hs-form-container"></div>
+      <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          portalId: "21023548",
+          formId: "cb0a7bf7-0db2-491c-b793-b5742173b2c8",
+          region: "na2",
+          target: "#hs-form-container"
+        });
+      </script>
     </div>
   </div>
 </section>
@@ -773,33 +748,6 @@ p, li { text-wrap: pretty; }
   </div>
 </section>
 
-<script>
-(function() {
-  var form = document.getElementById('mwd-form');
-  var fields = form.querySelectorAll('[required]');
-  fields.forEach(function(f) {
-    f.addEventListener('input', function() { f.classList.remove('invalid'); });
-  });
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var valid = true;
-    fields.forEach(function(f) {
-      if (!f.value.trim()) { f.classList.add('invalid'); valid = false; }
-      else { f.classList.remove('invalid'); }
-    });
-    if (!valid) return;
-    var v = function(id) { return document.getElementById(id).value.trim(); };
-    var subject = 'Meet With Dudley: ' + v('mwd-company');
-    var body = 'Name: ' + v('mwd-first') + ' ' + v('mwd-last') + '\n'
-      + 'Email: ' + v('mwd-email') + '\n'
-      + 'Phone: ' + v('mwd-phone') + '\n'
-      + 'Company: ' + v('mwd-company') + '\n\n'
-      + 'About the project:\n' + v('mwd-message');
-    window.location.href = 'mailto:info@dudley-utility.com?subject='
-      + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  });
-})();
-</script>
 
 <!-- Mobile nav burger toggle -->
 <script>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
 <title>Dudley Utility Services — Our Team</title>
 <meta name="description" content="Dudley Utility Services runs on the people, systems, and standards Dudley Land Company has built since 1980, led by 35+ combined years in utility land.">
 <meta property="og:title" content="Dudley Utility Services — Our Team">
@@ -11,6 +11,7 @@
 <meta property="og:image" content="https://dudley-utility-services.vercel.app/og/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://dudley-utility-services.vercel.app/pages/team">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -666,15 +667,54 @@ p, li { text-wrap: pretty; }
 .dus-standard-line { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--green-500);
   font-size: 21px; font-weight: 700; line-height: 1.45; color: var(--teal-700); max-width: 720px; }
 
-/* ---------- History — typographic peak, narrative rhythm ---------- */
+/* ---------- History — typographic peak + timeline infographic ---------- */
 #history { padding: 96px 0; }
-#history .sec-title { font-size: clamp(40px, 5.5vw, 64px); margin-bottom: 32px; }
-#history .credstrip { margin-top: 48px; margin-bottom: 0; }
-.history-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 36px; margin-top: 16px; }
-.history-pair .story { margin-top: 0; max-width: none; }
+#history .sec-title { font-size: clamp(40px, 5.5vw, 64px); margin-top: 18px; margin-bottom: 32px; }
+
+.timeline { position: relative; margin-top: 48px; margin-bottom: 32px; }
+.tl-nodes {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 16px;
+  position: relative;
+}
+.tl-nodes::before {
+  content: ""; position: absolute;
+  left: 0; right: 0; top: 23px;
+  height: 2.5px;
+  background: linear-gradient(to right, var(--teal-500), var(--green-500));
+  z-index: 1;
+}
+.tl-node {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; position: relative; z-index: 2;
+}
+.tl-icon {
+  width: 48px; height: 48px; padding: 10px;
+  background: var(--white); border: 1px solid var(--neutral-200);
+  border-radius: 0; margin-bottom: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+.tl-icon svg { width: 100%; height: 100%; display: block; }
+.tl-year {
+  font-weight: 900; font-size: clamp(24px, 2.9vw, 42px);
+  letter-spacing: -0.035em; line-height: 0.9; color: var(--teal-500);
+  margin-bottom: 10px; font-variant-numeric: lining-nums tabular-nums;
+}
+.tl-label {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-2); line-height: 1.4;
+}
 @media (max-width: 900px) {
   #history { padding: 66px 0; }
-  .history-pair { grid-template-columns: 1fr; }
+  .tl-nodes { gap: 0 8px; }
+  .tl-icon { width: 36px; height: 36px; padding: 7px; margin-bottom: 12px; }
+  .tl-nodes::before { top: 17px; }
+  .tl-year { font-size: clamp(18px, 4.5vw, 28px); }
+  .tl-label { font-size: 10px; letter-spacing: 0.08em; }
+}
+@media (max-width: 600px) {
+  .timeline { overflow-x: auto; -webkit-overflow-scrolling: touch;
+    margin-left: -24px; margin-right: -24px; padding: 0 24px; }
+  .tl-nodes { min-width: 420px; }
 }
 
 .why-grid { margin-top: 36px; }
@@ -756,35 +796,34 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
     <div class="dus-eyebrow dus-eyebrow--teal reveal">Our history</div>
     <h2 class="dus-display sec-title reveal">It started in a courthouse</h2>
     <p class="story reveal">Tom Dudley entered the land business in 1974, at age 24. He spent his early years running courthouse to courthouse across Oklahoma, Kansas, and Texas, pulling deed books and interpreting records. By 1980 he'd struck out on his own.</p>
-    <div class="history-pair">
-      <p class="story reveal">He built the company's reputation on respect for people and consistent innovation. He secured lines of credit so his landmen were paid every two weeks. When downturns emptied the field, he went back into it himself and rebuilt more than once.</p>
-      <p class="story reveal">Dudley pioneered automation and database management in the land business in the late 1980s. Tom hauled early Compaq &ldquo;suitcase&rdquo; computers through airports and set them up in front of clients to prove lease and land records could run digitally.</p>
-    </div>
+    <p class="story reveal" style="margin-top: 16px;">He built the company's reputation on respect for people and consistent innovation. He secured lines of credit so his landmen were paid every two weeks. When downturns emptied the field, he went back into it himself and rebuilt more than once.</p>
+    <p class="story reveal" style="margin-top: 16px;">Dudley pioneered automation and database management in the land business in the late 1980s. Tom hauled early Compaq &ldquo;suitcase&rdquo; computers through airports and set them up in front of clients to prove lease and land records could run digitally.</p>
     <p class="story reveal" style="margin-top: 16px;">Nearly twenty years in, Tom brought on a partner who shared his values, and the company expanded. Its early digital edge made it a leader as shale and horizontal drilling reshaped the industry in the 2000s.</p>
-    <p class="story reveal" style="margin-top: 16px;">Today the company runs under its next generation of leadership. The Houston Association of Professional Landmen named Dudley Land Company its 2025 Company of the Year, and the American Association of Professional Landmen named our president, Brent Broussard, its 2026 Face of the Industry. Brent also hosts The Land Department, a podcast sharing the state of land and energy as we see it: challenges and solutions across the industry, tactics for producing the best work, and stories from experts in the field.</p>
-    <div class="credstrip timeline5 dus-ticks reveal">
-      <div class="cred">
-        <div class="value">1974</div>
-        <div class="label">Tom Dudley enters<br>the land business</div>
+    <div class="timeline reveal">
+      <div class="tl-nodes">
+        <div class="tl-node">
+          <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="tg1"><stop offset="0" stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M5 4v16M5 4h10l-2.5 3.5L15 11H5" stroke="url(#tg1)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          <div class="tl-year">1980</div>
+          <div class="tl-label">Dudley Land<br>Company founded</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="tg2"><stop offset="0" stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M3 5h18v11H3zM8 20h8M12 16v4" stroke="url(#tg2)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          <div class="tl-year">Late '80s</div>
+          <div class="tl-label">Land records<br>go digital</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="tg3"><stop offset="0" stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M3 17l5-5 4 4 9-9M15 7h6v6" stroke="url(#tg3)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          <div class="tl-year">2000s</div>
+          <div class="tl-label">Expansion through<br>the shale era</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="tg4"><stop offset="0" stop-color="#015270"/><stop offset="1" stop-color="#41BE48"/></linearGradient></defs><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z" stroke="url(#tg4)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-label">Company of<br>the Year</div>
+        </div>
       </div>
-      <div class="cred">
-        <div class="value">1980</div>
-        <div class="label">Dudley Land<br>Company founded</div>
-      </div>
-      <div class="cred">
-        <div class="value">Late '80s</div>
-        <div class="label">Land records<br>go digital</div>
-      </div>
-      <div class="cred">
-        <div class="value">2000s</div>
-        <div class="label">Expansion through<br>the shale era</div>
-      </div>
-      <div class="cred">
-        <div class="value">2025</div>
-        <div class="label">Company of<br>the Year</div>
-      </div>
-      <span class="tick-b"></span>
     </div>
+    <p class="story reveal" style="margin-top: 16px;">Today the company runs under its next generation of leadership. The Houston Association of Professional Landmen named Dudley Land Company its 2025 Company of the Year, and the American Association of Professional Landmen named our president, Brent Broussard, its 2026 Face of the Industry. Brent also hosts The Land Department, a podcast sharing the state of land and energy as we see it: challenges and solutions across the industry, tactics for producing the best work, and stories from experts in the field.</p>
     <p class="dus-standard-line reveal">Dudley Utility Services applies the same people, systems, and standards to utility infrastructure.</p>
 
   </div>
