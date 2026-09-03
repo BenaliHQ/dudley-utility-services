@@ -989,11 +989,16 @@ p, li { text-wrap: pretty; }
 </main>
 
 <script>
+// Job data. Fields map 1:1 to the Paycor ATOM feed so this array can be
+// swapped for the live feed without touching the markup:
+//   title -> title | loc/more -> newton:location + newton:state
+//   remote -> newton:remotetype (blank when Paycor carries none)
+//   work/bring -> summary
 var JOBS = [
   {
     id: 'row-agent',
     title: 'Right-of-Way Agent',
-    type: 'Field',
+    remote: 'Fully Remote',
     loc: 'Texas',
     more: ['Oklahoma', 'New Mexico'],
     work: "You'll represent utility projects with the community members along the route: meeting with them on their own ground, presenting written offers, negotiating easements, and keeping every commitment you make on the record.",
@@ -1006,7 +1011,7 @@ var JOBS = [
   {
     id: 'title-agent',
     title: 'Title Agent',
-    type: 'Field',
+    remote: 'Fully Remote',
     loc: 'Oklahoma',
     more: [],
     work: "You'll run title at the courthouse and online: chains of title, ownership reports, and curative work that holds up when the project depends on it.",
@@ -1019,7 +1024,7 @@ var JOBS = [
   {
     id: 'land-manager',
     title: 'Land Manager',
-    type: 'Office + field',
+    remote: 'Hybrid',
     loc: 'Texas',
     more: [],
     work: "You'll run the land effort on utility projects: staffing to parcel count, keeping every file current and complete, and being the person the client calls first.",
@@ -1032,7 +1037,7 @@ var JOBS = [
   {
     id: 'project-coordinator',
     title: 'Project Coordinator',
-    type: 'Office',
+    remote: '',
     loc: 'Texas',
     more: [],
     work: "You'll keep the project record current and complete: parcel files, status reports, and the documentation that makes construction handoff and closeout clean.",
@@ -1055,7 +1060,7 @@ function renderDetail(job) {
   }
   var d = document.getElementById('jobDetail');
   d.innerHTML =
-    '<span class="type-pill">' + job.type + '</span>' +
+    (job.remote ? '<span class="type-pill">' + job.remote + '</span>' : '') +
     '<div class="dtitle">' + job.title + '</div>' +
     '<div class="dloc">' + locHtml + moreHtml + '</div>' +
     '<a class="dus-btn dus-btn--primary" href="' + APPLY_MAIL +
@@ -1094,7 +1099,7 @@ function selectJob(id) {
     b.setAttribute('aria-selected', 'false');
     b.innerHTML = '<span class="jtitle">' + job.title + '</span>' +
       '<span class="jmeta">' + job.loc + (job.more.length ? ' +' + job.more.length + ' more' : '') +
-      ' &middot; ' + job.type + '</span>';
+      (job.remote ? ' &middot; ' + job.remote : '') + '</span>';
     b.addEventListener('click', function () { selectJob(job.id); });
     list.appendChild(b);
   });
