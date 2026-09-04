@@ -542,6 +542,22 @@ p, li { text-wrap: pretty; }
 .lo-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .lo-photo { width: 100%; height: auto; display: block; object-fit: cover; border-radius: var(--r-md); }
 
+
+/* ---------- Responsive overrides ----------------------------------------
+   These rules exist earlier in the stylesheet but were defeated by base
+   rules declared after them, so mobile nav and stacked layouts never
+   applied. Re-declared last so the media queries actually win.
+   Fixed 9/4 after Jenny reported the mobile header and community band. */
+@media (max-width: 900px) {
+  .lo-split { grid-template-columns: 1fr; gap: 32px; }
+  .site-nav { padding: 0 24px; }
+  .site-nav-inner { height: 64px; }
+  .site-nav-links { display: none; }
+  .nav-burger { display: block; }
+}
+@media (max-width: 600px) {
+  .lo-split { gap: 24px; }
+}
 </style>
 </head>
 <body>
