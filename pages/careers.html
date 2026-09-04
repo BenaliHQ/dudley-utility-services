@@ -375,6 +375,10 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
   font-weight: 700; letter-spacing: -0.01em; color: var(--teal-500); text-wrap: balance; }
 .assoc-lede::after { content: ""; display: block; width: 28px; height: 4px; margin: 16px auto 0; background: var(--green-500); }
 .award .dus-h3 { text-wrap: balance; }
+.assoc-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+.assoc-grid > * { flex: 0 1 calc((100% - 44px) / 3); }
+@media (max-width: 900px) { .assoc-grid > * { flex-basis: calc((100% - 22px) / 2); } }
+@media (max-width: 600px) { .assoc-grid > * { flex-basis: 100%; } }
 
 /* .note — REMOVED accent bar per brand learning 2026-08-25 */
 .note { margin-top: 30px; padding: 22px 26px; background: var(--white);
@@ -982,8 +986,10 @@ p, li { text-wrap: pretty; }
         <p class="award-sub">American Association of Professional Landmen &middot; Brent Broussard</p>
       </div>
     </div>
-    <p class="assoc-lede reveal">Our team members have held appointed seats in these organizations.</p>
-    <div class="grid-3" style="margin-top: 24px;">
+    <p class="assoc-lede reveal">Our team members hold board seats, chair committees, and stay active across these organizations.</p>
+    <!-- Expanded 9/4 per Brent Broussard (OCAPL, DAPL, MLBC, APLA, WEN) and
+         Garrett Gill (IRWA, SEE, EUCI) on the "DUS site going live" thread. -->
+    <div class="assoc-grid" style="margin-top: 24px;">
       <div class="dus-card dus-ticks pad award reveal reveal-d1"><span class="tick-b"></span>
         <div class="award-year">AAPL</div>
         <h3 class="dus-h3">American Association of Professional Landmen</h3>
@@ -995,6 +1001,38 @@ p, li { text-wrap: pretty; }
       <div class="dus-card dus-ticks pad award reveal reveal-d3"><span class="tick-b"></span>
         <div class="award-year">NHAPL</div>
         <h3 class="dus-h3">North Houston Association of Professional Landmen</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d1"><span class="tick-b"></span>
+        <div class="award-year">OCAPL</div>
+        <h3 class="dus-h3">Oklahoma City Association of Professional Landmen</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d2"><span class="tick-b"></span>
+        <div class="award-year">DAPL</div>
+        <h3 class="dus-h3">Dallas Association of Petroleum Landmen</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d3"><span class="tick-b"></span>
+        <div class="award-year">MLBC</div>
+        <h3 class="dus-h3">Michael Late Benedum Chapter of the AAPL</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d1"><span class="tick-b"></span>
+        <div class="award-year">APLA</div>
+        <h3 class="dus-h3">Austin Professional Landmen&rsquo;s Association</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d2"><span class="tick-b"></span>
+        <div class="award-year">WEN</div>
+        <h3 class="dus-h3">Women&rsquo;s Energy Network</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d3"><span class="tick-b"></span>
+        <div class="award-year">IRWA</div>
+        <h3 class="dus-h3">International Right of Way Association</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d1"><span class="tick-b"></span>
+        <div class="award-year">SEE</div>
+        <h3 class="dus-h3">Southeastern Electric Exchange</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d2"><span class="tick-b"></span>
+        <div class="award-year">EUCI</div>
+        <h3 class="dus-h3">Electric Utility Consultants</h3>
       </div>
     </div>
 
