@@ -755,6 +755,45 @@ p, li { text-wrap: pretty; }
   .board-list { border-right: none; border-bottom: 1px solid var(--neutral-200); max-height: none; overflow-y: visible; }
   .board-detail { padding: 26px 22px; }
 }
+
+/* ---------- Responsive overrides ----------------------------------------
+   These rules exist earlier in the stylesheet but were defeated by base
+   rules declared after them, so mobile nav and stacked layouts never
+   applied. Re-declared last so the media queries actually win.
+   Fixed 9/4 after Jenny reported the mobile header and community band. */
+@media (max-width: 900px) {
+  .lo-split { grid-template-columns: 1fr; gap: 32px; }
+  .site-nav { padding: 0 24px; }
+  .site-nav-inner { height: 64px; }
+  .site-nav-links { display: none; }
+  .nav-burger { display: block; }
+  .benefit-cards { grid-template-columns: 1fr; }
+  .benefit-card { padding: 28px 22px; }
+  .culture-block { padding: 36px 24px; }
+  .resume-callout { padding: 26px 22px; }
+}
+@media (max-width: 600px) {
+  .board { margin-top: 24px; }
+  .board-list { max-height: none; }
+  .board-detail { padding: 22px 18px; }
+  .job-item { padding: 16px 18px; min-height: 44px; }
+  .job-item .jtitle { font-size: 16px; }
+  .close-single p { font-size: 17px; }
+  .lo-split { gap: 24px; }
+  .askfirst { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
+  .nav-dropdown-toggle svg { transition: none; }
+}
+
+/* Two-up stat strip must collapse on phones. The base `.credstrip--2` rule
+   outranks the responsive `.credstrip { 1fr }` (higher specificity on some
+   pages, `!important` on others), so at 390px each column was ~158px and
+   "HV+EHV" overflowed its box. Jenny caught it on the transmission page 9/4. */
+@media (max-width: 600px) {
+  .credstrip.credstrip--2 { grid-template-columns: 1fr !important; }
+}
 </style>
 
 <!-- Structured Data: JobPosting (Google for Jobs) -->
@@ -852,7 +891,7 @@ p, li { text-wrap: pretty; }
 <header class="hero field-teal-hero dus-grid-dark">
   <div class="wrap">
     <div class="dus-micro dus-micro--dark hero-kicker">Join Us</div>
-    <h1 class="dus-display">EXPERIENCE SOMETHING<br>DIFFERENT.</h1>
+    <h1 class="dus-display">EXPERIENCE SOMETHING <br>DIFFERENT.</h1>
     <p class="hero-lede">Work can take roughly a third of your life, and you deserve to spend that time where your ideas, family, and growth matter. You'll feel a real difference in a culture of innovation that respects your voice and invests in you.</p>
     <div class="actions">
       <a class="dus-btn dus-btn--primary" href="#start">Start your next chapter</a>

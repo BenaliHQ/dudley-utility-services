@@ -743,6 +743,30 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .careers-card .dus-btn { margin-top: 30px; }
 @media (max-width: 900px) { .credstrip--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 760px) { .svc-list { grid-template-columns: 1fr; } }
+
+/* ---------- Responsive overrides ----------------------------------------
+   These rules exist earlier in the stylesheet but were defeated by base
+   rules declared after them, so mobile nav and stacked layouts never
+   applied. Re-declared last so the media queries actually win.
+   Fixed 9/4 after Jenny reported the mobile header and community band. */
+@media (max-width: 900px) {
+  .lo-split { grid-template-columns: 1fr; gap: 32px; }
+  .site-nav { padding: 0 24px; }
+  .site-nav-inner { height: 64px; }
+  .site-nav-links { display: none; }
+  .nav-burger { display: block; }
+}
+@media (max-width: 600px) {
+  .lo-split { gap: 24px; }
+}
+
+/* Two-up stat strip must collapse on phones. The base `.credstrip--2` rule
+   outranks the responsive `.credstrip { 1fr }` (higher specificity on some
+   pages, `!important` on others), so at 390px each column was ~158px and
+   "HV+EHV" overflowed its box. Jenny caught it on the transmission page 9/4. */
+@media (max-width: 600px) {
+  .credstrip.credstrip--2 { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body>
