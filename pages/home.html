@@ -722,8 +722,8 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .lifecycle { list-style: none; display: flex; flex-wrap: wrap; align-items: stretch;
   gap: 0; margin: 40px 0 0; padding: 0; counter-reset: lc; }
 .lifecycle li { flex: 1 1 0; min-width: 150px; display: flex; align-items: center; position: relative; }
-.lifecycle li + li::before { content: ""; flex: 0 0 auto; width: 22px; height: 2px;
-  background: linear-gradient(90deg, var(--teal-300), var(--green-500)); }
+.lifecycle li + li::before { content: "\2192"; flex: 0 0 auto; padding: 0 12px;
+  color: var(--green-500); font-size: 20px; line-height: 1; }
 .lc-step { flex: 1 1 auto; display: block; padding: 20px 14px; text-align: center;
   border: 1px solid var(--neutral-200); border-top: 3px solid var(--green-500);
   background: var(--white); color: var(--teal-500);
@@ -735,20 +735,13 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .lifecycle-note { margin-top: 22px; font-size: 17px; line-height: 1.6; color: var(--text-2); max-width: 760px; }
 @media (max-width: 860px) {
   .lifecycle li { flex: 1 1 46%; }
-  .lifecycle li + li::before { display: none; }
-  .lifecycle { gap: 10px; }
+  .lifecycle li + li::before { padding: 0 8px; font-size: 17px; }
+  .lifecycle { gap: 10px 0; }
   .lifecycle li + li::after { left: 12px; }
 }
 
 /* ---- Capabilities disclosure -------------------------------------------- */
-.capbtn { display: inline-flex; align-items: center; gap: 12px; margin-top: 34px;
-  padding: 15px 26px; border: 1px solid var(--teal-500); border-radius: var(--r-md);
-  background: var(--white); color: var(--teal-500); text-decoration: none;
-  font-size: 13px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
-  transition: background 200ms ease, color 200ms ease, transform 200ms ease; }
-.capbtn::after { content: "\2192"; font-size: 16px; line-height: 1; }
-.capbtn:hover { background: var(--teal-500); color: var(--white); transform: translateY(-2px); }
-.capbtn:focus-visible { outline: 2px solid var(--green-500); outline-offset: 4px; }
+.capbtn { margin-top: 34px; }
 </style>
 </head>
 <body>
@@ -862,7 +855,7 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 
     <p class="lifecycle-note reveal">From the first ownership question through final closeout, our teams stay connected to the work, the landowners, and the project objectives.</p>
 
-    <a class="capbtn reveal" href="/pages/electric-transmission">Explore our capabilities</a>
+    <a class="dus-btn dus-btn--ghost capbtn reveal" href="/pages/electric-transmission">Explore our capabilities</a>
 
     <!-- ===== The six service descriptions, retired 2026-09-04 ==================
          Garrett, Onboarding #7: the toggle "pushes us over into transmission."
@@ -1236,6 +1229,5 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 })();
 </script>
 
-<script defer src="/review-widget.js"></script>
 </body>
 </html>
