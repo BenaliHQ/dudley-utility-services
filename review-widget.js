@@ -193,6 +193,15 @@
   }
 
   /* ---------- highlights ---------- */
+  /* Selections inside text-transform: uppercase elements come back transformed,
+     but the underlying text nodes keep their source casing. Match both ways. */
+  function indexOfLoose(hay, needle) {
+    if (!needle) return -1;
+    var i = hay.indexOf(needle);
+    if (i >= 0) return i;
+    return hay.toLowerCase().indexOf(needle.toLowerCase());
+  }
+
   function textNodesUnder(root) {
     var out = [];
     var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -227,10 +236,10 @@
       if (!c.quote) return;
       var idx = -1;
       if (c.prefix || c.suffix) {
-        idx = plain.indexOf((c.prefix || '') + c.quote + (c.suffix || ''));
+        idx = indexOfLoose(plain, (c.prefix || '') + c.quote + (c.suffix || ''));
         if (idx >= 0) idx += (c.prefix || '').length;
       }
-      if (idx < 0) idx = plain.indexOf(c.quote);
+      if (idx < 0) idx = indexOfLoose(plain, c.quote);
       if (idx < 0) return; /* text changed since the comment; it still shows in the sidebar */
       markRange(nodes, idx, idx + c.quote.length, c);
       /* re-walk after DOM mutation so later offsets stay correct */
@@ -280,9 +289,9 @@
       selBtn.style.left = window.scrollX + Math.max(10, rect.left + rect.width / 2 - 40) + 'px';
       var nodes = textNodesUnder(document.body);
       var plain = nodes.map(function (n) { return n.nodeValue; }).join('');
-      var i = plain.indexOf(text);
+      var i = indexOfLoose(plain, text);
       pendingCandidate = {
-        quote: text,
+        quote: i >= 0 ? plain.substr(i, text.length) : text,
         prefix: i > 0 ? plain.slice(Math.max(0, i - 30), i) : '',
         suffix: i >= 0 ? plain.slice(i + text.length, i + text.length + 30) : ''
       };
