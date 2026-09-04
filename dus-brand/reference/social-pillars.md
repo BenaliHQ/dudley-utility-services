@@ -1,189 +1,611 @@
 # DUS Social Content Pillars
 
-**Canonical.** This file is the settled foundation for DUS social content. Every post inherits from it; when the pillar set changes, it changes here first. Voice: `voice.md` governs, no exceptions. Working mirror and review trail live in Jenny's WorkDesk vault (dus-positioning project). Settled by Jenny 2026-08-06; Onboarding 3 (8/7) feedback applied 2026-08-13; **Onboarding 4, 5, the 8/24 tape backfill, and the water/fiber page rulings applied 2026-08-28.**
+**Canonical.** This file is the settled foundation for DUS social content. Every post inherits
+from it; when the pillar set changes, it changes here first. Voice: `voice.md` governs, no
+exceptions. Settled by Jenny 2026-08-06. Onboarding 3 applied 08-13; Onboarding 4, 5, the 8/24
+backfill and the water/fiber rulings applied 08-28. **Refreshed 2026-09-03 against the shipped
+website, the client's own 8/17–18 and 9/2 review rounds, and the first `content-ingest` run over
+all eight client sessions.**
 
-**What this is.** The four social pillars defined from the DUS perspective, each with the angles its example posts draw from. Per reference/pillar-definitions: the set maps to the four inherited Dudley values, industries are a dimension inside them, and certainty is the spine every pillar expresses without naming. Pillar titles are full thoughts, not nouns, so a person or an AI can route a piece of content by title alone (Jenny's ruling, 2026-08-06).
+---
 
-**The voice model (settled by Jenny, 2026-08-06).** Every piece of content gets written once from the company's voice and once more as the exact same piece tailored to Garrett's voice. A Savannah version joins the same pattern once her voice is established; the 8/7 and 8/21 tapes gave her real material (her own arc, the BD and client-growth remit, her water and storm-hardening explanations), so that may come sooner than planned.
+# Part 1 — The four pillars, simply
 
-**Where the content comes from.** The Drive reference library at `Dudley/DUS/Reference Library` (five docs, ~15,000 words, every claim confidence-marked). Write from the library, never from the raw tapes or from vault meeting notes. The pre-2026 messaging material is archived at `Dudley/DUS/_Archive — Pre-2026` and is banned as a source.
+Four pillars, mapped to the four Dudley values DUS inherits word for word. Industries are a
+dimension inside a pillar, never a pillar of their own. Certainty is the spine every pillar
+expresses without ever naming it.
 
-> [!warning] The library is the authority on proof, and this file defers to it
-> `DUS Proof, Claims, and Confidentiality` sorts every proof point into green, amber and red. **Pillar 4 was reconciled against it on 2026-08-28 and three entries were wrong** — the association story was filed as unpublishable when it's green, the $2M figure was treated as cleared when only the behaviour is, and a green retention data point was missing entirely. The cause was writing from vault meeting notes instead of the library. Before any proof claim ships from this file, re-read that document.
->
-> **What this library does not have:** a story bank, a take bank, or voice anchors. It carries capabilities, buyer intelligence and proof, which serve website and positioning work well and leave social short of the raw material posts run on. That gap is why pillar 4 stays thin, and closing it means a `content-ingest` run against a DUS subject roster — the skill has never been pointed at this client.
+| # | Pillar | Value | The one line |
+|---|---|---|---|
+| 1 | The people on the project are the project | The People | Who does the work decides how the work goes. |
+| 2 | Service gets measured twice | The Service | Two people judge us at once, and the community member comes first. |
+| 3 | How the work works | The Product | We show command of the work by showing the work. |
+| 4 | The work is the proof | The Example | Demonstrate it, never claim it. |
 
-## Standing rules that govern every post
-
-voice.md in full (three tests, never list, approved claims), plus:
-
-- **The byline test.** If the named person would read the post and think "that didn't happen to me," it can't ship in their voice.
-- **Never read as new.** The 45+ years belongs to Dudley Land Company, attributed by name, every time.
-- **Never teach the reader their own job.** These readers do this work daily. This breaks most often in the first sentence, so audit every hook and lede: if the subject is the industry's mechanics instead of our action, rewrite it. Fold the shared fact into a subordinate clause and lead with what we do.
-- **Never lead with condemnation or eminent domain.** A capability we can state mid-sentence or mid-list, never a headline, never the front of anything, and never prominent where community members will read it. Khalil made this cover social explicitly; Garrett ratified it twice. Savannah's frame is the shape: we keep records so complete that if a parcel ever takes the harder path, everything is organized and ready.
-- **Job title is "land professional," sitewide and in every post** (Garrett, 8/21). One term across all five services. Right-of-way professional, right-of-way agent, agent, utility professional, industry professional and project professional are all rejected.
-- **Outreach copy says community members or the community, never landowners** (Jenny, 8/25). Some of them are businesses, and "landowner" reads formal where the work is building relationships. Landowner survives only for title and acquisition mechanics: written offers, notifications, easements.
-- **No staffing-continuity claims in any form.** Leadership continuity is claimable. Same-people-start-to-finish, a core crew that follows your project, and one-agent-throughout are all banned. Continuity means Kudu plus company retention.
-- **No local-agent promises.** Familiarity with the project area is claimable; a guaranteed local agent is not.
-- **No cross-company expertise claims.** DUS and Dudley Land Company teams are separate in practice.
-- **Complexity drives cost.** Parcel count is an input to complexity and estimating texture, never the headline answer.
-- **Kudu is project intelligence and visibility, never dashboards.** Brent, via Savannah, 8/17: no real-time project dashboards exist. Custom project reporting and a cost dashboard do. Event-driven intelligence is defensible; the product claim isn't until Garrett's Power BI layer ships.
-- **Capability framing, not licensing claims** (8/14). State what DUS can work and where it has worked. The registrations and "licensed in roughly N states" constructions are retired.
-- **No client, project, route, or location names. No industry criticism.**
-- **Terminology.** Right-of-way never corridor. Client or utility company never buyer. Gas utility never gas pipeline. Secured never cleared. CCN not CPCN. Acres not feet. Water and wastewater, never water alone. Project and program are interchangeable (8/24 ruling, superseding the 8/13 call), so Garrett's own "programmatic work" is usable as-is.
-- **Retired display line.** "Delivering energy through land" is not to be used on any DUS surface unless the rule changes. The approved display line is "Creating certainty through strategic land solutions," never with a trademark symbol. The company tagline is Garrett's: **"Built on experience. Focused on execution."**
-- **Proof shape the client asked for themselves:** results-oriented specifics. Miles negotiated, voltages worked, obstacles secured, doors knocked.
-
-## What the business actually is (drives weighting)
-
-Garrett, 8/21: **85 to 90 percent of DUS's work for the next five years is electric transmission.** Transmission is also the front door. A client arrives for transmission, then asks for distribution, then asks for fiber. Three consequences for social:
-
-- **Transmission carries the feed.** Most posts should read as transmission work even when the method generalizes.
-- **Distribution lives here now.** It has no website page (folded into the transmission material, 8/21), so social is where distribution positioning gets expressed. Its pillar stands.
-- **Fiber is follow-on work, never a bundled build** (8/25). Never write it as something sold alongside transmission.
-- **Water is the coming boom** (Garrett, 8/21) and the thinnest evidence base after gas. Water content leans on the outreach obligation, which is where its land work actually gets won: no condemnation authority means consent carries everything.
-- **A client is not one buyer** (7/07). Transmission, distribution, fiber, gas and encroachment are separate departments with separate agreements. Never write "the utility" as a single decision-maker.
-
-## The production model (new, from the 8/21 core-competency ruling)
-
-Garrett stated it explicitly and Savannah closed it: **the core competencies do not change by service.** Only two functions vary, routing and siting, and construction support. Everything else runs on every project.
-
-That makes one method post reusable across five services with a genuine per-service adjustment rather than a find-and-replace. Write the method once under pillar 3, then dimension it: what changes on distribution is density and work-order cadence, on water the outreach load, on gas the department that buys it, on fiber that it arrives as follow-on work. Nothing else has to be re-argued.
+Pillar titles are full thoughts rather than nouns, so a person or an agent can route a piece of
+content by title alone.
 
 ---
 
 ## Pillar 1 — The people on the project are the project
 
-*Maps to: The People*
+**Value:** The People
 
-**The angle:** the people on a project determine how the project goes. DUS invests in the people who do the work: cross-training land professionals across every step, and recruiting through an engine Dudley Land Company has built since 1980. That investment is what the client feels.
+**In one line.** Who does the work decides how the work goes, and DUS invests in those people
+before a client ever meets them.
 
-**What it produces:** the culture-and-craft record. Posts that show what a utility land career at Dudley looks like, what cross-training means in practice, and why the person at the community member's door matters to the schedule.
+**The reader's question it answers.** *Who is actually going to show up on my project?*
 
-**Example post angles:**
-1. Trainability over pre-skill: what we actually look for when we hire a land professional. *(Flagship true story, pending Savannah's OK per the byline test: hired with zero right-of-way experience on raw talent, project coordinator to director, with the accounting-and-finance background regulated utilities demand. Garrett told it himself on 8/7, along with the foil: "we got the best people" is what everybody says, and the resumes show seven companies in as many years.)*
-2. What a cross-trained land professional knows that a specialist doesn't, walked through one stage handoff.
-3. Familiarity with the ground: what changes in a conversation when the land professional already knows the county. *(Revised 8/28. The prior version promised a local agent, which 8/14 banned. Familiarity is claimable; a local guarantee is not.)*
-4. Recruiting through a 45-year network: what it means to staff a project in weeks, attributed to Dudley Land Company by name.
-5. Employee first, client always, and what that ordering means in practice. *(Garrett's formulation; confirm phrasing against the 7/21 tape before shipping.)*
-6. Leadership continuity: 35+ combined years of utility land work, and what a client gets from the same leadership across a multi-year program. *(Added 8/28. The only continuity claim that survives the no-staffing-continuity rule. Figure from the client's own SOQ: Garrett 25+, Savannah 10+.)*
+**Belongs here:** hiring and what we look for. Cross-training across every step of the work. The
+recruiting engine Dudley Land Company has built since 1980. The dedicated W-2 workforce.
+Leadership continuity. What a utility land career at Dudley looks like. Why the person at a
+community member's door matters to the schedule.
 
-## Pillar 2 — Service gets measured twice
+**Does not belong here:** any promise about specific people staying on a specific project. The
+subject is the investment and the standard, never a personnel guarantee.
 
-*Maps to: The Service*
-
-**The angle:** exceptional service in utility land work gets judged by two people at once, the client watching the schedule and the budget, and the community member across the kitchen table. **Garrett and Savannah ranked those two, and the community came first** (8/14): representing the utility to its customers and communities outranks schedule and budget. Posts under this pillar show both getting the same standard, in that order.
-
-**What it produces:** the proof pillar. On-budget, on-schedule evidence accumulates here as DUS work completes. Until then, posts show the mechanisms that produce it: the schedule protected from the first staffing plan, the good-faith trio, a point of contact who answers through construction. The estimate colors this pillar rather than carrying it (8/7 weight check: it matters to roughly half of clients, and pricing models vary).
-
-**Example post angles:**
-1. Whose reputation is on the doorstep: why representing the client to its own customers outranks the schedule, and how that shows up in a single conversation. *(Promoted to first 8/28. It's the client's own ranking, stated on 8/14 and agreed by both.)*
-2. The in-service date is sacred: what signing on to a schedule means for how we staff and plan from day one. Garrett's words: "that end date is never going to change."
-3. The walk-away: when a schedule is unrealistic, we don't take the job (Garrett, 8/7). Certainty includes saying no.
-4. What a community member should expect in writing before anyone asks them to sign: the offer, the rights, the drawing.
-5. Continuity through construction: a point of contact who answers, from first knock through energization. *(Revised 8/28 to Savannah's exact framing, 8/14. The prior "one phone number" version was corrected on the call and risks the banned one-person-start-to-finish read.)*
-6. In budget, not under: why holding the estimate beats padding it. Complexity drives the number, with parcel count and ownership one input among several; pricing varies by contract (lump sum, time and materials, milestones), so this stays supporting color, never the lead. *(Revised 8/28: complexity leads, per the 8/21 ruling.)*
-
-## Pillar 3 — How the work works
-
-*Maps to: The Product*
-
-**The angle:** we show command of the work by showing the work, the challenges a right-of-way throws and what Dudley does about them. The reader knows this work inside and out, so nothing here explains their job to them; every post shows Dudley's way of handling something real.
-
-**What it produces:** the demonstrated-command record. Problem-shaped posts: what came up, what we did, what it protected. The depth position gets earned here without a single claim of expertise. The texture is the real week (8/7): association meetings, knocked doors, city council nights, open houses.
-
-**Example post angles:**
-1. Whose system your line list lives in decides what you inherit at closeout.
-2. Securing all necessary rights on a rebuild where the existing grant doesn't cover the work. *(Revised 8/28. The blanket-easement framing was cut on 8/14 for the all-necessary-rights construction; Savannah had also asked for more information on the original claim.)*
-3. Kudu, presented the way the category leader presents its platform: the working record the client logs into, with status moving on dated events. Project intelligence and visibility for risk management, never dashboards.
-4. Encroachments on a rebuild, hundreds on a single right-of-way (generalized), negotiated out ahead of the crews.
-5. Closeout and retainage: the file discipline that ends a project well is the discipline that ran it. *(Keep only if it reads as command rather than explanation, Jenny's call at Stage 2.)*
-6. More than easements: substation siting, line relocations, fiber negotiations. The breadth certainty covers (Garrett, 8/7; feeds Savannah's per-service statistics idea for carousel formats).
-7. **The method, dimensioned.** One post on how the work runs, then a per-service variant showing the single thing that changes. Only routing and siting and construction support actually vary by service (8/21), which is the honest and unusual thing to say out loud. *(Added 8/28. This is the reusable engine described in § The production model.)*
-8. Confidentiality inside a utility: why departments can't always talk to each other, and how we work inside that. *(Added 8/28. The information-firewall story is confirmed on the 7/30 tape in Garrett's own words, so it's publishable. Utilities bar cross-department talk because "companies are looking for power all the time." Write it as our operating discipline, never as a criticism of how utilities run.)*
-9. Water and wastewater without condemnation authority: what changes when consent is the only path. *(Added 8/28. Per the standing rule, condemnation appears as the absent option mid-post, never in the hook.)*
-
-## Pillar 4 — The work is the proof
-
-*Maps to: The Example*
-
-**The angle:** demonstrate expertise, never claim it. Garrett's own thesis: real business development is delivering on time and in budget. Posts under this pillar are receipts, outcomes held, challenges closed, case studies as DUS work completes, always anonymized per the confidentiality rule.
-
-**The boundary with pillar 3:** pillar 3 shows *how* Dudley works (method); pillar 4 shows *what that produced* (outcome). A post about negotiating encroachments belongs to pillar 3; a post about the rebuild that energized on schedule because of it belongs here.
-
-**What it produces:** the case-study bank. It starts thin by design and fills as work completes. Early posts tell generalized outcome stories from the proof bank; real anonymized program results attach as they land.
-
-> [!important] What fills this pillar: real stories
-> The posts here (and much of pillar 1) run on things that actually happened. We need Garrett and Savannah's real stories, challenges they walked into, what they did, how it ended, collected directly from them.
-> **Status 2026-08-28: still owed.** They committed on 8/7 to inventorying hurdle stories and per-service specifics (Savannah holds the note), and named real figures on the call. Neither the stories nor the figures have arrived in writing. It's the standing ask on the Onboarding #6 agenda. Nothing below publishes until the verified figures land.
-
-**Example post angles:**
-
-*Proof status below is reconciled against `DUS Proof, Claims, and Confidentiality` in the Drive reference library (2026-08-28). That document is the authority on what can ship; this list defers to it.*
-
-1. **GREEN — the community association negotiation.** Garrett offered the publishable shape himself: an opposition group on one of our projects, navigated to agreement. **Publish the shape, not a count.** He gave the denominator twice and it moved (212 of 215 on 21 July, 212 of 216 on 7 August), so either confirm the number with him or write it without one. Per the standing rule, condemnation appears mid-story, never in the lead. *(Corrected 8/28: previously filed here as unpublishable and quoting a disputed count. It's publishable today.)*
-2. **GREEN — retention on a program of projects.** On his largest prior utility program, 312 people worked one client's program with under 1% attrition, rotating between projects rather than off the account. Publishable unnamed, **framed as leadership's prior-program experience, never as a DUS record.** *(Added 8/28. Flag for Jenny: this sits close to the no-staffing-continuity line. It's a retention statistic about a past program rather than a promise about a client's build, which is why the library marks it green, but it wants a ruling before it ships.)*
-3. **GREEN — the voltage range.** HV and EHV, 69 kV to 765 kV on transmission surfaces. Savannah's note is the reason it matters: 765 is the gate question, the first thing a client asks, used as a proxy for familiarity. The SOQ keeps 34.5 kV as its floor because it also covers distribution and fiber; never mix the two on one surface.
-4. **GREEN as behaviour — the change-order give-back.** The story of giving money back and having it return as new work is publishable. **The $2M figure is not**, until Garrett signs off: it's his story and it involves a client's capital. Write the behaviour, leave the number out. *(Corrected 8/28: the earlier version put the figure in the headline and called the whole thing cleared. The 8/24 backfill confirmed he told the story; it did not clear the number.)*
-5. **GREEN — the estimate that held.** The two nine-mile lines told as an outcome, and the budget that didn't move.
-6. **AMBER — the miles-and-condemnation line.** Roughly 7,000 miles of right-of-way negotiated with under 2% condemnation. Garrett and Savannah workshopped it live on 8/7 as illustration rather than as a record, and neither figure has been verified since. **It also collides with the SOQ's 10,000+ miles and 40+ utility and public power clients** — 7,000 appears to be leadership's personal experience and 10,000+ the company's blended total. Never put them in the same sentence without resolving which is which. Sign-off needed on both.
-7. **AMBER — the scalability story.** A prior organisation grown from 125 to 1,300 people in three years, and a sole-sourced ten-year contract near $100 million requiring 150 people on the ground in 45 days. Strong evidence, belongs to a prior employer, so it frames as leadership experience and needs his sign-off.
-8. Reserved: the first DUS program closeout, told as a case study when it exists.
-9. Reserved: an on-schedule energization with the land work never on the critical path.
-
-**RED — never publish, recorded so a writer recognises them and stops:**
-
-- **Competitors.** Never name one, never characterise one, never build a contrast that depends on one. The privately-owned framing is the publishable form of the entire competitor argument.
-- **Live opportunities.** The Colorado water opportunity and its dollar figure, the Florida meeting, and any pipeline conversation in progress. They explain sequencing decisions in the vault; they never reach a surface.
-- **"Clients cannot accept entertainment."** Truer of policy than practice. The publishable version is that the work earns the business.
+**Routing test:** if you removed the people from the post and it still made its point, it isn't
+pillar 1.
 
 ---
 
-## Weighting (revised 2026-08-28)
+## Pillar 2 — Service gets measured twice
 
-Two facts still drive the near-term order: Garrett expects the DUS LinkedIn to out-pull everything as the professional legitimacy check ("our LinkedIn page for DUS is probably going to get more traffic than anything"), and they're in front of clients now, Tulsa the week of 2026-08-31. Warm leads look at the feed during exactly that window.
+**Value:** The Service
 
-1. **Pillar 3 first.** Needs no client input, demonstrates command immediately, feeds the legitimacy check. The dimensioned-method engine makes it the cheapest pillar to fill.
-2. **Pillar 1 second.** Real material in hand: the recruiting engine, leadership continuity, Savannah's story pending her OK.
-3. **Pillar 2 after its reweighting.** The community-first ranking leads, schedule certainty follows, the estimate colors.
-4. **Pillar 4 rises as verified figures land, then becomes the flagship.** Receipts are the client's own preferred proof shape, and they travel up the widened audience (director, VP, president). Angle 5 is publishable today, which gives the pillar a real opening post instead of a placeholder.
+**In one line.** Exceptional service here gets judged by two people at once, the client watching
+the schedule and the budget and the community member across the kitchen table, and the client
+themselves ranked the community first.
 
-**Service mix inside the pillars:** transmission carries the majority, matching the business. Distribution earns real airtime here because social is now its only surface. Water builds ahead of its boom. Gas stays light until the client supplies its material.
+**The reader's question it answers.** *What will it feel like to have you on my project, and what
+will my customers experience?*
 
-## Settled (Jenny, 2026-08-06, unchanged)
+**Belongs here:** representing the client to their own customers and communities. Schedule
+certainty and what protecting an in-service date requires from day one. The walk-away. The
+estimate and why holding it beats padding it. Continuity through construction. What a community
+member gets in writing, and when.
 
-- **All four pillar titles and framings** are final, including pillar 4's demonstrate-don't-claim redraw.
-- **Format set per pillar:** 2 text posts, 1 text + graphic, 1 document/carousel, 1 short-clip script.
-- **Voices:** every piece written from the company voice and the same piece tailored to Garrett; Savannah joins the pattern once her voice is established.
-- **Canonical home:** `dus-brand/reference/social-pillars.md` in the repo; the vault note is the working mirror.
-- **No Kudu hold.** Nothing about Kudu waits on Garrett.
-- One flag stays for Stage 2: pillar 3, angle 5 (closeout/retainage) ships only if it reads as command rather than explanation.
+**Does not belong here:** the mechanics of how a service is performed. That's pillar 3. This
+pillar is about the standard we hold, not the method we run.
 
-## Applied 2026-08-28 — Onboarding 4 and 5, the 8/24 backfill, and the water/fiber rulings
+**Routing test:** the post names a person we're accountable TO. If nobody is being served in it,
+it isn't pillar 2.
 
-The 8/13 pass was the last one. Six weeks of rulings had not reached this file, and several angles were actively out of compliance. What changed:
+---
 
-- **Terminology swept to "land professional"** throughout, per Garrett 8/21. Removed every instance of right-of-way agent and land manager.
-- **Three angles were violating standing rules and are rewritten:** pillar 1 angle 3 (local-agent promise, banned 8/14), pillar 2 angle 5 (one phone number, corrected 8/14), pillar 3 angle 2 (blanket easements, cut 8/14).
-- **Community-first ranking promoted** to pillar 2's lead angle. It's the client's own ordering from 8/14 and it outranks the schedule.
-- **Complexity replaces parcel count** as the cost answer wherever it appeared (8/21).
-- **Two holds lifted by the 8/24 tape backfill:** the $2M give-back and the information-firewall story are both confirmed in Garrett's own words on the 7/30 tape. The firewall becomes a new pillar 3 angle.
-- **Program/project ban reversed** (8/24, PR #53). Garrett's "programmatic work" is usable.
-- **New standing rules added:** no staffing-continuity claims, no cross-company expertise claims, capability framing over licensing claims, Kudu-never-dashboards, community members over landowners in outreach copy, and the never-teach rule sharpened to police hooks and ledes.
-- **New sections:** § What the business actually is (the 85–90% transmission fact and its consequences, including distribution's move to social-only) and § The production model (the core-competency ruling turned into a content engine).
-- **Publishable proof separated from held proof** in pillar 4. The SOQ figures clear; the 8/7 verbal figures still don't.
-- **Retired lines recorded:** "Delivering energy through land" is out; the tagline is "Built on experience. Focused on execution."
-- **Source of record changed** to the Drive reference library, with the pre-2026 material named as banned.
+## Pillar 3 — How the work works
+
+**Value:** The Product
+
+**In one line.** We show command of the work by showing the work, the problems a right-of-way
+throws and what we do about them.
+
+**The reader's question it answers.** *Do these people actually know how to do this?*
+
+**Belongs here:** method and mechanism. Title, survey, permitting, encroachments, closeout. Kudu
+and the project record. The one method dimensioned across five services. Confidentiality inside
+a utility. What changes when there's no condemnation authority. Problem-shaped posts: what came
+up, what we did, what it protected.
+
+**Does not belong here:** anything that explains the industry to the industry. The reader does
+this work daily. Every post here shows OUR way of handling something real, never how the work
+runs in general.
+
+**Routing test:** the post contains a mechanism a competitor couldn't copy into their own deck
+without lying. If it survives a logo swap, it isn't pillar 3.
+
+---
+
+## Pillar 4 — The work is the proof
+
+**Value:** The Example
+
+**In one line.** Receipts. Outcomes held, challenges closed, recognition earned, always
+anonymized on the client side.
+
+**The reader's question it answers.** *What have you actually done?*
+
+**Belongs here:** results and outcomes. Awards and appointed seats. Voltages executed. Miles
+negotiated. Program outcomes as DUS work completes. Case studies, always without a client,
+project, route or location name.
+
+**Does not belong here:** any figure not verified in writing, and any adjective standing in for
+a result. If the post can't name what happened, it belongs in pillar 3.
+
+**Routing test:** pillar 3 shows *how* Dudley works. Pillar 4 shows *what that produced*.
+Negotiating encroachments is pillar 3. The rebuild that energized on schedule because of it is
+pillar 4.
+
+**Garrett wrote the thesis himself** (2026-08-18): *"Relationships may create the first
+opportunity. Performance creates the next one. Our reputation should be built through how we
+lead, communicate, execute, and deliver, not through what we say about ourselves."*
+
+> [!warning] Recognition is not the same as per-service proof, and only one of them has arrived
+> The recognition block below is real, dated and third-party, and it gives this pillar a genuine
+> opening it never had. **The per-service work stories are still outstanding.** They were
+> committed to on 8/07, carried on every agenda since, and the 2026-08-28 session did not get
+> them: that tape ran on careers and on the two leaders' own origin stories, and the hurdle
+> stories, schedules, parcel counts and acquisition specifics were never asked for. Every entry
+> banked from 8/28 carries `Lane: none`. A future session has to ask for them directly, per
+> service, or this pillar stays a recognition pillar rather than a work pillar.
+
+---
+
+# Part 2 — The rules every post runs under
+
+`voice.md` in full (the three tests, the never list, the approved claims), plus these.
+
+## The gates that run before you draft
+
+These are pre-draft questions, not post-draft sweeps. Each one has been missed at least twice.
+
+1. **Never teach the reader their own job.** Before drafting any post, ask whose knowledge is the
+   subject. Our work ships; their industry doesn't. This kills whole post concepts, not just
+   sentences: a post whose subject is how the work runs in general gets cut, never reworded. It
+   breaks most often in the first line, so audit every hook and lede. The fix pattern is to fold
+   the shared fact into a subordinate clause and lead with our action.
+2. **Sweep the banned-term list mechanically.** Grep every draft against `voice.md` § Never.
+   Never trust memory of the rules. "Corridor" slipped into a shipped pillar six weeks after the
+   client banned it.
+3. **The byline test.** If the named person would read the post and think "that didn't happen to
+   me," it can't ship in their voice.
+4. **Community-facing copy addresses the community member as "you," in every sentence.** No third
+   person ("the people affected"), no mid-post pivot back to the utility.
+5. **Every figure traces to a green proof point.** Part 3 has the list. If it isn't there, it
+   doesn't ship.
+
+## Standing content rules
+
+- **Never read as new.** The 45+ years belongs to Dudley Land Company, attributed by name, every
+  time. DUS is the next evolution of a 45-year practice, never a new arrival.
+- **Never lead with condemnation or eminent domain.** A capability we can state mid-sentence or
+  mid-list, never a headline, never the front of anything, and never prominent where community
+  members read. Savannah's frame is the shape: we keep records so complete that if a parcel ever
+  takes the harder path, everything is organized and ready.
+- **Job title is "land professional," in every post** (Garrett, 8/21, restated in writing 8/17).
+  One term across all five services. Right-of-way professional, right-of-way agent, agent,
+  utility professional, industry professional and project professional are all rejected. On the
+  client's side of the table, their field staff are right-of-way agents or land representatives
+  and the people running the work are land managers.
+- **Outreach copy says community members or the community, never landowners.** Some of them are
+  businesses, and "landowner" reads formal where the work is building relationships. Landowner
+  survives only for title and acquisition mechanics: written offers, notifications, easements.
+- **No staffing-continuity claims in any form,** design intent included. Same-people-start-to-
+  finish, a core crew that follows your project, one-agent-throughout, and "a team built to stay
+  to closeout" are all banned. What IS claimable: leadership continuity, the dedicated W-2
+  workforce, company-level retention, and continuity carried by the record.
+- **No local-agent promises.** Familiarity with the project area is claimable; a guaranteed local
+  agent is not.
+- **No cross-company expertise claims,** and never present Dudley Land Company's safety record as
+  the DUS record. Garrett wrote that guardrail on himself (8/18) and it governs every 45-years
+  claim: name what belongs to DLC, what belongs to leadership, and what belongs to DUS.
+- **Complexity drives cost.** Garrett's written version: complexity drives the work, mileage alone
+  doesn't. Parcel count is an input and estimating texture, never the headline answer. Savannah
+  estimates off parcel count and says so; both are true, and neither runs as the whole story.
+- **Kudu is project intelligence and visibility.** Real-time project intelligence, real-time
+  project visibility, the current project record, project mapping and document control are all
+  client-approved and shipped. What stays barred is a real-time-dashboard product claim until
+  Garrett's Power BI layer exists.
+- **Capability framing, not licensing claims.** State what DUS can work and where it has worked.
+  Coverage is the lower 48, operating within each state's requirements. Never tie a state count
+  to licensure: license types vary by state, which was Savannah's catch.
+- **No client, project, route, or location names. No industry criticism. No renewables.**
+- **Terminology.** Right-of-way never corridor. Client or utility company never buyer. Gas utility
+  never gas pipeline. Secured never cleared. CCN not CPCN. Acres not feet. Water and wastewater,
+  never water alone. Project and program are interchangeable, so Garrett's own "programmatic
+  work" is usable as-is.
+- **The display line is "Built on experience. Focused on execution."** Garrett's own, written
+  8/17, now the company line everywhere. *"Creating certainty through strategic land solutions"*
+  is retired as a display line and stays the internal positioning claim; the client-approved SOQ
+  keeps it on its cover. Never set either with a trademark symbol.
+- **Proof shape the client asked for:** results-oriented specifics. Miles negotiated, voltages
+  worked, obstacles secured, doors knocked.
+
+## What the business actually is
+
+Garrett, 8/21: **85 to 90 percent of DUS's work for the next five years is electric
+transmission.** Transmission is also the front door. A client arrives for transmission, then asks
+for distribution, then asks for fiber. Four consequences for social:
+
+- **Transmission carries the feed.** Most posts read as transmission work even when the method
+  generalizes.
+- **Distribution is a small fragment of the work, and social should reflect that.** Garrett,
+  8/21, in his own words: *"right now electric distribution is going to be a very small fragment
+  of our work."* Undergrounding is the reason it used to be bigger, and he says that wave is
+  over: *"They call storm hardening... I think that ship has already sailed. I don't think
+  there's any more big initiatives going on that."* Savannah supplied the mechanism and put the
+  push at five or six years with the bulk of it now done. Distribution has no page of its own
+  because the work is small, **not** because social is meant to carry it. It gets acknowledged
+  and stays light.
+- **Fiber is follow-on work, never a bundled build.** Never write it as something sold alongside
+  transmission.
+- **Water is the coming boom** and the thinnest evidence base after gas. Water content leans on
+  the outreach obligation, which is where its land work actually gets won: no condemnation
+  authority means consent carries everything.
+
+**A client is not one buyer.** Transmission, distribution, fiber, gas and encroachment are
+separate departments with separate agreements. Never write "the utility" as a single
+decision-maker.
+
+## The production model
+
+Garrett stated it and Savannah closed it, 8/21: **the core competencies do not change by
+service.** Only routing and siting, and construction support, actually vary. Everything else runs
+on every project.
+
+That makes one method post reusable across five services with a genuine per-service adjustment
+rather than a find-and-replace. Write the method once under pillar 3, then dimension it: what
+changes on distribution is density and work-order cadence, on water the outreach load, on gas the
+department that buys it, on fiber that it arrives as follow-on work. Nothing else gets re-argued.
+
+---
+
+# Part 3 — Proof
+
+**The Drive reference library is the authority.** `DUS Proof, Claims, and Confidentiality` sorts
+every proof point green, amber or red. This section defers to it. What changed on 2026-09-03 is
+that a block of proof moved from amber to green by being published on the client-approved
+website: anything shipped on the live site or the SOQ has cleared the client.
+
+## Green — publishable today
+
+**Scale and experience** (live on the homepage, the transmission page and the SOQ):
+- 35+ combined years of leadership. Write "combined"; never imply one person's 35.
+- Up to 765 kV. Distribution, HV and EHV, executed by our leadership. Attribute to leadership and
+  team experience, never to a DUS track record. This answers the first question clients ask.
+- 10,000+ miles of transmission, distribution and fiber.
+- 40+ utility and public power clients.
+- 45+ years of Dudley Land Company behind it, since 1980, privately owned throughout.
+- Coverage as capability: the lower 48, operating within each state's requirements.
+
+**How we're built:**
+- A dedicated W-2 workforce, recruited through Dudley Land Company's 45-year network. This is the
+  honest, approved replacement for every banned staffing-continuity claim.
+- Privately owned since 1980, which is what makes the long-horizon investment claim possible.
+- Dudley pioneered computerized land records and database management in the 1980s.
+- Kudu: real-time project visibility, a current project record, project mapping, document
+  control.
+
+**Recognition — the public record** (all shipped on the careers page, all dated and verifiable):
+- Dudley Land Company, Company of the Year 2025, Houston Association of Professional Landmen, in
+  its 45th year.
+- Brent Broussard, Outstanding Landman of the Year 2021, and Face of the Industry 2026, American
+  Association of Professional Landmen.
+- Mike Gibson, Landman of the Year 2025, Houston Association of Professional Landmen.
+- Appointed seats held at AAPL, HAPL and NHAPL.
+- The Land Department podcast, and the round table on training the next generation.
+
+**Stories:**
+- The community association negotiation. Garrett offered the publishable shape himself: an
+  opposition group on one of our projects, navigated to agreement. **Publish the shape, not a
+  count** — he gave the denominator twice and it moved. Condemnation appears mid-story, never in
+  the lead.
+- Retention on a prior program of projects: 312 people on one client's program with under 1%
+  attrition, rotating between projects rather than off the account. Publishable unnamed, framed
+  as leadership's prior-program experience, never as a DUS record. **Still wants Jenny's ruling**
+  before first use — it sits close to the staffing-continuity line, though it's a past-program
+  statistic rather than a promise about a client's build.
+- The change-order give-back: giving money back and having it return as new work. The behavior
+  is publishable. The $2M figure is not.
+- The estimate that held: the two nine-mile lines, told as an outcome, and the budget that didn't
+  move.
+
+## Amber — needs the client's written sign-off before it ships
+
+- **Under 2% condemnation.** Workshopped live on 8/7 as illustration rather than as a record, and
+  never verified since.
+- **The 125-to-1,300 scalability story** and the sole-sourced ten-year contract near $100 million
+  requiring 150 people on the ground in 45 days. Strong evidence, belongs to a prior employer, so
+  it frames as leadership experience.
+- **The $2M change-order figure.** His story, a client's capital. Behaviour ships, number waits.
+
+> [!warning] The 7,000-miles figure is retired
+> Roughly 7,000 miles of right-of-way was Garrett's own verbal illustration of his experience.
+> **10,000+ miles is the client-approved company figure and it's already live.** Use 10,000+.
+> Never use 7,000, and never put both in circulation — the collision between them was the
+> unresolved problem, and shipping the larger figure resolved it.
+
+## Red — never publish
+
+- **Competitors.** Never name one, never characterize one, never build a contrast that depends on
+  one. The privately-owned framing is the publishable form of the whole competitor argument.
+- **Live opportunities.** The Colorado water opportunity and its dollar figure, the Florida
+  meeting, any pipeline conversation in progress.
+- **The entertainment-policy material.** The publishable version is that the work earns the
+  business.
+- **Any client, project, route or location name.**
+- **Renewables of any kind.**
+
+---
+
+# Part 4 — The angles
+
+## Pillar 1 — The people on the project are the project
+
+1. **Trainability over pre-skill:** what we actually look for when we hire a land professional.
+   *(Flagship true story, pending Savannah's OK per the byline test: hired with no
+   right-of-way experience on raw talent, project coordinator to director, with the
+   accounting-and-finance background regulated utilities demand. Garrett told it himself on 8/7,
+   along with the foil: "we got the best people" is what everybody says, and the resumes show
+   seven companies in as many years.)*
+2. **What a cross-trained land professional knows that a specialist doesn't,** walked through one
+   stage handoff.
+3. **Familiarity with the ground:** what changes in a conversation when the land professional
+   already knows the county. Familiarity is claimable; a local guarantee is not.
+4. **Recruiting through a 45-year network:** what it means to staff a project in weeks, attributed
+   to Dudley Land Company by name. Garrett's written version: we're building for the future
+   without starting from scratch.
+5. **Employee first, client always,** and what that ordering means in practice. *(Garrett's
+   formulation; confirm phrasing against the 7/21 tape before shipping.)*
+6. **Leadership continuity:** 35+ combined years of utility land work, and what a client gets from
+   the same leadership across a multi-year program. The only continuity claim that survives the
+   ban.
+7. **A dedicated W-2 workforce, and why that's the answer to a staffing question we won't answer
+   the usual way.** *(Added 9/3. Now live on the homepage and the SOQ, so it's green. It's also
+   the honest thing to say where a competitor would promise the same crew start to finish.)*
+8. **Careers, in the register the careers page settled:** what you deserve from the third of your
+   life you spend at work. Speak to what the reader gets, never to what we do. Benefits get named,
+   never explained. *(Added 9/3 from the careers page rulings.)*
+9. **The recognition is a people story, not a trophy story.** Company of the Year, Landman of the
+   Year, appointed seats. Write who earned it and what they did, never the plaque. *(Added 9/3.)*
+
+## Pillar 2 — Service gets measured twice
+
+1. **Whose reputation is on the doorstep:** why representing the client to its own customers
+   outranks the schedule, and how that shows up in a single conversation. *(The client's own
+   ranking, stated 8/14 and agreed by both.)* Garrett's written version: our people become an
+   extension of the client in the field, and every interaction carries the client's name with it.
+2. **The in-service date is sacred:** what signing on to a schedule means for how we staff and
+   plan from day one. Garrett's words: "that end date is never going to change."
+3. **The walk-away:** when a schedule is unrealistic, we don't take the job. Certainty includes
+   saying no.
+4. **What a community member should expect in writing before anyone asks them to sign:** the
+   offer, the rights, the drawing.
+5. **Continuity through construction:** a point of contact who answers, from first knock through
+   energization. *(Savannah made the correction on 8/14: agents roll between projects, so the
+   one-phone-number version was wrong and risks the banned one-person-start-to-finish read. The
+   phrase "continuity through construction" is Jenny's, endorsed for company copy. Never bank or
+   quote it as Savannah's own words.)*
+6. **In budget, not artificially under.** Garrett's own headline. A low estimate that doesn't
+   reflect the work creates uncertainty rather than value. Complexity drives the number; parcel
+   count is what Savannah counts to size it; pricing varies by contract.
+7. **What the client is actually buying.** Garrett, in writing: not resources or completed tasks,
+   but confidence that the right people are leading the work and issues surface early. *(Added
+   9/3.)*
+
+## Pillar 3 — How the work works
+
+1. **Whose system your line list lives in decides what you inherit at closeout.**
+2. **Securing all necessary rights on a rebuild** where the existing grant doesn't cover the work.
+3. **Kudu as the working record the client logs into,** with status moving on dated events.
+   Real-time project intelligence and visibility for risk management.
+4. **Encroachments on a rebuild,** hundreds on a single right-of-way (generalized), negotiated out
+   ahead of the crews.
+5. **Closeout and retainage:** the file discipline that ends a project well is the discipline that
+   ran it. *(Ships only if it reads as command rather than explanation.)*
+6. **More than easements:** substation siting, line relocations, fiber negotiations. The breadth
+   certainty covers.
+7. **The method, dimensioned.** One post on how the work runs, then a per-service variant showing
+   the single thing that changes. Only routing and siting and construction support actually vary,
+   which is the honest and unusual thing to say out loud. This is the reusable engine.
+8. **Confidentiality inside a utility:** why departments can't always talk to each other, and how
+   we work inside that. Write it as our operating discipline, never as criticism of how utilities
+   run.
+9. **Water and wastewater without condemnation authority:** what changes when consent is the only
+   path. Condemnation appears as the absent option mid-post, never in the hook.
+10. **Title up front, then refreshed at the milestones that depend on it.** Savannah's correction
+    of our own "title runs continuously" claim, and the accurate mechanism. *(Added 9/3.)*
+11. **Do the work before the work.** Garrett's phrase for validating ownership, requirements,
+    documents and strategy before anyone knocks on a door. *(Added 9/3.)*
+12. **Every parcel has a path:** clear ownership of each parcel, its status, its next action, and
+    what it needs to move. Garrett's own line, and the mechanism behind every schedule claim we
+    make. *(Added 9/3.)*
+
+## Pillar 4 — The work is the proof
+
+1. **The community association negotiation,** told as a shape rather than a count.
+2. **Retention on a prior program of projects.** Pending Jenny's ruling.
+3. **The voltage range.** HV and EHV, up to 765 kV. 765 is the gate question, the first thing a
+   client asks, used as a proxy for familiarity.
+4. **The change-order give-back,** behavior only.
+5. **The estimate that held:** two nine-mile lines and a budget that didn't move.
+6. **Company of the Year, in the 45th year.** Houston Association of Professional Landmen, 2025.
+   Real, dated, third-party. *(Added 9/3. This is the first genuine outside receipt the pillar has
+   ever had.)*
+7. **Face of the Industry, and Landman of the Year twice over.** Individual recognition earned by
+   our people, written as what they did rather than what they won. *(Added 9/3.)*
+8. **Appointed seats at AAPL, HAPL and NHAPL.** The industry asks these people to run things.
+   *(Added 9/3.)*
+9. **The track record we're still building, said plainly.** Garrett wrote the honest version
+   himself: DUS is building its utility track record, and the experience behind the company is
+   already established. Saying it outright is stronger than working around it. *(Added 9/3.)*
+10. Reserved: the first DUS program closeout, told as a case study when it exists.
+11. Reserved: an on-schedule energization with the land work never on the critical path.
+
+---
+
+# Part 5 — Weighting and production
+
+## Order of attack
+
+1. **Pillar 1 first, because recruiting is live.** On 8/28 Garrett deliberately pulled the team
+   off the water and fiber homework and put careers at the top, driven by a recruiting campaign
+   starting the week of 2026-09-04. Pillar 1 is the only pillar with an immediate campaign
+   attached to it, and the material is in hand: the recruiting engine, the W-2 workforce,
+   leadership continuity, and the careers register the page settled.
+2. **Pillar 3 alongside it.** Needs no client input, demonstrates command immediately, and the
+   dimensioned-method engine makes it the cheapest pillar to fill. Garrett expects the DUS
+   LinkedIn to out-pull everything as the legitimacy check.
+3. **Pillar 4 has moved up.** It is no longer thin. The recognition block alone carries several
+   posts of real third-party proof, and receipts are the client's own preferred shape.
+4. **Pillar 2 alongside.** The community-first ranking leads, schedule certainty follows, the
+   estimate colors.
+
+**Service mix inside the pillars:** transmission carries the majority, matching the business.
+Distribution gets acknowledged rather than featured, matching its actual share of the work.
+Water builds ahead of its boom. Gas stays light until the client supplies its material.
+
+## Voices
+
+Three voices, and every piece gets written from the company voice first.
+
+| Voice | Pronoun | Register | Reference bank |
+|---|---|---|---|
+| Dudley Utility Services | we / our | The site's register. Credibility frame, proved by mechanism. | `Company Voice - Anchors and Positions`, built from the shipped site |
+| Garrett Gill, Executive Vice President, Utilities | I / my | Spoken only. Loose, anecdotal, reaches for an analogy or a folk simile. | Garrett's story, take and anchor banks, spoken sources |
+| Savannah Cano, Regional Director, Utilities | I / my | Corrective, evidence-first, walks a sequence in order. Comfortable saying she needs more information. | Savannah's story, take and anchor banks |
+
+> [!important] The written material belongs to the company voice
+> **Operator ruling, 2026-09-03: Garrett's posts run on his spoken register only.** His written
+> register is the company voice, which is the honest reading of where it came from. He revised
+> the transmission surfaces himself on 8/17 and 8/18, and most of the site's structural voice
+> traces to that pass. Savannah's 9/2 written round is in the same position, and two of her
+> lines are now sitewide copy.
+>
+> The split runs by register rather than by author. Spoken Garrett and spoken Savannah carry
+> their own bylines. Their written rounds feed the company voice, where Garrett's written
+> register is the declared primary voice reference per `reference-spec.md`. A Garrett post
+> written off his written material reads like the website with an "I" bolted on, which is the
+> failure this ruling prevents.
+
+> [!warning] Savannah's 2026-08-28 material is voice-only
+> Before telling any of it she said on the tape: *"But this is not going to be published anywhere.
+> I think she's just using it for um voice,"* and the narrower purpose was confirmed on the call.
+> That covers her whole career story from that session and most of her takes on it. It shapes
+> **how her posts sound** and supplies **none of what they are about**. Her publishable substance
+> comes from 8/07, 8/14, 8/21 and her written review comments. Garrett is the opposite: he twice
+> says "that's my voice," offered his book, and uploaded a leadership-compatibility report
+> specifically as voice input.
+
+Every piece is written once from the company voice, then the same piece tailored to Garrett, and
+now to Savannah as well — her voice has enough material to stand on its own as of the 9/3 ingest
+run. Their reference banks (story, take, voice anchors) are what a drafting run reads before
+writing a line; the banks live in each subject's Reference Library, and the voice anchors are
+what keep rhythm coming from the person instead of from rules.
+
+**Format set per pillar:** 2 text posts, 1 text plus graphic, 1 document or carousel, 1 short-clip
+script.
+
+---
+
+# Part 6 — Change record
+
+## Applied 2026-09-03 — the website refresh, the 9/2 client round, and the first ingest run
+
+- **Restructured for routing.** The four pillars now open the file with a one-line definition, the
+  reader question each answers, what belongs, what doesn't, and a routing test. The working
+  detail moved below it.
+- **Display line flipped.** "Built on experience. Focused on execution." is the line. "Creating
+  certainty through strategic land solutions" is retired as a display line and stays internal.
+  The old text of this file still carried the retired line as approved.
+- **A block of proof moved amber to green** by shipping on the client-approved site and SOQ:
+  10,000+ miles, 40+ clients, 35+ combined years, up to 765 kV, the W-2 workforce, and the whole
+  recognition set.
+- **The 7,000-miles figure is retired** in favor of the shipped 10,000+. The collision between
+  the two was the open problem; publishing the company figure settled it.
+- **Kudu framing loosened to match what shipped.** Real-time project intelligence and visibility
+  are now client-written and live. Only the dashboard product claim stays barred.
+- **Recognition became a proof category.** Company of the Year 2025, Face of the Industry 2026,
+  Landman of the Year twice, appointed seats at three associations. Pillar 4 is no longer thin by
+  design.
+- **The pre-draft gates are now a numbered list** at the top of the rules, because the never-teach
+  and community-voice rules each hit a third strike on the service pages and both kill whole
+  sections rather than sentences.
+- **Six new angles from the client's own written material** (Garrett's 8/17–18 rounds, Savannah's
+  9/2 round): what the client is actually buying, in budget not artificially under, do the work
+  before the work, every parcel has a path, title up front then refreshed, and the plainly-stated
+  track record.
+- **Savannah's voice is promoted from pending to active.** The 9/3 ingest run over eight sessions
+  plus her 19 written review comments gives her a real bank. She joins the three-voice pattern
+  now rather than later.
+- **The safety-record guardrail is a standing rule,** in Garrett's own words: never present Dudley
+  Land Company's record as the DUS record.
+
+## Audit against the 8/21 and 8/28 sessions — 2026-09-03
+
+A second pass, run specifically against the two most recent client sessions, since the file's
+last substantive update predated both being fully mined. Four corrections:
+
+- **Distribution was weighted backwards.** The file said distribution "earns real airtime because
+  social is now its only surface." Garrett's actual position on 8/21 is that distribution is a
+  very small fragment of the work and the undergrounding wave that drove it has passed. The page
+  was dropped because the work is small, not so that social could carry it. Corrected in § What
+  the business actually is and in the service mix.
+- **The order of attack was stale.** On 8/28 Garrett deliberately pulled off the water and fiber
+  homework and put careers first, driven by a recruiting campaign starting the week of 09-04.
+  Pillar 1 now leads.
+- **Pillar 4's honest status was flattened.** The recognition block is real and new, and it does
+  not replace the per-service work stories, which are still outstanding and were never asked for
+  on 8/28. Restored as a warning on the pillar.
+- **Savannah's consent boundary was missing.** Her 8/28 material was given for voice modeling
+  rather than publication. Recorded against the voice model, because it governs what her posts
+  can be about.
+
+Also added: the framings that are ours rather than theirs, so no post misattributes one; and the
+two voice sources Garrett named on 8/28 that nobody has collected.
+
+**Page naming, for the record.** "Work with us" was Brent's ask on 7/30. Garrett overrode it on
+8/28 (*"we want to say careers because all of our clients use that"*). Savannah's 9/2 round moved
+it again, to "Join Us," which is what shipped. Current state is Join Us; don't revert it to
+either earlier version.
+
+## Settled, unchanged
+
+- All four pillar titles and framings, including pillar 4's demonstrate-don't-claim redraw.
+- Industries are a dimension inside the pillars, never a pillar.
+- Format set per pillar.
+- Canonical home is this file; the vault note is the working mirror.
+- No Kudu hold. Nothing about Kudu waits on Garrett.
+
+## Open
+
+- **Savannah's consent** on her own hiring story, pending since 2026-08-13. Pillar 1 angle 1 waits
+  on it.
+- **Jenny's ruling** on the 312-people retention statistic before its first use.
+- **Garrett's written sign-off** on the under-2% condemnation rate, the $2M figure, and the
+  scalability story.
+- **The blanket-easement framing** stays held until Savannah settles the wording.
+- **Brent's Q4 planning session** in September revisits purpose and core values for DUS. He
+  doesn't expect a large shift. If the values move, the pillar-to-value mapping moves with them.
+
+---
 
 ## Sources
 
-- reference/pillar-definitions — the settled architecture (4 pillars, dimension model, certainty as spine).
-- `Dudley/DUS/Reference Library` in Drive — Core Competencies by function and service, Service Profiles, Client and Buyer Intelligence, Proof Claims and Confidentiality, and the Index carrying the source ledger.
-- voice.md — register, terminology rules, approved claims, the never list.
-- atlas/meetings/2026-07-07-dus-hubspot-crm — a client is not one buyer; separate departments, separate agreements.
-- atlas/meetings/2026-07-21-dus-kickoff, atlas/meetings/2026-07-30-dus-onboarding — Garrett's convictions per angle; the confidentiality firewall and the $2M give-back, both in his own words.
-- DUS Onboarding 3 (2026-08-07) — terminology rules, estimate weight check, condemnation rule, incoming proof figures, LinkedIn and BD-timeline facts.
-- atlas/meetings/2026-08-14-dus-onboarding-4 — the customers-and-communities ranking, the local-agent and one-phone-number corrections, blanket easements cut, Kudu framing, leadership 35+, the SOQ figures.
-- atlas/meetings/2026-08-21-dus-onboarding-5 — land professional, complexity over parcel count, the 85–90% transmission fact, distribution's page folded in, the core-competency ruling, water and wastewater, the tagline.
-- Operator rulings 2026-08-24 and 2026-08-25 — program/project interchangeable, community members in outreach copy, no staffing-continuity claims, complexity-based estimates, the never-teach extension.
-- Operator rulings 2026-08-06 and 2026-08-13 — pillar architecture, voice model, the 8/7 absorption pass.
+- `voice.md` — register, terminology, approved claims, the never list. Governs on every conflict.
+- The live site: `pages/home.html`, `pages/electric-transmission.html`, `pages/careers.html`,
+  `pages/soq.html` as of 2026-09-03. What ships there has cleared the client.
+- `Dudley/DUS/Reference Library` in Drive — Core Competencies, Service Profiles, Client and Buyer
+  Intelligence, Proof Claims and Confidentiality, and the Index. The authority on proof status.
+- The review-widget comment corpus (`review_comments`, Neon Postgres behind
+  `dudley-utility-services.vercel.app`): 41 comments from Garrett 8/17–8/21, 43 from Savannah
+  8/12–9/2. Their own typed words, and the source of several angles here.
+- The eight client sessions, 2026-07-07 through 2026-08-28, ingested into the Garrett and Savannah
+  reference banks on 2026-09-03.
+- Operator rulings 2026-08-06 through 2026-09-02.
+- **Two voice sources named on 2026-08-28 and not yet collected:** Garrett's book, *When to Say
+  When*, which is 30-plus years of his own first-person prose and the strongest voice artifact
+  available for him; and the leadership-compatibility report on his and Savannah's DISC results,
+  in the DUS website update folder in Drive. He recommended both himself.
+
+## Framings that are ours, not theirs
+
+Recorded so no post ever attributes them to the client. Agreement is not authorship.
+
+- **The two-scales model for water** (transmission-and-distribution, from a tank rather than a
+  substation) is Jenny's, 8/21. Garrett's whole contribution was "it's true. Yeah, it's true."
+  His own separate point, that clients hire the land people after routing is finished and that
+  this is a mistake, is his and is the one to use.
+- **"Continuity through construction"** is Jenny's phrase. Savannah made the correction it came
+  from; the wording is ours.
+- **"Get involved early to avoid risk"** as a page framing is Jenny's. Garrett answered "Yeah.
+  Yeah."
+- **The privately-owned differentiator** originates with Brent Broussard, 7/30. Garrett restates
+  it as his own established position and the breakup analogy he uses to deliver it is his.
+- **Specific over comprehensive** came from the brand work. What's the client's is Garrett's
+  point that obstacles overcome are what clients are looking for, and Savannah's move to organize
+  proof per service.
+- One take carries a live provenance flag: Garrett's itemized estimate-inputs sentence from 8/21
+  is markedly more polished than his surrounding speech and he prefaces it by pointing back at an
+  existing draft. Check before it ships under his byline.
+- The pre-2026 messaging material at `Dudley/DUS/_Archive — Pre-2026` is **banned as a source.**
