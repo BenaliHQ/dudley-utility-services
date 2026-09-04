@@ -737,22 +737,14 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 }
 
 /* ---- Capabilities disclosure -------------------------------------------- */
-.capdrop { margin-top: 34px; }
-.capdrop > summary { list-style: none; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 14px; padding: 15px 26px;
-  border: 1px solid var(--teal-500); border-radius: var(--r-md); background: var(--white);
+.capbtn { display: inline-flex; align-items: center; gap: 12px; margin-top: 34px;
+  padding: 15px 26px; border: 1px solid var(--teal-500); border-radius: var(--r-md);
+  background: var(--white); color: var(--teal-500); text-decoration: none;
   font-size: 13px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--teal-500); transition: background 200ms ease, color 200ms ease, transform 200ms ease; }
-.capdrop > summary:hover { background: var(--teal-500); color: var(--white); transform: translateY(-2px); }
-.capdrop > summary:hover::after { color: var(--white); }
-.capdrop > summary::-webkit-details-marker { display: none; }
-.capdrop > summary::after { content: "+"; font-size: 20px; font-weight: 400; line-height: 1;
-  color: var(--green-500); transition: color 200ms ease; }
-.capdrop[open] > summary::after { content: "\2212"; }
-.capdrop > summary:hover { color: var(--teal-400); }
-.capdrop > summary:focus-visible { outline: 2px solid var(--green-500); outline-offset: 4px; }
-.capdrop-body .svc-list { margin-top: 20px; }
-.capdrop-body .svc-item:nth-last-child(-n+2) { border-bottom: none; }
+  transition: background 200ms ease, color 200ms ease, transform 200ms ease; }
+.capbtn::after { content: "\2192"; font-size: 16px; line-height: 1; }
+.capbtn:hover { background: var(--teal-500); color: var(--white); transform: translateY(-2px); }
+.capbtn:focus-visible { outline: 2px solid var(--green-500); outline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -855,49 +847,20 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 
     <p class="lifecycle-note reveal">From the first ownership question through final closeout, our teams stay connected to the work, the landowners, and the project objectives.</p>
 
-    <details class="capdrop reveal">
-      <summary><span>Explore our capabilities</span></summary>
-      <div class="capdrop-body">
-      <div class="svc-list">
+    <a class="capbtn reveal" href="/pages/electric-transmission">Explore our capabilities</a>
+
+    <!-- ===== The six service descriptions, retired 2026-09-04 ==================
+         Garrett, Onboarding #7: the toggle "pushes us over into transmission."
+         The electric transmission page carries the full capability set, so these
+         are no longer the homepage's job. Kept for reference. -->
+<!--
+<div class="svc-list">
         <div class="svc-item">
           <div>
             <div class="dus-micro">Routing &amp; siting</div>
             <p>Route selection and due diligence, with the estimate built parcel by parcel on per-acre valuation.</p>
           </div>
-        </div>
-        <div class="svc-item">
-          <div>
-            <div class="dus-micro">Public relations &amp; community outreach</div>
-            <p>We knock doors, meet landowner associations, and attend open houses and council meetings.</p>
-          </div>
-        </div>
-        <div class="svc-item">
-          <div>
-            <div class="dus-micro">Title research</div>
-            <p>Surface and mineral ownership cured before offers go out, so documents name the current owner.</p>
-          </div>
-        </div>
-        <div class="svc-item">
-          <div>
-            <div class="dus-micro">Survey support &amp; easement acquisition</div>
-            <p>Survey permission and rights of entry, then easements and fee acquisitions closed on good-faith offers.</p>
-          </div>
-        </div>
-        <div class="svc-item">
-          <div>
-            <div class="dus-micro">Construction</div>
-            <p>Notice before crews cross, gates and damages managed, and a point of contact who always answers.</p>
-          </div>
-        </div>
-        <div class="svc-item">
-          <div>
-            <div class="dus-micro">Operations</div>
-            <p>Landowner support long after energization: land records, encroachments, and vegetation managed.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </details>
+-->
   </div>
 </section>
 
