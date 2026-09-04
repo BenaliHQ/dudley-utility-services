@@ -1,4 +1,14 @@
-# PRE-LAUNCH: the site is not public yet. Swap this file for
-# robots.launch.txt at DNS cutover.
+# LIVE. Internal review surfaces stay out of the index; everything else is open.
 User-agent: *
-Disallow: /
+Disallow: /brand
+Disallow: /pages/soq
+Disallow: /pages/brand-voice
+Disallow: /pages/social-pillars
+Disallow: /pages/electric-transmission-v2
+Disallow: /pages/electric-transmission-pillar
+Disallow: /pages/electric-distribution-pillar
+Disallow: /pages/fiber-optics-broadband-pillar
+Disallow: /pages/gas-utility-pillar
+Disallow: /pages/water-utility-pillar
+
+Sitemap: https://dudley-utility.com/sitemap.xml
