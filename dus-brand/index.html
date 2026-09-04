@@ -722,7 +722,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--teal-400); outl
   }
   .cover-inner { padding: 48px 40px 56px !important; }
 
-  .section { padding: 34px 0 0 !important; margin-top: 0 !important; break-inside: auto; }
+  .section { padding: 0 !important; margin-top: 0 !important; break-inside: auto;
+            break-before: page; page-break-before: always; }
   .section > *:first-child { margin-top: 0 !important; }
 
   /* Groups flow; the units inside them stay whole. */
