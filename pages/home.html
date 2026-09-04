@@ -713,6 +713,43 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .careers-card .dus-btn { margin-top: 30px; }
 @media (max-width: 900px) { .credstrip--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 760px) { .svc-list { grid-template-columns: 1fr; } }
+
+/* ---- Lifecycle rail (What we do) ---------------------------------------- */
+.lifecycle { list-style: none; display: flex; flex-wrap: wrap; align-items: stretch;
+  gap: 0; margin: 40px 0 0; padding: 0; counter-reset: lc; }
+.lifecycle li { flex: 1 1 0; min-width: 150px; display: flex; align-items: center; position: relative; }
+.lifecycle li + li::before { content: ""; flex: 0 0 auto; width: 22px; height: 2px;
+  background: linear-gradient(90deg, var(--teal-300), var(--green-500)); }
+.lc-step { flex: 1 1 auto; display: block; padding: 20px 14px; text-align: center;
+  border: 1px solid var(--neutral-200); border-top: 3px solid var(--green-500);
+  background: var(--white); color: var(--teal-500);
+  font-size: 13px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+.lifecycle li::after { counter-increment: lc; content: "0" counter(lc);
+  position: absolute; top: 8px; left: 12px; font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; color: var(--text-3); font-variant-numeric: lining-nums tabular-nums; }
+.lifecycle li + li::after { left: 34px; }
+.lifecycle-note { margin-top: 22px; font-size: 17px; line-height: 1.6; color: var(--text-2); max-width: 760px; }
+@media (max-width: 860px) {
+  .lifecycle li { flex: 1 1 46%; }
+  .lifecycle li + li::before { display: none; }
+  .lifecycle { gap: 10px; }
+  .lifecycle li + li::after { left: 12px; }
+}
+
+/* ---- Capabilities disclosure -------------------------------------------- */
+.capdrop { margin-top: 34px; border-top: 1px solid var(--hairline); }
+.capdrop > summary { list-style: none; cursor: pointer; padding: 20px 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  font-size: 14px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--teal-500); }
+.capdrop > summary::-webkit-details-marker { display: none; }
+.capdrop > summary::after { content: "+"; font-size: 24px; font-weight: 400; line-height: 1;
+  color: var(--green-500); transition: transform 200ms ease; }
+.capdrop[open] > summary::after { content: "\2212"; }
+.capdrop > summary:hover { color: var(--teal-400); }
+.capdrop > summary:focus-visible { outline: 2px solid var(--green-500); outline-offset: 4px; }
+.capdrop-body .svc-list { margin-top: 4px; }
+.capdrop-body .svc-item:nth-last-child(-n+2) { border-bottom: none; }
 </style>
 </head>
 <body>
@@ -741,7 +778,7 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
       <a class="dus-btn dus-btn--light" href="/pages/meet-with-dudley">Meet With Dudley</a>
     </div>
     <div class="chipwrap">
-      <div class="dus-micro dus-micro--dark chiplabel">Industries</div>
+      <div class="dus-micro dus-micro--dark chiplabel">Services</div>
       <div class="chips">
         <span class="dus-pill">Electric Transmission</span>
         <span class="dus-pill">Electric Distribution</span>
@@ -787,50 +824,69 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 </section>
 
 <!-- ======================= 02 · WHAT WE DO =========================== -->
-<!-- Copy source: SOQ "What We Deliver" (approved 8/17), reused verbatim. -->
+<!-- Copy from Garrett, 2026-09-04. The lifecycle rail replaces the six
+     text-heavy service descriptions as the visual; those descriptions now sit
+     behind the capabilities disclosure below it. -->
 <section id="what" class="sec sec-alt">
   <div class="wrap">
     <div class="dus-eyebrow dus-eyebrow--teal reveal">What we do</div>
-    <h2 class="dus-h1 sec-title reveal">Strategic land solutions across the utility project lifecycle</h2>
-    <p class="askfirst reveal">We carry the land work from the first title search through closeout.</p>
-    <div class="svc-list">
-      <div class="svc-item">
-        <div>
-          <div class="dus-micro">Routing &amp; siting</div>
-          <p>Route selection and due diligence, with the estimate built parcel by parcel on per-acre valuation.</p>
+    <h2 class="dus-h1 sec-title reveal">Services that move with the project</h2>
+    <p class="sec-lede reveal">Utility projects evolve from early planning and route development through acquisition, construction, and long-term operations. Our role evolves with them. DUS brings the people, regional knowledge, and execution discipline needed to maintain continuity across each phase, helping clients manage land requirements, stakeholder relationships, and project risk as the work moves forward.</p>
+
+    <ol class="lifecycle reveal" aria-label="The project lifecycle">
+      <li><span class="lc-step">Plan</span></li>
+      <li><span class="lc-step">Research</span></li>
+      <li><span class="lc-step">Engage</span></li>
+      <li><span class="lc-step">Acquire</span></li>
+      <li><span class="lc-step">Support</span></li>
+      <li><span class="lc-step">Closeout</span></li>
+    </ol>
+
+    <p class="lifecycle-note reveal">From the first ownership question through final closeout, our teams stay connected to the work, the landowners, and the project objectives.</p>
+
+    <details class="capdrop reveal">
+      <summary><span>Explore our capabilities</span></summary>
+      <div class="capdrop-body">
+      <div class="svc-list">
+        <div class="svc-item">
+          <div>
+            <div class="dus-micro">Routing &amp; siting</div>
+            <p>Route selection and due diligence, with the estimate built parcel by parcel on per-acre valuation.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div>
+            <div class="dus-micro">Public relations &amp; community outreach</div>
+            <p>We knock doors, meet landowner associations, and attend open houses and council meetings.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div>
+            <div class="dus-micro">Title research</div>
+            <p>Surface and mineral ownership cured before offers go out, so documents name the current owner.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div>
+            <div class="dus-micro">Survey support &amp; easement acquisition</div>
+            <p>Survey permission and rights of entry, then easements and fee acquisitions closed on good-faith offers.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div>
+            <div class="dus-micro">Construction</div>
+            <p>Notice before crews cross, gates and damages managed, and a point of contact who always answers.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div>
+            <div class="dus-micro">Operations</div>
+            <p>Landowner support long after energization: land records, encroachments, and vegetation managed.</p>
+          </div>
         </div>
       </div>
-      <div class="svc-item">
-        <div>
-          <div class="dus-micro">Public relations &amp; community outreach</div>
-          <p>We knock doors, meet landowner associations, and attend open houses and council meetings.</p>
-        </div>
       </div>
-      <div class="svc-item">
-        <div>
-          <div class="dus-micro">Title research</div>
-          <p>Surface and mineral ownership cured before offers go out, so documents name the current owner.</p>
-        </div>
-      </div>
-      <div class="svc-item">
-        <div>
-          <div class="dus-micro">Survey support &amp; easement acquisition</div>
-          <p>Survey permission and rights of entry, then easements and fee acquisitions closed on good-faith offers.</p>
-        </div>
-      </div>
-      <div class="svc-item">
-        <div>
-          <div class="dus-micro">Construction</div>
-          <p>Notice before crews cross, gates and damages managed, and a point of contact who always answers.</p>
-        </div>
-      </div>
-      <div class="svc-item">
-        <div>
-          <div class="dus-micro">Operations</div>
-          <p>Landowner support long after energization: land records, encroachments, and vegetation managed.</p>
-        </div>
-      </div>
-    </div>
+    </details>
   </div>
 </section>
 
