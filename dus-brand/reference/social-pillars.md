@@ -449,11 +449,24 @@ Water builds ahead of its boom. Gas stays light until the client supplies its ma
 
 Three voices, and every piece gets written from the company voice first.
 
-| Voice | Pronoun | Register |
-|---|---|---|
-| Dudley Utility Services | we / our | The site's register. Credibility frame, proved by mechanism. |
-| Garrett Gill, Executive Vice President, Utilities | I / my | Spoken: looser, anecdotal, analogy-reaching. Written: compressed, second person, verb-phrase headlines. |
-| Savannah Cano, Regional Director, Utilities | I / my | Corrective, evidence-first, walks a sequence in order. Comfortable saying she needs more information. |
+| Voice | Pronoun | Register | Reference bank |
+|---|---|---|---|
+| Dudley Utility Services | we / our | The site's register. Credibility frame, proved by mechanism. | `Company Voice - Anchors and Positions`, built from the shipped site |
+| Garrett Gill, Executive Vice President, Utilities | I / my | Spoken only. Loose, anecdotal, reaches for an analogy or a folk simile. | Garrett's story, take and anchor banks, spoken sources |
+| Savannah Cano, Regional Director, Utilities | I / my | Corrective, evidence-first, walks a sequence in order. Comfortable saying she needs more information. | Savannah's story, take and anchor banks |
+
+> [!important] The written material belongs to the company voice
+> **Operator ruling, 2026-09-03: Garrett's posts run on his spoken register only.** His written
+> register is the company voice, which is the honest reading of where it came from. He revised
+> the transmission surfaces himself on 8/17 and 8/18, and most of the site's structural voice
+> traces to that pass. Savannah's 9/2 written round is in the same position, and two of her
+> lines are now sitewide copy.
+>
+> The split runs by register rather than by author. Spoken Garrett and spoken Savannah carry
+> their own bylines. Their written rounds feed the company voice, where Garrett's written
+> register is the declared primary voice reference per `reference-spec.md`. A Garrett post
+> written off his written material reads like the website with an "I" bolted on, which is the
+> failure this ruling prevents.
 
 > [!warning] Savannah's 2026-08-28 material is voice-only
 > Before telling any of it she said on the tape: *"But this is not going to be published anywhere.
