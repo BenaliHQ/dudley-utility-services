@@ -63,4 +63,4 @@ add a link on `index.html`, and push.
 
 ## Making changes
 
-The templates are locked by design — consistency is the product. If something needs to evolve (new template, new claim, contact block updates), change it here and cut a new release so every copy stays in sync. Maintained with the Benali team.
+The templates are locked by design — consistency is the product. If something needs to evolve (new template, new claim, contact block updates), change it here and cut a new release so every copy stays in sync. Maintained with the Demandcast team.

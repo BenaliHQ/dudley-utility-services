@@ -226,7 +226,7 @@ Everything in this document traces to one of these. Nothing is invented.
 - `system/transcripts/2026-07-30-dus-onboarding.md` — Khalil, Jenny, Garrett, and Brent Broussard.
 - the 2026-07-21 kickoff note · the 2026-07-30 onboarding note — processed notes.
 
-**Governing brand documents, in `BenaliHQ/dudley-utility-services`:**
+**Governing brand documents, in `Demandcast/dudley-utility-services`:**
 - `dus-brand/reference/voice.md` — canonical voice and messaging. Authoritative on everything in § Never.
 - `dus-brand/reference/brand-rules.md` — the visual system.
 - `dus-brand/SKILL.md` — the skill you're extending.
