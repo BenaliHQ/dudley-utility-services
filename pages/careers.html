@@ -362,10 +362,18 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .highlight-cta { background: var(--white); border-color: var(--neutral-200); box-shadow: var(--shadow-sm); overflow: hidden; }
 .highlight-cta h3 { color: var(--teal-500); }
 .highlight-cta p { color: var(--text); }
-.cta-card-img { display: block; max-width: 260px; height: auto; border-radius: 4px; margin: 0 auto 20px; }
-.cta-card-img--square { aspect-ratio: 1/1; object-fit: cover; object-position: center top; }
-.cta-card-body { padding: 28px 28px 30px; text-align: center; }
-.cta-card-body .dus-btn { display: inline-block; margin-top: 22px; }
+.cta-card-img { flex: 0 0 92px; width: 92px; height: 92px; object-fit: cover; object-position: center top; border-radius: 4px; }
+.cta-card-body { padding: 28px 28px 30px; display: flex; gap: 20px; align-items: flex-start; }
+.cta-card-copy { flex: 1 1 auto; min-width: 0; }
+.cta-card-copy p { margin-top: 8px; }
+.cta-card-body .dus-btn { display: inline-block; margin-top: 20px; }
+@media (max-width: 520px) { .cta-card-body { flex-direction: column; } }
+.assoc-card .dus-micro { margin-bottom: 10px; }
+.assoc-lede { font-size: 16px; line-height: 1.6; color: var(--text); }
+.assoc-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 26px; }
+.assoc-list li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.5; font-weight: 700; color: var(--teal-500); text-wrap: balance; }
+.assoc-list li::before { content: ""; position: absolute; left: 0; top: .45em; width: 9px; height: 9px; background: var(--green-500); }
+@media (max-width: 900px) { .assoc-list { grid-template-columns: 1fr; } }
 
 /* .note — REMOVED accent bar per brand learning 2026-08-25 */
 .note { margin-top: 30px; padding: 22px 26px; background: var(--white);
@@ -667,7 +675,7 @@ p, li { text-wrap: pretty; }
 /* Culture block — branded moment closing Life at DUS */
 .culture-block { margin: 52px 0 0; padding: 48px 42px;
   background: var(--glow-green), linear-gradient(to right, var(--teal-800) 0%, var(--teal-600) 35%, var(--teal-500) 65%, #0b7a48 100%); text-align: center; position: relative; }
-.culture-block p { font-size: 19px; line-height: 1.68; color: var(--on-dark); font-weight: 700; letter-spacing: -0.01em; max-width: 680px; margin: 0 auto; }
+.culture-block p { font-size: 19px; line-height: 1.68; color: var(--on-dark); font-weight: 700; letter-spacing: -0.01em; max-width: 680px; margin: 0 auto; text-wrap: balance; }
 .culture-block .culture-cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 14px 26px; border: none; border-radius: 6px; background: var(--green-500); color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 700; letter-spacing: 0.02em; cursor: pointer; text-decoration: none; transition: filter 200ms ease, transform 200ms ease, box-shadow 200ms ease; }
 .culture-block .culture-cta:hover { filter: brightness(0.92); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(65,190,72,0.3); }
 .culture-block .culture-cta:active { transform: translateY(0) scale(0.97); box-shadow: none; }
@@ -685,9 +693,9 @@ p, li { text-wrap: pretty; }
 .benefit-icon svg { width: 40px; height: 40px; stroke-width: 1.2; stroke: url(#dus-icon-grad); }
 .benefit-card h3 { font-size: 22px; font-weight: 900; letter-spacing: -0.015em;
   color: var(--teal-500); margin-bottom: 10px; line-height: 1.2; }
-.benefit-card p { font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.benefit-card p { font-size: 15px; line-height: 1.6; color: var(--text-2); text-wrap: balance; }
 @media (max-width: 900px) { .benefit-cards { grid-template-columns: 1fr; } .benefit-card { padding: 28px 22px; } }
-@media (max-width: 600px) { .benefit-cards { grid-template-columns: 1fr; } .cta-card-img { max-width: 200px; } }
+@media (max-width: 600px) { .benefit-cards { grid-template-columns: 1fr; } }
 .award { text-align: center; }
 .award .award-year { font-size: 38px; font-weight: 900; letter-spacing: -0.03em; line-height: 0.9; color: var(--teal-500); font-variant-numeric: lining-nums tabular-nums; margin-bottom: 14px; background: linear-gradient(135deg, var(--teal-500) 0%, var(--teal-400) 40%, var(--green-500) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .award .dus-h3 { margin-bottom: 6px; }
@@ -944,21 +952,35 @@ p, li { text-wrap: pretty; }
         <p class="award-sub">American Association of Professional Landmen &middot; Brent Broussard</p>
       </div>
     </div>
+    <div class="assoc-card dus-card dus-ticks pad reveal" style="margin-top: 22px;"><span class="tick-b"></span>
+      <div class="dus-micro">Industry associations</div>
+      <p class="assoc-lede">Our team members have held appointed seats in these organizations.</p>
+      <ul class="assoc-list">
+        <li>American Association of Professional Landmen</li>
+        <li>Houston Association of Professional Landmen</li>
+        <li>North Houston Association of Professional Landmen</li>
+      </ul>
+    </div>
+
     <div class="grid-2" style="margin-top: 22px;">
       <div class="dus-card dus-ticks highlight-cta reveal reveal-d1"><span class="tick-b"></span>
         <div class="cta-card-body">
           <img class="cta-card-img" src="assets/land-department-cover.jpg" alt="The Land Department podcast cover" loading="lazy">
-          <h3 class="dus-h3">The Land Department podcast</h3>
-          <p>Brent Broussard, our president, talks training, planning, and where the work is headed with leaders from across the land business, at Dudley and beyond.</p>
-          <a class="dus-btn dus-btn--ghost" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
+          <div class="cta-card-copy">
+            <h3 class="dus-h3">The Land Department podcast</h3>
+            <p>Brent Broussard, our president, talks training, planning, and where the work is headed with leaders from across the land business, at Dudley and beyond.</p>
+            <a class="dus-btn dus-btn--ghost" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
+          </div>
         </div>
       </div>
       <div class="dus-card dus-ticks highlight-cta reveal reveal-d2"><span class="tick-b"></span>
         <div class="cta-card-body">
-          <img class="cta-card-img cta-card-img--square" src="assets/bench-building.jpg" alt="Dudley team working together in the office" loading="lazy">
-          <h3 class="dus-h3">Building the bench the industry needs</h3>
-          <p>Our industry has more work than people. On a recent round table, our leadership lays out Dudley's answer: bring the next generation in and train them responsibly.</p>
-          <a class="dus-btn dus-btn--ghost" href="https://youtu.be/92O_n9zpVTM" target="_blank" rel="noopener">Hear the round table</a>
+          <img class="cta-card-img" src="assets/bench-building.jpg" alt="Dudley team working together in the office" loading="lazy">
+          <div class="cta-card-copy">
+            <h3 class="dus-h3">Building the bench the industry needs</h3>
+            <p>Our industry has more work than people. On a recent round table, our leadership lays out Dudley's answer: bring the next generation in and train them responsibly.</p>
+            <a class="dus-btn dus-btn--ghost" href="https://youtu.be/92O_n9zpVTM" target="_blank" rel="noopener">Hear the round table</a>
+          </div>
         </div>
       </div>
     </div>
