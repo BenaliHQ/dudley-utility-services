@@ -16,7 +16,7 @@ files in ./templates/ — keep this file in the package folder.
 <style>
 /* ==========================================================================
    DUDLEY UTILITY SERVICES — CORE DESIGN SYSTEM  v3.0
-   Refined by Benali from the Dudley Land Company brand guidelines.
+   Refined by Demandcast from the Dudley Land Company brand guidelines.
    This block is inlined verbatim into every DUS template. Do not restyle.
    Concept: "The route and the grid" — plat-map survey grids, a green
    right-of-way route line, squared structural geometry, teal depth.
@@ -702,6 +702,34 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--teal-400); outl
   .section-head h2 { font-size: 36px; }
   .foot { margin-top: 80px; }
 }
+
+/* ---------- Print / PDF export ----------
+   The brand book doubles as the leave-behind PDF for DUS. These rules only
+   apply to print: hide the sticky nav, give the cover a full page, and stop
+   swatches, template cards and spec rows splitting across a page break. */
+@media print {
+  @page { size: letter portrait; margin: 0.5in; }
+  .nav, .nav-inner, .to-top, #to-top { display: none !important; }
+  html, body { background: #fff !important; }
+  .cover {
+    height: auto !important; min-height: 9.4in !important; max-height: none !important;
+    break-after: page; page-break-after: always;
+  }
+  .cover-inner { padding: 48px 40px 56px !important; }
+  .section {
+    padding: 0 0 28px !important;
+    break-before: page; page-break-before: always;
+    break-inside: auto;
+  }
+  .section-head { margin-bottom: 28px !important; }
+  .swatch, .tpl-card, .sp-row, .icon-catalog-cell, .hl-row, .comp-panel,
+  .rule, .card, figure, table, .cap {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  a[href]::after { content: ""; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
 </style>
 </head>
 <body>
@@ -720,7 +748,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--teal-400); outl
   </div>
   <div class="cover-meta">
     <span class="dus-micro dus-micro--dark">Dudley Utility Services &middot; Brand System</span>
-    <span class="dus-micro dus-micro--dark">Maintained with the Benali team &middot; September 2026</span>
+    <span class="dus-micro dus-micro--dark">Maintained with the Demandcast team &middot; September 2026</span>
   </div>
 </header>
 
