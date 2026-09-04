@@ -483,8 +483,63 @@ run. Their reference banks (story, take, voice anchors) are what a drafting run 
 writing a line; the banks live in each subject's Reference Library, and the voice anchors are
 what keep rhythm coming from the person instead of from rules.
 
-**Format set per pillar:** 2 text posts, 1 text plus graphic, 1 document or carousel, 1 short-clip
-script.
+## How the content is delivered
+
+**One document per voice, not one per pillar.** The person who has to post shouldn't hunt across
+four files. Each voice gets a single document holding all twenty of its posts, sectioned by
+pillar and numbered one to five inside each, so "pillar 3, post 2" is a real address. A fifth
+document carries one topic written in all three voices, as the demonstration of how the voices
+relate.
+
+- `DUS Social — Company page posts`
+- `DUS Social — Garrett posts`
+- `DUS Social — Savannah posts`
+- `DUS Social — One post, three voices`
+
+**No bank citations in a client-facing document.** Entry IDs mean nothing to the client. Sources
+stay in the banks, where a drafting run reads them.
+
+## Formats, and who can use which
+
+The original set (2 text, 1 text plus graphic, 1 carousel, 1 short-clip script per pillar) is
+retired. What replaced it:
+
+| Format | Company page | Garrett | Savannah |
+|---|---|---|---|
+| Text | yes | yes | yes |
+| Text plus graphic | yes | yes | yes |
+| Carousel | yes | yes | yes |
+| Short-clip script | **never** | **never** | yes |
+
+- **The company page gets no clip scripts.** A company isn't a person and can't stand in front of
+  a camera. A clip belongs to Garrett or Savannah.
+- **Garrett gets no clip scripts either** (operator ruling 2026-09-04). A script for him runs
+  straight at the never-teach line, because talking through how the work runs is exactly what a
+  camera invites.
+- **A carousel ships with its slide text and its caption.** Slides alone are half a deliverable.
+- **A graphic ships with the words that go on it.** "Text plus graphic" without the graphic's
+  content is a note to ourselves, not a post.
+- **On a person's own page, a quote graphic carries the DUS logo, never the speaker's name.**
+  Garrett posting a card that attributes a quote to Garrett reads as self-regard. The company
+  attributing a line to itself is fine.
+
+## What keeps failing, and the check for it
+
+Three failure modes accounted for nearly every rewrite in the first drafting cycle. Run these
+before showing anyone a draft.
+
+1. **Teaching the industry about the industry.** Still the most common defect by a wide margin.
+   The specific shape it took here: reaching for the mechanics of the work to justify *why
+   something matters*. The justification has to come from what we did about it. If a paragraph
+   explains how utility procurement works, how title generally runs, or why a landowner
+   negotiates the way they do, cut it.
+2. **Lifting the reasoning behind a decision into the post.** Why we won't publish a state count,
+   who said what in which meeting, what skill we screen for. That's the working conversation.
+   The decision belongs in the post; the argument behind it stays in the room.
+3. **Building a thesis on a direction rather than on the bank.** Every claim in a byline post
+   traces to something that voice actually said. A plausible extension of their position is a
+   fabrication with their name on it. When the material doesn't support the point, the point
+   changes.
 
 ---
 
