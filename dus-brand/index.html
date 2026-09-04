@@ -704,31 +704,80 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--teal-400); outl
 }
 
 /* ---------- Print / PDF export ----------
-   The brand book doubles as the leave-behind PDF for DUS. These rules only
-   apply to print: hide the sticky nav, give the cover a full page, and stop
-   swatches, template cards and spec rows splitting across a page break. */
+   The brand book doubles as the PDF handed to DUS. Structure is regular:
+   every section holds group divs, and each group holds repeat units. So the
+   rule is structural rather than a list of class names — groups may break
+   across a page, the units inside them may not, and no heading or caption is
+   ever left behind by the thing it labels. */
 @media print {
   @page { size: letter portrait; margin: 0.5in; }
-  .nav, .nav-inner, .to-top, #to-top { display: none !important; }
+  .nav, .nav-inner, .nav-drawer, .nav-scrim, .to-top, #to-top { display: none !important; }
   html, body { background: #fff !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a[href]::after { content: ""; }
+
   .cover {
     height: auto !important; min-height: 9.4in !important; max-height: none !important;
     break-after: page; page-break-after: always;
   }
   .cover-inner { padding: 48px 40px 56px !important; }
-  .section {
-    padding: 0 0 28px !important;
-    break-before: page; page-break-before: always;
-    break-inside: auto;
-  }
-  .section-head { margin-bottom: 28px !important; }
-  .swatch, .tpl-card, .sp-row, .icon-catalog-cell, .hl-row, .comp-panel,
-  .rule, .card, figure, table, .cap {
+
+  .section { padding: 0 !important; margin-top: 0 !important; break-inside: auto;
+            break-before: page; page-break-before: always; }
+  .section > *:first-child { margin-top: 0 !important; }
+
+  /* Groups flow; the units inside them stay whole. */
+  .section > * { break-inside: auto; }
+  .section > * > * { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Grids hold many units, so they must be allowed to break; the cards can't. */
+  .tpl-grid, .icon-catalog, .ramps, .comp-panels, .voice-grid,
+  .donts, .logo-panels, .sp-scale, .sp-rules, .motifs, .spec { break-inside: auto; }
+
+  .tpl-card, .icon-catalog-cell, .swatch, .dont, .logo-panel, .comp-panel,
+  .sp-row, .prop, .hl-row, .rule, .card, figure, table, li,
+  .clearspace-demo, .color-hero, div:has(> .cap) {
     break-inside: avoid; page-break-inside: avoid;
   }
-  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
-  a[href]::after { content: ""; }
-  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Nothing that labels something else gets stranded at a page foot. */
+  h1, h2, h3, .cap, .dus-eyebrow, .lede, .section-head, .tpl-note {
+    break-after: avoid; page-break-after: avoid;
+  }
+  .section-head { break-inside: avoid; page-break-inside: avoid; }
+
+  /* One template card per page: the previews are JS-scaled to their column, so
+     a multi-column print grid overflows and clips. Cap the frame so the card,
+     its caption and its link all land on the same page. */
+  .tpl-frame { max-height: 5.2in !important; overflow: hidden !important; }
+
+  /* A label must not be the last thing on a page. break-after: avoid alone is
+     unreliable in Chrome, so pin the following sibling as well. */
+  .cap, .sp-flow-title, .icon-catalog-group-title, .rule-title, .panel-cap {
+    break-after: avoid; page-break-after: avoid;
+  }
+  .cap + *, .section-head + *, h2 + *, h3 + *, .dus-eyebrow + *,
+  .sp-flow-title + *, .icon-catalog-group-title + *, .rule-title + * {
+    break-before: avoid; page-break-before: avoid;
+  }
+  /* A label plus the first row of what it labels should travel together. */
+  .sp-rules, .icon-catalog-group, .prop, .tpl-group > .cap {
+    break-after: avoid; page-break-after: avoid;
+  }
+
+  /* Component demos are inline-styled flex rows sized for a 1200px screen.
+     At the 7.5in print measure their children refuse to shrink and the row
+     runs off the page, where the demo's overflow:hidden clips it. Let them
+     shrink, and bring the display numerals down to a size that fits. */
+  .section div[style*="display: flex"] > div,
+  .section div[style*="display:flex"] > div { min-width: 0 !important; }
+  .section [style*="font-size: 110px"] { font-size: 60px !important; }
+  .section [style*="font-size: 76px"],
+  .section [style*="font-size: 72px"] { font-size: 44px !important; }
+  .section [style*="font-size: 56px"],
+  .section [style*="font-size: 54px"],
+  .section [style*="font-size: 52px"] { font-size: 34px !important; }
+  .section [style*="padding: 24px 32px"] { padding: 18px 20px !important; }
 }
 </style>
 </head>
