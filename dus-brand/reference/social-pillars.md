@@ -120,6 +120,15 @@ pillar 4.
 opportunity. Performance creates the next one. Our reputation should be built through how we
 lead, communicate, execute, and deliver, not through what we say about ourselves."*
 
+> [!warning] Recognition is not the same as per-service proof, and only one of them has arrived
+> The recognition block below is real, dated and third-party, and it gives this pillar a genuine
+> opening it never had. **The per-service work stories are still outstanding.** They were
+> committed to on 8/07, carried on every agenda since, and the 2026-08-28 session did not get
+> them: that tape ran on careers and on the two leaders' own origin stories, and the hurdle
+> stories, schedules, parcel counts and acquisition specifics were never asked for. Every entry
+> banked from 8/28 carries `Lane: none`. A future session has to ask for them directly, per
+> service, or this pillar stays a recognition pillar rather than a work pillar.
+
 ---
 
 # Part 2 — The rules every post runs under
@@ -200,8 +209,14 @@ for distribution, then asks for fiber. Four consequences for social:
 
 - **Transmission carries the feed.** Most posts read as transmission work even when the method
   generalizes.
-- **Distribution lives here.** It has no website page of its own (folded into the transmission
-  page, 8/21), so social is where distribution positioning gets expressed.
+- **Distribution is a small fragment of the work, and social should reflect that.** Garrett,
+  8/21, in his own words: *"right now electric distribution is going to be a very small fragment
+  of our work."* Undergrounding is the reason it used to be bigger, and he says that wave is
+  over: *"They call storm hardening... I think that ship has already sailed. I don't think
+  there's any more big initiatives going on that."* Savannah supplied the mechanism and put the
+  push at five or six years with the bulk of it now done. Distribution has no page of its own
+  because the work is small, **not** because social is meant to carry it. It gets acknowledged
+  and stays light.
 - **Fiber is follow-on work, never a bundled build.** Never write it as something sold alongside
   transmission.
 - **Water is the coming boom** and the thinnest evidence base after gas. Water content leans on
@@ -347,7 +362,10 @@ website: anything shipped on the live site or the SOQ has cleared the client.
 4. **What a community member should expect in writing before anyone asks them to sign:** the
    offer, the rights, the drawing.
 5. **Continuity through construction:** a point of contact who answers, from first knock through
-   energization. *(Savannah's exact framing, 8/14.)*
+   energization. *(Savannah made the correction on 8/14: agents roll between projects, so the
+   one-phone-number version was wrong and risks the banned one-person-start-to-finish read. The
+   phrase "continuity through construction" is Jenny's, endorsed for company copy. Never bank or
+   quote it as Savannah's own words.)*
 6. **In budget, not artificially under.** Garrett's own headline. A low estimate that doesn't
    reflect the work creates uncertainty rather than value. Complexity drives the number; parcel
    count is what Savannah counts to size it; pricing varies by contract.
@@ -410,19 +428,22 @@ website: anything shipped on the live site or the SOQ has cleared the client.
 
 ## Order of attack
 
-1. **Pillar 3 first.** Needs no client input, demonstrates command immediately, and the
+1. **Pillar 1 first, because recruiting is live.** On 8/28 Garrett deliberately pulled the team
+   off the water and fiber homework and put careers at the top, driven by a recruiting campaign
+   starting the week of 2026-09-04. Pillar 1 is the only pillar with an immediate campaign
+   attached to it, and the material is in hand: the recruiting engine, the W-2 workforce,
+   leadership continuity, and the careers register the page settled.
+2. **Pillar 3 alongside it.** Needs no client input, demonstrates command immediately, and the
    dimensioned-method engine makes it the cheapest pillar to fill. Garrett expects the DUS
    LinkedIn to out-pull everything as the legitimacy check.
-2. **Pillar 1 second.** Real material in hand: the recruiting engine, the W-2 workforce,
-   leadership continuity, the careers register, Savannah's story pending her OK.
 3. **Pillar 4 has moved up.** It is no longer thin. The recognition block alone carries several
    posts of real third-party proof, and receipts are the client's own preferred shape.
 4. **Pillar 2 alongside.** The community-first ranking leads, schedule certainty follows, the
    estimate colors.
 
 **Service mix inside the pillars:** transmission carries the majority, matching the business.
-Distribution earns real airtime because social is now its only surface. Water builds ahead of its
-boom. Gas stays light until the client supplies its material.
+Distribution gets acknowledged rather than featured, matching its actual share of the work.
+Water builds ahead of its boom. Gas stays light until the client supplies its material.
 
 ## Voices
 
@@ -433,6 +454,15 @@ Three voices, and every piece gets written from the company voice first.
 | Dudley Utility Services | we / our | The site's register. Credibility frame, proved by mechanism. |
 | Garrett Gill, Executive Vice President, Utilities | I / my | Spoken: looser, anecdotal, analogy-reaching. Written: compressed, second person, verb-phrase headlines. |
 | Savannah Cano, Regional Director, Utilities | I / my | Corrective, evidence-first, walks a sequence in order. Comfortable saying she needs more information. |
+
+> [!warning] Savannah's 2026-08-28 material is voice-only
+> Before telling any of it she said on the tape: *"But this is not going to be published anywhere.
+> I think she's just using it for um voice,"* and the narrower purpose was confirmed on the call.
+> That covers her whole career story from that session and most of her takes on it. It shapes
+> **how her posts sound** and supplies **none of what they are about**. Her publishable substance
+> comes from 8/07, 8/14, 8/21 and her written review comments. Garrett is the opposite: he twice
+> says "that's my voice," offered his book, and uploaded a leadership-compatibility report
+> specifically as voice input.
 
 Every piece is written once from the company voice, then the same piece tailored to Garrett, and
 now to Savannah as well — her voice has enough material to stand on its own as of the 9/3 ingest
@@ -478,6 +508,34 @@ script.
 - **The safety-record guardrail is a standing rule,** in Garrett's own words: never present Dudley
   Land Company's record as the DUS record.
 
+## Audit against the 8/21 and 8/28 sessions — 2026-09-03
+
+A second pass, run specifically against the two most recent client sessions, since the file's
+last substantive update predated both being fully mined. Four corrections:
+
+- **Distribution was weighted backwards.** The file said distribution "earns real airtime because
+  social is now its only surface." Garrett's actual position on 8/21 is that distribution is a
+  very small fragment of the work and the undergrounding wave that drove it has passed. The page
+  was dropped because the work is small, not so that social could carry it. Corrected in § What
+  the business actually is and in the service mix.
+- **The order of attack was stale.** On 8/28 Garrett deliberately pulled off the water and fiber
+  homework and put careers first, driven by a recruiting campaign starting the week of 09-04.
+  Pillar 1 now leads.
+- **Pillar 4's honest status was flattened.** The recognition block is real and new, and it does
+  not replace the per-service work stories, which are still outstanding and were never asked for
+  on 8/28. Restored as a warning on the pillar.
+- **Savannah's consent boundary was missing.** Her 8/28 material was given for voice modeling
+  rather than publication. Recorded against the voice model, because it governs what her posts
+  can be about.
+
+Also added: the framings that are ours rather than theirs, so no post misattributes one; and the
+two voice sources Garrett named on 8/28 that nobody has collected.
+
+**Page naming, for the record.** "Work with us" was Brent's ask on 7/30. Garrett overrode it on
+8/28 (*"we want to say careers because all of our clients use that"*). Savannah's 9/2 round moved
+it again, to "Join Us," which is what shipped. Current state is Join Us; don't revert it to
+either earlier version.
+
 ## Settled, unchanged
 
 - All four pillar titles and framings, including pillar 4's demonstrate-don't-claim redraw.
@@ -512,4 +570,29 @@ script.
 - The eight client sessions, 2026-07-07 through 2026-08-28, ingested into the Garrett and Savannah
   reference banks on 2026-09-03.
 - Operator rulings 2026-08-06 through 2026-09-02.
+- **Two voice sources named on 2026-08-28 and not yet collected:** Garrett's book, *When to Say
+  When*, which is 30-plus years of his own first-person prose and the strongest voice artifact
+  available for him; and the leadership-compatibility report on his and Savannah's DISC results,
+  in the DUS website update folder in Drive. He recommended both himself.
+
+## Framings that are ours, not theirs
+
+Recorded so no post ever attributes them to the client. Agreement is not authorship.
+
+- **The two-scales model for water** (transmission-and-distribution, from a tank rather than a
+  substation) is Jenny's, 8/21. Garrett's whole contribution was "it's true. Yeah, it's true."
+  His own separate point, that clients hire the land people after routing is finished and that
+  this is a mistake, is his and is the one to use.
+- **"Continuity through construction"** is Jenny's phrase. Savannah made the correction it came
+  from; the wording is ours.
+- **"Get involved early to avoid risk"** as a page framing is Jenny's. Garrett answered "Yeah.
+  Yeah."
+- **The privately-owned differentiator** originates with Brent Broussard, 7/30. Garrett restates
+  it as his own established position and the breakup analogy he uses to deliver it is his.
+- **Specific over comprehensive** came from the brand work. What's the client's is Garrett's
+  point that obstacles overcome are what clients are looking for, and Savannah's move to organize
+  proof per service.
+- One take carries a live provenance flag: Garrett's itemized estimate-inputs sentence from 8/21
+  is markedly more polished than his surrounding speech and he prefaces it by pointing back at an
+  existing draft. Check before it ships under his byline.
 - The pre-2026 messaging material at `Dudley/DUS/_Archive — Pre-2026` is **banned as a source.**
