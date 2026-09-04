@@ -362,17 +362,12 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .highlight-cta { background: var(--white); border-color: var(--neutral-200); box-shadow: var(--shadow-sm); overflow: hidden; }
 .highlight-cta h3 { color: var(--teal-500); }
 .highlight-cta p { color: var(--text); }
-.cta-card-img { flex: 0 0 92px; width: 92px; height: 92px; object-fit: cover; object-position: center top; border-radius: 4px; }
-.cta-card-body { padding: 28px 28px 30px; display: flex; gap: 20px; align-items: center; }
-.cta-card-copy { flex: 1 1 auto; min-width: 0; }
-.cta-card-copy p { margin-top: 8px; }
+.cta-card-img { display: block; width: 84px; height: 84px; object-fit: cover; object-position: center top; margin: 0 auto 18px; }
+.cta-card-body { padding: 32px 26px; text-align: center; }
+.cta-card-copy p { margin-top: 8px; text-wrap: balance; }
 .cta-card-body .dus-btn { display: inline-block; margin-top: 20px; }
-@media (max-width: 520px) { .cta-card-body { flex-direction: column; } }
-.assoc-card .dus-micro { margin-bottom: 10px; }
-.assoc-lede { font-size: 16px; line-height: 1.6; color: var(--text); }
-.assoc-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 10px; }
-.assoc-list li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.5; font-weight: 700; color: var(--teal-500); text-wrap: balance; }
-.assoc-list li::before { content: ""; position: absolute; left: 0; top: .45em; width: 9px; height: 9px; background: var(--green-500); }
+.assoc-lede { margin-top: 34px; font-size: 16px; line-height: 1.6; color: var(--text); }
+.award .dus-h3 { text-wrap: balance; }
 
 /* .note — REMOVED accent bar per brand learning 2026-08-25 */
 .note { margin-top: 30px; padding: 22px 26px; background: var(--white);
@@ -951,14 +946,20 @@ p, li { text-wrap: pretty; }
         <p class="award-sub">American Association of Professional Landmen &middot; Brent Broussard</p>
       </div>
     </div>
-    <div class="assoc-card dus-card dus-ticks pad reveal" style="margin-top: 22px;"><span class="tick-b"></span>
-      <div class="dus-micro">Industry associations</div>
-      <p class="assoc-lede">Our team members have held appointed seats in these organizations.</p>
-      <ul class="assoc-list">
-        <li>American Association of Professional Landmen</li>
-        <li>Houston Association of Professional Landmen</li>
-        <li>North Houston Association of Professional Landmen</li>
-      </ul>
+    <p class="assoc-lede reveal">Our team members have held appointed seats in these organizations.</p>
+    <div class="grid-3" style="margin-top: 22px;">
+      <div class="dus-card dus-ticks pad award reveal reveal-d1"><span class="tick-b"></span>
+        <div class="award-year">AAPL</div>
+        <h3 class="dus-h3">American Association of Professional Landmen</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d2"><span class="tick-b"></span>
+        <div class="award-year">HAPL</div>
+        <h3 class="dus-h3">Houston Association of Professional Landmen</h3>
+      </div>
+      <div class="dus-card dus-ticks pad award reveal reveal-d3"><span class="tick-b"></span>
+        <div class="award-year">NHAPL</div>
+        <h3 class="dus-h3">North Houston Association of Professional Landmen</h3>
+      </div>
     </div>
 
     <div class="grid-2" style="margin-top: 22px;">
@@ -966,7 +967,7 @@ p, li { text-wrap: pretty; }
         <div class="cta-card-body">
           <img class="cta-card-img" src="assets/land-department-cover.jpg" alt="The Land Department podcast cover" loading="lazy">
           <div class="cta-card-copy">
-            <h3 class="dus-h3">The Land Department podcast</h3>
+            <h3 class="dus-h3">The Land&nbsp;Department podcast</h3>
             <p>Brent Broussard, our president, talks training, planning, and where the work is headed with leaders from across the land business, at Dudley and beyond.</p>
             <a class="dus-btn dus-btn--ghost" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
           </div>
