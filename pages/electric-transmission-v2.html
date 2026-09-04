@@ -551,7 +551,14 @@ p, li { text-wrap: pretty; }
   <div class="site-nav-inner">
     <a href="/"><img class="nav-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAoCAYAAAAFELFnAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA" alt="Dudley Utility Services"></a>
     <div class="site-nav-links">
-      <a href="/pages/electric-transmission">Services</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Services <svg viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu-inner">
+            <a href="/pages/electric-transmission">Electric Transmission</a>
+          </div>
+        </div>
+      </div>
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a class="dus-btn dus-btn--accent" href="#">Meet With Dudley</a>
