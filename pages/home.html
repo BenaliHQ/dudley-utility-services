@@ -105,7 +105,9 @@
   --r-sm: 3px;
   --r-md: 6px;
   --r-lg: 10px;
-  --r-pill: 999px;      /* eyebrow pills and status chips ONLY */
+  --r-pill: 999px;
+  /* height of the sticky site nav; the section bar sticks directly beneath it */
+  --navh: 72px;      /* eyebrow pills and status chips ONLY */
 
   /* ---- Shadows: cool, subtle ---- */
   --shadow-sm: 0 1px 2px rgba(3,34,48,0.07), 0 1px 3px rgba(3,34,48,0.08);
@@ -115,7 +117,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html {
-  scroll-padding-top: 56px;
+  scroll-padding-top: 120px;
 }
 html, body {
   font-family: var(--font);
@@ -358,7 +360,7 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .chips .dus-pill { padding: 8px 17px; font-size: 12px; letter-spacing: .13em; }
 
 /* ---------- Sticky section nav ---------- */
-.tocbar { position: sticky; top: 0; z-index: 20; background: var(--white);
+.tocbar { position: sticky; top: var(--navh); z-index: 20; background: var(--white);
   border-bottom: 1px solid var(--hairline); }
 .toc { display: flex; gap: 30px; overflow-x: auto; }
 .toc a { white-space: nowrap; text-decoration: none; color: var(--text-2);
@@ -608,6 +610,8 @@ p, li { text-wrap: pretty; }
   .sec-lede + .svc-phase { margin-top: 36px; }
   .site-nav { padding: 0 24px; }
   .site-nav-inner { height: 64px; }
+  :root { --navh: 64px; }
+  html { scroll-padding-top: 112px; }
   .site-nav-links { display: none; }
   .nav-burger { display: block; }
   .toc { gap: 14px; }
@@ -788,6 +792,17 @@ a.ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
     </div>
   </div>
 </header>
+
+<nav class="tocbar">
+  <div class="wrap toc">
+    <a href="#heritage">Our foundation</a>
+    <a href="#what">What we do</a>
+    <a href="#why">Why clients choose us</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#careers">Join us</a>
+    <a href="#close">Let's connect</a>
+  </div>
+</nav>
 
 <main>
 
