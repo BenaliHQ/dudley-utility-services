@@ -362,11 +362,16 @@ img.dus-logo { display: block; width: auto; object-fit: contain; }
 .highlight-cta { background: var(--white); border-color: var(--neutral-200); box-shadow: var(--shadow-sm); overflow: hidden; }
 .highlight-cta h3 { color: var(--teal-500); }
 .highlight-cta p { color: var(--text); }
-.cta-card-img { display: block; width: 84px; height: 84px; object-fit: cover; object-position: center top; margin: 0 auto 18px; }
 .cta-card-body { padding: 32px 26px; text-align: center; }
+.cta-card-title { font-size: 30px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 12px; min-height: 2.16em;
+  color: var(--teal-500); text-wrap: balance;
+  background: linear-gradient(135deg, var(--teal-500) 0%, var(--teal-400) 40%, var(--green-500) 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .cta-card-copy p { margin-top: 8px; text-wrap: balance; }
 .cta-card-body .dus-btn { display: inline-block; margin-top: 20px; }
-.assoc-lede { margin-top: 34px; font-size: 16px; line-height: 1.6; color: var(--text); }
+.assoc-lede { margin: 44px auto 0; max-width: 640px; text-align: center; font-size: 19px; line-height: 1.45;
+  font-weight: 700; letter-spacing: -0.01em; color: var(--teal-500); text-wrap: balance; }
+.assoc-lede::after { content: ""; display: block; width: 28px; height: 4px; margin: 16px auto 0; background: var(--green-500); }
 .award .dus-h3 { text-wrap: balance; }
 
 /* .note — REMOVED accent bar per brand learning 2026-08-25 */
@@ -947,7 +952,7 @@ p, li { text-wrap: pretty; }
       </div>
     </div>
     <p class="assoc-lede reveal">Our team members have held appointed seats in these organizations.</p>
-    <div class="grid-3" style="margin-top: 22px;">
+    <div class="grid-3" style="margin-top: 24px;">
       <div class="dus-card dus-ticks pad award reveal reveal-d1"><span class="tick-b"></span>
         <div class="award-year">AAPL</div>
         <h3 class="dus-h3">American Association of Professional Landmen</h3>
@@ -965,9 +970,8 @@ p, li { text-wrap: pretty; }
     <div class="grid-2" style="margin-top: 22px;">
       <div class="dus-card dus-ticks highlight-cta reveal reveal-d1"><span class="tick-b"></span>
         <div class="cta-card-body">
-          <img class="cta-card-img" src="assets/land-department-cover.jpg" alt="The Land Department podcast cover" loading="lazy">
           <div class="cta-card-copy">
-            <h3 class="dus-h3">The Land&nbsp;Department podcast</h3>
+            <div class="cta-card-title">The Land Department podcast</div>
             <p>Brent Broussard, our president, talks training, planning, and where the work is headed with leaders from across the land business, at Dudley and beyond.</p>
             <a class="dus-btn dus-btn--ghost" href="https://www.youtube.com/channel/UCi5aLDkpG4B-iviAHrEdESg" target="_blank" rel="noopener">Watch the show</a>
           </div>
@@ -975,16 +979,14 @@ p, li { text-wrap: pretty; }
       </div>
       <div class="dus-card dus-ticks highlight-cta reveal reveal-d2"><span class="tick-b"></span>
         <div class="cta-card-body">
-          <img class="cta-card-img" src="assets/bench-building.jpg" alt="Dudley team working together in the office" loading="lazy">
           <div class="cta-card-copy">
-            <h3 class="dus-h3">Building the bench the industry needs</h3>
+            <div class="cta-card-title">Building the bench the industry needs</div>
             <p>Our industry has more work than people. On a recent round table, our leadership lays out Dudley's answer: bring the next generation in and train them responsibly.</p>
             <a class="dus-btn dus-btn--ghost" href="https://youtu.be/92O_n9zpVTM" target="_blank" rel="noopener">Hear the round table</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="applyrow reveal"><a class="dus-btn dus-btn--primary" href="#positions">See open positions</a></div>
   </div>
 </section>
 
